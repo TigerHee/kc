@@ -1,0 +1,78 @@
+@import 'src/styles/mixin.scss';
+
+.container {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 8px;
+
+  .passwordStrengthLeft {
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+
+    .passwordStrengthText {
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: 'PingFang SC';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      margin-right: 6px;
+      &.strengthLevel0 {
+        color: var(--kux-brandRed);
+      }
+      &.strengthLevel1 {
+        color: var(--kux-complementaryYellow);
+      }
+      &.strengthLevel2 {
+        color: var(--kux-brandGreen);
+      }
+    }
+
+    .strengthLevelItem {
+      width: 14px;
+      height: 3px;
+      border-radius: 1.4px;
+      margin-right: 4px;
+      background-color: var(--kux-cover16);
+      &.strengthLevel0 {
+        background-color: var(--kux-brandRed);
+      }
+      &.strengthLevel1 {
+        background-color: var(--kux-complementaryYellow);
+      }
+      &.strengthLevel2 {
+        background-color: var(--kux-brandGreen);
+      }
+    }
+
+    .passwordStrengthLevel {
+      display: flex;
+      flex-flow: nowrap row;
+      align-items: center;
+      justify-content: flex-start;
+      margin-right: 12px;
+
+      div:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .passwordStrengthDesc {
+    display: inline;
+    color: var(--kux-text40);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'PingFang SC';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 16.9px */
+
+    &.hide {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.iconWrapper {
+  cursor: pointer;
+  width: 32px;
+  height: 100%;
+  border-radius: 4px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+
+  &.active {
+    background: #fff;
+    img {
+      opacity: 1;
+    }
+  }
+
+}
+
+.wrapper {
+
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 2px;
+  background: var(--color-cover4);
+  border-radius: 6px;
+
+}

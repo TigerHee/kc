@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Icon/pro</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/pro">
+            <rect id="Rectangle" stroke="#58CCB6" stroke-width="2" x="11" y="15" width="8" height="9" rx="1"></rect>
+            <rect id="Rectangle" fill="#58CCB6" opacity="0.319999993" x="27" y="14" width="4" height="7"></rect>
+            <rect id="Rectangle-Copy-2" stroke="#58CCB6" stroke-width="2" x="24" y="11" width="10" height="13" rx="1"></rect>
+            <path d="M15,10 C15.5522847,10 16,10.4477153 16,11 L16,14 L16,14 L14,14 L14,11 C14,10.4477153 14.4477153,10 15,10 Z" id="Rectangle" fill="#FFFFFF"></path>
+            <path d="M29,6 C29.5522847,6 30,6.44771525 30,7 L30,10 L30,10 L28,10 L28,7 C28,6.44771525 28.4477153,6 29,6 Z" id="Rectangle-Copy-6" fill="#FFFFFF"></path>
+            <path d="M14,25 L16,25 L16,28 C16,28.5522847 15.5522847,29 15,29 C14.4477153,29 14,28.5522847 14,28 L14,25 L14,25 Z" id="Rectangle-Copy-3" fill="#FFFFFF"></path>
+            <path d="M28,25 L30,25 L30,28 C30,28.5522847 29.5522847,29 29,29 C28.4477153,29 28,28.5522847 28,28 L28,25 L28,25 Z" id="Rectangle-Copy-7" fill="#FFFFFF"></path>
+            <rect id="Rectangle" fill="#58CCB6" x="5" y="6" width="2" height="28" rx="1"></rect>
+            <rect id="Rectangle" fill="#58CCB6" x="5" y="32" width="30" height="2" rx="1"></rect>
+            <rect id="Rectangle" fill-opacity="0.32" fill="#58CCB6" x="14" y="18" width="2" height="3"></rect>
+        </g>
+    </g>
+</svg>

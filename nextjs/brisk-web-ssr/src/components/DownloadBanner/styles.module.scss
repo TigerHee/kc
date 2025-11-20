@@ -1,0 +1,61 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  background-color: var(--kux-backgroundOverlay);
+  border-top: 1px solid var(--kux-divider4);
+  border-bottom: 1px solid var(--kux-divider4);
+  z-index: 1000;
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+  .content {
+    flex: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+    .title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      color: var(--kux-text);
+    }
+    .description {
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 140%;
+      color: var(--kux-text40);
+    }
+  }
+
+  .button {
+    width: 64px;
+    :global {
+      .kux-button-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    width: 8px !important;
+    height: 8px !important;
+    color: var(--kux-text60);
+    cursor: pointer;
+    [dir='rtl'] & {
+      left: 6px;
+      right: auto;
+    }
+  }
+}

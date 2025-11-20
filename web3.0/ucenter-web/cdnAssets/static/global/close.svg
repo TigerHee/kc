@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>撤销</title>
+    <g id="撤销" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wendang" fill="#000000" fill-rule="nonzero" opacity="0">
+            <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+        </g>
+        <path d="M17,18 C18.1045695,18 19,17.1045695 19,16 L20,16 C20,17.5976809 18.75108,18.9036609 17.1762728,18.9949073 L17,18.999 L5,19 L5,18 L17,18 Z M8.74264069,4.26 L9.44974747,4.96710678 L6.417,7.999 L17,8 C18.5976809,8 19.9036609,9.24891996 19.9949073,10.8237272 L20,10.999 L20,15.999 L19,15.999 L19,10.999 C19,9.94559275 18.1841222,9.08183281 17.1492623,9.00548564 L17,8.999 L6.411,8.999 L9.44974747,12.0381746 L8.74264069,12.7452814 L4.5,8.50264069 L8.74264069,4.26 Z" id="形状" fill="#FFFFFF"></path>
+    </g>
+</svg>

@@ -1,0 +1,58 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as Stories from './stories';
+
+<Meta title="base/Empty/Readme" />
+
+
+# StatusIcon
+
+用于展示带动画的状态图标，支持多种业务场景（如警告、错误、成功、等待、无记录、系统繁忙等），并自动适配明暗主题。
+
+配合 `StatusIcon` 的还有 `StatusIconWithText` 组件，用于在图标下方显示状态文字。
+
+<Callout type="warning">
+依赖 `lottie-web` 库，必须在库的 [`setup` 方法中 设置 `getLottie` 方法](?path=/docs/1-开始使用--api#引入组件并初始化)。
+</Callout>
+
+## 支持的状态（name）
+
+| name                | 说明         |
+|---------------------|--------------|
+| warn                | 警告         |
+| error               | 错误         |
+| wait                | 等待         |
+| safety              | 安全         |
+| success             | 成功         |
+| prompt              | 提示         |
+| no-record           | 无记录       |
+| suspension-trading  | 暂停交易     |
+| network-error       | 网络错误     |
+| system-busy         | 系统繁忙     |
+
+## StatusIcon Props
+
+| 属性      | 类型                                | 默认值   | 说明                                                         |
+|-----------|-------------------------------------|----------|--------------------------------------------------------------|
+| name      | 'warn' \| 'error' ...                | -        | 图标类型，见上表                                             |
+| theme     | 'light' \| 'dark' \| 'auto'          | 'auto'   | 主题模式，auto 时自动跟随系统/页面主题                        |
+| immediate | boolean                             | false    | 是否立即渲染动画，false 时等页面 LCP 后再渲染动画              |
+| size      | 'small' \| 'medium' \| 'auto'      | 'auto' | 图标尺寸, auto 表示自适应 |
+| title     | ReactNode                             | -        | 状态标题, 当描述和标题只有标题时, 标题将以描述形式展示 |
+| description | ReactNode                           | -        | 状态描述                                                       |
+| className | string                             | -        | 自定义类名 |
+| style | CSSProperties                             | -    | 自定义样式 |
+
+
+## 主题说明
+
+支持明暗主题切换，自动适配不同主题下的动画资源。
+
+## 示例
+
+```tsx
+import { Empty } from '@kux/design';
+// 图标, 仅图标本身
+<Empty name="warn" />
+// 带状态文字的图标
+<Empty name="warn" title="警告状态" />
+```

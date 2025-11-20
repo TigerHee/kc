@@ -1,0 +1,98 @@
+@import "@/styles/mixin.scss";
+
+.pricePageBox {
+  padding: 0 24px;
+  @include media-query("lg") {
+    padding: 0 12px;
+  }
+}
+
+.priceBox {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: inherit;
+  @include media-query("lg") {
+    width: 100%;
+  }
+}
+
+.navigationBox {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  line-height: 18px;
+  @include media-query("sm") {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  gap: 48px;
+  @include media-query("sm") {
+    flex-direction: column;
+  }
+}
+
+.conLeft {
+  flex: 1;
+  width: calc(100% - 432px);
+
+  @include media-query("sm") {
+    width: 100%;
+  }
+}
+
+.conRight {
+  width: 384px;
+  flex: 0 0 384px;
+
+  @include media-query("sm") {
+    display: none;
+    width: 0;
+  }
+}
+
+.tradeWrapper {
+  
+}
+
+.cont {
+  position: relative;
+  display: block;
+
+  &.hide {
+    display: none;
+  }
+
+  @include media-query("sm") {
+    margin-bottom: 20px;
+  }
+}
+
+.klineBox {
+  margin-bottom: 32px;
+
+  @include media-query("sm") {
+    margin-bottom: 20px;
+  }
+}
+
+.coinBarInDialog {
+  @include media-query("sm") {
+    gap: 12px ;
+    padding: 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 0.5px solid rgba(29, 29, 29, 0.08);
+    margin-bottom: 0;
+
+    :global(#chart-switch-list) {
+      font-weight:500;
+      gap: 20px;
+      flex: 1;
+    };
+  }
+}

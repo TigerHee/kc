@@ -1,0 +1,28 @@
+{
+  "url": "ssh://git@bitbucket.kucoin.net/kuc/kucoin-main-web.git",
+  "app_type": "web",
+  "web_type": "static",
+  "pre_copy": true,
+  "node_version": "v14.19.3",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:14.19.3",
+  "offline_params": {
+    "build_cmd": "yarn run build:sit",
+    "dist_copy": {
+      "on_opts": true,
+      "copy_file": "dist",
+      "copy_path": "kucoin-main-web",
+      "copy_cmd": "rsync",
+      "exclude_file": ["kucoin-main-web"],
+      "delete_opts": true
+    },
+    "cdn_copy": {
+      "on_opts": true,
+      "copy_file": "dist/kucoin-main-web/{ver}",
+      "copy_path": "kucoin-main-web/{ver}",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": false
+    },
+    "other_opts": ""
+  }
+}

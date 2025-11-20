@@ -1,0 +1,250 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-upload 作为类名
+// * 例如: $ns: 'kux', componentName: 'Upload', 则类名为 kux-upload
+// * $prefix 也会自动更新: $ns + '-' + 'upload'
+// * 例如: $ns: 'kux', componentName: 'Upload', 则 $prefix 为 kux-upload
+
+@include component('upload') {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 343px;
+  height: 143px;
+  border: 1px dashed get-theme(text20);
+  border-radius: 8px;
+  background-color: get-theme(cover2);
+
+  &_full-width {
+    width: 100% !important;
+  }
+
+  &:hover {
+    background-color: get-theme(cover4);
+  }
+
+  @include responsive(md) {
+    width: 576px;
+    height: 240px;
+  }
+
+  &_area-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    text-align: center;
+    &_title {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: get-theme(text);
+      line-height: 140%;
+      &-error {
+        color: get-theme(brandRed);
+      }
+    }
+    &_description {
+      margin-top: 4px;
+      font-size: 12px;
+      color: get-theme(text40);
+      line-height: 140%;
+    }
+    @include responsive(md) {
+      &_title {
+        font-size: 16px;
+      }
+      &_description {
+        font-size: 14px;
+      }
+    }
+  }
+  &_area-icon {
+    width: 40px;
+    height: 40px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @include responsive(md) {
+    &_area-icon {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  /** loading overlay */
+  &-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: blend-color(rgba(29,29,29,0.02), #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+}
+
+// 文件列表样式
+@include component('upload-file-list') {
+  margin-top: 16px;
+  width: 343px;
+  height: 143px;
+
+  &_full-width {
+    width: 100% !important;
+  }
+
+  @include responsive(md) {
+    width: 576px;
+    height: 240px;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: get-theme(text40);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 12px 16px 0;
+    border-bottom: 1px solid get-theme(divider8);
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+  &__item-icon {
+    width: 48px;
+    height: 37px;
+    border-radius: 6px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: get-theme(brandGreen);
+    }
+  }
+  &__item-info {
+    flex: 1;
+  }
+  &__item-name {
+    font-size: 14px;
+    color: get-theme(text);
+    @include ellipsis(1);
+    line-height: 140%;
+    &-error {
+      color: get-theme(brandRed);
+    }
+  }
+  &__item-size {
+    font-size: 12px;
+    color: get-theme(text40);
+    line-height: 140%;
+  }
+  &__item-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__item-actions-retry {
+    font-size: 14px;
+    line-height: 140%;
+    color: get-theme(icon);
+    cursor: pointer;
+    &-hidden {
+      display: none;
+    }
+    &:hover {
+      color: get-theme(brandGreen);
+    }
+  }
+  &__item-actions-delete {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: get-theme(icon);
+    &:hover {
+      color: get-theme(brandGreen);
+    }
+  }
+}
+
+// 图片覆盖层样式
+@include component('upload-image-overlay') {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: blend-color(rgba(29,29,29,0.02), #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: inherit;
+
+  &:hover {
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background-color: blend-color(rgba(0, 13, 29, 0.30), #ffffff);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 24%;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 1;
+    }
+    
+    &__btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      gap: 8px;
+      color: get-theme(textEmphasize);
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

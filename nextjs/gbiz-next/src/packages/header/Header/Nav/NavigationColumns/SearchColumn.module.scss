@@ -1,0 +1,89 @@
+.searchContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--kux-text40);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 140%;
+  background-color: var(--kux-backgroundOverlay);
+
+  .contentList {
+    background-color: transparent;
+    min-width: unset;
+    box-shadow: unset;
+    height: 100%;
+
+    & :global {
+      .list-container {
+        // height: unset !important;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .list-search-box {
+          min-width: unset;
+          width: 100%;
+          margin-inline-start: 0;
+          padding-bottom: 0;
+          // padding-right: 24px;
+          padding-inline-end: 16px;
+          padding-inline-start: 16px;
+
+          .kux-input-filed {
+            color: var(--kux-text40);
+            font-weight: 400;
+          }
+          .kux-input {
+            width: 100%;
+          }
+          .kux-input-suffixbox {
+            margin-inline-start: 0 !important;
+          }
+        }
+      }
+
+      .has-input-value {
+        input {
+          color: var(--kux-text) !important;
+        }
+      }
+
+      .blank1-container,
+      .blank2-container {
+        // 原来的hack节点隐藏，
+        display: none;
+      }
+
+      .trade-list-tab {
+        // width: 100%;
+        // max-width: 100%;
+        // overflow-x: auto;
+        margin-inline-start: 16px;
+
+        margin: 24px 0 16px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        /* Firefox */
+        scrollbar-width: none; /* 隐藏滚动条 */
+        -ms-overflow-style: none; /* IE 10+ */
+      }
+
+      .kux-input-small {
+        height: 40px;
+        .kux-input-fieldset {
+          border-radius: 40px;
+          inset: -8px 0 0 0 !important;
+        }
+      }
+      .virtualized-list {
+        // padding-right: 16px;
+        // [dir='rtl'] & {
+        //   padding-left: 16px;
+        // }
+      }
+    }
+  }
+}

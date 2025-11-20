@@ -1,0 +1,180 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './stories';
+
+<Meta title="base/Spacer/Readme" />
+
+# Spacer 间距组件
+
+Spacer 组件用于在 Stack 布局中创建弹性或固定的间距。其设计灵感来自 SwiftUI 的 Spacer，主要用于以下场景：
+- 在 Stack 布局中创建弹性间距
+- 实现元素间的均匀分布
+- 控制元素的对齐方式
+
+## 基础用法
+
+### 水平间距
+通过设置 `direction` 属性为 `horizontal`，可以实现水平间距; 通过设置 `direction` 属性为 `vertical`，可以实现垂直间距：
+
+```tsx
+<div style={{ display: 'flex', alignItems: 'center' }}>
+  <div>左侧</div>
+  <Spacer direction="horizontal" length={16} />
+  <div>右侧</div>
+</div>
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+  <div>上侧</div>
+  <Spacer direction="vertical" length={16} />
+  <div>下侧</div>
+</div>
+```
+
+### 弹性间距
+配合Stack/HStack/VStack, 默认情况下，Spacer 会弹性伸缩并平均分配剩余空间, Spacer 会自动感知direction：
+
+```tsx
+<HStack>
+  <div>左侧</div>
+  <Spacer />
+  <div>右侧</div>
+</HStack>
+```
+
+### 最小间距
+通过 `minLength` 可以设置最小间距，同时保持弹性伸缩：
+
+```tsx
+<HStack>
+  <div>左侧</div>
+  <Spacer minLength={20} />
+  <div>右侧</div>
+</HStack>
+```
+
+### 固定间距
+使用 `length` 属性可以创建固定间距，此时会失去弹性伸缩特性：
+
+```tsx
+<HStack>
+  <div>左侧</div>
+  <Spacer length={50} />
+  <div>右侧</div>
+</HStack>
+```
+
+## 常见布局场景
+
+### 1. 导航栏布局
+实现导航栏常见的两端对齐布局：
+
+```tsx
+<HStack>
+  <div>Logo</div>
+  <Spacer minLength={32} />
+  <div>导航菜单</div>
+  <Spacer />
+  <div>用户信息</div>
+</HStack>
+```
+
+### 2. 表单布局
+在表单中使用 Spacer 实现标签和输入框的对齐：
+
+```tsx
+<VStack spacing={16}>
+  <HStack>
+    <div>用户名：</div>
+    <Spacer minLength={16} />
+    <input style={{ flex: 1 }} />
+  </HStack>
+  <HStack>
+    <div>密码：</div>
+    <Spacer minLength={16} />
+    <input style={{ flex: 1 }} />
+  </HStack>
+  <HStack>
+    <Spacer />
+    <button>提交</button>
+    <Spacer length={16} />
+    <button>取消</button>
+  </HStack>
+</VStack>
+```
+
+### 3. 卡片布局
+在卡片中使用 Spacer 控制内容分布：
+
+```tsx
+<VStack style={{ padding: '16px', border: '1px solid #eee' }}>
+  <div>卡片标题</div>
+  <Spacer minLength={16} />
+  <div>卡片内容</div>
+  <Spacer />
+  <div>卡片底部</div>
+</VStack>
+```
+
+### 4. 复杂布局
+Spacer 可以灵活组合使用，实现复杂的布局需求：
+
+```tsx
+<VStack>
+  {/* 顶部导航 */}
+  <HStack>
+    <div>Logo</div>
+    <Spacer minLength={32} />
+    <div>导航菜单</div>
+    <Spacer />
+    <div>用户信息</div>
+  </HStack>
+  
+  {/* 主要内容区 */}
+  <HStack>
+    {/* 侧边栏 */}
+    <VStack style={{ width: 200 }}>
+      <div>菜单项</div>
+      <Spacer />
+      <div>底部菜单</div>
+    </VStack>
+    
+    {/* 内容区 */}
+    <Spacer length={16} />
+    <VStack style={{ flex: 1 }}>
+      <div>主要内容</div>
+    </VStack>
+  </HStack>
+</VStack>
+```
+
+## API
+
+### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| direction | 间距方向 | 'horizontal' \| 'vertical' | - |
+| length | 固定间距值（设置后失去弹性） | number \| string | - |
+| minLength | 最小间距值（保持弹性） | number \| string | - |
+| className | 自定义类名 | string | - |
+
+### 注意事项
+
+1. Spacer 必须在 Stack 布局组件（HStack/VStack/Stack）内使用
+2. 设置 `length` 后会失去弹性伸缩特性，保持固定间距
+3. `minLength` 和弹性伸缩特性共存，可以设置最小间距的同时保持弹性
+4. 当同时设置 `length` 和 `minLength` 时，`minLength` 优先级更高
+5. 如果未指定 direction，会自动继承父 Stack 的方向
+6. 数字类型的值会被自动转换为 px 单位，也支持直接传入带单位的字符串
+
+## 与 SwiftUI Spacer 的区别
+
+1. **API 设计**
+   - SwiftUI: 使用 `Spacer(minLength: CGFloat?)` 和 `.frame(width/height:)` 控制大小
+   - 我们的实现: 使用 `length` 和 `minLength` 属性，更符合 React 组件的使用习惯
+
+2. **方向控制**
+   - SwiftUI: 自动适应父容器方向
+   - 我们的实现: 默认继承父 Stack 方向，也可以手动指定
+
+3. **灵活性**
+   - SwiftUI: 主要用于 flex 布局
+   - 我们的实现: 可以更灵活地控制固定间距和最小间距

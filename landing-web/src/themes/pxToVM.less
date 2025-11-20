@@ -1,0 +1,8 @@
+.pxToVM() {
+  @functions: ~`(function() {
+    this.px2vw = function($px, $base = 375) {
+      return ($px / $base) * 100 + 'vw';
+    }
+  })()`
+}
+.pxToVM();

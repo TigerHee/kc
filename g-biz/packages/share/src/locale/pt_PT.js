@@ -1,0 +1,15 @@
+export default {
+  "inviteB.manage.copy.share": "Copiado! Compartilhe agora!",
+  "inviteB.manage.remark": "Observações",
+  "inviteB.manage.commission.yourrate": "Sua taxa de comissão",
+  "inviteB.manage.commisson.friendrate": "Desconto de taxas de amigo",
+  "inviteB.manage.poster.create": "Compartilhe agora",
+  "inviteB.manage.poster.share": "Compartilhe agora",
+  "69ti912QyqQK3RLThoqqNL": "Registre-se para resgatar o pacote de boas-vindas",
+  "h2RhjtaW236Cy1ofAMdsY7": "No valor de até {{num}}  {{siteBaseCurrency}}!",
+  "ceWPbECZDHEFPo5wuNKZou": "Mais",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "Copiado!",
+  "sTkpRT7EiVTxqr6sApV5Aj": "Copiar link",
+  "x8nfNnRNkgqeds6C4AfUC8": "Salvar imagem",
+  "4EhrZujhYTKtPmKwo99tBr": "Código de indicação: {rcode}"
+}

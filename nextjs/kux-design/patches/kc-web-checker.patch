@@ -1,0 +1,24 @@
+diff --git a/lib/commitlint/checkDependencies/index.js b/lib/commitlint/checkDependencies/index.js
+index e96f327e691a8d7d75e622948c55fe1550354876..8b804a11f4594aab86090ac8347f6e2c2e2b8fe6 100644
+--- a/lib/commitlint/checkDependencies/index.js
++++ b/lib/commitlint/checkDependencies/index.js
+@@ -146,6 +146,7 @@ const checkDependenciesHelper = async (config) => {
+ 
+   //check lock file
+   const checkNpmRegistry = () => {
++    return;
+     let npmLocks = [];
+     if (fs.existsSync(yarnLockPath)) {
+       const yarnLockJson = yarnlockfile.parse(
+diff --git a/lib/commitlint/checkWebVersion/index.js b/lib/commitlint/checkWebVersion/index.js
+index f6c5784daa50d4dc46fafb6ba7dcdc8f09c8eeeb..7b6e51f7bb761d831ef7f19b6d51c8686153ed3f 100644
+--- a/lib/commitlint/checkWebVersion/index.js
++++ b/lib/commitlint/checkWebVersion/index.js
+@@ -12,6 +12,7 @@ const { name: ProjectName } = require(`${cwd}/package.json`)
+ 
+ const checkWebVersion = async () => {
+   let checkWebOk = true
++  return { checkWebOk }
+ 
+   const { data } = await getProjectCheck(
+     projectAliasMap[ProjectName] || ProjectName

@@ -1,0 +1,145 @@
+@keyframes move {
+  0%,
+  65% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(6deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(6deg);
+  }
+  85% {
+    transform: rotate(-6deg);
+  }
+  90% {
+    transform: rotate(6deg);
+  }
+  95% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes move {
+  0%,
+  65% {
+    -webkit-transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(6deg);
+  }
+  75% {
+    -webkit-transform: rotate(-6deg);
+  }
+  80% {
+    -webkit-transform: rotate(6deg);
+  }
+  85% {
+    -webkit-transform: rotate(-6deg);
+  }
+  90% {
+    -webkit-transform: rotate(6deg);
+  }
+  95% {
+    -webkit-transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.modBonus {
+  width: 100%;
+  height: ~`px2rem(50) `;
+  margin-top: ~`px2rem(54) `;
+}
+.bonusWrap {
+  width: 100%;
+  height: ~`px2rem(50) `;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: ~`px2rem(1) ` solid #00142a;
+  z-index: 99;
+  background-color: #fff;
+  margin-top: ~`px2rem(54) `;
+  padding: 0 ~`px2rem(12) `;
+  .bonusLeft {
+    display: flex;
+    align-items: center;
+  }
+  .presentBox {
+    width: ~`px2rem(84) `;
+    height: ~`px2rem(77) `;
+    margin-bottom: ~`px2rem(48) `;
+    position: relative;
+  }
+  .presentImg {
+    width: ~`px2rem(84) `;
+    height: ~`px2rem(77) `;
+    animation: move 2s 0s infinite;
+    -webkit-animation: move 2s 0s infinite;
+  }
+  .presentTextImg {
+    width: 100%;
+    height: ~`px2rem(20) `;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .numWrap {
+    margin-left: ~`px2rem(10) `;
+    .numBox {
+      display: flex;
+    }
+    .numItems {
+      width: ~`px2rem(20) `;
+      height: ~`px2rem(18) `;
+      line-height: ~`px2rem(18) `;
+      background: #00142a;
+      border-radius: ~`px2rem(2) `;
+      margin-right: ~`px2rem(8) `;
+      text-align: center;
+      font-size: ~`px2rem(14) `;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .numRed {
+      color: red;
+    }
+    .numInfo {
+      margin-top: ~`px2rem(4) `;
+      font-size: ~`px2rem(10) `;
+      color: #01081e;
+      line-height: ~`px2rem(10) `;
+      font-weight: 500;
+    }
+  }
+
+  .signBtn {
+    max-width: ~`px2rem(100) `;
+    height: ~`px2rem(36) `;
+    background: #00142a;
+    border: none;
+    border-radius: ~`px2rem(4) `;
+    font-size: ~`px2rem(14) `;
+    color: #ffffff;
+    font-weight: 500;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}

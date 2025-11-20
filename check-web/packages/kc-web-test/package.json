@@ -1,0 +1,27 @@
+{
+  "name": "kc-web-test",
+  "version": "0.5.6",
+  "description": "jest 配置",
+  "license": "MIT",
+  "bin": {
+    "kc-web-test": "./bin/kc-web-test.js"
+  },
+  "scripts": {
+    "release": "natasha-release",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.3.4",
+    "commander": "^7.2.0",
+    "filing-cabinet": "^3.3.0",
+    "lodash.clonedeep": "^4.5.0",
+    "path-to-regexp": "^6.2.1",
+    "precinct": "8.3.0",
+    "ulid": "^2.3.0",
+    "yargs-parser": "20.2.9"
+  },
+  "devDependencies": {
+    "@natasha/release": "^1.0.1"
+  },
+  "gitHead": "6cde4f7a8412c15518ce0beb9824975dc3f8d343"
+}

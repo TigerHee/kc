@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "paths": {
+      "scripts/*": ["scripts/*"],
+      "static/*": ["static/*"],
+      "src/*": ["src/*"],
+      "helper": ["src/helper.js"],
+      "config/*": ["src/config/*"],
+      "codes": ["src/codes.js"],
+      "paths": ["src/paths.js"],
+      "utils/*": ["src/utils/*"],
+      "hocs/*": ["src/hocs/*"],
+      "tools/*": ["src/tools/*"],
+      "api/*": ["src/api/*"],
+      "hooks/*": ["src/hooks/*"],
+      "routes/*": ["src/routes/*"],
+      "models/*": ["src/models/*"],
+      "services/*": ["src/services/*"],
+      "selector/*": ["src/selector/*"],
+      "components/*": ["src/components/*"],
+      "meta/*": ["src/meta/*"]
+    },
+    "experimentalDecorators": true
+  },
+  "include": ["src/**/*", "test/**/*", "config/**/*", "e2e/**/*"],
+  "exclude": ["node_modules", "cdnAssets"]
+}

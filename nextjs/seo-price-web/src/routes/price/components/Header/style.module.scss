@@ -1,0 +1,70 @@
+@import "@/styles/mixin.scss";
+
+.priceAllHeader {
+  padding: 0 24px;
+  position: relative;
+  overflow: hidden;
+  background-image: get-asset("/static/price/header-lg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @include media-query('lg') {
+    background-image: get-asset("/static/price/header-md.png");
+  }
+  
+  @include media-query('sm') {
+    padding: 0 16px;
+    background-image: get-asset("/static/price/header-sm.png");
+  }
+  
+}
+
+.headingWrap {
+  
+  font-style: normal;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 0;
+  
+  @include media-query('lg') {
+    padding: 24px 0;
+  }
+  
+  @include media-query('sm') {
+    padding-top: 6px;
+    padding-bottom: 16px;
+  }
+  
+}
+
+.headingTitle {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 130%;
+  color: #000d1d;
+  margin-bottom: 24px;
+  
+  @include media-query('lg') {
+    font-size: 24px;
+  }
+  
+  @include media-query('sm') {
+    margin-bottom: 16px;
+    line-height: 130%;
+  }
+  
+}
+
+.headingText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(0, 13, 29, 0.4);
+  max-width: 1200px;
+  
+  @include media-query('lg') {
+    font-size: 12px;
+    line-height: 130%;
+  }
+  
+}

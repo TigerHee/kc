@@ -1,0 +1,116 @@
+$sm: 767px;
+
+.emptyArea {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+  color: var(--kux-text40);
+  @media (max-width: $sm) {
+    gap: 32px;
+    flex: 1;
+  }
+  .tip {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%; /* 33.6px */
+    margin-top: 16px;
+    @media (max-width: $sm) {
+      font-size: 20px;
+    }
+  }
+  .subTip {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    margin-top: 12px;
+  }
+}
+
+.passkeyVerifyingIcon {
+  width: 254px;
+  height: 152px;
+}
+
+.advantageList {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 40px 32px;
+  border-radius: 12px;
+  background: var(--kux-cover2);
+  @media (max-width: $sm) {
+    width: 100%;
+    border-radius: 12px;
+    border: 0.5px solid var(--kux-cover12);
+    background-color: transparent;
+    padding: 32px 20px;
+    gap: 32px;
+    flex-direction: column;
+  }
+
+  .advantageItem {
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    @media (max-width: $sm) {
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    img {
+      width: 24px;
+    }
+    &>div {
+      div:first-child {
+        color: var(--kux-text);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 140%; /* 22.4px */
+        margin-top: 16px;
+        @media (max-width: $sm) {
+          margin-top: 0;
+        }
+      }
+      div:last-child {
+        color: var(--kux-text60);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+        margin-top: 6px;
+        @media (max-width: $sm) {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+.createButtonWrapper {
+  width: 100%;
+  button {
+    max-width: 343px;
+    width: 100%;
+    :global(.kux-button-content) {
+      display: flex;
+      gap: 4px;
+    }
+  }
+  @media (max-width: $sm) {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    button {
+      max-width: 100%;
+    }
+  }
+}
+
+.learnMore {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  color: var(--kux-text40);
+  margin-top: 16px;
+}

@@ -1,0 +1,31 @@
+:global {
+  .community-collect-page-content.enter {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
+  .community-collect-page-content.enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+  .community-collect-page-content.exit {
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+
+  .community-collect-page-content.exit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  :global {
+    #layout {
+      &[data-layout='flexible'] {
+        overflow: inherit;
+      }
+    }
+  }
+}

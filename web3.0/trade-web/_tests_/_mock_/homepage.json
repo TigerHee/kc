@@ -1,0 +1,70 @@
+{
+  "languageType":  [
+    {
+        "id": "5ba31cfd7c72412cf863eadc",
+        "type": "LANGUAGE",
+        "typeCode": "en_US",
+        "typeName": "美国",
+        "isOpen": 1,
+        "icon": null,
+        "iconV2": "https://assets.staticimg.com/legal_coin/pay/Wire+transfer.png",
+        "typeNameEn": null,
+        "isCommonlyUsed": 0
+    },
+    {
+        "id": "5ba31cfd7c72412cf863eadb",
+        "type": "LANGUAGE",
+        "typeCode": "vi_VN",
+        "typeName": "越南",
+        "isOpen": 1,
+        "icon": null,
+        "iconV2": "https://assets.staticimg.com/legal_coin/pay/Wire+transfer.png",
+        "typeNameEn": null,
+        "isCommonlyUsed": 0
+    },
+    {
+        "id": "5ba31cfd7c72412cf863ead7",
+        "type": "LANGUAGE",
+        "typeCode": "zh_CN",
+        "typeName": "中国",
+        "isOpen": 1,
+        "icon": null,
+        "iconV2": "https://assets.staticimg.com/legal_coin/pay/Wire+transfer.png",
+        "typeNameEn": null,
+        "isCommonlyUsed": 0
+    },
+    {
+        "id": "5ba31cfd7c72412cf863ead8",
+        "type": "LANGUAGE",
+        "typeCode": "zh_HK",
+        "typeName": "中国香港",
+        "isOpen": 1,
+        "icon": null,
+        "iconV2": "https://assets.staticimg.com/legal_coin/pay/Wire+transfer.png",
+        "typeNameEn": null,
+        "isCommonlyUsed": 0
+    },
+    {
+        "id": "5ba31cfd7c72412cf863ead9",
+        "type": "LANGUAGE",
+        "typeCode": "zh_MO",
+        "typeName": "中国澳门",
+        "isOpen": 1,
+        "icon": null,
+        "iconV2": "https://assets.staticimg.com/legal_coin/pay/Wire+transfer.png",
+        "typeNameEn": null,
+        "isCommonlyUsed": 0
+    },
+    {
+        "id": "5ba31cfd7c72412cf863eada",
+        "type": "LANGUAGE",
+        "typeCode": "zh_TW",
+        "typeName": "中国台湾",
+        "isOpen": 1,
+        "icon": null,
+        "iconV2": "https://assets.staticimg.com/legal_coin/pay/Wire+transfer.png",
+        "typeNameEn": null,
+        "isCommonlyUsed": 0
+    }
+]
+}

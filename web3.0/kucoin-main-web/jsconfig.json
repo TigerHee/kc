@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./",
+    "module": "commonjs",
+    "paths": {
+      "@@/*": ["./src/.umi/*"],
+      "scripts/*": ["scripts/*"],
+      "static/*": ["static/*"],
+      "@/*": ["src/*"],
+      "src/*": ["src/*"],
+      "helper": ["src/helper.js"],
+      "config/*": ["src/config/*"],
+      "codes": ["src/codes.js"],
+      "paths": ["src/paths.js"],
+      "utils/*": ["src/utils/*"],
+      "hocs/*": ["src/hocs/*"],
+      "hooks": ["src/hooks"],
+      "tools/*": ["src/tools/*"],
+      "routes/*": ["src/routes/*"],
+      "models/*": ["src/models/*"],
+      "services/*": ["src/services/*"],
+      "selector/*": ["src/selector/*"],
+      "components/*": ["src/components/*"],
+      "common/*": ["src/common/*"],
+      "meta/*": ["src/meta/*"]
+    },
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules", "cdnAssets"],
+  "include": ["src"]
+}

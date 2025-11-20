@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'Abbrechen',
+  'gfa_btn': 'Bestätigen',
+  'verify_img_tip': 'Geben Sie die Zeichen ein',
+  'verify_img_title': 'Bildverifizierung',
+};

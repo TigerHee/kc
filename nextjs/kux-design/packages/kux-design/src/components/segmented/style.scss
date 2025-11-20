@@ -1,0 +1,151 @@
+@import '@/style/index.scss';
+
+@include component('segmented') {
+  position: relative;
+  display: inline-flex;
+  user-select: none;
+  gap: 4px;
+  border-radius: 8px;
+  font-size: 14px;
+
+  &.is-small {
+    font-size: 12px;
+  }
+
+  &.is-large {
+    font-size: 16px;
+  }
+  // 保持块级元素的特性
+  // is-full-width 为公共类, 已自带 100% 宽度
+  &.is-full-width {
+    display: flex;
+  }
+
+  &.is-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &.is-plain {
+    background-color: transparent;
+    padding: 4px;
+
+    .#{$prefix}-item {
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    &.is-small .#{$prefix}-item {
+      padding: 4.5px 10px;
+      border-radius: 6px;
+    }
+
+    // large style not found
+  }
+
+  &.is-slider {
+    background-color: get-theme(cover4);
+    padding: 4px;
+    border-radius: 8px;
+
+    .#{$prefix}-item {
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    &.is-small .#{$prefix}-item {
+      padding: 4px 8px;
+    }
+
+  }
+
+  &.is-underlined {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+
+    // 全宽时才显示底部边框
+    &.is-full-width {
+      border-bottom: 1px solid get-theme(divider8);
+    }
+
+    .#{$prefix}-item {
+      padding: 8px 16px 11px;
+    }
+
+    &.is-large .#{$prefix}-item {
+      padding-top: 7px;
+    }
+  }
+
+  &.is-justified-stretch {
+    .#{$prefix}-item {
+      flex: 1;
+    }
+  }
+
+  &.is-justified-auto {
+    justify-content: space-between;
+  }
+
+  &-item {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 400;
+    color:  get-theme(text60);
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+    outline: none;
+    z-index: 0;
+
+    &.is-active {
+      color: get-theme(text);
+      font-weight: 500;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.4;
+    }
+  }
+
+  &-label {
+    position: relative;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  &-indicator {
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    z-index: -1;
+
+    &.is-plain {
+      background-color: get-theme(cover4);
+    }
+
+    &.is-slider {
+      background-color: get-theme(backgroundOverlay);
+    }
+
+    &.is-underlined {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      height: 2px;
+      border-radius: 2px;
+      background-color: currentColor;
+      z-index: 0;
+    }
+  }
+}
+

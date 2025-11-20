@@ -1,0 +1,71 @@
+@import '~themes/mix.less';
+
+.out {
+  position: relative;
+  padding-bottom: 140px;
+  .mediaQueryMd({padding-bottom: 100px;});
+  .mediaQuerySm({padding-bottom: 50px;});
+}
+
+.imgBox {
+  position: relative;
+  width: 492px;
+  height: 570px;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 20px 0 0 96px;
+  .mediaQueryMd(
+    {width: 303px; height: 351px;grid-row-start: 3; grid-row-end: 6;margin: 20px 0 0 33px;}
+  );
+  .mediaQuerySm({width: 215px; height: 249px;margin: 11px 0 0 0;});
+}
+
+.glowImg {
+  pointer-events: none;
+  width: 150%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img {
+  width: 100%;
+  position: absolute;
+}
+
+.foot {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  color: #ffffff;
+  margin-top: 96px;
+  margin-bottom: 0;
+  .mediaQueryMd({margin-top: 48px;});
+  .mediaQuerySm({font-size: 16px; line-height: 26px; margin-top: 24px;});
+}
+
+.bigWords {
+  pointer-events: none;
+  position: absolute;
+  width: 600px;
+  height: 94px;
+  left: 0;
+  bottom: 144px;
+  background-image: url('../../../../assets/consensus/pass-through-2.svg');
+  .mediaQueryMd({display: none;});
+}
+
+.tabContent {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 12px));
+  grid-column-gap: 24px;
+  grid-row-gap: 48px;
+  .mediaQueryMd({grid-row-gap: 48px;});
+  .mediaQuerySm(
+    {grid-row-gap: 24px; grid-column-gap: 12px;grid-template-columns: repeat(2, calc(50% - 6px)) ;}
+  );
+}

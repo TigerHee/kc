@@ -1,0 +1,49 @@
+// 入金入口
+.styledGoldEntry {
+  min-width: 84px;
+  padding: 9px 16px;
+  height: 36px;
+  display: flex;
+  border-radius: 90px;
+  border: none;
+  // background-color: var(--color-primary8);
+  background-color: var(--kux-brandGreen8);
+  color: var(--kux-brandGreen);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+  cursor: pointer;
+  // margin-right: 12px;
+  align-items: center;
+  font-family: inherit;
+
+  [dir='rtl'] & {
+    // margin-left: 12px;
+    margin-right: 0;
+  }
+
+  svg {
+    margin-right: 4px;
+
+    [dir='rtl'] & {
+      margin-left: 4px;
+      margin-right: 0;
+    }
+
+    path {
+      fill: var(--kux-brandGreen);
+    }
+  }
+
+  span {
+    max-width: 123px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+  }
+}
+
+.styledGoldEntryInTrade {
+  height: 32px;
+}

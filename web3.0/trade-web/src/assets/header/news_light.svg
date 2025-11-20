@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>矩形</title>
+    <desc>Created with Sketch.</desc>
+    <g id="优化" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="顶部导航" transform="translate(-1196.000000, -235.000000)">
+            <g id="top备份" transform="translate(0.000000, 172.000000)">
+                <g id="Group-4">
+                    <g id="编组-11备份" transform="translate(1196.000000, 63.000000)">
+                        <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+                        <path d="M10,-4.46531701e-12 L15,5 L18,5 L18,17 L2,17 L2,5 L5,5 L10,-4.46531701e-12 Z M17,6 L3,6 L3,16 L17,16 L17,6 Z M10,12 L10,13 L6,13 L6,12 L10,12 Z M14,9 L14,10 L6,10 L6,9 L14,9 Z M10,1.41421356 L6.413,5 L13.585,5 L10,1.41421356 Z" id="形状结合" fill="#10141C" fill-rule="nonzero" opacity="0.6"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

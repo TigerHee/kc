@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'İptal',
+  'gfa_btn': 'Onayla',
+  'verify_img_tip': 'Karakterleri girin',
+  'verify_img_title': 'Resmi Doğrulayınız',
+};

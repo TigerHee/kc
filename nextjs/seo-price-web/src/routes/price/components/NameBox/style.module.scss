@@ -1,0 +1,96 @@
+@import "@/styles/mixin.scss";
+
+.wrapNameBox {
+  display: flex;
+  align-items: center;
+
+  &[data-isintable="true"] {
+    .KuxAvatar-circle {
+      margin-right: 8px !important;
+    }
+  }
+
+  &[data-isintable="false"] {
+    .KuxAvatar-circle {
+      margin-right: 16px !important;
+    }
+  }
+
+  .KuxAvatar-circle {
+    border: none !important;
+  }
+}
+
+.nameBlock {
+  &[data-isintable="true"] {
+    @include media-query("xl") {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
+.avatar {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  user-select: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+
+  @include media-query("lg") {
+    width: 24px;
+    height: 24px;
+  }
+
+  & > img {
+    width: 100% !important;
+    height: 100% !important;
+
+    text-align: center;
+    object-fit: cover;
+    color: transparent;
+    text-indent: 10000px;
+  }
+}
+
+.fullName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  color: #000d1d;
+  width: max-content;
+  display: inline-block;
+
+  &[data-isintable="true"] {
+    margin-right: 4px;
+
+    @include media-query("lg") {
+      font-size: 12px;
+    }
+  }
+  
+  &[data-isintable="false"] {
+    margin-right: 8px;
+  }
+}
+
+.coinCode {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: rgba(0, 13, 29, 0.4);
+
+  &[data-isintable="true"] {
+    @include media-query("lg") {
+      font-size: 12px;
+    }
+  }
+}

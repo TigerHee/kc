@@ -1,0 +1,39 @@
+@import '@/style/index.scss';
+
+.kux-range-picker__extra-footer {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  padding: 0 12px 12px;
+  background: get-theme(bulletLayer);
+  border-radius: 0 0 8px 8px;
+}
+
+.kux-range-picker__extra-item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: get-theme(text60);
+  background: get-theme(backgroundOverlay);
+  border: 1px solid get-theme(divider8);
+  border-radius: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: get-theme(text);
+  }
+
+  &.selected {
+    color: get-theme(textEmphasis);
+    border-color: get-theme(text);
+  }
+} 

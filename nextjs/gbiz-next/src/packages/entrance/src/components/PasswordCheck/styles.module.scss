@@ -1,0 +1,50 @@
+@import 'src/styles/mixin.scss';
+
+.tipContainer {
+  margin-top: 5px;
+}
+
+.checkIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kux-brandGreen);
+}
+
+.failIcon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  &::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--kux-cover16);
+  }
+}
+
+.tipItem {
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--kux-text);
+  &.fail {
+    color: var(--kux-text60);
+  }
+  &:last-of-type {
+    margin-bottom: 24px; // 需要总间距32px，但是 mtSpace 已经有 8px 了
+    @include media-query('sm') {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+
+
+.going_wrapper{
+
+  padding: 12px;
+
+  :global{
+    .item{
+      border: 1px solid;
+      border-image: linear-gradient(129deg, rgba(2, 110, 100, 1), rgba(0, 44, 49, 1)) 1 1;
+      padding: 17px 28px 20px 52px;
+      display: block;
+      position: relative;
+      &::before{
+        content: ' ';
+        background-image: url('../../../../assets/guardian/going_before_group.svg');
+        background-repeat: no-repeat;
+        width: 73px;
+        height: 26px;
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 14px;
+        // z-index: 111;
+        background-size: contain;
+      }
+    }
+    .item + .item {
+      margin-top: 16px;
+    }
+    .title{
+      font-size: 19px;
+      font-family: Roboto;
+      font-weight: normal;
+      color: #FFFFFF;
+      line-height: 23px;
+    }
+    .content{
+      font-size: 16px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 24px;
+    }
+    .more{
+      font-size: 12px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #31BA9C;
+      line-height: 17px;
+      position: relative;
+      display: inline-block;
+      &::after{
+        content: ' ';
+        width: 12px;
+        height: 12px;
+        background-image: url('../../../../assets/guardian/going_right.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+.going_wrapper_h5{
+  padding: ~`px2rem(12)`;
+  margin-bottom: ~`px2rem(30)`;
+  max-height: 50vh;
+  overflow-y: auto;
+  :global{
+    .item{
+      padding: ~`px2rem(17)` ~`px2rem(28)` ~`px2rem(20)` ~`px2rem(52)`;
+      &::before{
+        width: ~`px2rem(73)`;
+        height: ~`px2rem(26)`;
+        left: 0px;
+        top: 14px;
+        // z-index: 111;
+      }
+    }
+    .item + .item {
+      margin-top: ~`px2rem(16)`;
+    }
+    .title{
+      font-size: ~`px2rem(16)`;
+      line-height: ~`px2rem(26)`;
+    }
+    .content{
+      font-size: ~`px2rem(14)`;
+      line-height:  ~`px2rem(22)`;
+    }
+    .more{
+      font-size: ~`px2rem(12)`;
+      line-height: ~`px2rem(17)`;
+      &::after{
+        width: ~`px2rem(12)`;
+        height: ~`px2rem(12)`;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

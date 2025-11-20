@@ -1,0 +1,17 @@
+export default {
+  '3pJd1o7HS7Mc7RP61KBt3j':
+    "Assicurati che <span class='highlight'>l’indirizzo e-mail</span> sia corretto.",
+  '5H1kxNCtmaz678kvjrsyPF': "Se il link è scaduto o non hai ricevuto l'e-mail, fai clic qui per",
+  '8E7WgVPbNC4K56218gDkPu':
+    "Controlla il <span class='highlight'>cestino o la cartella spam</span>.",
+  '8JDS5CK7Qg2C7eFKb5cYvq': 'Autorizzazione richiesta',
+  'aWraMbu1VTMzskoUX44puZ':
+    "Per ragioni di sicurezza, devi fare clic sul link di verifica usando il medesimo dispositivo da cui hai richiesto l'e-mail di verifica.",
+  'bGGSwLk9n6gSxapYQMzad4': 'Non hai ricevuto l’e-mail?',
+  'baXa9AEkqjrk9YkLe9nM7g': 'Avviso di rischio',
+  'iBsXv5QsHeP8wpAWSNFZaS': 'Inviato',
+  'puaUwRAmKgrg7fdRQ3F2mN': 'rinviare.',
+  'qvXxQhQy1SeuAxmM51aFE3':
+    "Un'email di verifica è stata inviata all'indirizzo <span class='highlight'>{{email}}</span>. Tieni aperta la pagina attuale e segui le istruzioni presenti nell'e-mail per completare l'autorizzazione.",
+  'vt2AqpbRG2bxpioX9zDQYS': 'inviare di nuovo dopo {{a}}s.',
+};

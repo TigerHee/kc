@@ -1,0 +1,49 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-switch 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'switch'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('switch') {
+  width: 100px;
+  height: 50px;
+  background-color: get-theme(cover16);
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  border: none;
+  padding: 10px;
+  position: relative;
+  justify-content: flex-start;
+  padding: 2px;
+  width: 36px;
+  height: 20px;
+  appearance: none;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  &.is-on {
+    justify-content: flex-end;
+    background-color: get-theme(brandGreen);
+  }
+
+  &-handle {
+    width: 16px;
+    height: 16px;
+    background-color: get-theme(backgroundOverlay);
+    border-radius: 50%;
+  }
+
+  &.is-small {
+    width: 28px;
+    height: 16px;
+
+    .#{$prefix}-handle {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

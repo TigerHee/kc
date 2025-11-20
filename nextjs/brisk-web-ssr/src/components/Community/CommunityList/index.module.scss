@@ -1,0 +1,25 @@
+@import '@/styles/mixin.scss';
+
+.communityList {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @include media-query('lg') {
+    display: flex;
+    gap: 8px;
+    align-items: left;
+    margin-top: 48px;
+  }
+
+  @include media-query('sm') {
+    display: flex;
+    gap: 8px;
+    align-items: left;
+    margin-top: 32px;
+  }
+
+  .iconWrapper {
+    cursor: pointer;
+  }
+}

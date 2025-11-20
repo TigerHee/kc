@@ -1,0 +1,13 @@
+node_modules/
+report/
+images/
+/style
+/docs/assets/themeColorsArray.json
+/docs-build
+.env.local
+.env
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

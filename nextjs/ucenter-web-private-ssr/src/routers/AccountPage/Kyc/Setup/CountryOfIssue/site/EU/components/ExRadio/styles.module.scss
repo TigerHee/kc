@@ -1,0 +1,32 @@
+.exRadio {
+  .exRadioTitle {
+    color: var(--kux-text);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+  }
+  .exRadioContent {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    .exRadioOption {
+      display: flex;
+      min-width: 120px;
+      padding: 8px 16px;
+      justify-content: center;
+      border-radius: 40px;
+      border: 1px solid var(--kux-divider8);
+      color: var(--kux-text40);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      cursor: pointer;
+      &.exRadioOptionActive {
+        color: var(--kux-brandGreen);
+        border-color: var(--kux-brandGreen12);
+        background: var(--kux-brandGreen8);
+        font-weight: 500;
+      }
+    }
+  }
+}

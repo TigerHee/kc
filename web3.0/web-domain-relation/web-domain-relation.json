@@ -1,0 +1,26 @@
+{
+  "web_type": "static",
+  "pre_copy": false,
+  "node_version": "v14.19.3",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:14.19.3",
+  "offline_params": {
+    "build_cmd": "yarn run build",
+    "dist_copy": {
+      "on_opts": false,
+      "copy_file": "dist",
+      "copy_path": "",
+      "copy_cmd": "",
+      "exclude_file": [],
+      "delete_opts": false
+    },
+    "cdn_copy": {
+      "on_opts": true,
+      "copy_file": "dist/web-domain-relation/{ver}",
+      "copy_path": "web-domain-relation/{ver}",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": true
+    },
+    "other_opts": ""
+  }
+}

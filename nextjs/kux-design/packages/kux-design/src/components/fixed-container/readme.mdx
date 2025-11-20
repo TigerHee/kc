@@ -1,0 +1,92 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="base/FixedContainer/Readme" />
+
+# FixedContainer 固定容器
+
+一个用于创建固定定位元素的容器组件，自动处理内容高度变化，避免页面跳动。主要用于固定页面顶部的导航栏、工具栏、筛选条件等场景。
+
+## 特性
+
+- 自动处理内容高度变化，确保页面布局稳定
+- 使用 ResizeObserver API（如果浏览器支持），回退到 MutationObserver
+- 提供高度变化回调，方便进行额外处理
+- 支持动态内容，自动适应内容高度变化
+
+## 基础用法
+
+```tsx
+import { FixedContainer } from '@kucoin/kux-design';
+
+function Navbar() {
+  return (
+    <div>
+      <FixedContainer>
+        <nav style={{ backgroundColor: 'white', padding: '16px' }}>
+          这是一个固定在顶部的导航栏
+        </nav>
+      </FixedContainer>
+      <div style={{ paddingTop: '60px' }}>
+        页面主内容
+      </div>
+    </div>
+  );
+}
+```
+
+## Props
+
+| 属性 | 说明 | 类型 | 是否必填 | 默认值 |
+| --- | --- | --- | --- | --- |
+| children | 需要固定定位的内容 | React.ReactNode | 是 | - |
+| onHeightChange | 容器高度变化时的回调函数, 在初次触发时 prevHeight 为0  | (height: number, prevHeight: number) => void | 否 | - |
+
+## 注意事项
+
+1. **内容渲染时机**
+   - 组件会在首次渲染时计算内容高度
+   - 建议确保内容在首次渲染时就有基本的结构，避免后续添加大量内容导致页面跳动
+
+2. **内容高度变化**
+   - 组件会自动监听内容高度的变化
+   - 如果内容高度发生变化，会触发 onHeightChange 回调
+   - 父容器需要预留足够的 paddingTop 来防止内容被遮挡
+
+3. **性能优化**
+   - 使用 ResizeObserver API 时会自动批量处理高度变化
+   - 回退到 MutationObserver 时使用防抖来优化性能
+
+## 最佳实践
+
+1. **固定导航栏**
+   ```tsx
+   <FixedContainer>
+     <nav>导航内容</nav>
+   </FixedContainer>
+   ```
+
+2. **动态内容区域**
+   ```tsx
+   const [expanded, setExpanded] = useState(false);
+   
+   <FixedContainer>
+     <header>
+       <button onClick={() => setExpanded(!expanded)}>
+         {expanded ? '收起' : '展开'}
+       </button>
+       {expanded && <div>额外的筛选条件</div>}
+     </header>
+   </FixedContainer>
+   ```
+
+3. **监听高度变化**
+   ```tsx
+   <FixedContainer
+     onHeightChange={(height) => {
+       // 可以根据高度变化调整其他元素的样式
+       console.log('容器高度变化:', height);
+     }}
+   >
+     <header>头部内容</header>
+   </FixedContainer>
+   ```

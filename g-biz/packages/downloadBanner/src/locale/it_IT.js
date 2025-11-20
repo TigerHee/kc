@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Trading semplice e sicuro 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Registrati e padroneggia subito i mercati!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Padroneggia i mercati 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "Oltre 80.000 recensioni",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Verificati, deposita e acquista crypto ASAP!",
+  "rw8e32A8H7X3QtiKHS37EK": "Download",
+  "tXwwyoSbqG4pgsoXomccjp": "Scarica la {{brandName}} app per guadagnare fino a {{num}} {{siteBaseCurrency}} in premi.",
+  "7dhofXiN9vaVRtVSNY9eCc": "I nuovi utenti ottengono",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Richiedi ora",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>Oltre 5 milioni</1> di download",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(Oltre 100.000 recensioni)",
+  "qqJX78TFyekdKwwT6nVVWU": "(Oltre 16.000 recensioni)",
+  "awPHBDRwtLBxNEMctyUMJZ": "In esclusiva per i nuovi utenti: se il tuo primo deposito o acquisto di criptovalute è superiore a 50 $, riceverai una Mystery Box con un valore massimo pari a <span>500 $</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Scarica",
+  "csjK9uyQQyYMLprAYkKsRT": "Scarica la {{brandName}} app per continuare il tuo viaggio nel mondo delle criptovalute e ricevi premi fino a <span>500 $</span> nella zona principianti.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Deposita o acquista criptovalute per la prima volta e ottieni una Mystery Box con un valore massimo pari a <span>500 $</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Premi fino a <span>500 $</span> per i nuovi utenti!",
+  "wLAfc8MZvoHbeNragecB4Z": "Fai trading in modo più sicuro e veloce utilizzando la nostra app per dispositivi mobili."
+}

@@ -1,0 +1,53 @@
+/**
+ * @tank@kupotech.com
+ */
+ @import 'src/styles/mixin.scss';
+
+.futures-symbol-wrapper {
+  font-size: 16px;
+  font-weight: 500;
+  .symbol-name {
+    line-height: 130%;
+    white-space: nowrap;
+  }
+  &:global(.mini) {
+    :global(.symbol-name) {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  &:global(.small) {
+    :global(.symbol-name) {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &:global(.large) {
+    :global(.symbol-name) {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+.futures-symbol-content {
+  display: flex;
+  align-items: center;
+  :global(.symbol-tag) {
+    margin-left: 4px;
+  }
+}
+
+.futures-symbol-ContentTag {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  :global(.symbol-tag) {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    margin-left: 4px;
+    padding: 0 4px;
+    border-radius: 4px;
+    background: var(--color-cover4); 
+  }
+}

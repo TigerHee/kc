@@ -1,0 +1,25 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+import React from 'react';
+import { styled } from '@kufox/mui';
+import gift from 'static/root/download/modal/gift.svg';
+import Countdown from './Countdown';
+
+const Wrapper = styled.div`
+  position: relative;
+`;
+
+const Gift = styled.img`
+  width: 56px;
+  height: 60px;
+`;
+
+export default ({ onClose, onOpenModal } = {}) => {
+  return (
+    <Wrapper onClick={onOpenModal}>
+      <Gift src={gift} />
+      <Countdown onClose={onClose} />
+    </Wrapper>
+  );
+};

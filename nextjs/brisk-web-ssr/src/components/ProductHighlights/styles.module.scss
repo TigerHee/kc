@@ -1,0 +1,164 @@
+@import '@/styles/mixin.scss';
+
+.product {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 360px;
+  @include media-query('lg') {
+    padding: 160px 32px 0;
+  }
+  @include media-query('sm') {
+    padding: 120px 16px 0;
+  }
+}
+.desc {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text60);
+  margin-bottom: 8px;
+  @include media-query('sm') {
+    font-size: 14px;
+  }
+}
+.title {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--kux-text);
+  margin-bottom: 80px;
+  @include media-query('sm') {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+.cards {
+  display: grid;
+  gap: 56px; /* 卡片间距 */
+  grid-template-columns: repeat(3, 1fr); /* 默认三列均分 */
+  @include media-query('lg') {
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr); /* 两列 */
+    grid-template-rows: auto auto;
+  }
+  @include media-query('sm') {
+    gap: 24px;
+    grid-template-columns: 1fr; /* 一列 */
+  }
+}
+
+.cardWrapper {
+  border-radius: 24px;
+
+  @include media-query('lg') {
+    &:nth-child(3) {
+      grid-column: span 2; /* 卡3占满一整行 */
+    }
+  }
+  @include media-query('sm') {
+    &:nth-child(3) {
+      grid-column: auto; /* 取消占满设置 */
+    }
+  }
+}
+
+.card {
+  background-color: var(--kux-backgroundOverlay);
+  overflow: hidden;
+  padding: 32px;
+  border-radius: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  @include media-query('lg') {
+    &:nth-child(3) {
+      grid-column: span 2; /* 卡3占满一整行 */
+    }
+  }
+  @include media-query('sm') {
+    padding: 24px 16px;
+    min-height: 343px;
+    &:nth-child(3) {
+      grid-column: auto; /* 取消占满设置 */
+    }
+  }
+}
+.cardLight {
+  border: 1px solid rgba(29, 29, 29, 0.08);
+}
+.cardContent {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 119px 119px;
+  h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    color: var(--kux-text);
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--kux-text60);
+    margin-bottom: 24px;
+  }
+  @include media-query('sm') {
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
+.card1 {
+  background-image: linear-gradient(321deg, #10dc9e 0%, #0d1915 102.53%);
+}
+.cardLight1 {
+  background-image: linear-gradient(104deg, rgba(255, 255, 255, 0.08) 0%, rgba(0, 180, 125, 0.08) 93.18%);
+}
+.card2 {
+  background-image: linear-gradient(180deg, #161616 0%, #2f2f2f 100%);
+}
+.cardLight2 {
+  background-image: linear-gradient(104deg, rgba(255, 255, 255, 0.12) 0%, rgba(29, 29, 29, 0.12) 93.18%);
+}
+.card3 {
+  background-size: cover;
+  background-position: center center;
+  @include media-query('lg') {
+    min-height: 429px;
+    background-position: center 80%;
+  }
+  @include media-query('sm') {
+    min-height: 343px;
+  }
+}
+.coin {
+  border-radius: 12px;
+  padding: 24px;
+  background-color: rgba(29, 29, 29, 0.12);
+}
+.coinLight {
+  background-color: var(--kux-cover2);
+}
+.coinNum {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--kux-text);
+  margin-bottom: 4px;
+}
+.coinDesc {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}

@@ -1,0 +1,39 @@
+.header {
+  height: 88px;
+  padding-top: 44px;
+
+  &__noapp {
+    height: 44px;
+    padding-top: 0;
+  }
+
+  &__bar {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    position: relative;
+  }
+
+  &__back {
+    width: 24px;
+    height: 24px;
+    background: url('assets/global/arrow-left.svg') no-repeat center;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #000d1d;
+  }
+}

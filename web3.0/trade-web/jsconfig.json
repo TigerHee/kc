@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "paths": {
+      "scripts/*": ["scripts/*"],
+      "src/*": ["src/*"],
+      "@/*": ["src/trade4.0/*"],
+      "helper": ["src/helper.js"],
+      "config/*": ["config/*"],
+      "paths": ["src/paths.js"],
+      "utils/*": ["src/utils/*"],
+      "hocs/*": ["src/hocs/*"],
+      "pages/*": ["src/pages/*"],
+      "models/*": ["src/models/*"],
+      "services/*": ["src/services/*"],
+      "components/*": ["src/components/*"],
+      "meta/*": ["src/meta/*"],
+      "@/pages/Orderbook": ["@/pages/Orderbook/*"],
+    },
+    "experimentalDecorators": true,
+  },
+  "exclude": ["node_modules"]
+}

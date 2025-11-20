@@ -1,0 +1,49 @@
+.MDDialog {
+  :global(.KuxModalHeader-root) {
+    height: auto !important;
+    padding: 24px 16px 0 16px  !important;
+    :global(.KuxModalHeader-title) {
+      width: 100% !important;
+    }
+  }
+  :global(.KuxDrawer-content) {
+    padding-top: 12px !important;
+  }
+}
+
+.dialogTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftCoinName {
+  flex: 1;
+  width: fit-content;
+}
+
+.rightBtn {
+  width: auto;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.closeSmall {
+  width: 100%;
+  height: 100%;
+}

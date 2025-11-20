@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "7/24 güvenli, kolay global alım satım.",
+  "evsRWTcozWk2pEFSUsfw28": "Bir saniyede kayıt olup piyasada uzmanlaşın!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "7/24 her yerde piyasada uzmanlaşabilirisiniz.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80K+ Yorum",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "İlk fırsatta doğrulama yapın, kripto yatırın ve alın!",
+  "rw8e32A8H7X3QtiKHS37EK": "İndir",
+  "tXwwyoSbqG4pgsoXomccjp": "{{{num}}} {{siteBaseCurrency}}'ye kadar ödül kazanmak için {{brandName}} uygulamasını indirin.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Yeni Kullanıcılara",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Şimdi Alın",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> İndirme",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ Yorum)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ Yorum)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Yeni kullanıcılara özel: İlk para yatırma işleminiz veya kripto satın alma işleminiz 50$'dan fazlaysa, değeri <span>500$</span>'a çıkan gizemli bir kutu alırsınız!",
+  "bc25RyyCduDizpfpxEcMEi": "İndir",
+  "csjK9uyQQyYMLprAYkKsRT": "Kripto yolculuğunuza {{brandName}} uygulamasıyla devam edin, Başlangıç Bölgesinde <span>500$</span> 'a kadar ödül kazanın.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Değeri <span>500$</span>'a varan sürpriz kutuyu kazanmak için ilk kriptonuzu yatırın veya satın alın!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Yeni Kullanıcılar için <span>500$</span>'a Varan Ödüller!",
+  "wLAfc8MZvoHbeNragecB4Z": "Mobil uygulamamızla daha güvenli ve daha hızlı işlem yapın."
+}

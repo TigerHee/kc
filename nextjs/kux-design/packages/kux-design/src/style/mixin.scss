@@ -1,0 +1,144 @@
+// 公共样式mixin
+@import './vars.scss';
+
+$prefix: $ns;
+
+/**
+ * 生成组件样式
+ * @param {String} $name 组件名
+ */
+@mixin component($name) {
+  $prefix: $ns + '-' + $name !global;
+  .#{$prefix} {
+    @content;
+  }
+  // 重置 $prefix
+  $prefix: $ns !global;
+}
+
+/**
+ * 省略号
+ */
+@mixin ellipsis($line: 1) {
+  @if $line == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+@mixin abs_center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin scrollbar(
+  $width: 2px,
+  $height,
+  $track_width: $width,
+  $thumb_bg: get-theme(divider8),
+  $thumb_width: $track_width,
+  $thumb_border: 2px
+) {
+  scrollbar-width: initial;
+  -ms-overflow-style: initial;
+  &::-webkit-scrollbar {
+    display: initial;
+    width: $width;
+    height: $height;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: $track_width;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: $thumb_width;
+    background: $thumb_bg;
+    border-radius: $thumb_border;
+  }
+}
+
+@mixin no-scrollbar() {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/**
+ * 生成水平间距的mixin
+ * @param {string} $space - 间距大小
+ * @example
+ * .class {
+ *   @include space-x(10px);
+ * }
+ */
+@mixin space-x($space) {
+
+  // 默认 LTR
+  >*+* {
+    margin-left: $space;
+  }
+
+  // RTL 支持
+  [dir="rtl"] & {
+    >*+* {
+      margin-left: 0;
+      margin-right: $space;
+    }
+  }
+}
+
+/**
+* 生成垂直间距的mixin
+ * @param {string} $space - 间距大小
+ * @example
+ * .class {
+ *   @include space-y(10px);
+ * }
+ */
+@mixin space-y($space) {
+  >*+* {
+    margin-top: $space;
+  }
+}
+
+/**
+ * 使用 text-shadow 实现文字描边
+ */
+@mixin text-stroke($color, $width: 1px, $restShadow: null) {
+  $textStroke: $width $width 0 $color, (-$width) $width 0 $color,
+    (-$width) (-$width) 0 $color, $width (-$width) 0 $color;
+  @if $restShadow != null {
+    text-shadow: $textStroke, $restShadow;
+  }
+  @else {
+    text-shadow: $textStroke;
+  }
+}
+
+/**
+ * 动画 keyframes
+  * @param {string} $name 动画名称
+ */
+@mixin keyframes($name) {
+  $prefix: $ns + '-' + $name !global;
+   @keyframes #{$prefix} {
+     @content;
+   }
+
+  $prefix: $ns !global;
+}

@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  height: ~`px2rem(44) `;
+  padding: 0 ~`px2rem(10) `;
+  background: #0b0f15;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: ~`px2rem(80) `;
+    height: ~`px2rem(30) `;
+  }
+  :global {
+    .ant-dropdown-trigger {
+      color: #ffffff;
+      font-size: ~`px2rem(14) `;
+    }
+    .ant-dropdown-menu {
+      background-color: #161c2f;
+      .ant-dropdown-menu-item {
+        color: #ffffff;
+        &:hover {
+          background-color: #13192c;
+          color: rgba(0, 208, 182, 1);
+          > a {
+            color: rgba(0, 208, 182, 1);
+          }
+        }
+        > a {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

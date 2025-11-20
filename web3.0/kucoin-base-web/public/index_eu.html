@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit" />
+  <link rel="preconnect" href="%REACT_APP_CDN%" />
+  <link rel="dns-prefetch" href="https://bigdata-scfx-push.kucoin.plus" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="shortcut icon" href="/logo_eu.png" />
+  <link rel="manifest" href="%REACT_APP_BASE_PATH%manifest.json">
+  <!-- safari（iOS）add to screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="KuCoin">
+  <link rel="apple-touch-icon" href="%REACT_APP_BASE_PATH%img/logo/512.png">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000" />
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <meta httpEquiv="Pragma" content="no-cache" />
+  <meta httpEquiv="Cache-Control" content="no-cache, max-age=0, must-revalidate" />
+  <meta httpEquiv="Expires" content="0" />
+  <meta name="twitter:site" content="@kucoincom" />
+  <meta name="description"
+    content="KuCoin is a secure cryptocurrency exchange that makes it easier to buy, sell, and store cryptocurrencies like BTC, ETH, KCS, SHIB, DOGE, Gari etc.">
+  <meta name="keywords" content="Crypto Exchange,Cryptocurrency Exchange,Bitcoin Exchange">
+  <meta name="yandex-verification" content="f31b7ed8b0fb11e8" />
+  <meta name="facebook-domain-verification" content="we62fkvs4zu5hinmxeei2jbd9u30da" />
+  <!-- OneTrust Cookies Consent Notice start for kucoin.com -->
+  <script type="text/javascript"
+    src="https://cdn.cookielaw.org/consent/01983f61-f230-7dc2-bb8a-9be87c2612b3/OtAutoBlock.js"></script>
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+    data-domain-script="01983f61-f230-7dc2-bb8a-9be87c2612b3"></script>
+  <script>
+    // 初始化 oneTrust
+    function initOneTrust() {
+      try {
+        // SSG 不处理
+        if (navigator.userAgent.indexOf('SSG_ENV') !== -1) {
+          return;
+        }
+
+        // 默认先隐藏 oneTrust 的 UI，等语言准备好之后再展示，防止闪烁，先出现英文，再出现目标语言
+        var style = document.createElement('style');
+        style.id = 'custom-onetrust-style';
+        style.innerHTML = '#onetrust-pc-sdk, #onetrust-consent-sdk { display: none !important; }';
+        document.head.appendChild(style);
+
+        let isOneTrustLoaded = false;
+        const listeners = [];
+        // oneTrust 首次加载完成，以及用户设置变化后，都会触发 OptanonWrapper 函数
+        // 我们只需要首次触发，用来更新语言
+        window.OptanonWrapper = function () {
+          if (isOneTrustLoaded) {
+            return;
+          }
+          isOneTrustLoaded = true;
+          listeners.forEach(listener => listener());
+        }
+        window.onOneTrustLoaded = function (callback) {
+          if (isOneTrustLoaded) {
+            callback();
+            return;
+          }
+          listeners.push(callback);
+        }
+      } catch (e) {
+        console.error('OneTrust error', e);
+      }
+    }
+    initOneTrust();
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for kucoin.com -->
+  <!-- preload start -->
+  <link rel="preload" href="%REACT_APP_CDN%/natasha/npm/@kux/font/Kufox-Sans-VF-Regular.woff2" as="font"
+    type="font/woff2" crossorigin />
+  <link rel="preload" href="%REACT_APP_CDN%/natasha/npm/@kux/font/Kufox-Sans-VF-Italic.woff2" as="font"
+    type="font/woff2" crossorigin />
+
+  <link rel="preload" href="%REACT_APP_GBIZ_MAP%/gbiz-import-map.json" as="fetch" type="application/json"
+    crossorigin="anonymous" />
+  <link rel="preload" href="%REACT_APP_GBIZ_NEXT_MAP%/gbiz-import-map.json" as="fetch" type="application/json"
+    crossorigin="anonymous" />
+  <link rel="preload" href="%REACT_APP_BASE_WEB_MAP%" as="fetch" type="application/json" crossorigin="anonymous" />
+  <!-- preload end -->
+  <link rel="preload" href="%REACT_APP_CDN%/natasha/npm/@kufox/mui@2.5.14.patch/umd/kufox-mui.umd.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="%REACT_APP_CDN%/natasha/npm/@kux/font/css.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="%REACT_APP_CDN%/natasha/npm/@kux/mui-next@1.1.6/style.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="%REACT_APP_CDN%/natasha/npm/@kux/mui-next@1.1.6/mui-vars.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="%REACT_APP_CDN%/natasha/npm/@kux/font/css.css">
+    <link rel="stylesheet" href="%REACT_APP_CDN%/natasha/npm/@kux/mui-next@1.1.6/style.css">
+    <link rel="stylesheet" href="%REACT_APP_CDN%/natasha/npm/@kux/mui-next@1.1.6/mui-vars.css">
+
+  </noscript>
+  <title>Crypto Exchange | Bitcoin Exchange | Bitcoin Trading | KuCoin</title>
+  %errorReportCode%
+  <script type="systemjs-importmap">
+    %frameworkImportMaps%
+  </script>
+  <script type="systemjs-importmap" src="%REACT_APP_BASE_WEB_MAP%"></script>
+  <script type="systemjs-importmap" src="%REACT_APP_GBIZ_MAP%/gbiz-import-map.json"></script>
+  <script type="systemjs-importmap" src="%REACT_APP_GBIZ_NEXT_MAP%/gbiz-import-map.json"></script>
+  <!--Delay loading the css resource because this resource is not used in fcp -->
+  <link href="%REACT_APP_CDN%/natasha/npm/fontsGoogleapis/googleapis.css" rel="prefetch" as="style" crossorigin />
+  <script>
+    _KC_LOCALE_DATA = {};
+    _KC_PAGE_LANG_LOADER = function _KC_PAGE_LANG_LOADER(lang, locale) {
+      if (!_KC_LOCALE_DATA[lang]) { _KC_LOCALE_DATA[lang] = locale; }
+    };
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="outdated"></div>
+  <script async src="%REACT_APP_CDN%/natasha/npm/anomaly/anomaly@1.0.0.min.js" id="$anomaly"></script>
+  <!-- Google Tag Manager -->
+  <!-- <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PBTJK8Q');</script> -->
+  <!-- End Google Tag Manager -->
+  <script id="locale_data_flag"></script>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBTJK8Q" height="0" width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <script>
+    window._natasha_version_ = "%REACT_APP_VERSION%";
+  </script>
+  <script type="text/javascript" src="%REACT_APP_CDN%/web-domain-relation/1.9.20/boot_eu.js"
+    integrity="sha384-Os6xEGEk68KFXEddsLCQIWLSEwJKoyGKCXuEtn6UNNSPNyc0y07otbDwurQfUR0e" crossorigin="anonymous"
+    data-ot-ignore="true"></script>
+  <script type="text/javascript" async src="%REACT_APP_CDN%/natasha/npm/sentry/7.52.1/sentry-loader.js"
+    data-ot-ignore="true"></script>
+  <script type="text/javascript" src="%REACT_APP_CDN%/natasha/npm/systemjs@6.14.1/dist/system.min.js"
+    data-ot-ignore="true"></script>
+  <script type="text/javascript" src="%REACT_APP_CDN%/natasha/npm/systemjs@6.14.1/dist/extras/amd.min.js"
+    data-ot-ignore="true"></script>
+  <script>
+    (function () {
+      (function (global) {
+        var systemJSPrototype = global.System.constructor.prototype;
+        var exitingCreateScript = systemJSPrototype.createScript;
+
+        systemJSPrototype.createScript = function (url) {
+          if (global.location) {
+            url = url + "?__kcorigin=" + global.location.host + "&type=system";
+          }
+          var script = exitingCreateScript.call(this, url);
+          return script;
+        };
+      })(typeof self !== "undefined" ? self : global);
+    })();
+  </script>
+  <script type="systemjs-module" src="import:@kucoin-base/runtime" data-ot-ignore="true"></script>
+  <script type="systemjs-module" src="import:@kucoin-base/main" data-ot-ignore="true"></script>
+  <script type="systemjs-module" src="import:@kucoin-biz/compliance" data-ot-ignore="true"></script>
+  <script type="systemjs-module" src="import:@kucoin-gbiz-next/compliance" data-ot-ignore="true"></script>
+</body>
+
+</html>

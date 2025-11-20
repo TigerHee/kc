@@ -1,0 +1,474 @@
+@import 'src/styles/mixin.scss';
+
+.navUser {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+
+  & .navUserItem {
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none !important;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    white-space: nowrap;
+    background-clip: border-box !important;
+
+    // [dir='rtl'] & {
+    //   padding: 0 0 0 12px;
+    // }
+
+    &[data-menu='i18n'],
+    &[data-menu='currency'],
+    &[data-menu='download'],
+    &[data-menu='theme'] {
+      display: flex;
+    }
+
+    &[data-menu='order'],
+    &[data-menu='asset'],
+    &[data-menu='person'] {
+      display: flex;
+    }
+
+    &[data-menu='search'] {
+      display: flex;
+    }
+
+    &[data-menu='person'] {
+      display: flex;
+    }
+
+    &[data-menu='download'],
+    &[data-menu='i18n'],
+    &[data-menu='currency'],
+    &[data-menu='notice'],
+    &[data-menu='person'],
+    &[data-menu='order'] {
+      padding: 0;
+    }
+
+    &[data-menu='notice'] {
+      // margin-right: 12px;
+      margin-left: 0;
+      & > span {
+        margin-left: 0 !important;
+        width: 32px !important;
+        height: 32px !important;
+      }
+      svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+
+    // &[data-menu='person'],
+    // &[data-menu='order'],
+    // &[data-menu='notice'] {
+    //   margin-left: 12px;
+    // }
+
+    // &[data-menu='download'] {
+    //   [dir='rtl'] & {
+    //     margin-right: 12px;
+    //   }
+    // }
+
+    &[data-menu='notice'] {
+      [dir='rtl'] & {
+        margin: 0;
+      }
+
+      & > span {
+        border-radius: 32px 32px;
+      }
+
+      @include media-query('sm') {
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &[data-menu='person'] {
+      [dir='rtl'] & {
+        margin-left: 0;
+      }
+    }
+
+    // &[data-menu='theme'] {
+    //   [dir='rtl'] & {
+    //     padding: 0 12px 0 0;
+    //   }
+    // }
+
+    // &.signinLink {
+    //     width: auto;
+    //     margin-right: unset;
+
+    //     @media screen and (max-width: 414px) {
+    //         display: none;
+    //     }
+
+    //     &:hover {
+    //         opacity: 0.6;
+    //     }
+
+    //     &:active {
+    //         opacity: 1;
+    //     }
+    // }
+
+    // & .signinBtn {
+    //     width: unset;
+    //     padding: 9px 12px;
+    //     font-weight: 500;
+    //     font-size: 14px;
+    //     line-height: 130%;
+    //     text-align: center;
+    //     color: var(--color-text);
+    //     margin: 0;
+    //     transition: all .3s ease;
+    //     border: unset;
+    //     border-radius: 24px;
+
+    //     @include media-query('sm') {
+    //         font-size: 12px;
+    //     }
+
+    //     [dir='rtl'] & {
+    //         margin: 0;
+    //     }
+    // }
+
+    // &.signUpLink {
+    //     width: auto;
+
+    //     &:hover {
+    //         opacity: 0.6;
+    //     }
+
+    //     &:active {
+    //         opacity: 1;
+
+    //         &>img {
+    //             display: block;
+    //         }
+    //     }
+    // }
+
+    // & .signUpBtn {
+    //     width: unset;
+    //     padding: 9px 20px;
+    //     border-radius: 90px;
+    //     font-weight: 700;
+    //     font-size: 14px;
+    //     text-align: center;
+    //     color: var(--color-textEmphasis);
+    //     // background: ${theme.currentTheme === 'dark' ? theme.colors.primary : theme.colors.text};
+    //     position: relative;
+    //     transition: all .3s ease;
+
+    //     @include media-query('sm') {
+    //         padding: 8px 16px;
+    //         font-size: 12px;
+    //     }
+    // }
+  }
+}
+
+.navUserInDrawer {
+  flex-direction: column;
+
+  & .navUserItem {
+    width: 100%;
+
+    [dir='rtl'] & {
+      padding: 0;
+    }
+
+    &[data-menu='search'] {
+      display: none;
+    }
+
+    &[data-menu='theme'] {
+      [dir='rtl'] & {
+        padding: 0;
+      }
+    }
+
+    // &.signinLink {
+    //     width: 50%;
+    //     margin-right: 12px;
+
+    //     @media screen and (max-width: 414px) {
+    //         display: unset;
+    //     }
+
+    //     &:hover {
+    //         opacity: 0.6;
+    //     }
+
+    //     &:active {
+    //         opacity: 1;
+    //     }
+    // }
+
+    // & .signinBtn {
+    //     width: 100%;
+    //     padding: 12.5px 0;
+    //     font-size: 16px;
+    //     border: 1px solid var(--color-text);
+
+    //     @include media-query('sm') {
+    //         font-size: 16px;
+    //     }
+
+    //     [dir='rtl'] & {
+    //         margin: 0 0 0 24px;
+    //     }
+    // }
+
+    // &.signUpLink {
+    //     width: 50%;
+
+    //     &:hover {
+    //         opacity: 0.6;
+    //     }
+
+    //     &:active {
+    //         opacity: 1;
+
+    //         &>img {
+    //             display: block;
+    //         }
+    //     }
+    // }
+
+    // & .signUpBtn {
+    //     width: 100%;
+    //     padding: 13.61px 0;
+    //     font-size: 16px;
+
+    //     @include media-query('sm') {
+    //         padding: 13.61px 0;
+    //         font-size: 16px;
+    //     }
+    // }
+  }
+}
+
+// inDrawer false && inTrade true
+.navUserInTrade {
+  // & .navUserItem {
+  // font-size: 11.2px;
+
+  // & .signinBtn {
+  //     padding: 9px 12px;
+  //     font-size: 12px;
+  // }
+
+  // & .signUpBtn {
+  //     padding: 6px 16px;
+  //     font-size: 12px;
+
+  //     @include media-query('sm') {
+  //         padding: 6px 16px;
+  //     }
+  // }
+  // }
+}
+
+// navStatus !== 0
+.navUser1 {
+  & .navUserItem {
+    &[data-menu='i18n'],
+    &[data-menu='currency'],
+    &[data-menu='download'],
+    &[data-menu='theme'] {
+      display: none;
+    }
+  }
+}
+
+// navStatus >= 2
+.navUser2 {
+  & .navUserItem {
+    &[data-menu='order'],
+    &[data-menu='asset'] {
+      display: none;
+    }
+  }
+}
+
+// navStatus >= 3
+.navUser3 {
+  & .navUserItem {
+    &[data-menu='search'] {
+      display: none;
+    }
+  }
+}
+
+.navUser3UnLogin {
+  & .navUserItem {
+    &[data-menu='search'] {
+      display: none;
+    }
+  }
+}
+
+// navStatus >= 5
+// .navUser3 {
+//     & .navUserItem {
+
+//         &[data-menu='search'] {
+//             display: none;
+//         }
+
+//     }
+// }
+
+// navStatus > 5
+// .navUser4 {
+//     & .navUserItem {
+
+//         &[data-menu='notice'] {
+//             margin-right: 12px;
+//             margin-left: 12px;
+//         }
+
+//     }
+// }
+
+.userBoxWrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  flex-direction: row;
+
+  width: auto;
+  padding: 0;
+
+  justify-content: unset;
+  width: max-content;
+
+  @include media-query('sm') {
+    padding: 0 6px;
+  }
+}
+
+.userBoxWrapperInDrawer {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+  gap: 12px;
+}
+
+// export const UserBoxComponent=styled.div`
+// /* margin-left: 8px;
+
+//   [dir='rtl'] & {
+//     margin-left: 0;
+//   } */
+// `;
+
+.divider {
+  width: 1px !important;
+  height: 16px !important;
+  margin-left: 12px !important;
+  background: var(--kux-cover8) !important;
+
+  [dir='rtl'] & {
+    margin: 0 12px 0 0 !important;
+  }
+}
+
+.searchWrapper {
+  height: 32px;
+  width: 32px;
+
+  background-color: var(--color-cover4);
+  border-radius: 50%;
+
+  // 使用 jsx style实现
+  // display: $ {
+  //     (props)=>(props.status >=3 ? 'flex' : 'none')
+  // };
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-right: 12px;
+
+  &:hover {
+    svg {
+      color: var(--color-primary);
+    }
+  }
+
+  @include media-query('sm') {
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+
+  [dir='rtl'] & {
+    transform: rotateY('180deg');
+  }
+}
+
+.searchWrapperInTrade {
+  height: 32px;
+  width: 32px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.signinLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-inline-end: 24px;
+}
+
+.signinLinkUnLogin {
+  display: none;
+}
+
+.signinLinkInDrawer {
+  flex: 1;
+  display: block;
+  margin-inline-end: 0;
+}
+
+.signinLinkInTrade {
+  font-size: 12px;
+}
+
+.signUpBtnInDrawer {
+  flex: 1;
+}
+
+.btnInDrawer {
+  :global {
+    .kux-button-content {
+      font-size: 16px !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.btnInTrade {
+  :global {
+    .kux-button-content {
+      font-size: 12px !important;
+    }
+  }
+}

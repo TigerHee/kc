@@ -1,0 +1,103 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  & > li {
+    &:not(:first-child) {
+      padding-top: 16px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(29, 29, 29, 0.04);
+    }
+    @include media-query("sm") {
+      &:not(:first-child) {
+        padding-top: 12px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 0;
+        padding-bottom: 16px;
+      }
+    }
+  }
+}
+
+.head {
+  color: #1d1d1d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  margin: 0px;
+  cursor: pointer;
+  transition: 0.3s all;
+  position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &::marker {
+    content: "";
+  }
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background: get-asset('/static/coinDetail/triangle.svg');
+    transform: rotate(0deg);
+    content: " ";
+  }
+
+  &.opened::before {
+    transform: rotate(180deg);
+  }
+}
+
+.cont {
+  text-align: justify;
+  color: rgba(29, 29, 29, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 16px;
+  display: none;
+
+  &.opened {
+    display: block;
+  }
+
+  @include media-query("sm") {
+    margin-top: 12px;
+  }
+  article {
+    div,
+    p,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    strong {
+      color: rgba(29, 29, 29, 0.6);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      @include media-query("sm") {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.statement {
+  padding-top: 12px;
+  border-top: 1px solid;
+  margin-top: 12px;
+  color: var(--color-text40);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@kc/gbiz-base",
+  "version": "1.2.2",
+  "description": "common modules",
+  "keywords": [
+    "kc-gbiz"
+  ],
+  "author": "梁骥 <jhellscream@kucoin.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib",
+  "module": "es",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "es"
+  ],
+  "publishConfig": {
+    "registry": "https://nac.kucoin.com:1149/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.kucoin.net:kumex-web/G-BIZ.git"
+  },
+  "scripts": {
+    "watch": "rollup -c ../../config/base.rollup.config.js --watch",
+    "build": "rollup -c ../../config/base.rollup.config.js",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.13.10",
+    "react": "^16.12.0"
+  },
+  "dependencies": {
+    "@redux-saga/delay-p": "^1.1.2",
+    "axios": "^0.22.0",
+    "i18next": "^19.0.2",
+    "lodash": "^4.17.15",
+    "qs": "^6.9.4",
+    "react-i18next": "^11.2.7",
+    "store2": "^2.11.2"
+  },
+  "gitHead": "5d909f7a4ae1e4df13bae48e4d580d01796e467b"
+}

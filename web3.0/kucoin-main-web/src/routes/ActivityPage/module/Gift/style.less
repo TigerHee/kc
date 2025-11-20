@@ -1,0 +1,36 @@
+@import '../mix';
+.GiftBox {
+  .gift {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    background: @frameBg;
+    border: 1px solid @frameBorderColor;
+    border-radius: 8px;
+    .imgBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: #0c1735;
+      border-radius: 100%;
+      img {
+        display: block;
+        width: 32px;
+        height: 30px;
+      }
+    }
+    .text {
+      flex: 1;
+      padding-left: 16px;
+      * {
+        margin: 0 !important;
+        color: #9dc4ff;
+        font-size: 14px !important;
+        letter-spacing: 0;
+        background: transparent !important;
+      }
+    }
+  }
+}

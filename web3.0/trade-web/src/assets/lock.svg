@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="360px" viewBox="0 0 360 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/lock</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="89.8682545%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#DDE3E7" offset="0%"></stop>
+            <stop stop-color="#EFF2F4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.9853913%" y1="0%" x2="0%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F8F9FA" offset="0%"></stop>
+            <stop stop-color="#DDE2E7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/ic_lock">
+            <g>
+                <rect id="Rectangle" x="0" y="0" width="360" height="360"></rect>
+                <path d="M180.5,207 C228.824916,207 268,167.824916 268,119.5 C268,71.1750844 228.824916,32 180.5,32 C132.175084,32 93,71.1750844 93,119.5 C93,167.824916 132.175084,207 180.5,207 Z M180.5,239 C114.501972,239 61,185.498028 61,119.5 C61,53.5019724 114.501972,0 180.5,0 C246.498028,0 300,53.5019724 300,119.5 C300,185.498028 246.498028,239 180.5,239 Z" id="Oval" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <rect id="Rectangle" fill="url(#linearGradient-2)" x="32" y="119" width="296" height="240" rx="2"></rect>
+                <path d="M163.873208,252.633958 C156.092076,247.213971 151,238.201644 151,228 C151,211.431458 164.431458,198 181,198 C197.568542,198 211,211.431458 211,228 C211,238.201644 205.907924,247.213971 198.126792,252.633958 L206,292 L156,292 L163.873208,252.633961 Z" id="Combined-Shape" fill="#CDD4DA"></path>
+            </g>
+        </g>
+    </g>
+</svg>

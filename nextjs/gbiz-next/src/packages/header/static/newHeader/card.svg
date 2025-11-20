@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/card</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/card" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-11" transform="translate(4.000000, 9.000000)" fill-rule="nonzero">
+            <rect id="Rectangle" stroke="#0AC7A9" stroke-width="1.6" x="0.8" y="0.8" width="39.4" height="28.2181818" rx="4"></rect>
+            <rect id="Rectangle" fill="#0AC7A9" x="0" y="9.31818182" width="41" height="1.86363636"></rect>
+            <circle id="Oval" fill="#0AC7A9" cx="29.8181818" cy="5.59090909" r="1"></circle>
+            <circle id="Oval-Copy" fill="#0AC7A9" cx="32.6136364" cy="5.59090909" r="1"></circle>
+            <circle id="Oval-Copy-2" fill="#0AC7A9" cx="35.4090909" cy="5.59090909" r="1"></circle>
+            <rect id="Rectangle" fill="#0AC7A9" opacity="0.319999993" x="3.72727273" y="13.0454545" width="33.5454545" height="13.0454545"></rect>
+            <rect id="Rectangle-Copy" fill="#FFFFFF" x="7.45454545" y="17.7045455" width="7.45454545" height="1.86363636" rx="0.931818182"></rect>
+            <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="7.45454545" y="21.4318182" width="3.72727273" height="1.86363636" rx="0.931818182"></rect>
+        </g>
+    </g>
+</svg>

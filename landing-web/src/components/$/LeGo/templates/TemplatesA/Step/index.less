@@ -1,0 +1,156 @@
+@import '~themes/mix.less';
+
+.container {
+  width: 100%;
+  padding: 80px 0 0;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({padding: 60px 24px 0 24px;});
+  .mediaQuerySm({padding: 40px 12px 0 12px;});
+}
+.inner {
+  margin: 0 auto;
+  width: 83.3%;
+  max-width: 1200px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 100%;});
+}
+
+.title {
+  margin: 0 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: #00142a;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({font-size: 36px; line-height: 48px;});
+  .mediaQuerySm({font-size: 24px; line-height: 36px;});
+}
+
+.steps {
+  display: flex;
+  margin-top: 24px;
+  .mediaQueryMd({display: block; margin-top: 20px;});
+}
+
+.stepsItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .mediaQueryMd({margin-left: 0;margin-bottom: 20px;});
+
+  & + .stepsItem {
+    margin-left: 24px;
+    .mediaQueryMd({margin-left: 0;});
+  }
+}
+
+.stepContent {
+  border: 1px solid rgba(0, 20, 42, 0.2);
+  border-top: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 16px 24px 30px 32px;
+}
+
+.stepButton {
+  border-radius: 32px !important;
+  height: auto !important;
+  min-height: 40px;
+  padding: 5px 14px !important;
+  min-width: 87px !important;
+  .mediaQuerySm({min-height: 32px;});
+  span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    /* identical to box height, or 167% */
+
+    /* 亮色主题/文字/textEmphasis */
+
+    color: #ffffff;
+    margin-top: -2px;
+  }
+}
+
+.arrowRight {
+  [dir='rtl'] & {
+    transform: rotate(180deg) /* rtl:ignore */;
+  }
+}
+
+.step {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  background-image: url('assets/lego/step-title-bg-new.png'),
+    linear-gradient(91.69deg, #01bc8d 0%, #34e9bb 100%);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: cover;
+  line-height: 26px;
+  padding: 16px 24px 16px 32px;
+  position: relative;
+  &.single_bg {
+    background-image: url('assets/lego/step-title-bg.png'),
+    linear-gradient(91.69deg, #01bc8d 0%, #34e9bb 100%);
+    background-size: contain;
+  }
+}
+
+.stepTitle {
+  margin-bottom: 0;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  /* or 36px */
+  > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* autoprefixer: off */
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.stepDesc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+
+  /* 亮色主题/文字/text68 */
+
+  color: rgba(0, 13, 29, 0.68);
+
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.stepsInfo {
+  margin: 24px 0 0 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: #00142a;
+  .mediaQueryMd({margin-top: 20px;});
+}
+
+.stepsItemRever {
+  & + .stepsItem {
+    margin-left: unset;
+    margin-right: 24px;
+    .mediaQueryMd({margin-right: 0;});
+  }
+}

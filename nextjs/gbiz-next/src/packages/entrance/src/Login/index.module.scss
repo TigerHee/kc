@@ -1,0 +1,18 @@
+@import 'src/styles/mixin.scss';
+
+.extendDrawer {
+  max-width: 615px;
+  width: 100%;
+  background: var(--kux-overlay, #fff);
+
+  @include media-query('lg') {
+    max-width: 100%;
+    height: calc(100% - 80px);
+    border-radius: 12px 12px 0px 0px;
+  }
+  @include media-query('sm') {
+    max-width: 100%;
+    height: calc(100% - 32px);
+    border-radius: 12px 12px 0px 0px;
+  }
+}

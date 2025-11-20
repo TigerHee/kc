@@ -1,0 +1,28 @@
+{
+  "api": [
+    {
+      "service": "ucenter",
+      "outputDir": "./src/api",
+      "baseURL": "/_api/ucenter",
+      "swaggerUrl": "https://inner.sit.kucoin.net/ucenter/v3/api-docs",
+      "apiClient": "tools/request",
+      "include": [
+        "/user-info",
+        "/country-codes/voice-support"
+      ]
+    },
+    {
+      "service": "risk-validation-center",
+      "outputDir": "./src/api",
+      "baseURL": "/_api/risk-validation-center",
+      "swaggerUrl": "https://inner.sit.kucoin.net/risk-validation-center/v3/api-docs",
+      "apiClient": "tools/request",
+      "include": [
+        "/v1/security/validation/combine",
+        "/v1/security/validation/send-validation-code",
+        "/v1/security/validation/risk/verify",
+        "/v1/security/validation/inner/user-info"
+      ]
+    }
+  ]
+}

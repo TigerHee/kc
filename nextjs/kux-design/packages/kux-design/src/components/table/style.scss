@@ -1,0 +1,141 @@
+@import '@/style/index.scss';
+
+// 表格中间区域滚动时两侧阴影的起始颜色
+@include defineThemeVar(table-overscroll-shadow, 'rgba(29, 29, 29, 0.16)', '#000');
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-table 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'table'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('table') {
+  display: flex;
+  width: 100%;
+  position: relative;
+  color: get-theme(text);
+
+  $table-border-radius: 12px;
+  $table-shadow-width: 20px;
+
+  &.is-bordered {
+    border-radius: 12px;
+    border: 0.5px solid get-theme(cover12);
+
+    th, td {
+      border-right: 0.5px solid get-theme(cover12);
+    }
+
+    th:last-child, td:last-child {
+      border-right: none;
+    }
+  }
+
+  &.is-striped {
+    tr:nth-child(even) {
+      background-color: get-theme(cover2);
+    }
+  }
+
+  &-item {
+    flex-shrink: 0;
+    position: relative;
+
+    &.is-start, &.is-end {
+      z-index: 1;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: $table-shadow-width;
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+    &.is-start {
+      &::after {
+        inset-inline-start: 100%;
+        background-image: linear-gradient(
+          to inline-end,
+          get-theme(table-overscroll-shadow) 0%,
+          transparent 89.29%
+        );
+      }
+      thead th:first-child {
+        border-start-start-radius: $table-border-radius;
+        border-end-start-radius: $table-border-radius;
+      }
+    }
+
+    &.is-end {
+      &::after {
+        inset-inline-end: 100%;
+        background-image: linear-gradient(
+          to inline-start,
+          get-theme(table-overscroll-shadow) 0%,
+          transparent 89.29%
+        );
+      }
+      thead th:last-child {
+        border-start-end-radius: $table-border-radius;
+        border-end-end-radius: $table-border-radius;
+      }
+    }
+
+    &.is-middle {
+      flex: 1;
+      overflow-x: auto;
+
+      // 设置水平滚动条
+      @include scrollbar(4px, 4px);
+
+      &:first-child {
+        thead th:first-child {
+          border-start-start-radius: $table-border-radius;
+          border-end-start-radius: $table-border-radius;
+        }
+      }
+
+      &:last-child {
+        thead th:last-child {
+          border-start-end-radius: $table-border-radius;
+          border-end-end-radius: $table-border-radius;
+        }
+      }
+
+      .#{$prefix}-inner {
+        width: 100%;
+      }
+    }
+  }
+
+  &-inner {
+    border-collapse: collapse;
+    table-layout: fixed;
+    th {
+      background-color: get-theme(cover2);
+      color: get-theme(text40);
+      padding: 0 8px;
+      height: 40px;
+      font-size: 12px;
+      line-height: 1.1;
+      font-weight: 400;
+    }
+    td {
+      padding: 0 8px;
+      border-bottom: 0.5px solid get-theme(cover12);
+      height: 48px;
+    }
+    
+
+    tbody {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    tr:last-of-type {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}

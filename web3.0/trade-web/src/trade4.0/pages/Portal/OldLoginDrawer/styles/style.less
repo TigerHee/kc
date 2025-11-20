@@ -1,0 +1,20 @@
+@import '~themes/kufox.base.less';
+body {
+
+
+.title {
+  opacity: 1;
+}
+
+.root {
+  .mediaQuerySm({
+    max-width: 100% !important;
+  });
+  /* rtl:ignore */
+  [dir='rtl'] & > :global(.KuxBox-root):first-child {
+    left: 24px;
+    right: unset;
+  }
+ }
+
+}

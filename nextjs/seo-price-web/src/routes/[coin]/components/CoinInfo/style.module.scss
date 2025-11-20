@@ -1,0 +1,10 @@
+@import '@/styles/mixin.scss';
+
+.coinInfoBox {
+  width: 100%;
+  color: var(--color-text40);
+  margin-bottom: 32px;
+  @include media-query('sm') {
+    margin-bottom: 20px;
+  }
+}

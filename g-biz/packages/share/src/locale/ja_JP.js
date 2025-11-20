@@ -1,0 +1,15 @@
+export default {
+  "inviteB.manage.copy.share": "コピーしました！今すぐ共有しましょう！",
+  "inviteB.manage.remark": "備考",
+  "inviteB.manage.commission.yourrate": "あなたの手数料率",
+  "inviteB.manage.commisson.friendrate": "友達の料金割引",
+  "inviteB.manage.poster.create": "今すぐ共有",
+  "inviteB.manage.poster.share": "今すぐ共有",
+  "69ti912QyqQK3RLThoqqNL": "口座開設してウェルカムパッケージを受け取る",
+  "h2RhjtaW236Cy1ofAMdsY7": "最大{{num}}  {{siteBaseCurrency}}相当！",
+  "ceWPbECZDHEFPo5wuNKZou": "その他",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "コピーしました",
+  "sTkpRT7EiVTxqr6sApV5Aj": "リンクをコピー",
+  "x8nfNnRNkgqeds6C4AfUC8": "画像を保存",
+  "4EhrZujhYTKtPmKwo99tBr": "紹介コード：{rcode}"
+}

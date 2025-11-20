@@ -1,0 +1,23 @@
+.wrapper {
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-text40);
+}
+
+.priceChange {
+  margin-left: 4px;
+  color: var(--color-primary);
+
+  &.negative {
+    color: var(--color-secondary);
+  }
+}

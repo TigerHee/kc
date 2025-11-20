@@ -1,0 +1,10 @@
+/node_modules
+/var/log/*
+pm2-out.log
+pm2-error.log
+
+# misc
+.DS_Store
+.idea
+.vscode
+.env

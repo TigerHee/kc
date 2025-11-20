@@ -1,0 +1,144 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  
+}
+
+.icon {
+  color: #737e8d;
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.row {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+
+  @include media-query('sm') {
+    margin-bottom: 12px;
+  }
+}
+
+.label {
+  
+  font-size: 14px;
+  line-height: 22px;
+  width: 120px;
+  flex-shrink: 0;
+  margin-right: 12px;
+  color: var(--color-text40);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @include media-query('lg') {
+    font-size: 12px;
+  }
+  
+}
+
+.text {
+  
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--color-text);
+  
+}
+
+.tag {
+  padding: 0 4px;
+  color: var(--color-text60);
+  font-size: 12px;
+  line-height: 20px;
+  // TODO cehck
+  background: var(--color-text008);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  cursor: auto;
+  
+  @include media-query('sm') {
+    margin-bottom: 12px;
+  }
+  
+}
+
+.linkTag {
+  padding: 0 4px;
+  color: var(--color-text60);
+  font-size: 12px;
+  line-height: 20px;
+  background: var(--color-text008);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  cursor: auto;
+
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: get-asset('/static/coinDetail/coin-info-link.svg');
+    content: ' ';
+  }
+
+  @include media-query('sm') {
+    margin-bottom: 12px;
+  }
+  
+}
+
+.iconLink {
+  margin-right: 12px;
+  
+}
+
+.span {
+  color: var(--color-text40);
+}
+
+.image {
+  width: 24px;
+  height: 24px;
+}
+
+.blank {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+
+.extendLink {
+  cursor: pointer;
+  color: var(--color-primary);
+  background: var(--color-primary008);
+  padding-left: 18px;
+  &::before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    content: ' ';
+  }
+}
+
+.contractTag {
+  color: var(--color-text);
+  background: var(--color-text008);
+  padding-right: 18px;
+  &::before {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 12px;
+    height: 12px;
+    background: get-asset('/static/coinDetail/copy.svg');
+    cursor: pointer;
+    content: ' ';
+  }
+}

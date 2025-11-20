@@ -1,0 +1,55 @@
+@import 'src/styles/mixin.scss';
+
+// 验证账户相关样式
+.verifyAccountWrap {
+  width: 100%;
+  
+  & input {
+    width: auto;
+    flex: 1;
+  }
+}
+
+.tips {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--kux-text60);
+  margin-bottom: 37px;
+  
+  @include media-query('sm') {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+.voiceCodeWrapper {
+  margin-top: 40px;
+}
+
+
+// 其他样式
+.submitButton {
+  margin-top: 32px;
+}
+
+.container {
+  display: inline-block;
+}
+
+.baseText {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  text-decoration-line: underline;
+  
+  &.disabled {
+    cursor: default;
+    color: inherit;
+  }
+  
+  &:not(.disabled) {
+    cursor: pointer;
+    color: var(--kux-text);
+  }
+}

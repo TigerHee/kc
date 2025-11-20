@@ -1,0 +1,30 @@
+.extendForm {
+  .subButton {
+    margin-top: 40px;
+  }
+
+    // 密码输入与表单间距
+  .passwordFormItem {
+    margin-top: 32px;
+  }
+
+  .KuxInput-togglePwdIcon {
+    margin-left: 12px;
+
+    @media (max-width: 600px) {
+      margin-left: 10px;
+    }
+  }
+  :global(.KuxCol-col) {
+    width: 100%;
+  }
+}
+
+.forgetPwdBox {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--kux-text);
+  text-decoration: underline;
+  margin-top: 0;
+}

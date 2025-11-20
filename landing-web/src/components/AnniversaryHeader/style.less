@@ -1,0 +1,229 @@
+@baseColor: #fff; //基础白色
+@textColor: rgba(0, 20, 42, 1); // 亮色主题/文字/text
+
+.topHeaderBox {
+  width: 100%;
+  height: ~`px2rem(60) `;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 ~`px2rem(12) `;
+  z-index: 19;
+  color: @baseColor;
+  background: transparent;
+  :global {
+    .land-lang-selector {
+      .ant-dropdown {
+        max-height: 300px;
+        overflow: auto;
+        border: 1px solid;
+      }
+      .ant-dropdown-trigger {
+        font-size: 14px;
+        color: @textColor;
+      }
+      .ant-dropdown-menu {
+        background-color: @baseColor;
+        .ant-dropdown-menu-item {
+          color: rgba(0, 20, 42, 0.6);
+          padding: 5px 16px;
+          &:hover {
+            // background-color: #13192c;
+            color: rgba(0, 208, 182, 1);
+            > a {
+              color: rgba(0, 208, 182, 1);
+            }
+          }
+          > a {
+            color: rgba(0, 20, 42, 0.6);
+            text-decoration: none;
+          }
+        }
+        .kc-active-lang {
+          color: #00142a;
+          font-weight: 500;
+        }
+      }
+    }
+    .land-lang-selector-dark {
+      .ant-dropdown {
+        max-height: ~`px2rem(256) `;
+        width: ~`px2rem(156) `;
+        border-radius: ~`px2rem(6) `;
+        overflow: hidden auto;
+        @media (min-width: 1040px) {
+          max-height: 256px;
+          width: 156px;
+          border-radius: 6px;
+        }
+      }
+      .ant-dropdown-menu {
+        background: #2f353b;
+        border: none;
+        .ant-dropdown-menu-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          color: rgba(255, 255, 255, 0.6);
+          padding: ~`px2rem(5) ` ~`px2rem(12) `;
+          @media (min-width: 1040px) {
+            padding: 5px 12px;
+          }
+          &.kc-active-lang {
+            color: #fff;
+            img.kc-active-lang-img {
+              width: ~`px2rem(16) `;
+              height: ~`px2rem(16) `;
+              margin-left: auto;
+              @media (min-width: 1040px) {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+          &:hover {
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+      .ant-dropdown-trigger {
+        color: #fff;
+        font-size: ~`px2rem(14) `;
+        @media (min-width: 1040px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.inApp {
+  padding-top: 24pt;
+}
+.LogoImg {
+  width: ~`px2rem(113) `;
+  height: ~`px2rem(26) `;
+  cursor: pointer;
+  transform: rotateY(0deg) /* rtl:rotateY(180deg) */ ;
+}
+.rightBox {
+  display: flex;
+  align-items: center;
+}
+.nickBox {
+  margin: 0 ~`px2rem(6) `;
+  // padding: 0 ~`px2rem(11) `;
+  font-size: ~`px2rem(14) `;
+  font-weight: 500;
+}
+.avatar {
+  margin: 0 ~`px2rem(12) `;
+  width: ~`px2rem(40) `;
+  height: ~`px2rem(40) `;
+  display: flex;
+  align-items: center;
+}
+button.btnBox {
+  margin: 0 ~`px2rem(12) `;
+  min-width: ~`px2rem(30) `;
+  height: ~`px2rem(24) `;
+  padding: ~`px2rem(0) ` ~`px2rem(8) `;
+  font-size: ~`px2rem(12) `;
+  line-height: ~`px2rem(20) `;
+  font-weight: 500;
+  color: #fff;
+  background: #00142a;
+  &:hover,
+  &:active,
+  &:visited {
+    background: #00142a;
+  }
+}
+.leftBox {
+  height: ~`px2rem(40) `;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.leftIcon {
+  width: ~`px2rem(20) `;
+  height: ~`px2rem(20) `;
+}
+
+// pc适配的样式
+@media (min-width: @kc-mb-width) {
+  .topHeaderBox {
+    margin: 0 auto;
+    max-width: 375px;
+    height: 60px;
+    padding: 0 12px;
+  }
+  .LogoImg {
+    width: 113px;
+  }
+  .avatar {
+    margin: 0 12px;
+    width: 40px;
+    height: 40px;
+  }
+  .nickBox {
+    margin: 0 6px;
+    font-size: 14px;
+  }
+  button.btnBox {
+    margin: 0 12px;
+    min-width: 30px;
+    height: 24px;
+    padding: 0px 8px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .leftBox {
+    height: 40px;
+  }
+  .leftIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// 768断点 pc适配的样式
+@media (min-width: 768px) {
+  :global(.page-with-768) {
+    .topHeaderBox {
+      margin: 0 auto;
+      max-width: 375px;
+      height: 60px;
+      padding: 0 12px;
+    }
+    .LogoImg {
+      width: 113px;
+    }
+    .avatar {
+      margin: 0 12px;
+      width: 40px;
+      height: 40px;
+    }
+    .nickBox {
+      margin: 0 6px;
+      font-size: 14px;
+    }
+    button.btnBox {
+      margin: 0 12px;
+      min-width: 30px;
+      height: 24px;
+      padding: 0px 8px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .leftBox {
+      height: 40px;
+    }
+    .leftIcon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  :global {
+    .intro_title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 21px;
+    }
+    .intro_content {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      .intro_text+.intro_text {
+        margin-top: 10px;
+      }
+    }
+    .intro_img {
+      overflow: hidden;
+      >img {
+        position: relative;
+        top: 45px;
+      }
+    }
+  }
+}

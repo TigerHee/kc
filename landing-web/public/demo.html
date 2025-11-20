@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            overflow: hidden;
+            width: 400px;
+        }
+        .card {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            bottom: 100px;
+            right: 100px;
+            background-color: aqua;
+            border: 20px solid;
+            transition: 500ms ease all;
+        }
+        .left {
+            transform: translate(-120%, 20px);
+        }
+        .center {
+            transform: translate(0%, 0px);
+        }
+        .right {
+            transform: translate(120%, 20px);
+        }
+    </style>
+    <div class="card left">
+        a
+    </div>
+    <div class="card center">
+        b
+    </div>
+    <div class="card right">
+        c
+    </div>
+    <script>
+        const cards = document.querySelectorAll('.card')
+        let i = 0;
+        function x() {
+
+            cards[i % 3].className = "card right"
+            cards[(i + 1) % 3].className = "card left"
+            cards[(i + 2) % 3 ].className = "card center"
+            i++
+        }
+        cards[0].addEventListener('transitionend', () => {
+            setTimeout(x, 500)
+        })
+        
+        setTimeout(x, 33)
+    </script>
+</body>
+</html>

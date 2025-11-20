@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.methodItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 28px 20px;
+  padding-right: 52px;
+  border-radius: 12px;
+  border: 1px solid var(--color-cover12);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--color-text);
+  cursor: pointer;
+  position: relative;
+
+  & + & {
+    margin-top: 24px;
+  }
+
+  .arrowIcon {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 8px);
+    color: var(--color-icon60);
+  }
+}
+
+.fieldItem {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  gap: 8px;
+
+  :global(.mk-icon) {
+    margin-right: 8px;
+  }
+}
+
+.plusIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.methodIcon {
+  width: 24px;
+  height: 24px;
+}

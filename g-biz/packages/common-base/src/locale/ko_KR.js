@@ -1,0 +1,15 @@
+export default {
+  '3pJd1o7HS7Mc7RP61KBt3j': "<span class='highlight'>이메일 주소</span>가 올바른지 확인하세요.",
+  '5H1kxNCtmaz678kvjrsyPF': '링크가 만료되었거나 이메일을 받지 못한 경우 다음을 클릭하세요',
+  '8E7WgVPbNC4K56218gDkPu': "<span class='highlight'>스팸 메일함</span>을 확인하세요.",
+  '8JDS5CK7Qg2C7eFKb5cYvq': '승인 필요',
+  'aWraMbu1VTMzskoUX44puZ':
+    '사용자 보안을 위해 반드시 인증 이메일을 요청한 동일한 기기에서만 인증 링크를 클릭해야 합니다.',
+  'bGGSwLk9n6gSxapYQMzad4': '이메일을 받지 못하셨나요?',
+  'baXa9AEkqjrk9YkLe9nM7g': '리스크 경고',
+  'iBsXv5QsHeP8wpAWSNFZaS': '보냄',
+  'puaUwRAmKgrg7fdRQ3F2mN': '재전송.',
+  'qvXxQhQy1SeuAxmM51aFE3':
+    "인증 이메일이 <span class='highlight'>{{email}}</span> 주소로 전송되었습니다. 현재 페이지를 닫지 말고 이메일에 적힌 지시를 따라 인증을 완료해 주세요.",
+  'vt2AqpbRG2bxpioX9zDQYS': '{{a}}초 후 재전송.',
+};

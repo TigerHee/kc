@@ -1,0 +1,302 @@
+.banner {
+  background: #191E29;
+
+  .content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 12px;
+    color: #fff;
+  }
+
+  .pic {
+    position: absolute;
+    left: 60%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .info {
+    position: relative;
+    z-index: 2;
+    min-height: 160px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    max-width: 560px;
+    word-break: break-word;
+    margin-bottom: 0;
+  }
+
+  .period {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .register {
+    margin-top: 12px;
+
+    &[disabled] {
+      background-color: #c6c6c6;
+    }
+  }
+}
+
+.section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 12px;
+
+  .hd {
+    color: #00142A;
+    font-size: 14px;
+    line-height: 22px;
+
+    .title {
+      margin-bottom: 8px;
+      .icon {
+        width: 23px;
+        height: 23px;
+        display: inline-block;
+        vertical-align: middle;
+        background-size: contain;
+        margin-right: 10px;
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.iconRank {
+  background-image: url(../../assets/leaderboard/icon-rank.png);
+}
+.iconNote {
+  background-image: url(../../assets/leaderboard/icon-note.png);
+}
+
+.leaderboard {
+  .tableList {
+    width: 100%;
+    margin-top: 24px;
+    border-top: 1px solid #E9EAED;
+    tr {
+      border-bottom: 1px solid #E9EAED;
+    }
+    
+    th, td {
+      padding: 17px 12px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+    th {
+      font-weight: normal;
+      color: rgba(0, 20, 42, 0.6)
+    }
+    td {
+      color: #00142A;
+      font-weight: 500;
+    }
+    .unit {
+      color: rgba(0, 20, 42, 0.6);
+      font-size: 12px;
+    }
+
+    tbody {
+      tr:nth-child(1) {
+        td:first-child {
+          padding-top: 11px;
+          padding-bottom: 12px;
+          span {
+            display: none;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 29px;
+            height: 32px;
+            background-image: url(../../assets/leaderboard/icon-gold.png);
+            background-size: contain;
+          }
+        }
+      }
+      tr:nth-child(2) {
+        td:first-child {
+          padding-top: 11px;
+          padding-bottom: 12px;
+          span {
+            display: none;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 29px;
+            height: 32px;
+            background-image: url(../../assets/leaderboard/icon-silver.png);
+            background-size: contain;
+          }
+        }
+      }
+      tr:nth-child(3) {
+        td:first-child {
+          padding-top: 11px;
+          padding-bottom: 12px;
+          span {
+            display: none;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 29px;
+            height: 32px;
+            background-image: url(../../assets/leaderboard/icon-copper.png);
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .addon {
+    text-align: center;
+    margin-top: 24px;
+    
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 40px;
+      vertical-align: middle;
+    }
+  }
+
+  .updated {
+    font-size: 14px;
+    color: rgba(0, 20, 42, 0.6);
+    text-align: right;
+    margin-top: -30px;
+
+    &.newline {
+      margin-top: 24px;
+    }
+  }
+
+  .rankList {
+    padding: 12px 0;
+    list-style: none;
+    .item {
+      padding: 16px 0;
+      border-bottom: 1px solid #E9EAED;
+      &:first-child {
+        border-top: 1px solid #E9EAED;
+      }
+      .serial {
+        display: inline-block;
+        vertical-align: middle;
+        width: 21px;
+        margin-right: 12px;
+      }
+      &:nth-child(1) {
+        .serial {
+          span {
+            display: none;
+          }
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 21px;
+            height: 24px;
+            background-image: url(../../assets/leaderboard/icon-gold.png);
+            background-size: contain;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .serial {
+          span {
+            display: none;
+          }
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 21px;
+            height: 24px;
+            background-image: url(../../assets/leaderboard/icon-silver.png);
+            background-size: contain;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .serial {
+          span {
+            display: none;
+          }
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 21px;
+            height: 24px;
+            background-image: url(../../assets/leaderboard/icon-copper.png);
+            background-size: contain;
+          }
+        }
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 14px;
+        margin-bottom: 8px;
+
+        .label {
+          color: rgba(0, 20, 42, 0.6);
+        }
+      }
+      .uid {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+      }
+      .emailOrPhone {
+        font-size: 14px;
+        color: rgba(0, 20, 42, 0.6)
+      }
+    }
+  }
+}
+
+.rules {
+  .bd {
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 22px;
+    color: #00142A;
+    * {
+      max-width: 100%!important;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  .banner {
+    .pic {
+      background-position: right bottom;
+    }
+  }
+}

@@ -1,0 +1,229 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding-bottom: 88px;
+  .content {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 48px;
+      line-height: 72px;
+      font-weight: 500;
+      color: #01081E;
+    }
+    .cards {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      .card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+        padding: 40px 32px;
+        box-sizing: border-box;
+        background-image: linear-gradient(45deg, rgba(246,246,248,0.24) 0%, #F6F6F8 100%);
+        border-radius: 16px;
+        &:last-child {
+          margin-right: 0;
+        }
+        .cardTitle {
+          font-size: 34px;
+          line-height: 48px;
+          font-weight: 500;
+          color: #01081E;
+        }
+        .cardDes {
+          margin-top: 12px;
+          font-size: 20px;
+          line-height: 36px;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.6);
+        }
+        .more {
+          display: block;
+          margin-top: 13px;
+          font-size: 16px;
+          line-height: 16px;
+          color: rgba(0, 0, 0, 0.38);
+          cursor: pointer;
+        }
+        .share {
+          margin-top: 32.4px;
+          height: 28px;
+          display: flex;
+          .shareIcon {
+            margin-right: 26.4px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+          }
+        }
+        .voteBtn {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-top: 44px;
+          width: 470px;
+          .btn {
+            width: 100%;
+            height: 48px;
+          }
+          .votes {
+            margin-top: 16px;
+            font-size: 16px;
+            line-height: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .voteNum {
+              color: rgba(0, 0, 0, 0.38);
+              .extraVote {
+                font-size: 16px;
+                color: #24AE8F;
+                line-height: 20px;
+              }
+              .voteNew {
+                background: rgba(36,174,143,0.16);
+                border-radius: 2px;
+                font-size: 12px;
+                color: #24AE8F;
+                text-align: center;
+                line-height: 20px;
+                margin-left: 7.4px;
+                padding: 2px 8px;
+              }
+              .loginBtn {
+                text-decoration: underline;
+                color: #24AE8F;
+                margin-right: 4px;
+                cursor: pointer;
+              }
+            }
+            .voteMore {
+              color: #24AE8F;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  .wrapper {
+    padding: 0 ~`px2rem(16)`;
+    width: 100%;
+    .content {
+      width: 100%;
+      .title {
+        font-size: ~`px2rem(24)`;
+        line-height: ~`px2rem(34)`;
+      }
+      .cards {
+        margin-top: ~`px2rem(24)`;
+        flex-direction: column;
+        .card {
+          flex: auto;
+          width: ~`px2rem(343)`;
+          padding: ~`px2rem(26)` ~`px2rem(16)` ~`px2rem(24)` ~`px2rem(16)`;
+          border-radius: ~`px2rem(16)`;
+          margin-bottom: ~`px2rem(24)`;
+          margin-right: 0;
+          .cardTitle {
+            font-size: ~`px2rem(20)`;
+            line-height: ~`px2rem(48)`;
+          }
+          .cardDes {
+            margin-top: ~`px2rem(4)`;
+            font-size: ~`px2rem(16)`;
+            line-height: ~`px2rem(20)`;
+          }
+          .more {
+            margin-top: ~`px2rem(12)`;
+            font-size: ~`px2rem(16)`;
+            line-height: ~`px2rem(16)`;
+          }
+          .share {
+            margin-top: ~`px2rem(36)`;
+            height: ~`px2rem(28)`;
+            .shareIcon {
+              margin-right: ~`px2rem(27.9)`;
+              width: ~`px2rem(29.1)`;
+              height: ~`px2rem(23.5)`;
+            }
+          }
+          .voteBtn {
+            margin-top: ~`px2rem(36.5)`;
+            width: ~`px2rem(311)`;
+            .btn {
+              width: 100%;
+              height: ~`px2rem(48)`;
+              border-radius: ~`px2rem(4)`;
+              font-size: ~`px2rem(14)`;
+              letter-spacing: ~`px2rem(1.09)`;
+              line-height: 1.15;
+            }
+            .votes {
+              margin-top: ~`px2rem(12)`;
+              font-size: ~`px2rem(13)`;
+              line-height: ~`px2rem(20)`;
+              .voteNum {
+                .loginBtn {
+                  margin-right: ~`px2rem(4)`;
+                }
+                .extraVote {
+                  font-size: ~`px2rem(16)`;
+                  line-height: ~`px2rem(24)`;
+                }
+                .voteNew {
+                  font-size: ~`px2rem(12)`;
+                  line-height: ~`px2rem(20)`;
+                  margin-left: ~`px2rem(7.4)`;
+                  padding: ~`px2rem(2)` ~`px2rem(8)`;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.voteModal {
+  :global {
+    .ant-modal {
+      width: ~`px2rem(280)` !important;
+    }
+  }
+  .title {
+    opacity: 0.6;
+    font-size: ~`px2rem(16)`;
+    color: #00142A;
+    line-height: ~`px2rem(26)`;
+    margin-bottom: ~`px2rem(15)`;
+  }
+  .btns {
+    display: flex;
+    justify-content: flex-end;
+    .btn {
+      font-size: ~`px2rem(14)`;
+      line-height: ~`px2rem(24)`;
+      &.cancelBtn {
+        color: #00142A;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.voteText {
+  font-size: ~`px2rem(14)`;
+  color: #00142A;
+  line-height: ~`px2rem(24)`;
+}

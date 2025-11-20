@@ -1,0 +1,202 @@
+@import '~themes/mix.less';
+
+.bigWords {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 484px;
+  width: 600px;
+  height: 154px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('../../../../assets/consensus/chain.svg');
+  .mediaQueryMd({display: none;});
+}
+
+.grayedText {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(225, 232, 245, 0.4);
+  .mediaQuerySm({font-size: 14px; line-height: 22px;});
+}
+
+.titleStyle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  color: #ffffff;
+  margin: 30px 0 12px;
+  .mediaQuerySm({font-size: 16px; line-height: 26px;});
+}
+
+.out {
+  position: relative;
+  padding-bottom: 140px;
+  .mediaQueryMd({padding-bottom: 100px;});
+  .mediaQuerySm({padding-bottom: 68px;});
+}
+
+// 分块
+.block1 {
+  .list {
+    flex-wrap: wrap;
+    padding-top: 12px;
+    display: flex;
+    .mediaQueryMd({padding-top: 36px;});
+    .mediaQuerySm({padding-top: 32px;});
+  }
+  .itemDesc {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: #21c397;
+    .mediaQuerySm({font-size: 14px; line-height: 22px;});
+  }
+
+  .item {
+    width: 33.33%;
+    .mediaQuerySm({width: 50%});
+
+    &:nth-of-type(1) {
+      .itemLogo {
+        background-image: url('../../../../assets/consensus/community-icon1.svg');
+      }
+    }
+    &:nth-of-type(2) {
+      .mediaQuerySm({padding-left: 12px;});
+      .itemLogo {
+        background-image: url('../../../../assets/consensus/community-icon2.svg');
+      }
+    }
+    &:nth-of-type(3) {
+      .mediaQuerySm({margin-top: 31px;});
+      .itemLogo {
+        background-image: url('../../../../assets/consensus/community-icon3.svg');
+      }
+    }
+
+    .itemLogo {
+      width: 66px;
+      height: 66px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      .mediaQuerySm({width: 48px; height: 48px;});
+    }
+  }
+}
+
+.block2 {
+  .part1Desc {
+    .grayedText();
+    & + .part1Desc {
+      margin-top: 2em;
+    }
+  }
+
+  .part2Desc {
+    .grayedText();
+    span + span {
+      color: rgba(33, 195, 151, 1);
+    }
+  }
+  .part3Desc {
+    .grayedText();
+    & + .part3Desc {
+      margin-top: 2em;
+    }
+  }
+
+  .foot {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    color: #ffffff;
+    margin-top: 48px;
+    .mediaQuerySm({font-size: 16px; line-height: 26px; margin-top: 24px;});
+  }
+  .part3 {
+    .mediaQuerySm({grid-column-start: 1; grid-column-end: 3;});
+    .titleStyle {
+      .mediaQuerySm({margin-top: 0;});
+    }
+  }
+  .part4 {
+    pointer-events: none;
+    position: relative;
+    width: 536px;
+    height: 570px;
+    margin: -100px 0 0 52px;
+    .mediaQueryMd({width: 405.29px; height: 431px; margin: 35px 0 0 0px;});
+    .mediaQuerySm({width: 180.07px; height: 191.5px; margin: 50px 0 0 18px;});
+  }
+  .part4Glow {
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../../../../assets/consensus/community-glow.png');
+    background-size: cover;
+  }
+  .part4Img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../../assets/consensus/community-banner1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .block2Grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 12px));
+    grid-column-gap: 24px;
+    grid-row-gap: 48px;
+    .mediaQueryMd({grid-row-gap: 48px;});
+    .mediaQuerySm(
+      {grid-row-gap: 24px; grid-column-gap: 12px;grid-template-columns: repeat(2, calc(50% - 6px)) ;}
+    );
+  }
+}
+
+.block3 {
+  .itemDesc {
+    .grayedText();
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 9px;
+    .mediaQuerySm({padding-top: 16px;});
+    .item {
+      width: 50%;
+      &:nth-of-type(1) {
+        .itemLogo {
+          width: 254px;
+          height: 50px;
+          background-image: url('../../../../assets/consensus/community-icon4.svg');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          margin-bottom: 20px;
+          .mediaQuerySm({width: 163px; height: 32px;margin-bottom: 14px});
+        }
+      }
+      &:nth-of-type(2) {
+        padding-left: 12px;
+        .mediaQuerySm({padding-left: 0;margin-top: 33px;});
+        .itemLogo {
+          width: 221px;
+          height: 51px;
+          background-image: url('../../../../assets/consensus/community-icon5.svg');
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          margin-bottom: 18px;
+          .mediaQuerySm({width: 145px; height: 33px;margin-bottom: 12px;});
+        }
+      }
+      .mediaQuerySm({width: 100%;});
+    }
+  }
+}

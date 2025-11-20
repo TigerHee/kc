@@ -1,0 +1,325 @@
+@import '@/style/index.scss';
+@import './style-mixin.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-input 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'input'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('input') {
+  width: clamp(100px, 100%, 343px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .#{$prefix}-core {
+    position: relative;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    height: 56px;
+  }
+
+  /* small size */
+  .#{$prefix}-small {
+    height: 48px;
+  }
+
+  .#{$prefix}-search {
+    height: 48px;
+  }
+
+  .#{$prefix}-search-small {
+    height: 40px;
+  }
+
+  .#{$prefix}-search-mini {
+    padding: 0 14px;
+    width: 120px;
+    height: 28px;
+  }
+
+  .#{$prefix}-search-mini-allowclear {
+    padding: 0 8px 0 14px;
+    width: 120px;
+    height: 28px;
+  }
+
+  /* input border */
+  .#{$prefix}-fieldset {
+    position: absolute;
+    margin: 0;
+    top: -6px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    border: 1px solid get-theme(cover12);
+    overflow: hidden;
+  }
+
+  .#{$prefix}-fieldset-search {
+    border-radius: 40px;
+  }
+
+  .#{$prefix}-legend {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    font-size: 12px;
+    visibility: hidden;
+  }
+
+  .#{$prefix}-legend-float {
+    @include legend-float();
+  }
+
+  /* label */
+  .#{$prefix}-label {
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    color: get-theme(text);
+  }
+
+  /* labe outline */
+  .#{$prefix}-label-outline {
+    color: get-theme(text);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
+
+  /* 框内可浮动标签 */
+  .#{$prefix}-label-inline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left top;
+    transform: translate(16px, 16px);
+    transition: color 200ms cubic-bezier(0, 0, 0.2, 1), transform 200ms cubic-bezier(0, 0, 0.2, 1);
+    color: get-theme(text60);
+  }
+
+  .#{$prefix}-label-inline-small {
+    transform: translate(16px, 12px);
+  }
+
+  .#{$prefix}-label-inline-float {
+    @include label-float(0);
+  }
+
+  /* input */
+  .#{$prefix}-filed {
+    border: none;
+    outline: none;
+    padding: 0;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    color: get-theme(text);
+    caret-color: get-theme(text);
+
+    &::placeholder {
+      font-weight: 400;
+      color: get-theme(text40);
+    }
+    &:-webkit-autofill {
+      -webkit-transition-delay: 99999s;
+    }
+    &:-webkit-autofill:hover {
+      -webkit-transition-delay: 99999s;
+    }
+    &:-webkit-autofill:focus {
+      -webkit-transition-delay: 99999s;
+    }
+    &:-webkit-autofill:active {
+      -webkit-transition-delay: 99999s;
+    }
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: get-theme(text40);
+      font-weight: 400;
+    }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: get-theme(text40);
+      font-weight: 400;
+    }
+    &:-ms-input-placeholder {
+      /* IE 10+ */
+      color: get-theme(text40);
+      font-weight: 400;
+    }
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: get-theme(text40);
+      font-weight: 400;
+    }
+
+    /* 去除 input search 自带的 clear 按钮 */
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      appearance: none;
+      display: none;
+    }
+  }
+
+  .#{$prefix}-filed-search-mini {
+    font-size: 12px;
+  }
+
+  /* prefix */
+  .#{$prefix}-prefix {
+    margin-inline-end: 8px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    color: get-theme(text40);
+  }
+
+  /* 后缀盒子，包含 suffix 和 addon after */
+  .#{$prefix}-suffixbox {
+    margin-inline-start: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .#{$prefix}-suffixbox-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .#{$prefix}-suffix {
+    display: inline-flex;
+    align-items: center;
+    color: get-theme(text40);
+
+    @include svg-default();
+
+    .#{$prefix}-clear-icon {
+      cursor: pointer;
+      color: get-theme(icon40);
+    }
+  }
+
+  .#{$prefix}-addonafter {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    color: get-theme(brandGreen);
+    cursor: pointer;
+
+    @include svg-default();
+
+    .#{$prefix}-loading-icon {
+      color: get-theme(brandGreen);
+      // 无限旋转
+      animation: spin 1s linear infinite;
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  .#{$prefix}-status-info {
+    color: get-theme(text);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  /* 额外样式，聚焦、禁用、错误、rtl等 */
+
+  &.#{$prefix}-rtl {
+    $rtl: 1;
+
+    .#{$prefix}-label-inline {
+      left: auto;
+      right: 0;
+      transform-origin: right top;
+      transform: translate(-16px, 16px);
+    }
+
+    .#{$prefix}-label-inline-float {
+      @include label-float(1);
+    }
+  }
+
+  /* focus */
+  &.#{$prefix}-focus {
+    .#{$prefix}-fieldset {
+      border-color: get-theme(text);
+    }
+
+    .#{$prefix}-legend-float {
+      @include legend-float();
+    }
+
+    .#{$prefix}-legend-search,
+    .#{$prefix}-legend-outline {
+      margin: 0;
+      padding: 0;
+      width: 0;
+      font-size: 12px;
+      visibility: hidden;
+    }
+  }
+
+  /* disable */
+  &.#{$prefix}-disable {
+    opacity: 0.4;
+    user-select: none;
+
+    * {
+      cursor: not-allowed;
+    }
+
+    .#{$prefix}-core {
+      background: get-theme(cover2);
+    }
+  }
+
+  /* error */
+  &.#{$prefix}-error {
+    .#{$prefix}-fieldset {
+      border-color: get-theme(brandRed);
+    }
+
+    .#{$prefix}-label {
+      color: get-theme(brandRed);
+    }
+
+    .#{$prefix}-status-info {
+      color: get-theme(brandRed);
+    }
+
+    .#{$prefix}-label-inline {
+      color: get-theme(brandRed);
+    }
+
+    .#{$prefix}-label-inline-float {
+      color: get-theme(brandRed);
+    }
+  }
+}

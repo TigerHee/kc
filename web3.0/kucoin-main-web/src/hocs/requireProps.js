@@ -1,0 +1,42 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+/**
+ * runtime: browser
+ */
+import React from 'react';
+import _ from 'lodash';
+import AbsoluteLoading from 'components/KuxAbsoluteLoading';
+
+const requireProps = (propConditions, placeholder) => (WrappedComponent) => {
+  return (props) => {
+    if (
+      _.some(propConditions, (condition, propName) => {
+        let pass = false;
+        if (_.isFunction(condition)) {
+          pass = !!condition.call(null, props[propName], props);
+        }
+        return !pass;
+      })
+    ) {
+      return (
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            minHeight: '500px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          {placeholder || <AbsoluteLoading style={{ position: 'absolute' }} />}
+        </div>
+      );
+    }
+
+    return React.createElement(WrappedComponent, props);
+  };
+};
+
+export default requireProps;

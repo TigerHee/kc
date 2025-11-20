@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>k_heikin_ashi</title>
+    <desc>Created with Sketch.</desc>
+    <g id="k_heikin_ashi" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3,4 L3,14 L6,14 L6,4 L3,4 Z M2,3 L7,3 L7,15 L2,15 L2,3 Z" id="Rectangle" fill="#6D7E8E" fill-rule="nonzero"></path>
+        <path d="M10,5 L10,11 L13,11 L13,5 L10,5 Z M9,4 L14,4 L14,12 L9,12 L9,4 Z" id="Rectangle-Copy-2" fill="#6D7E8E" fill-rule="nonzero"></path>
+        <rect id="Rectangle" fill="#6D7E8E" fill-rule="nonzero" x="4" y="0" width="1" height="4"></rect>
+        <rect id="Rectangle-Copy-3" fill="#6D7E8E" fill-rule="nonzero" x="11" y="2" width="1" height="2"></rect>
+    </g>
+</svg>

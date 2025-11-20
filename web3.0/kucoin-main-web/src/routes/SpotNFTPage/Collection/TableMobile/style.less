@@ -1,0 +1,41 @@
+.container {
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+    padding: 0 12px;
+  }
+}
+.item {
+  padding: 16px 0;
+  &:not(:first-child) {
+    border-top: 1px solid rgba(0, 20, 42, 0.08);;
+  }
+}
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+.itemCol {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  .title {
+    color: rgba(0, 20, 42, 0.4);
+  }
+  .val {
+    color: #00142A;
+    margin-top: 4px;
+  }
+}
+
+.noMore {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  color: rgba(0, 20, 42, 0.2);
+  font-weight: 400;
+  font-size: 12px;
+  border-top: 1px solid rgba(0, 20, 42, 0.08);
+}

@@ -1,0 +1,17 @@
+export default {
+  "wtvAa6fsU5APWF5H3bEqQN": "View <1>Privacy Policy</1> and <3>Terms of Use</3>",
+  "3Dn54WPNF5VzE5PZNVQ42C": "Redo Verification",
+  "aGLiVVCYQQc3qbqz9Rugmb": "Notice",
+  "aZursHyMzqCf8q23258vE2": "Cancel",
+  "g3qDpMcCoxeKi1vbF8pmJ5": "As you did not complete your identity verification within the required time frame, your status has been reset to Unverified. Please submit your identity verification information again.",
+  "hKKLHfYD47D8jZ3bRWr8Nb": "Redo Verification",
+  "hXuuxGgQZ3pYpPEhtXFepB": "Based on your identity verification information, you reside in a country or region in which we are currently unable to provide services due to local laws and regulations. We apologize for any inconvenience this may cause.",
+  "s7bVrYwynBGUQWmFfoTnsA": "Refer to our <1>User Agreement</1> for more information on related policies.",
+  "ugX6gMQu3aTn5fgBnWUC2o": "If you are not residing in this country or region, please resubmit your identity verification before <1>{{date}} (UTC)</1>. Otherwise, your <3>identity verification status will be reset to Unverified</3>.",
+  "2vW7TMpb66typtNx1LDyNt": "Identity Verification",
+  "262ee07aefe84000a800": "If you're not from this region, please resubmit your identity verification promptly to avoid any interruption to your service.",
+  "0e5612829fed4800a0b7": "Migrate Now",
+  "8b2da0659a454800a2cc": "Site Migration",
+  "96f0872977434800a621": "Maybe Later",
+  "ed57cb44a83b4800a23d": "Based on your ID information, we recommend migrating to {{targetSiteName}} for an improved experience."
+}

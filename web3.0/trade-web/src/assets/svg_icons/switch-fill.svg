@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="资产中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="资金划转弹框" transform="translate(-737.000000, -388.000000)">
+            <g id="弹窗-copy-2" transform="translate(487.000000, 312.000000)">
+                <g id="Group-18" transform="translate(250.000000, 76.000000)">
+                    <circle id="Oval-7" fill="#DCEAFF" cx="11.5" cy="11.5" r="11.5"></circle>
+                    <g id="箭头_切换左" transform="translate(4.130435, 7.000000)" fill="#0F7DFF" fill-rule="nonzero">
+                        <polygon id="Shape" transform="translate(7.679295, 1.965003) scale(-1, 1) translate(-7.679295, -1.965003) " points="2.62373969 3.82490616 0.67929524 3.82490616 2.23485079 2.41137959 4.64596191 0.105099389 5.57929524 0.997853012 4.10151746 2.41137959 14.6792952 2.41137959 14.6792952 3.82490616"></polygon>
+                    </g>
+                    <g id="箭头_切换右" transform="translate(3.000000, 12.043478)" fill="#0F7DFF" fill-opacity="0.236865942" fill-rule="nonzero">
+                        <polygon id="Shape" transform="translate(7.620511, 2.528823) scale(-1, 1) translate(-7.620511, -2.528823) " points="12.7538446 0.668919292 14.6205113 0.668919292 13.0649557 2.08244585 10.6538446 4.38872605 9.72051129 3.49597243 11.1982891 2.08244585 0.620511291 2.08244585 0.620511291 0.668919292"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

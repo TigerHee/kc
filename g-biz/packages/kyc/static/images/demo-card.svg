@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="338px" height="208px" viewBox="0 0 338 208" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>示意图大</title>
+    <defs>
+        <rect id="path-1" x="-6.71785859e-14" y="0.753918495" width="38.1034483" height="52.6724138"></rect>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="个人认证-示例图" transform="translate(-563.000000, -611.000000)">
+            <g id="Feedback/Dialog/1.Title/Light" transform="translate(492.000000, 447.000000)">
+                <g id="编组-5" transform="translate(40.000000, 38.000000)">
+                    <g id="示意图大" transform="translate(31.000000, 126.000000)">
+                        <rect id="bg-copy" fill="#EFEFEF" x="0" y="0" width="338" height="208" rx="5.2"></rect>
+                        <g id="人" transform="translate(71.500000, 15.600000)">
+                            <path d="M8.64448974e-14,159.937561 C13.4806601,124.667694 24.6549678,102.073894 33.5229232,92.1561592 C42.3908787,82.2384247 58.9865697,76.4218563 83.3099963,74.706454 L83.3099963,74.706454 L96.946,76.425454 L110.58275,74.706454 C134.906177,76.4218563 151.501868,82.2384247 160.369823,92.1561592 C169.237778,102.073894 180.412086,124.667694 193.892746,159.937561 Z" id="形状结合" fill="#6CD9AF"></path>
+                            <path d="M83.1175177,65.0725951 L83.1175177,74.8484886 C91.5028878,80.8293937 96.0000821,84.4521991 96.6091009,85.716905 C100.130729,82.7273232 104.788612,79.2866049 110.58275,75.3947501 L110.58275,63.696003 L83.1175177,65.0725951 Z" id="路径-4" fill="#FFB57A"></path>
+                            <path d="M117.714177,39.7172317 C120.992642,37.1549618 123.265274,36.7339631 124.532073,38.4542356 C126.432272,41.0346445 121.583912,50.7418968 117.714177,50.7418968 C115.134353,50.7418968 115.134353,47.0670084 117.714177,39.7172317 Z" id="路径-2" fill="#FFB57A"></path>
+                            <path d="M69.0500256,39.7172317 C72.3284906,37.1549618 74.6011228,36.7339631 75.8679221,38.4542356 C77.7681212,41.0346445 72.9197612,50.7418968 69.0500256,50.7418968 C66.4702019,50.7418968 66.4702019,47.0670084 69.0500256,39.7172317 Z" id="路径-2" fill="#FFB57A" transform="translate(71.704525, 44.079799) scale(-1, 1) translate(-71.704525, -44.079799) "></path>
+                            <path d="M95.6564285,21.499791 L120.368676,24.9017274 L120.368676,30.3211969 C119.8297,45.1734677 118.010459,54.7209115 114.910952,58.9635285 C110.261692,65.3274539 102.168352,72.7278766 95.6564285,72.7278766 C95.6610162,72.7278766 95.6654362,72.7050379 95.6696884,72.6593606 C89.1975069,72.5081522 81.372755,65.2607108 76.7722553,58.9635285 C73.6727488,54.7209115 71.9835054,45.1734677 71.7045252,30.3211969 L71.7045252,30.3211969 L71.7045252,24.9017274 L95.6566979,21.5731632 C95.6566081,21.5487145 95.6565183,21.5242572 95.6564285,21.499791 Z" id="形状结合" fill="#FFC190"></path>
+                            <path d="M71.9373725,29.7299962 C86.8001764,32.2027417 98.5597607,29.9842338 107.216125,23.0744723 C111.505689,28.6712094 115.819536,31.9195404 120.157666,32.8194653 L120.157666,37.2754979 L122.58009,37.2754979 C125.37173,26.7865162 124.981158,19.2778776 121.408374,14.7495819 C116.049198,7.9571383 114.902057,1.23578764 88.0236764,2.49176215 C83.9043842,2.62809667 80.6926236,1.79750929 78.3883946,5.32907052e-14 C76.6985486,2.20826825 76.2760871,3.82438826 77.1210101,4.84836002 C78.3883946,6.38431767 66.3212573,12.9336135 69.2659076,21.394546 C69.2519081,26.9407273 69.5742383,31.788804 70.2328984,35.9387759 L70.2328984,37.0191825 L73.3631401,37.0191825 L71.9373725,29.7299962 Z" id="路径-3" fill="#363B45"></path>
+                        </g>
+                        <g id="护照" transform="translate(35.100000, 106.600000)">
+                            <rect id="矩形" fill="#FFFFFF" x="0" y="0" width="130" height="80.6896552" rx="2.24137931"></rect>
+                            <g id="人" transform="translate(5.603448, 7.090909)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="蒙版" fill="#EEEEEE" xlink:href="#path-1"></use>
+                                <g mask="url(#mask-2)">
+                                    <g transform="translate(-11.818182, 10.636364)">
+                                        <path d="M2.75051946e-14,50.8892239 C4.28930094,39.6669936 7.84476249,32.4780571 10.6663847,29.3224143 C13.4880068,26.1667715 18.768454,24.3160452 26.5077261,23.7702354 L26.5077261,23.7702354 L30.846,24.3162354 L35.1854204,23.7702354 C42.9246925,24.3160452 48.2051397,26.1667715 51.0267619,29.3224143 C53.848384,32.4780571 57.4038456,39.6669936 61.6931465,50.8892239 Z" id="形状结合" fill="#6CD9AF"></path>
+                                        <path d="M26.4464829,20.7049166 L26.4464829,23.8154282 C29.1145552,25.7184434 30.5454807,26.8711543 30.7392594,27.2735607 C31.8597774,26.3223301 33.3418311,25.2275561 35.1854204,23.9892387 L35.1854204,20.2669101 L26.4464829,20.7049166 Z" id="路径-4" fill="#FFB57A"></path>
+                                        <path d="M37.4545107,12.637301 C38.4976587,11.8220333 39.2207689,11.6880792 39.6238414,12.2354386 C40.2284502,13.0564778 38.6857902,16.145149 37.4545107,16.145149 C36.6336577,16.145149 36.6336577,14.9758663 37.4545107,12.637301 Z" id="路径-2" fill="#FFB57A"></path>
+                                        <path d="M21.9704627,12.637301 C23.0136106,11.8220333 23.7367209,11.6880792 24.1397934,12.2354386 C24.7444022,13.0564778 23.2017422,16.145149 21.9704627,16.145149 C21.1496097,16.145149 21.1496097,14.9758663 21.9704627,12.637301 Z" id="路径-2" fill="#FFB57A" transform="translate(22.815076, 14.025390) scale(-1, 1) translate(-22.815076, -14.025390) "></path>
+                                        <path d="M30.4361363,6.84084259 L37.8066538,7.92327689 L37.8066538,9.64765357 C37.963475,14.3733761 37.5487823,17.4111991 36.5625756,18.7611227 C35.0832657,20.7860081 32.5081121,23.140688 30.4361363,23.140688 C30.437623,23.140688 30.4390544,23.1331502 30.4404303,23.1180746 C28.3815834,23.0712929 25.8914953,20.7649963 24.4275358,18.7611227 C23.4413291,17.4111991 23.0266364,14.3733761 23.1834576,9.64765357 L23.1834576,9.64765357 L23.1834576,7.92327689 L30.4362215,6.86404414 C30.4361931,6.85631305 30.4361647,6.8485792 30.4361363,6.84084259 Z" id="形状结合" fill="#FFC190"></path>
+                                        <path d="M22.889164,9.45954425 C27.6182379,10.2463269 31.3599239,9.54043802 34.1142217,7.34187755 C35.479083,9.12265754 36.8516706,10.1562174 38.2319845,10.4425571 L38.2319845,11.8603857 L39.002756,11.8603857 C39.891005,8.52298244 39.766732,6.13387014 38.6299372,4.69304877 C36.924745,2.53181673 36.5597456,0.393205158 28.0075334,0.792833411 C26.6968495,0.836212578 25.6749257,0.571934775 24.9417619,1.37525973e-14 C24.4040837,0.702630807 24.2696641,1.21685081 24.5385032,1.54266001 C24.9417619,2.0313738 21.1022182,4.11524067 22.0391524,6.80735553 C22.034698,8.5720496 22.1372576,10.1146194 22.3468313,11.435065 L22.3468313,11.7788308 L23.3428173,11.7788308 L22.889164,9.45954425 Z" id="路径-3" fill="#363B45"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <text id="PASSEPORT" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="4.88042269" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="11.7241379">PASSEPORT</tspan>
+                            </text>
+                            <rect id="矩形" fill="#8B8A8A" x="48.1896552" y="12.3275862" width="29.137931" height="1"></rect>
+                            <text id="Issuing-Post-Name" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="17.6896552">Issuing Post Name</tspan>
+                            </text>
+                            <text id="Surmame" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="25.5344828">Surmame</tspan>
+                            </text>
+                            <text id="Given-Name" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="33.3793103">Given Name</tspan>
+                            </text>
+                            <text id="Passport-Number" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="41.2241379">Passport Number</tspan>
+                            </text>
+                            <text id="Entries" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="49.0689655">Entries</tspan>
+                            </text>
+                            <text id="Annotation" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="56.9137931">Annotation</tspan>
+                            </text>
+                            <text id="N00088432345" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="64.7586207">N00088432345</tspan>
+                            </text>
+                            <text id="FORT-HAYS-STATE-UNIV" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="67">FORT HAYS STATE UNIVERSITY</tspan>
+                            </text>
+                            <text id="&lt;&lt;&lt;&lt;&lt;&lt;XXX&lt;&lt;&lt;XX&lt;&lt;&lt;&lt;&lt;&lt;" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="3.84145768" y="73.7241379">&lt;&lt;&lt;&lt;&lt;&lt;XXX&lt;&lt;&lt;XX&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</tspan>
+                            </text>
+                            <text id="IEJDL4567XXXJEIWHWOL" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="5.62810345" y="77.0862069">IEJDL4567XXXJEIWHWOL543JDIDSKXXXXXXXXXXR45JSI224JZXXXK2K2HJ3KDPSJXXXJ44453LS0LSJLFJS</tspan>
+                            </text>
+                            <text id="Issue-Date" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="76.2068966" y="49.0689655">Issue Date</tspan>
+                            </text>
+                            <text id="Expiration-Date" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="90.7758621" y="49.0689655">Expiration Date</tspan>
+                            </text>
+                            <text id="Sex" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="76.2068966" y="41.2241379">Sex</tspan>
+                            </text>
+                            <text id="Birth-Date" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="90.7758621" y="41.2241379">Birth Date</tspan>
+                            </text>
+                            <text id="Nationnality" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="108.706897" y="41.2241379">Nationnality</tspan>
+                            </text>
+                            <text id="Visa-Type/Class" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="105.344828" y="33.3793103">Visa Type/Class</tspan>
+                            </text>
+                            <text id="JACK" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="21.0517241">JACK</tspan>
+                            </text>
+                            <text id="XX" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="28.8965517">XX</tspan>
+                            </text>
+                            <text id="XX备份" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="36.7413793">XX</tspan>
+                            </text>
+                            <text id="XXXXXX" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="44.5862069">XXXXXX</tspan>
+                            </text>
+                            <text id="X" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="48.1896552" y="52.4310345">X</tspan>
+                            </text>
+                            <text id="XXXXXX" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="76.2068966" y="52.4310345">XXXXXX</tspan>
+                            </text>
+                            <text id="XXXXXX备份" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="90.7758621" y="52.4310345">XXXXXX</tspan>
+                            </text>
+                            <text id="X" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="76.2068966" y="44.5862069">X</tspan>
+                            </text>
+                            <text id="XXXXXX" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="90.7758621" y="44.5862069">XXXXXX</tspan>
+                            </text>
+                            <text id="XXXX" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="108.706897" y="44.5862069">XXXX</tspan>
+                            </text>
+                            <text id="XX备份-2" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="105.344828" y="36.7413793">XX</tspan>
+                            </text>
+                            <text id="XXXXXXXXXX" font-family="PingFangSC-Semibold, PingFang SC" font-size="2.24137931" font-weight="500" fill="#8B8A8A">
+                                <tspan x="105.344828" y="21.0517241">XXXXXXXXXX</tspan>
+                            </text>
+                            <text id="Control-Number" font-family="PingFangSC-Regular, PingFang SC" font-size="2.24137931" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="105.344828" y="17.6896552">Control Number</tspan>
+                            </text>
+                        </g>
+                        <g id="卡片" transform="translate(179.400000, 106.600000)">
+                            <rect id="矩形" fill="#FFFFFF" x="0" y="0" width="123.5" height="80.6" rx="2.46551724"></rect>
+                            <text id="XXXXXXX" font-family="PingFangSC-Regular, PingFang SC" font-size="11.7" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="37.2297" y="19.8">XXXXXXX</tspan>
+                            </text>
+                            <text id="2021-01-01" font-family="SignPainter-HouseScript, SignPainter" font-size="14.3" font-style="condensed" font-weight="normal" fill="#8B8A8A">
+                                <tspan x="37.2203" y="39.9">2021-01-01</tspan>
+                            </text>
+                            <text id="JACK" font-family="SignPainter-HouseScriptSemibold, SignPainter" font-size="23.4" font-style="condensed" font-weight="500" fill="#8B8A8A">
+                                <tspan x="39.0094" y="64.1">JACK</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

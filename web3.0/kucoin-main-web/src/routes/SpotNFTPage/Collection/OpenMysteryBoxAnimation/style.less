@@ -1,0 +1,93 @@
+@keyframes MaskZoomIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes MaskZoomOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.outContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transition: visibility 0.3s ease-in-out;
+  visibility: hidden;
+  &.outContainerShow {
+    visibility: visible;
+  }
+
+  .mask {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-name: MaskZoomOut;
+    background-color: rgba(0, 0, 0, 0.6);
+    &.maskShow {
+      animation-name: MaskZoomIn;
+    }
+  }
+
+  .container {
+    position: fixed;
+    //width: 50vh;
+    //height: 50vh;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    :global {
+      .lf-player-container {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      width: 75vw;
+      height: 75vw;
+    }
+  }
+  .closeContainer {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    @media screen and (min-width: 769px) {
+      top: calc(25vh - 24px);
+      right: calc((100vw - 50vh) / 2 - 24px);
+    }
+    &.closeContainerMOne {
+      @media screen and (max-width: 768px) {
+        top: calc(10vh - 24px);
+        left: 90vh;
+      }
+    }
+    &.closeContainerMTwo {
+      @media screen and (max-width: 768px) {
+        top: calc(50vh - 40vw - 24px);
+        left: 90vw;
+      }
+    }
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

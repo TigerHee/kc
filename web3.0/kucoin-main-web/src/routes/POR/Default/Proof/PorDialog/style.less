@@ -1,0 +1,112 @@
+.pro_dialog.pro_dialog {
+  :global {
+    .underline {
+      text-decoration: underline;
+    }
+    .KuxDialog-header{
+      background: #01BC8D;
+      font-size: 14px;
+      line-height: 130%;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 13px 0;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      >div:first-child {
+        width: auto;
+        height: auto;
+        text-align: right;
+        .close_svg__icon{
+          z-index: 1;
+          padding: 0 0 6px 6px;
+        }
+      }
+      .d_close {
+        color: #FFF;
+        .d_detail {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          cursor: pointer;
+        }
+      }
+      .d_header {
+        // display: flex;
+        // justify-content: space-between;
+        margin-right: -25px;
+        color: #FFF;
+        .d_title {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 30px;
+        }
+        .d_uid {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          margin-top: 4px;
+          margin-bottom: 13px;
+        }
+      }
+    }
+  }
+}
+
+.self_dialog.self_dialog.self_dialog {
+  :global {
+    .KuxDialog-header{
+      background: rgba(0, 13, 29, 0.68);
+    }
+  }
+}
+
+
+
+.step {
+  :global {
+    .step_title {
+      color: rgba(0, 13, 29, 0.68);
+      font-size: 14px;
+      .step_label {
+        min-width: 60px;
+        margin-right: 10px;
+        font-weight: 600;
+      }
+      >div{
+        display: inline-block;
+      }
+      .step_val {
+        color: rgba(0, 13, 29, 0.68);
+        font-weight: 400;
+        .KuxBox-root {
+          // max-height: 24px;
+          // div{
+          //   max-height: 24px;
+          //   line-height: 1em;
+          // }
+        }
+      }
+    }
+    .step_error {
+      color: #E80404;
+    }
+    .verify:not(.current_step){
+      >a {
+        color: rgba(0, 13, 29, 0.68);
+      }
+    }
+    .current_step.current_step{
+      color: #01BC8D;
+    }
+  }
+  :global {
+    .KuxSteps-steps {
+      .KuxStep-container {
+        height: 40px;
+      }
+      .KuxStep-tail::after {
+        background-color: transparent;
+      }
+    }
+  }
+}

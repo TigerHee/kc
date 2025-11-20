@@ -1,0 +1,54 @@
+.changeRateSpan {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--color-text40);
+
+  &[data-status='up'] {
+    color: var(--color-primary);
+  }
+
+  &[data-status='down'] {
+    color: var(--color-secondary);
+  }
+
+  &[data-size="ssm"] {
+    font-size: 12px;
+    line-height: 10px;
+  }
+
+  &[data-size="sm"] {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &[data-size="s2m"] {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  &[data-size="md"] {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &[data-size="m2d"] {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &[data-size="lg"] {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &[data-size="xl"] {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &[data-size="x2l"] {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

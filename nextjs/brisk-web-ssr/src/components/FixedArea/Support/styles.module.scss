@@ -1,0 +1,13 @@
+@import '@/styles/mixin.scss';
+
+.supportBox {
+  margin-top: 30px;
+
+  @include media-query('sm') {
+    margin-top: 14px;
+  }
+
+  .support {
+    margin-top: 0 !important;
+  }
+}

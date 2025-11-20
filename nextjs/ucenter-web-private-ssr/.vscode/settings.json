@@ -1,0 +1,34 @@
+{
+  "cSpell.words": [
+    "gbiz",
+    "iconpack",
+    "iife",
+    "kucoinv",
+    "nextjs",
+    "RRWEB",
+    "svgr",
+    "ucenter",
+    "unmodel",
+    "updatepwd",
+    "xsmall",
+    "zustand"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "files.watcherExclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.localesPaths": [
+    "public/locales",
+    "src/tools/i18n"
+  ],
+}

@@ -1,0 +1,72 @@
+.activityWrapper {
+  width: 100%;
+  .bannerWrapper {
+    display: block;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .bannerTitle {
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 45px;
+      text-align: center;
+    }
+    .bannerDescription {
+      max-width: 1248px;
+      margin: 20px auto 64px;
+      margin-top: 20px;
+      margin-bottom: 64px;
+      color: rgba(155, 155, 155, 1);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+  .activityGroup {
+    width: 1248px;
+    margin: 0 auto;
+    .activeItem {
+      display: inline-block;
+      width: 50%;
+      min-height: 530px;
+      margin-bottom: 64px;
+      :global {
+        .ant-card {
+          background: transparent;
+          .ant-card-body {
+            .ant-card-meta {
+              .ant-card-meta-detail {
+                max-width: 400px;
+                margin: 0 auto;
+                text-align: center;
+                .ant-card-meta-title {
+                  margin-bottom: 16px;
+                  color: rgba(255, 255, 255, 1);
+                  font-weight: 500;
+                  font-size: 24px;
+                  line-height: 33px;
+                  white-space: pre-line;
+                }
+                .ant-card-meta-description {
+                  color: rgba(155, 155, 155, 1);
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 22px;
+                }
+              }
+            }
+          }
+        }
+        .ant-card-hoverable:hover {
+          border-color: rgba(0, 0, 0, 0.09);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+}

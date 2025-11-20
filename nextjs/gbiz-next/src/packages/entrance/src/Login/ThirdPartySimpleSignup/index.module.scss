@@ -1,0 +1,10 @@
+@import 'src/styles/mixin.scss';
+
+.forgetLeft {
+  cursor: pointer;
+  color: var(--kux-brandGreen);
+  font-size: 14px;
+  &:hover {
+    text-decoration: underline;
+  }
+}

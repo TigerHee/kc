@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "lib": ["es2015", "dom"],
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "sourceMap": false,
+    "allowJs": true,
+    "baseUrl": "./",
+    "strict": false,
+    "outDir": "./lib",
+    "paths": {
+      "@utils": [
+        "./externals/utils"
+      ],
+      "@utils/*": [
+          "./externals/utils/*"
+      ],
+      "@tools/*": [
+        "./externals/tools/*"
+    ],
+    },
+    "moduleResolution": "node", // 必须为 node
+    "esModuleInterop": true, // 解决 CommonJS/ESM 兼容问题
+    "allowSyntheticDefaultImports": true, // 允许默认导入
+    "skipLibCheck": true, // 跳过库类型检查（临时方案）
+  },
+  "include": [
+    "futures/**/*",
+    "spot/**/*",
+    "tools/**/*",
+    "index.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+  ]
+}

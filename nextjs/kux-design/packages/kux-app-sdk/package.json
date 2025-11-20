@@ -1,0 +1,59 @@
+{
+  "name": "@kux/app-sdk",
+  "version": "1.0.0-beta.20250810134323",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": true,
+  "scripts": {
+    "watch": "vite build --watch",
+    "build": "vite build",
+    "release": "natasha-release --packageManager=pnpm",
+    "dev": "vite dev",
+    "lint": "eslint . --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest --coverage"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.kcprd.com/repository/npm-hosted/"
+  },
+  "dependencies": {
+    "big.js": "^6.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "@natasha/release": "catalog:",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/react-hooks": "catalog:",
+    "@types/big.js": "^6.2.2",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "jsdom": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vite": "catalog:",
+    "vite-bundle-analyzer": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vitest": "catalog:"
+  },
+  "volta": {
+    "node": "20.14.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "check-web",
+  "version": "0.4.1",
+  "private": true,
+  "repository": "ssh://git@bitbucket.kucoin.net/kuft/check-web.git",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "publish": "lerna publish",
+    "release": "node scripts/release.js",
+    "version": "rimraf .changeset && node scripts/version.js"
+  },
+  "devDependencies": {
+    "inquirer": "^7.0.6",
+    "lerna": "^5.0.0",
+    "ora": "5.4.0",
+    "simple-git": "^2.47.0"
+  }
+}

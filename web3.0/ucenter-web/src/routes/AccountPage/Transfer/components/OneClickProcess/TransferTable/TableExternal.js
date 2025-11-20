@@ -1,0 +1,60 @@
+/**
+ * Owner: john.zhang@kupotech.com
+ */
+
+import { styled, useResponsive } from '@kux/mui';
+
+export const TableNote = ({ note, link }) => {
+  const rv = useResponsive();
+  const isH5 = !rv?.sm;
+  if (isH5) {
+    return null;
+  }
+  return (
+    <Note>
+      {note}
+      {link?.text ? (
+        <Link href={link.href} target="_blank" rel="noopener noreferrer">
+          {link.text}
+          {link.href ? (
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M9.7672 3.52851C9.50685 3.78886 9.50685 4.21097 9.7672 4.47132L12.6291 7.33325H2.23861C1.87042 7.33325 1.57194 7.63173 1.57194 7.99992C1.57194 8.36811 1.87042 8.66659 2.23861 8.66659H12.6291L9.7672 11.5285C9.50685 11.7889 9.50685 12.211 9.7672 12.4713C10.0276 12.7317 10.4497 12.7317 10.71 12.4713L14.7098 8.47157C14.7098 8.47149 14.7099 8.4714 14.71 8.47132C14.7105 8.47085 14.711 8.47038 14.7114 8.46991C14.7746 8.40632 14.8224 8.33316 14.8547 8.25511C14.8873 8.1765 14.9053 8.09031 14.9053 7.99992C14.9053 7.81654 14.8312 7.65046 14.7114 7.52993C14.711 7.52946 14.7105 7.52899 14.71 7.52851C14.7099 7.52843 14.7098 7.52835 14.7098 7.52827L10.71 3.52851C10.4497 3.26816 10.0276 3.26816 9.7672 3.52851Z" />
+            </svg>
+          ) : null}
+        </Link>
+      ) : null}
+    </Note>
+  );
+};
+
+const Note = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: ${({ theme }) => theme.colors.text40};
+`;
+
+const Link = styled.a`
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 140%; /* 16.8px */
+  color: ${({ theme }) => theme.colors.text};
+  gap: 4px;
+  &:hover svg {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+  svg {
+    fill: ${({ theme }) => theme.colors.text};
+  }
+`;

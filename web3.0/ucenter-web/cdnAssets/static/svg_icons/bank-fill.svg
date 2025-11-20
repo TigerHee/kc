@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="支付方式" transform="translate(-20.000000, -122.000000)">
+            <g id="银行卡">
+                <g transform="translate(20.000000, 122.000000)">
+                    <g id="Group-3">
+                        <circle id="Oval-6-Copy-2" fill="#8BA0D3" opacity="0.900000036" cx="9" cy="9" r="9"></circle>
+                        <path d="M13.72,5 L5.08,5 C4.4833,5 4.0054,5.49428409 4.0054,6.10454545 L4,12.7318182 C4,13.3420795 4.4833,13.8363636 5.08,13.8363636 L13.72,13.8363636 C14.3167,13.8363636 14.8,13.3420795 14.8,12.7318182 L14.8,6.10454545 C14.8,5.49428409 14.3167,5 13.72,5 Z M13.72,12.7318182 L5.08,12.7318182 L5.08,9.41818182 L13.72,9.41818182 L13.72,12.7318182 Z M13.72,7.20909091 L5.08,7.20909091 L5.08,6.10454545 L13.72,6.10454545 L13.72,7.20909091 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

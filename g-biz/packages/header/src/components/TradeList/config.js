@@ -1,0 +1,32 @@
+export const TRADETYPE_MAP = {
+  SPOT: 'SPOT',
+  MARGIN: 'MARGIN',
+  FUTURES_USDT: 'FUTURES_USDT', // U本位
+  FUTURES_CURRENCY: 'FUTURES_CURRENCY', // 币本位本位
+  TRADING_BOT: 'TRADING_BOT', // 机器人策略列表
+};
+
+export const MARGINTYPE_MAP = {
+  ALL: 'ALL',
+  MARGIN_TRADE: 'Cross_Margin_Leverage',
+  MARGIN_ISOLATED_TRADE: 'Isolated_Margin_Leverage',
+};
+
+// 杠杆文案
+export const MARGIN_TABS_LABEL = {
+  [MARGINTYPE_MAP.All]: 'v8qZVGvUUtdzhGisQA4t2P',
+  [MARGINTYPE_MAP.MARGIN_TRADE]: 'qwrE2gXSeuyPK4NL4kvXvi',
+  [MARGINTYPE_MAP.MARGIN_ISOLATED_TRADE]: '2pSJWqdpnC53AsvWTkqqak',
+};
+
+export const FUTURES_MAP = {
+  ALL: 'ALL',
+  USDT: 'USDT',
+  USDC: 'USDC',
+};
+
+export const WITH_SEARCH_LIST = [
+  TRADETYPE_MAP.SPOT,
+  TRADETYPE_MAP.MARGIN,
+  TRADETYPE_MAP.FUTURES_USDT,
+];

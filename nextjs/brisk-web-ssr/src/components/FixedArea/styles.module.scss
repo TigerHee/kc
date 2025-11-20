@@ -1,0 +1,33 @@
+@import '@/styles/mixin.scss';
+
+.fixedArea {
+  position: fixed;
+  // bottom: 48px;
+  right: 48px;
+  z-index: 999;
+  [dir='rtl'] & {
+    left: 48px;
+    right: auto;
+  }
+
+  @include media-query('lg') {
+    right: 24px;
+    [dir='rtl'] & {
+      left: 24px;
+      right: auto;
+    }
+  }
+
+  @include media-query('sm') {
+    right: 16px;
+    // bottom: 45px;
+    [dir='rtl'] & {
+      left: 16px;
+      right: auto;
+    }
+  }
+}
+
+// .showDownloadBanner {
+//   bottom: 110px;
+// }

@@ -1,0 +1,155 @@
+@import 'themes/mix.less';
+@import 'themes/px2rem.less';
+
+html,
+body,
+#root {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: contain;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: YouSheBiaoTiHei;
+  src: url('assets/font/YouSheBiaoTiHei-2.ttf') format('truetype');
+}
+
+@font-family: Roboto, 'Titillium Web', Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+  Microsoft YaHei, '微软雅黑', Aril, sans-serif;
+
+body {
+  margin: 0;
+  font-family: @font-family;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:global {
+  // 屏蔽联系客服的浮动按钮
+  #launcher {
+    display: none;
+  }
+  .loopingClass (@index) when (@index > 0) {
+    @indexDouble: (@index * 2);
+    .mr-@{indexDouble} {
+      margin-right: (@indexDouble) * 1px;
+    }
+    .ml-@{indexDouble} {
+      margin-left: (@indexDouble) * 1px;
+    }
+    .mt-@{indexDouble} {
+      margin-top: (@indexDouble) * 1px;
+    }
+    .mb-@{indexDouble} {
+      margin-bottom: (@indexDouble) * 1px;
+    }
+    .pr-@{indexDouble} {
+      padding-right: (@indexDouble) * 1px;
+    }
+    .pl-@{indexDouble} {
+      padding-left: (@indexDouble) * 1px;
+    }
+    .pt-@{indexDouble} {
+      padding-top: (@indexDouble) * 1px;
+    }
+    .pb-@{indexDouble} {
+      padding-bottom: (@indexDouble) * 1px;
+    }
+    .font-size-@{indexDouble} {
+      font-size: (@indexDouble) * 1px;
+    }
+    .loopingClass(@index - 1);
+    .horizontal-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+    }
+    .horizontal-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .loopingClass(16);
+  .ant-message {
+    z-index: 1400 !important;
+  }
+}
+
+:global {
+  @keyframes lightMove {
+    from {
+      transform: translate(-1000%, -50%) skewX(-25deg);
+    }
+
+    to {
+      transform: translate(1000%, -50%) skewX(-25deg);
+    }
+  }
+}
+
+/* rtl:begin:ignore */
+[dir='rtl'] .Ku_arLeft {
+  transform: scaleX(-1);
+}
+
+[dir='rtl'] .Ku_arRight {
+  transform: scaleX(-1);
+}
+/* rtl:end:ignore */
+
+/* rtl:begin:ignore */
+[dir='rtl'] {
+  // kufox/mui Checkbox
+  .KuxCheckbox-inner:after {
+    right: unset;
+    left: 2px;
+    border-top: 0;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-left: 0;
+    transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  }
+}
+
+:global {
+  [dir='rtl'] {
+    div[class*='MuiDialog-'] .MuiDialog-closeX {
+      right: unset;
+      left: 16px;
+    }
+  }
+}
+/* rtl:end:ignore */
+
+:global {
+  // 图片懒加载
+  .lazy {
+    opacity: 0;
+  }
+}
+
+body fieldset {
+  min-width: initial;
+  padding: initial;
+  margin: initial;
+  border: initial;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+
+}
+body legend {
+  width: initial;
+  padding: initial;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+}

@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "सुरक्षित आसान 24/7 वैश्विक ट्रेडिंग।",
+  "evsRWTcozWk2pEFSUsfw28": "कुछ सेकंद में रजिस्टर करें और बाजारों में महारत हासिल करें!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "24/7 कहीं भी बाजार में महारत हासिल करें।",
+  "mNJrrvGzgxR6JhQ8u82crp": "80K+ रिव्यूज़",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "जल्द से जल्द वेरिफ़ाई, डिपॉज़िट और क्रिप्टो खरीदें!",
+  "rw8e32A8H7X3QtiKHS37EK": "डाउनलोड करें",
+  "tXwwyoSbqG4pgsoXomccjp": "{{{num}}} {{siteBaseCurrency}} तक इनामों में कमाने के लिए {{brandName}} ऐप डाउनलोड करें।",
+  "7dhofXiN9vaVRtVSNY9eCc": "नए उपयोगकर्ताओं को मिलेगा",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "अभी क्लेम करें",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> डाउनलोड्स",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ रिव्यूज़)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ रिव्यूज़)",
+  "awPHBDRwtLBxNEMctyUMJZ": "केवल नए उपयोगकर्ताओं के लिए: यदि आपकी पहला डिपॉज़िट या क्रिप्टो खरीदी $50 से अधिक है, तो आपको <span>$500</span> तक का एक मिस्ट्री बॉक्स प्राप्त होगा!",
+  "bc25RyyCduDizpfpxEcMEi": "डाउनलोड करें",
+  "csjK9uyQQyYMLprAYkKsRT": "अपनी क्रिप्टो यात्रा जारी रखने के लिए {{brandName}} ऐप डाउनलोड करें, और शुरुआती क्षेत्र में <span>$500</span> तक के इनाम प्राप्त करें।",
+  "oiiFHQ3NZu5zSYqpSGreye": "<span>$500</span> तक का मिस्ट्री बॉक्स प्राप्त करने के लिए पहली बार क्रिप्टो डिपॉज़िट करें या खरीदें!",
+  "pgBahZcxwoUfbjzJwqpmY7": "नए उपयोगकर्ताओं के लिए <span>$500</span> तक के इनाम!",
+  "wLAfc8MZvoHbeNragecB4Z": "हमारे मोबाइल ऐप को इस्तेमाल करके सुरक्षित और तेज़ से ट्रेड करें।"
+}

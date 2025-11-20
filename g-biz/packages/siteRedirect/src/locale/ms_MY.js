@@ -1,0 +1,13 @@
+export default {
+  "0e69c213ac414800a71a": "Teruskan",
+  "122f15eb20c94800a85a": "Australia",
+  "1282a9de05204000a42e": "Kemudian",
+  "2441224b3dbb4000a184": "Anda akan dibawa ke laman dalam <span>{{time}}</span>s",
+  "327afb2cd06c4800a436": "Eropah",
+  "3705a22def0d4800a1b9": "Pengemaskinian Wilayah Perkhidmatan",
+  "50184c5b65814800ab6a": "Berdasarkan lokasi anda, kami mengesyorkan agar anda bertukar ke laman <span>{{site}}</span> untuk menikmati pengalaman yang terbaik. Adakah anda ingin meneruskan?",
+  "5db2931fb7474800a935": "Berdasarkan butiran KYC terkini anda, akaun anda telah dipindahkan ke platform <span>{{site}}</span>. Demi pematuhan, anda akan dibawa secara automatik ke laman yang dikemas kini.",
+  "a4d911c5beb74000aa50": "Nampaknya anda berada di wilayah yang berbeza",
+  "e60f7f265df84800a4e3": "Global",
+  "f8f20fdb54ed4800a803": "Tukar Sekarang"
+}

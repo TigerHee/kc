@@ -1,0 +1,6 @@
+const url = '/account/kyb/home';
+
+describe(`【${url}】`, () => {
+  it('@todo 先占位，提测后再补', () => {
+  })
+});

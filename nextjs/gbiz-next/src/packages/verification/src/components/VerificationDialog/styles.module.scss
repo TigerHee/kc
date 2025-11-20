@@ -1,0 +1,11 @@
+.commonDialog {
+  :global(.kux-modal-body .kux-modal-content-mobile-drawer) {
+    padding-bottom: 34px;
+  }
+}
+
+.errorDialog {
+  &.headerCloser :global(.kux-modal-header) {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion and AccordionPanel should render Accordion correctly 1`] = `
+<div
+  class="css-axjbiw"
+>
+  <div
+    class="KuxAccordion-root KuxAccordion-bordered css-79elbk"
+  >
+    <div
+      class="KuxAccordion-head css-75p5bc"
+    >
+      <span
+        class="KuxAccordion-iconWrapper css-8p8knz"
+      >
+        <svg
+          class="css-1p9b4hr"
+          fill="rgba(140, 140, 140, 0.6)"
+          height="16"
+          viewBox="0 0 1024 1024"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M298.656 341.344C275.104 341.344 256 360.448 256 384v49.984c0 22.624 8.992 44.32 24.992 60.352l170.656 170.656a85.344 85.344 0 00120.672 0l170.656-170.656c16-16 24.992-37.696 24.992-60.352V384c0-23.552-19.104-42.656-42.656-42.656H298.656z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="css-a0y2e3"
+      style="min-height: 0px;"
+    >
+      <div
+        class="css-1yi6755"
+        orientation="vertical"
+      >
+        <div
+          class="css-xcdytv"
+          orientation="vertical"
+        >
+          <div
+            class="KuxAccordion-panel css-1eozcq5"
+          >
+            <div>
+              Panel Content
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

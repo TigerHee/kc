@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 22</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M47.7857143,35.5609286 L42.4285714,35.55 C41.8392857,35.55 41.3571429,36.0417857 41.3571429,36.6428571 L41.3571429,46.4785714 C41.3571429,47.0796429 41.8392857,47.5714286 42.4285714,47.5714286 L47.7857143,47.5714286 C48.375,47.5714286 48.8571429,47.0796429 48.8571429,46.4785714 L48.8571429,36.6428571 C48.8571429,36.0417857 48.375,35.5609286 47.7857143,35.5609286 Z M47.7857143,45.3857143 L42.4285714,45.3857143 L42.4285714,37.7357143 L47.7857143,37.7357143 L47.7857143,45.3857143 Z M44.5714286,25.7142857 L25.2857143,25.7142857 C24.0964286,25.7142857 23.1428571,26.6869286 23.1428571,27.9 L23.1428571,41.0142857 C23.1428571,42.2164286 24.0964286,43.2 25.2857143,43.2 L32.7857143,43.2 L32.7857143,45.3857143 L30.6428571,45.3857143 L30.6428571,47.5714286 L39.2142857,47.5714286 L39.2142857,45.3857143 L37.0714286,45.3857143 L37.0714286,43.2 L39.2142857,43.2 L39.2142857,41.0142857 L25.2857143,41.0142857 L25.2857143,27.9 L44.5714286,27.9 L44.5714286,33.3642857 L46.7142857,33.3642857 L46.7142857,27.9 C46.7142857,26.6869286 45.75,25.7142857 44.5714286,25.7142857 Z M35.9678571,33.3642857 L34.9285714,30.0857143 L33.8892857,33.3642857 L30.6428571,33.3642857 L33.2892857,35.2877143 L32.2821429,38.4679286 L34.9285714,36.5007857 L37.575,38.4679286 L36.5678571,35.2877143 L39.2142857,33.3642857 L35.9678571,33.3642857 Z" id="path-1"></path>
+        <filter x="-19.4%" y="-18.3%" width="138.9%" height="145.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="账户中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="账号概览-copy-3" transform="translate(-783.000000, -566.000000)" fill-rule="nonzero">
+            <g id="Group-22" transform="translate(783.000000, 566.000000)">
+                <g id="Group-10">
+                    <circle id="Oval" fill="#DFEEFF" cx="36" cy="36" r="36"></circle>
+                    <circle id="Oval" fill="#90C3FF" cx="36" cy="36" r="25.7142857"></circle>
+                </g>
+                <g id="Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

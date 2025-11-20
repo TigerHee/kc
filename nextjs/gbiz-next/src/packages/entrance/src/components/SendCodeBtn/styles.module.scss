@@ -1,0 +1,26 @@
+.btn {
+  padding: 0 !important;
+  .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--kux-brandGreen);
+    &.isCount {
+      color: var(--kux-text60);
+    }
+  }
+
+  :global(.kux-button-content) {
+    .loadingIcon {
+      color: var(--kux-brandGreen);
+      animation: rotate-ani 2s linear infinite;
+      @keyframes rotate-ani {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

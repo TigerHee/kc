@@ -1,0 +1,60 @@
+.bg {
+  @videoSize: 980px;
+
+  width: 100%;
+  height: @videoSize;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @videoSize;
+    z-index: 2;
+    background-image: linear-gradient(180deg, rgba(1,8,30,0.32) 54%, #01081E 100%);
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  .bg {
+    width: 100%;
+    height: ~`px2rem(580)`;
+
+    @videoSize: 100%;
+    img {
+      position: absolute;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: 1;
+      width: auto;
+      height: ~`px2rem(580)`;
+      right: 0;
+      top: 0;
+    }
+
+    &::after {
+      width: @videoSize;
+      height: ~`px2rem(580)`;
+      right: 0;
+      top: 0;
+    }
+  }
+}

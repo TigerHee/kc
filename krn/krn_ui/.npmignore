@@ -1,0 +1,12 @@
+.idea
+.vscode
+.DS_Store
+
+node_modules
+yarn.lock
+.gitignore
+example
+babel.config.js
+/index.js
+metro.config.js
+webStorm.config.js

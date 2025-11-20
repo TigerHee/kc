@@ -1,0 +1,30 @@
+/**
+ * Owner: brick.fan@kupotech.com
+ */
+
+// oneTrust 语言映射
+export const ONE_TRUST_LANG_MAP = {
+  en_US: 'en',
+  de_DE: 'de',
+  es_ES: 'es',
+  fr_FR: 'fr',
+  ko_KR: 'ko',
+  nl_NL: 'nl',
+  pt_PT: 'pt',
+  ru_RU: 'ru',
+  tr_TR: 'tr',
+  vi_VN: 'vi',
+  zh_HK: 'zh-hant',
+  it_IT: 'it',
+  id_ID: 'id',
+  ms_MY: 'ms',
+  hi_IN: 'hi',
+  th_TH: 'th',
+  ja_JP: 'ja',
+  bn_BD: 'bn',
+  pl_PL: 'pl',
+  fil_PH: 'en-ph',
+  ar_AE: 'ar',
+  ur_PK: 'ur',
+  uk_UA: 'uk',
+};

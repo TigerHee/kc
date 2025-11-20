@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="160px" viewBox="0 0 384 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>矩形备份 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="13.0639633%" y1="21.8995141%" x2="103.937033%" y2="102.05995%" id="linearGradient-1">
+            <stop stop-color="#C1C6C6" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#6A85B2" stop-opacity="0.481588724" offset="100%"></stop>
+        </linearGradient>
+        <path d="M291.633975,126.418584 L302.990606,145.748322 L325.408965,145.918584 L317.277839,159.999617 L294.275839,159.999617 L283.164839,141.087558 L291.633975,126.418584 Z M303.582921,107.415977 L341.484217,107.754772 L353.588759,128.354926 L375.664966,128.566213 L367.354012,142.961207 L305.485194,142.396352 L294.296702,123.500181 L303.582921,107.415977 Z M333.667216,55.6456173 L355.735194,55.697967 L383.999839,104.598617 L383.999839,114.465617 L377.418986,125.86533 L355.232752,125.844615 L324.192748,72.0558774 L333.667216,55.6456173 Z" id="path-2"></path>
+    </defs>
+    <g id="矩形备份-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#FFFFFF" x="0" y="0" width="384" height="160"></rect>
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <use id="形状结合" fill="url(#linearGradient-1)" opacity="0.480073475" xlink:href="#path-2"></use>
+    </g>
+</svg>

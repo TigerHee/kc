@@ -1,0 +1,1 @@
+insight script husky-prepare-commit-msg "$1"

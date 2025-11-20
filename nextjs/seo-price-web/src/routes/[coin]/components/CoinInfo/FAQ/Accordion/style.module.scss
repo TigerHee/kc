@@ -1,0 +1,77 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  border-radius: 16px;
+  background: rgba(29, 29, 29, 0.02);
+  cursor: pointer;
+  @include media-query("sm") {
+    padding: 16px;
+  }
+}
+
+.titleWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: #1d1d1d;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  flex: 1;
+  @include media-query("sm") {
+    color: #1d1d1d;
+    font-size: 14px;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 40px 0px;
+  background: rgba(29, 29, 29, 0.04);
+
+  @include media-query("sm") {
+    margin: 16px 0px;
+  }
+}
+
+.description {
+  color: rgba(29, 29, 29, 0.4);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+
+  p {
+    margin: 0px;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  @include media-query("lg") {
+    line-height: 130%;
+  }
+
+  @include media-query("sm") {
+    color: rgba(29, 29, 29, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+
+.animationContent {
+  min-height: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}

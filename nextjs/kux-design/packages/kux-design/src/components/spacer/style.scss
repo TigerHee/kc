@@ -1,0 +1,18 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-space 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'space'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('spacer') {
+  &.is-horizontal {
+    width: var(--kux-space, auto);
+    min-width: var(--kux-space-min, 0);
+    flex: var(--kux-space-flex, 1 0 0%);
+  }
+  &.is-vertical {
+    height: var(--kux-space, auto);
+    min-height: var(--kux-space-min, 0);
+    flex: var(--kux-space-flex, 1 0 0%);
+  }
+}

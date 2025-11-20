@@ -1,0 +1,124 @@
+import { updateWorkflow } from '@/services/workflow';
+import { EditOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons';
+import { ModalForm } from '@ant-design/pro-components';
+import { Button, Form, Input, Select, Space, message } from 'antd';
+import React from 'react';
+import { API } from 'types';
+
+interface UpdateWorkflowWithButtonProps {
+  onSuccess: () => void;
+  jobDefine: API.DefineItem[];
+  data: API.WorkflowItem;
+}
+export const UpdateWorkflowWithButton: React.FC<UpdateWorkflowWithButtonProps> = (props) => {
+  const { onSuccess, jobDefine, data } = props;
+  const [form] = Form.useForm<API.WorkflowItem>();
+
+  const initialValues = {
+    ...data,
+    node: data.node.map((item) => ({ key: item.name })),
+  };
+
+  return (
+    <ModalForm<API.WorkflowItem>
+      title="编辑工作流"
+      trigger={
+        <Button type="default" icon={<EditOutlined key="edit" />}>
+          编辑
+        </Button>
+      }
+      submitter={{
+        render: (props) => {
+          return [
+            <Button
+              key="submit"
+              type="primary"
+              onClick={() => {
+                props.submit();
+              }}
+            >
+              提交
+            </Button>,
+          ];
+        },
+      }}
+      form={form}
+      autoFocusFirstInput
+      modalProps={{
+        destroyOnClose: true,
+      }}
+      initialValues={initialValues}
+      submitTimeout={2000}
+      onFinish={async (values) => {
+        const nodes = values.node as unknown as { key: string }[];
+        const node = nodes.map((item) => ({
+          name: item.key,
+          desc: jobDefine.find((job) => job.name === item.key)?.desc || '',
+        }));
+        const _data = {
+          ...values,
+          node,
+        };
+        try {
+          await updateWorkflow(data._id, _data);
+          message.success('编辑成功');
+          onSuccess();
+          return true;
+        } catch (error) {
+          console.log('error', error);
+          return false;
+        }
+      }}
+    >
+      <Form.Item
+        label="工作流名称"
+        name="name"
+        required
+        rules={[{ required: true, message: '请输入名称' }]}
+      >
+        <Input placeholder="请输入" />
+      </Form.Item>
+      <Form.Item
+        label="工作流描述"
+        name="desc"
+        required
+        rules={[{ required: true, message: '清楚入描述' }]}
+      >
+        <Input placeholder="请输入" />
+      </Form.Item>
+      <Form.Item label="节点" required>
+        <Form.List name="node">
+          {(fields, { add, remove }) => (
+            <>
+              {fields.map(({ key, name, ...restField }) => (
+                <Space key={key} style={{ display: 'flex', marginBottom: 8 }} align="start">
+                  <Form.Item
+                    {...restField}
+                    name={[name, 'key']}
+                    rules={[{ required: true, message: '请选择节点' }]}
+                  >
+                    <Select
+                      style={{ width: 350 }}
+                      // popupMatchSelectWidth={500}
+                      options={jobDefine.map((item) => ({
+                        label: item.desc,
+                        value: item.name,
+                      }))}
+                      placeholder="请选择节点"
+                    />
+                  </Form.Item>
+                  <Button danger onClick={() => remove(name)} icon={<MinusOutlined />}></Button>
+                </Space>
+              ))}
+              <Form.Item>
+                <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+                  增加节点
+                </Button>
+              </Form.Item>
+            </>
+          )}
+        </Form.List>
+      </Form.Item>
+    </ModalForm>
+  );
+};

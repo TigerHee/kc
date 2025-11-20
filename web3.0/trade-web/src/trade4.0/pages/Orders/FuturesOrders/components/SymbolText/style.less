@@ -1,0 +1,42 @@
+.text {
+  display: flex;
+}
+.currencyText {
+  color: var(--text40);
+  padding-right: 4px;
+  &.importColor {
+    color: var(--medium-emphasis);
+  }
+}
+
+.h1Title {
+  color: var(--medium-emphasis);
+}
+.margin4 {
+  margin-left: 4px;
+}
+:global {
+  .symbol-link {
+    cursor: pointer;
+  }
+}
+
+.symbolBox {
+  display: inline-flex;
+  align-items: center;
+  div, span {
+    line-height: initial;
+  }
+  > span {
+    display: block;
+  }
+  .nowap {
+    white-space: nowrap;
+  }
+}
+html[dir='rtl'] .dirbox {
+  margin-right: 4px;
+}
+.symbolBox.isWap {
+  flex-wrap: wrap;
+}

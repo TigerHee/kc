@@ -1,0 +1,57 @@
+@import "~themes/dark.less";
+
+.tradeModal.tradeModal {
+  :global {
+    .ant-modal-content {
+      background: @color_5;
+      border: 1px solid fade(@black, 8%);
+      box-shadow: 0 2px 20px 0 fade(@black, 10%);
+      .ant-modal-close-x {
+        .fadeColor(@color_8, 0.85, color);
+      }
+      .ant-modal-header {
+        background: transparent !important;
+        .ant-modal-title {
+          .fadeColor(@color_8, 0.85, color);
+        }
+      }
+      .ant-modal-body {
+        .ant-card {
+          background: transparent;
+          .ant-card-head {
+            background: transparent;
+            .ant-card-head-title {
+              color: @color_7;
+              .fadeColor(@color_7, 0.1, border-color);
+            }
+          }
+          .ant-card-body {
+            .ant-row {
+              .fadeColor(@color_8, 0.9, color);
+            }
+            .ant-table-thead>tr,
+            .ant-table-tbody>tr
+            {
+              background-color: transparent;
+            }
+            .ant-table-thead>tr>th,
+            .ant-table-tbody>tr>td {
+              background-color: transparent;
+              color: @color_7;
+              .fadeColor(@color_7, 0.1, border-color);
+            }
+          }
+        }
+        .ant-form {
+          .ant-row {
+            .ant-form-item-label {
+              label {
+                color: @color_7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

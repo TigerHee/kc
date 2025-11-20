@@ -1,0 +1,150 @@
+.ticket {
+  margin-bottom: ~`px2rem(18)`;
+}
+
+.bg {
+  background-color: fade(#FFFFFF, 3);
+}
+
+.ticketBox {
+  padding-top: ~`px2rem(20)`;
+}
+
+.withNumber() {
+  color: #D4DAEC;
+  letter-spacing: 0;
+
+
+  a {
+    font-size: ~`px2rem(24)`;
+    vertical-align: baseline;
+    cursor: default;
+  }
+}
+
+.title {
+  font-size: ~`px2rem(16)`;
+
+  .withNumber();
+
+  display: flex;
+  align-items: baseline;
+}
+
+.selfTickets {
+  font-size:  ~`px2rem(16)`;
+  color: #58CCB6;
+  letter-spacing: 0;
+  margin-left:  ~`px2rem(34)`;
+  cursor: pointer;
+}
+
+.rows {
+  padding:  ~`px2rem(24)` 0;
+}
+
+.impress {
+  color: #58CCB6;
+}
+
+.row {
+  .withNumber();
+
+  background: fade(#FFFFFF, 8);
+  padding:  ~`px2rem(12)` ~`px2rem(18)` ~`px2rem(12)` ~`px2rem(28)`;
+  position: relative;
+  margin-bottom:  ~`px2rem(18)`;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+
+  font-size:  ~`px2rem(14)`;
+  .ticketNum {
+    color: fade(#FFFFFF, 87);
+  }
+  a {
+    font-size:  ~`px2rem(20)`;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background: #58CCB6;
+    width: ~`px2rem(5)`;
+    height: ~`px2rem(5)`;
+    border-radius: ~`px2rem(5)`;
+    position: absolute;
+    top: 32%;
+    left: ~`px2rem(10)`;
+    transform: translateY(-50%);
+  }
+  .rowTitle {
+    color: fade(#FFFFFF, 60);
+  }
+}
+
+.tip {
+
+  font-size: ~`px2rem(12)`;
+  color: fade(#FFFFFF, 38);
+  letter-spacing: 0;
+}
+
+.lotteryNums {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-height: ~`px2rem(316)`;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: ~`px2rem(16)`;
+
+  .lotteryNum {
+    width: ~`px2rem(80)`;
+    // padding: 0 13px;
+    height: ~`px2rem(25)`;
+    line-height: ~`px2rem(23)`;
+    text-align: center;
+    border: 1px solid #929FB3;
+
+    font-size: ~`px2rem(12)`;
+    color: #333;
+    letter-spacing: -0.12px;
+    text-align: center;
+    margin-right: ~`px2rem(18)`;
+    margin-bottom: ~`px2rem(18)`;
+    background-clip: border-box !important;
+
+    &:nth-child(3n) {
+      margin-right: 0 !important;
+    }
+
+    &.yes {
+      color: #fff;
+      border: 1px solid #FFB82C;
+      background: #FFB82C;
+      position: relative;
+
+      .win {
+        position: absolute;
+        width: ~`px2rem(53)`;
+        height: ~`px2rem(19)`;
+        line-height: ~`px2rem(17)`;
+        text-align: center;
+        font-size: ~`px2rem(12)`;
+        background: #fff;
+        border: 1px solid #FFB82C;
+        color: #FFB82C;
+        letter-spacing: 0;
+
+        left: 50%;
+        top: -10%;
+        transform: translateX(-50%) translateY(-50%) scale(0.75);
+      }
+    }
+  }
+}

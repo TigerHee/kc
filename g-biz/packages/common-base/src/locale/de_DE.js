@@ -1,0 +1,18 @@
+export default {
+  '3pJd1o7HS7Mc7RP61KBt3j':
+    "Stellen Sie sicher, dass Ihre <span class='highlight'>E-Mail-Adresse</span> korrekt ist.",
+  '5H1kxNCtmaz678kvjrsyPF':
+    'Wenn der Link abgelaufen ist oder Sie die E-Mail nicht erhalten haben, klicken Sie hier, um',
+  '8E7WgVPbNC4K56218gDkPu':
+    "Überprüfen Sie Ihren <span class='highlight'>Spam- oder Junk-Ordner</span>.",
+  '8JDS5CK7Qg2C7eFKb5cYvq': 'Autorisierung erforderlich',
+  'aWraMbu1VTMzskoUX44puZ':
+    'Aus Sicherheitsgründen müssen Sie den Verifizierungslink mit demselben Gerät anklicken, mit dem Sie die Verifizierungs-E-Mail angefordert haben.',
+  'bGGSwLk9n6gSxapYQMzad4': 'Sie haben die E-Mail nicht erhalten?',
+  'baXa9AEkqjrk9YkLe9nM7g': 'Risikowarnung',
+  'iBsXv5QsHeP8wpAWSNFZaS': 'Gesendet',
+  'puaUwRAmKgrg7fdRQ3F2mN': 'Erneut senden.',
+  'qvXxQhQy1SeuAxmM51aFE3':
+    "Eine Bestätigungs-E-Mail wurde an <span class='highlight'>{{email}}</span> gesendet. Bitte lassen Sie diese aktuelle Seite geöffnet und befolgen Sie die Anweisungen in der E-Mail, um die Autorisierung abzuschließen.",
+  'vt2AqpbRG2bxpioX9zDQYS': 'erneut senden nach {{a}} s.',
+};

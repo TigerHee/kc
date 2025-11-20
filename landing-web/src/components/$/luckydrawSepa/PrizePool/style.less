@@ -1,0 +1,208 @@
+@import '~themes/mix.less';
+
+.container {
+  width: 100%;
+  padding: 80px 0 0;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({padding: 60px 24px 0 24px;});
+  .mediaQuerySm({padding: 40px 12px 0 12px;});
+}
+
+.inner {
+  margin: 0 auto;
+  width: 83.3%;
+  max-width: 1200px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 100%;});
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.remain {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 48px;
+  color: #2dbd96;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({font-size: 36px;});
+  .mediaQuerySm({font-size: 24px;});
+}
+
+.remainImg {
+  width: 53px;
+  height: 44px;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 39px; height: 32px;});
+  .mediaQuerySm({width: 24px; height: 20px;});
+}
+
+.title {
+  margin: 0 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: #00142a;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({font-size: 36px; line-height: 48px;});
+  .mediaQuerySm({width: 100%; font-size: 24px; line-height: 36px;});
+}
+
+.prizeBox {
+  width: 100%;
+  height: 564px;
+  margin-top: 60px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({margin-top: 40px;height: 428px;});
+  .mediaQuerySm({height: 226px;});
+}
+
+.coinWall {
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  height: 260px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 64.5%;max-width: 465px;height: 205px;});
+  .mediaQuerySm({width: 68.3%;max-width: 240px;height: 105px;});
+}
+
+@keyframes moveOne {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*Safari 和 Chrome:*/
+@-webkit-keyframes moveOne {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes moveTwo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*Safari 和 Chrome:*/
+@-webkit-keyframes moveTwo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.coinBox {
+  position: absolute;
+  z-index: 1;
+  height: 0;
+  background: url('assets/luckydrawSepa/coin-bg.svg') no-repeat;
+  background-size: cover;
+}
+
+.move1 {
+  animation: moveOne 2.5s linear infinite;
+  -webkit-animation: moveOne 2.5s linear infinite;
+}
+
+.move2 {
+  animation: moveTwo 2.5s linear infinite 1s;
+  -webkit-animation: moveTwo 2.5s linear infinite 1s;
+}
+
+.move3 {
+  animation: moveOne 2.5s linear infinite 0.5s;
+  -webkit-animation: moveOne 2.5s linear infinite 0.5s;
+}
+
+.move4 {
+  animation: moveTwo 2.5s linear infinite 0.5s;
+  -webkit-animation: moveTwo 2.5s linear infinite 0.5s;
+}
+
+.coinText {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 32px;
+  color: #ff9b46;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({line-height: 24px;});
+  .mediaQuerySm({line-height: 14px;});
+}
+
+.coinNum {
+  font-size: 30px;
+  .mediaQueryMd({font-size: 24px;});
+  .mediaQuerySm({font-size: 16px;});
+}
+
+.coinName {
+  font-size: 20px;
+  .mediaQueryMd({font-size: 16px;});
+  .mediaQuerySm({font-size: 12px;});
+}
+
+.prizeImg {
+  display: block;
+  width: 73.3%;
+  max-width: 880px;
+  position: absolute;
+  top: 214px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 100%;max-width: 683px; top: 156px;});
+  .mediaQuerySm({width: 100%;max-width: 351px; top: 82px;});
+}
+
+.imgIndex {
+  z-index: 2;
+}
+
+.winImg {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 80px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({margin-top: 60px;});
+  .mediaQuerySm({margin-top: 40px;});
+}

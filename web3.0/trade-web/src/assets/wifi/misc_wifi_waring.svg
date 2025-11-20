@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="24px" viewBox="0 0 33 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>misc wifi copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="信号低-红色" transform="translate(1.000000, -9.000000)" stroke="#FF6477" stroke-width="1.3167">
+            <g id="misc-wifi-copy" transform="translate(0.000000, 10.000000)">
+                <path d="M10.4928261,15.8 C11.8118232,14.4721884 13.6147768,13.7242677 15.4966304,13.7242677 C17.3784841,13.7242677 19.1814377,14.4721884 20.5004348,15.8" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4.94652174,11.24 C7.73268829,8.44488258 11.5352252,6.87128944 15.5033696,6.87128944 C19.4715139,6.87128944 23.2740508,8.44488258 26.0602174,11.24" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M0,6.66666667 C4.08701564,2.55585026 9.6714607,0.240636591 15.5,0.240636591 C21.3285393,0.240636591 26.9129844,2.55585026 31,6.66666667" id="Shape" stroke-linecap="round" stroke-linejoin="round"></path>
+                <ellipse id="Oval" cx="15.5" cy="20.2333333" rx="1.34782609" ry="1.34666667"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,64 @@
+@import '../mix';
+.conditionBox {
+  .condition {
+    padding: 24px 26px;
+    background: @frameBg;
+    border: 1px solid @frameBorderColor;
+    border-radius: 8px;
+    .conditionItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+      margin-bottom: 16px;
+      padding: 0 16px;
+      background: rgb(16, 32, 58);
+      border-radius: 8px;
+      p {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        color: #9dc4ff;
+        font-size: 14px;
+        letter-spacing: 0;
+        span {
+          margin-right: 8px;
+          &.success {
+            color: #596e8d;
+          }
+          &.fail {
+            color: #0f7dff;
+          }
+        }
+      }
+    }
+  }
+  .conditionBtn {
+    margin-top: 8px;
+    text-align: center;
+    .login {
+      color: #0f7dff;
+      font-size: 16px;
+      letter-spacing: 0;
+      text-align: center;
+    }
+    .join {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      color: #ffffff;
+      font-size: 16px;
+      letter-spacing: 0;
+      text-align: center;
+      background-image: linear-gradient(-45deg, #ffb82c 0%, #f8a531 100%);
+      border: 1px solid #c88415;
+      border-radius: 8px;
+    }
+    span {
+      color: #9dc4ff;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+  }
+}

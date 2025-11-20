@@ -1,0 +1,53 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { {{ pascalCase componentName }} } from './index';
+
+// https://storybook.js.org/docs/writing-stories#default-export
+const componentMeta = {
+  title: 'base/{{ pascalCase componentName }}',
+  component: {{ pascalCase componentName }},
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info:
+    // https://storybook.js.org/docs/configure/story-layout
+    layout: 'padded',
+  },
+  /**
+    * 自定义组件参数信息: https://storybook.js.org/docs/api/argtypes
+    *
+    * 比如, storybook 不能正确解析类型函数返回的新类型, 可以手动指定 argTypes
+    */
+  argTypes: {
+    // backgroundColor: { control: 'color' },
+  },
+  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked:
+  // https://storybook.js.org/docs/essentials/actions#action-args
+  // args: { onClick: fn() },
+} satisfies Meta<typeof {{ pascalCase componentName }}>;
+
+export default componentMeta;
+
+type Story = StoryObj<typeof componentMeta>;
+
+/**
+  * 用于给设计师验收的 ShowCase 
+  * 若有UI设计稿, 请保证 ShowCase 展示的内容与设计稿一致
+  * 
+  * 若有样式/布局需求, 请直接使用内连样式或者组件库的其他组件实现, 不要创建给 stories 使用的样式文件
+  */
+export const ShowCase: Story = {
+  args: {
+    children: 'Hello',
+  },
+  // 使用 render 函数自定义story样式使其与设计稿一致
+  render: (args) => <{{ pascalCase componentName }} {...args} />,
+};
+
+/**
+  * 用于给开发人员测试组件的 Playground
+  * Playground 中的内容可以随意修改, 但请不要删除或修改组件本身的 props
+  * 一般来组件, 只需要提供 args 即可, 若有特殊定制需求, 则需要提供 render 函数
+  */
+export const Playground: Story = {
+  args: {
+    children: 'Playground',
+  },
+};

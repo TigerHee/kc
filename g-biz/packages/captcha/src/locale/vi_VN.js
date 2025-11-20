@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'Hủy',
+  'gfa_btn': 'Xác nhận',
+  'verify_img_tip': 'Nhập các ký tự',
+  'verify_img_title': 'Xác minh hình ảnh',
+};

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>交易cion</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EBF0FD" offset="0%"></stop>
+            <stop stop-color="#C9D6FE" offset="100%"></stop>
+        </linearGradient>
+        <path d="M14.5263158,13.5 L14.5263158,14 C14.5263158,14.5525 14.1023684,15 13.5789474,15 L6.94736842,15 C6.42394737,15 6,14.5525 6,14 L6,7 C6,6.4475 6.42394737,6 6.94736842,6 L13.5789474,6 C14.1023684,6 14.5263158,6.4475 14.5263158,7 L14.5263158,7.5 L10.2631579,7.5 C9.73973684,7.5 9.31578947,7.9475 9.31578947,8.5 L9.31578947,12.5 C9.31578947,13.0525 9.73973684,13.5 10.2631579,13.5 L14.5263158,13.5 Z M10.2631579,12.5 L15,12.5 L15,8.5 L10.2631579,8.5 L10.2631579,12.5 Z M12.1578947,11.25 C11.7647368,11.25 11.4473684,10.915 11.4473684,10.5 C11.4473684,10.085 11.7647368,9.75 12.1578947,9.75 C12.5510526,9.75 12.8684211,10.085 12.8684211,10.5 C12.8684211,10.915 12.5510526,11.25 12.1578947,11.25 Z" id="path-2"></path>
+        <filter x="-44.4%" y="-22.2%" width="188.9%" height="188.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="只有staking" transform="translate(-630.000000, -297.000000)" fill-rule="nonzero">
+            <g id="Group-20" transform="translate(606.000000, 278.000000)">
+                <g id="Staking">
+                    <g id="交易cion" transform="translate(24.000000, 19.000000)">
+                        <rect id="Rectangle-Copy-10" fill="url(#linearGradient-1)" x="0" y="0" width="20" height="20" rx="10"></rect>
+                        <g id="Shape-Copy-3">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <use fill="#0F7DFF" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

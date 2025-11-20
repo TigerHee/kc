@@ -1,0 +1,19 @@
+.tipContent {
+  font-size: 12px;
+  color: rgba(0, 13, 29, 0.4);
+  margin: 0;
+  margin-top: 16px;
+  line-height: 130%;
+
+  .klineReminder {
+    margin-right: 1ch;
+    color: #000d1d;
+  }
+
+  .partnerName {
+    position: relative;
+    margin-left: 0.5ch;
+    color: rgba(0, 13, 29, 0.4);
+    text-decoration: underline;
+  }
+}

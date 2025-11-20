@@ -1,0 +1,211 @@
+@import '@/style/index.scss';
+
+$popover-default-bgc: #2d2d2f;
+$popover-default-border-color: $popover-default-bgc;
+
+@include component('popover') {
+  display: inline-flex;
+  cursor: pointer;
+  align-content: center;
+  align-items: center;
+
+  &-content {
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    background: get-theme(toolTips);
+    color: get-theme(text, dark);
+    border-radius: 8px;
+    opacity: 1;
+    transform: none;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+      rgba(0, 0, 0, 0.06) 0px 10px 16px 0px,
+      rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border: 1px solid get-theme(toolTips);
+
+    .#{$prefix}-arrow {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      overflow: hidden;
+      box-sizing: content-box;
+
+      &[data-size='large'] {
+        width: 18px;
+        height: 18px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        box-sizing: content-box;
+        width: 100%;
+        height: 100%;
+        background: var(--kux-popover-bg-color, $popover-default-bgc);
+        border: 1px solid var(--kux-popover-border-color, $popover-default-border-color);
+        border-radius: 2px;
+        box-shadow:
+          rgba(0, 0, 0, 0.06) 0px 10px 16px 0px,
+          rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+        top: -1px;
+        left: -1px;
+        transform: rotate(45deg);
+      }
+    }
+
+    &[data-placement^='top'] {
+      .#{$prefix}-arrow {
+        top: 100%;
+        &::after {
+          top: -90%;
+        }
+      }
+    }
+    &[data-placement='top'] {
+      &[data-static='false'] {
+        left: 50%;
+      }
+
+      .#{$prefix}-arrow {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &[data-placement='top-start'] {
+      .#{$prefix}-arrow {
+        left: 12px;
+      }
+    }
+    &[data-placement='top-end'] {
+      left: auto;
+      .#{$prefix}-arrow {
+        right: 12px;
+      }
+    }
+    &[data-placement^='bottom'] {
+      &[data-static='false'] {
+        top: 100%;
+      }
+      .#{$prefix}-arrow {
+        bottom: 100%;
+        &::after {
+          top: 70%;
+        }
+      }
+    }
+    &[data-placement='bottom'] {
+      &[data-static='false'] {
+        left: 50%;
+      }
+      .#{$prefix}-arrow {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &[data-placement='bottom-start'] {
+      .#{$prefix}-arrow {
+        left: 12px;
+      }
+    }
+    &[data-placement='bottom-end'] {
+      .#{$prefix}-arrow {
+        right: 12px;
+      }
+    }
+    &[data-placement^='left'] {
+      .#{$prefix}-arrow {
+        left: 100%;
+
+        &::after {
+          left: -90%;
+        }
+      }
+    }
+    &[data-placement='left'] {
+      &[data-static='false'] {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .#{$prefix}-arrow {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &[data-placement='left-start'] {
+      &[data-static='false'] {
+        top: 0;
+      }
+
+      .#{$prefix}-arrow {
+        top: 12px;
+      }
+    }
+    &[data-placement='left-end'] {
+      &[data-static='false'] {
+        top: auto;
+      }
+      .#{$prefix}-arrow {
+        bottom: 12px;
+      }
+    }
+    &[data-placement^='right'] {
+      right: auto;
+
+      .#{$prefix}-arrow {
+        right: 100%;
+
+        &::after {
+          left: 70%;
+        }
+      }
+    }
+    &[data-placement='right'] {
+      &[data-static='false'] {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .#{$prefix}-arrow {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &[data-placement='right-start'] {
+      &[data-static='false'] {
+        top: 0;
+      }
+
+      .#{$prefix}-arrow {
+        top: 12px;
+      }
+    }
+    &[data-placement='right-end'] {
+      &[data-static='false'] {
+        top: auto;
+      }
+      .#{$prefix}-arrow {
+        bottom: 12px;
+      }
+    }
+
+    &-static {
+      position: relative;
+      width: fit-content;
+      left: unset;
+      right: unset;
+      bottom: unset;
+      top: unset;
+    }
+  }
+
+  &-show {
+    animation: get-animation-name(fade-in) 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &-hide {
+    opacity: 0;
+  }
+}

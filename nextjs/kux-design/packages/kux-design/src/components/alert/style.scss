@@ -1,0 +1,57 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-alert 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'alert'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('alert') {
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: get-theme(cover4);
+    color: get-theme(text60);
+    border-radius: 8px;
+    margin-top: 8px;
+    max-width: 400px;
+    pointer-events: auto;
+    .kux-alert-icon {
+      color: get-theme(text);
+    }
+
+    &.is-error {
+      background-color: get-theme(brandRed8);
+      .kux-alert-icon {
+        color: get-theme(brandRed);
+      }
+    }
+
+    &.is-warning {
+      background-color: get-theme(complementaryYellow8);
+      .kux-alert-icon {
+        color: get-theme(complementaryYellow);
+      }
+    }
+
+    &.is-success {
+      background-color: get-theme(walletGreen8);
+      .kux-alert-icon {
+        color: get-theme(walletGreen);
+      }
+    }
+
+    &.in-basic {
+      font-size: 14px;
+      padding: 12px 16px;
+    }
+    &.in-small {
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+  }
+
+  &-close-icon {
+    cursor: pointer;
+  }
+}

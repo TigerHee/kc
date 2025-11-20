@@ -1,0 +1,22 @@
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  min-height: 80vh;
+  color: var(--kux-text);
+}
+
+.header {
+  min-height: 72px;
+
+  @media (max-width: 767px) {
+    min-height: 64px;
+  }
+
+  &.unset {
+    min-height: unset;
+  }
+}

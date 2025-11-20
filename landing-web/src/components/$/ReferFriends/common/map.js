@@ -1,0 +1,44 @@
+/**
+ * Owner: gavin.liu1@kupotech.com
+ */
+// 固定奖品id
+export const AWARD_ID = {
+  // 礼包 1 : 50 USDT 合约抵扣金
+  ReferralBonusGift1: 'ReferralBonusGift1',
+  // 礼包 2 : 50 USDT 合约体验金
+  ReferralBonusGift2: 'ReferralBonusGift2',
+  // 礼包 3 : 50 USDT提现
+  ReferralBonusGift3: 'ReferralBonusGift3',
+  // 礼包 4 : 10000 USDT大奖瓜分机会 (旅游)
+  ReferralBonusGift4: 'ReferralBonusGift4',
+  // vip 卷
+  VIPLv1Trial: 'VIPLv1Trial',
+};
+
+export const MODAL_MAP = {
+  // 邀请人助力福利弹窗
+  INVITER_BOOST_WELFARE_POPUP_WINDOW: 'INVITER_BOOST_WELFARE_POPUP_WINDOW',
+  // 被邀请人助力福利弹窗
+  BE_INVITER_BOOST_WELFARE_POPUP_WINDOW: 'BE_INVITER_BOOST_WELFARE_POPUP_WINDOW',
+  // 好友助力结果弹窗
+  FRIENDS_HELP_RESULTS_WINDOW: 'FRIENDS_HELP_RESULTS_WINDOW',
+  // 助力奖品获奖弹窗
+  BOOST_PRIZE_WINNING_POP_UP_WINDOW: 'BOOST_PRIZE_WINNING_POP_UP_WINDOW',
+  // 助力奖品-礼包3后的平台助力弹窗
+  POWER_AWARDS_PACKAGE_AFTER_3_PLATFORM_DYNAMICAL_POPUP_WINDOW:
+    'POWER_AWARDS_PACKAGE_AFTER_3_PLATFORM_DYNAMICAL_POPUP_WINDOW',
+
+  // 提示性弹窗:
+  //助力翻倍秘诀
+  SECRET_POWER_DOUBLED: 'SECRET_POWER_DOUBLED',
+  USDT_10000_TIP: 'USDT_10000_TIP',
+  TRADE_TIP: 'TRADE_TIP',
+
+  // 奖品列表提示性弹窗:
+  TRAVEL_PACKAGE: 'TRAVEL_PACKAGE',
+  FUTURES_DEDUCTION_COUPON: 'FUTURES_DEDUCTION_COUPON',
+  FUTURES_TRIAL_FUND: 'FUTURES_TRIAL_FUND',
+  VIP1_EXPERIENCE_TICKET: 'VIP1_EXPERIENCE_TICKET',
+  SIGNATURE_SPOTLIGH: 'SIGNATURE_SPOTLIGH',
+  TOKEN: 'TOKEN',
+};

@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table applies custom styles 1`] = `
+Array [
+  <View
+    containerStyle={
+      Object {
+        "backgroundColor": "red",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "borderBottomColor": "rgba(29, 29, 29, 0.08)",
+          "borderBottomWidth": 1,
+          "borderLeftColor": "rgba(29, 29, 29, 0.08)",
+          "borderLeftWidth": 1,
+          "borderRightColor": "rgba(29, 29, 29, 0.08)",
+          "borderRightWidth": 1,
+          "borderTopColor": "rgba(29, 29, 29, 0.08)",
+          "borderTopWidth": 1,
+          "overflow": "hidden",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#f7f7f7",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        hasBorder={true}
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "rgba(29, 29, 29, 0.08)",
+              "borderLeftColor": "rgba(29, 29, 29, 0.08)",
+              "borderRightColor": "rgba(29, 29, 29, 0.08)",
+              "borderRightWidth": 1,
+              "borderTopColor": "rgba(29, 29, 29, 0.08)",
+              "justifyContent": "center",
+              "minHeight": 32,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            },
+            Object {
+              "width": "50%",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#1D1D1D",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 15.6,
+              },
+              undefined,
+            ]
+          }
+        >
+          Name
+        </Text>
+      </View>
+      <View
+        hasBorder={false}
+        style={
+          Array [
+            Object {
+              "justifyContent": "center",
+              "minHeight": 32,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            },
+            Object {
+              "width": "50%",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#1D1D1D",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 15.6,
+              },
+              undefined,
+            ]
+          }
+        >
+          Age
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomColor": "rgba(29, 29, 29, 0.08)",
+            "borderLeftColor": "rgba(29, 29, 29, 0.08)",
+            "borderRightColor": "rgba(29, 29, 29, 0.08)",
+            "borderTopColor": "rgba(29, 29, 29, 0.08)",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        hasBorder={true}
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "rgba(29, 29, 29, 0.08)",
+              "borderLeftColor": "rgba(29, 29, 29, 0.08)",
+              "borderRightColor": "rgba(29, 29, 29, 0.08)",
+              "borderRightWidth": 1,
+              "borderTopColor": "rgba(29, 29, 29, 0.08)",
+              "justifyContent": "center",
+              "minHeight": 32,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            },
+            Object {
+              "width": "50%",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#1D1D1D",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 15.6,
+              },
+              undefined,
+            ]
+          }
+        >
+          Alice
+        </Text>
+      </View>
+      <View
+        hasBorder={false}
+        style={
+          Array [
+            Object {
+              "justifyContent": "center",
+              "minHeight": 32,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            },
+            Object {
+              "width": "50%",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#1D1D1D",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 15.6,
+              },
+              undefined,
+            ]
+          }
+        >
+          18
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomColor": "rgba(29, 29, 29, 0.08)",
+            "borderLeftColor": "rgba(29, 29, 29, 0.08)",
+            "borderRightColor": "rgba(29, 29, 29, 0.08)",
+            "borderTopColor": "rgba(29, 29, 29, 0.08)",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        hasBorder={true}
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "rgba(29, 29, 29, 0.08)",
+              "borderLeftColor": "rgba(29, 29, 29, 0.08)",
+              "borderRightColor": "rgba(29, 29, 29, 0.08)",
+              "borderRightWidth": 1,
+              "borderTopColor": "rgba(29, 29, 29, 0.08)",
+              "justifyContent": "center",
+              "minHeight": 32,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            },
+            Object {
+              "width": "50%",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#1D1D1D",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 15.6,
+              },
+              undefined,
+            ]
+          }
+        >
+          Bob
+        </Text>
+      </View>
+      <View
+        hasBorder={false}
+        style={
+          Array [
+            Object {
+              "justifyContent": "center",
+              "minHeight": 32,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            },
+            Object {
+              "width": "50%",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#1D1D1D",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 15.6,
+              },
+              undefined,
+            ]
+          }
+        >
+          20
+        </Text>
+      </View>
+    </View>
+  </View>,
+  "\\\\",
+]
+`;

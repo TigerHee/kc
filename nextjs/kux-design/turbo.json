@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["NODE_ENV", "PUBLIC_SUB_APP", "MODE",
+    "PUBLIC_CDN_ROOT", "UNIFY_BUILD",
+    "PUBLIC_SSG_LANG", "PUBLIC_IS_IN_SERVER"],
+  "tasks": {
+    "build": {
+      "cache": false,
+      "env": ["NODE_ENV=production", "BUILD=1"],
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "watch": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import '@/styles/mixin.scss';
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-query('lg') {
+    gap: 32px;
+    width: 100%;
+  }
+
+  @include media-query('sm') {
+    gap: 16px;
+    width: 100%;
+    margin-top: 48px;
+  }
+}
+
+.PagerScroll {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+
+  @include media-query('lg') {
+    gap: 32px;
+  }
+
+  @include media-query('sm') {
+    gap: 16px;
+  }
+}
+
+.ListController {
+  display: none;
+  margin-top: 48px;
+
+  @include media-query('lg') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include media-query('sm') {
+    margin-top: 32px;
+  }
+}
+
+.h5Highlights {
+  margin-top: 48px;
+}
+.h5HighlightsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    color: var(--kux-text);
+  }
+}
+.desc {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text60);
+}

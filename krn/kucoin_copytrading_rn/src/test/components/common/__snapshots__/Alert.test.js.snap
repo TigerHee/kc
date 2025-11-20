@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert applies style prop 1`] = `
+Array [
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(248, 178, 0, 0.08)",
+          "borderBottomLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderTopRightRadius": 8,
+          "flexDirection": "row",
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+        },
+        Object {
+          "backgroundColor": "red",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginTop": 2,
+        }
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight="16"
+        bbWidth="16"
+        fill="none"
+        focusable={false}
+        height="16"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            Object {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        vbHeight={16}
+        vbWidth={16}
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={null}
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGGroup>
+            <RNSVGPath
+              d="M7.99984 3.66612C8.36803 3.66612 8.6665 3.9646 8.6665 4.33279V8.99945C8.6665 9.36764 8.36803 9.66612 7.99984 9.66612C7.63165 9.66612 7.33317 9.36764 7.33317 8.99945V4.33279C7.33317 3.9646 7.63165 3.66612 7.99984 3.66612Z"
+              fill={4294488576}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+            <RNSVGPath
+              d="M7.99984 11.9995C8.22085 11.9995 8.43281 11.9117 8.58909 11.7554C8.74537 11.5991 8.83317 11.3871 8.83317 11.1661C8.83317 10.9451 8.74537 10.7331 8.58909 10.5769C8.43281 10.4206 8.22085 10.3328 7.99984 10.3328C7.77882 10.3328 7.56686 10.4206 7.41058 10.5769C7.2543 10.7331 7.1665 10.9451 7.1665 11.1661C7.1665 11.3871 7.2543 11.5991 7.41058 11.7554C7.56686 11.9117 7.77882 11.9995 7.99984 11.9995Z"
+              fill={4294488576}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+            <RNSVGPath
+              d="M0.666504 7.99984C0.666504 3.94975 3.94975 0.666504 7.99984 0.666504C12.0499 0.666504 15.3332 3.94975 15.3332 7.99984C15.3332 12.0499 12.0499 15.3332 7.99984 15.3332C3.94975 15.3332 0.666504 12.0499 0.666504 7.99984ZM7.99984 1.99984C4.68613 1.99984 1.99984 4.68613 1.99984 7.99984C1.99984 11.3135 4.68613 13.9998 7.99984 13.9998C11.3135 13.9998 13.9998 11.3135 13.9998 7.99984C13.9998 4.68613 11.3135 1.99984 7.99984 1.99984Z"
+              fill={4294488576}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+          <RNSVGDefs>
+            <RNSVGClipPath
+              name="clip0_6120_8968"
+            >
+              <RNSVGRect
+                fill={4294967295}
+                height="16"
+                propList={
+                  Array [
+                    "fill",
+                  ]
+                }
+                width="16"
+                x={0}
+                y={0}
+              />
+            </RNSVGClipPath>
+          </RNSVGDefs>
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "rgba(29, 29, 29, 0.6)",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "flexWrap": "wrap",
+            "fontSize": 14,
+            "lineHeight": 21,
+            "marginLeft": 8,
+          },
+          undefined,
+        ]
+      }
+    >
+      Styled
+    </Text>
+  </View>,
+  "\\\\",
+]
+`;

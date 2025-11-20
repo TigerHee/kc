@@ -1,0 +1,130 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="2. 主题" />
+# 主题
+
+`@kux/design` 组件库基于css variable提供了一套主题变量，支持黑白主题.
+
+[Figma 主题变量地址](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42766-20134&vars=1&var-id=22816-30832&m=dev)
+
+## 主题变量
+
+> 表格单元格的背景色即为颜色值对应颜色
+
+import colors from './assets/themeColorsArray.json';
+import { getTextColorBasedBg } from './helper/colors';
+
+<table>
+<thead>
+<tr>
+  <th>颜色名称</th>
+  <th>light</th>
+  <th>dark</th>
+</tr>
+</thead>
+<tbody>
+{colors.map((color) => (
+  <tr key={color.name}>
+    <td>
+      <code>{color.name}</code>
+    </td>
+    <td style={{ background: color.light, color: getTextColorBasedBg(color.light) }}>{color.light}</td>
+    <td style={{ background: color.dark, color: getTextColorBasedBg(color.dark) }}>{color.dark}</td>
+  </tr>
+))}
+</tbody>
+</table>
+
+## 如何使用
+css variable 可以通过 `var(--kux-<变量名>)` 的方式使用。
+
+例如：
+
+在css中
+```css
+body {
+  background-color: var(--kux-primary);
+  color: var(--kux-text);
+}
+```
+
+在js中
+```js
+document.body.style.backgroundColor = 'var(--kux-primary)';
+```
+
+我们提供了sass专门的函数 `get-theme`, 可以更方便的使用主题变量
+
+```scss
+// 引入 kux-design 的sass工具
+@import '@kux/design/style';
+
+.some-component {
+  background-color: get-theme(primary);
+  color: get-theme(text);
+}
+```
+
+## 自定义主题变量
+```scss
+// 在引入 kux-design 的sass 工具之前, 可以通过 $ns 变量来设置样式的命名空间
+// $ns: 'kol'; // 默认为 user
+@import '@kux/design/style';
+
+
+/**
+ * 定义用户自定义主题变量
+ * @param {string} key 变量名
+ * @param {string} lightValue 浅色主题的值
+ * @param {string} darkValue 暗黑主题的值
+*/
+@include defineUserTheme('primary', #ffffff, #1a1a1a);
+@include defineUserTheme('text', #000000, #f0f0f0);
+
+// 使用自定义主题变量
+.some-component {
+  background-color: get-user-theme(primary);
+  color: get-user-theme(text);
+}
+```
+
+相当于下面的代码:
+```scss
+[data-theme='light'] {
+  --user-primary: #ffffff; // 自定义浅色主题的主色
+  --user-text: #000000; // 自定义浅色主题的文本颜色
+}
+[data-theme='dark'] {
+  --user-primary: #1a1a1a; // 自定义暗黑主题的主色
+  --user-text: #f0f0f0; // 自定义暗黑主题的文本颜色
+}
+// 使用自定义主题变量
+.some-component {
+  background-color: var(--user-primary);
+  color: var(--user-text);
+}
+```
+
+
+## 主题切换及获取
+主题变量的值通过 html(可以是任何html标签) 属性 `[data-theme="dark"]` 或 `[data-theme="light"]` 来切换。
+
+库提供了工具方法来切换获取主题
+
+```ts
+import { BUILTIN_THEMES, themeListener, useTheme, useIsDark, setTheme } from '@kux/design';
+
+setTheme('dark'); // 切换到暗黑主题, 默认给html标签添加 data-theme="dark" 属性
+setTheme('light', document.body); // 切换到浅色主题, 给指定的元素(body)添加 data-theme="light" 属性
+
+// 获取当前主题, 获根节点 (html标签) 
+themeListener.getValue(); // 返回根节点 [data-theme] 属性值, 如 'dark' 或 'light', 若未设置则返回 ''
+
+// 使用hook获取当前主题
+function MyComponent() {
+  const isDark = useIsDark(); // 返回 true 或 false
+  const theme = useTheme(); // 返回 'dark' 或 'light' 或 ''
+  console.log('is builtin theme:', BUILTIN_THEMES.includes(theme)); // 判断是否为内置主题
+  return <div>{isDark ? '当前是暗黑主题' : '当前是浅色主题'}</div>;
+}
+```

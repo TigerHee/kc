@@ -1,0 +1,1 @@
+import '../common/freeze.cy';

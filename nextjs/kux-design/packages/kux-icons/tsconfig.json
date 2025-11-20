@@ -1,0 +1,19 @@
+{
+  "extends": "@kux/tsconfig/jsx",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
+    "types": [
+      "@types/node",
+    ],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@d/*": ["./docs/*"]
+    },
+    "verbatimModuleSyntax": false
+  },
+  "include": ["scripts", "src", "demo"],
+  "exclude": ["node_modules", "dist"]
+}

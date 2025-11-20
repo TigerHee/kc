@@ -1,0 +1,95 @@
+.root {
+  background-color: #2F353C !important;
+  border-radius: ~`px2rem(6)` !important;
+}
+
+.title {
+  color: #fff;
+}
+
+.content {
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+
+.okBtn {
+  background: #80DC11 !important;
+  border-radius: ~`px2rem(6)` !important;
+  font-weight: 500 !important;
+  font-size: ~`px2rem(16)` !important;
+  color: #11151F !important;
+  @media (min-width: 1040px) {
+    font-size: 16px !important;
+  }
+}
+
+.container {
+  z-index: 10 !important;
+  .wrapper {
+    width: 40px !important;
+  }
+  .item {
+    width: 3px !important;
+  }
+}
+
+// 上下移动
+@-webkit-keyframes bounce-up {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(~`px2rem(8) `);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes bounce-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(~`px2rem(8) `);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo_amin {
+  -webkit-animation: bounce-up 2s ease-in-out infinite;
+  animation: bounce-up 2s ease-in-out infinite;
+}
+
+/* H5设置0.5px的边框，不带border-color, 如果需要带border-radius 2边都要带，不带则相反 */
+.scale_05px {
+  position: relative;
+  border: none;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: .5px;
+    border-style: solid;
+    border-radius: ~`px2rem(86.4881) `;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+  }
+}
+
+/* H5设置1px的边框，不带border-color，如果需要带border-radius 2边都要带，不带则相反 */
+.scale_1px{
+  .scale_05px;
+  &::after {
+    border-width: 1px !important;
+  }
+}

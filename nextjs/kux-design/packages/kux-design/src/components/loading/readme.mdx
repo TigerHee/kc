@@ -1,0 +1,54 @@
+
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="base/Loading/Readme" />
+
+# Loading 加载组件
+
+用于页面或区块的加载中状态展示，支持品牌和普通两种风格，支持多种尺寸和全屏遮罩。
+
+[设计稿 Figma](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=13319-20905&p=f&m=dev)
+
+## 基本用法
+
+```tsx
+import { Loading } from '@kux-design/react';
+
+// 品牌风格（默认）
+<Loading />
+
+// 普通风格，可自定义颜色
+<Loading type="normal" />
+<Loading type="normal" style={{ color: 'red' }} />
+<Loading type="normal" style={{ color: 'var(--kux-brandGreen)' }} />
+
+// 不同尺寸
+<Loading size="mini" />
+<Loading size="small" />
+<Loading size="medium" />
+<Loading size="large" />
+<Loading size="custom" style={{ width: 40, height: 40 }} />
+
+// 全屏遮罩
+<Loading fullScreen />
+
+// 全屏+背景模糊
+<Loading fullScreen blurBg />
+```
+
+## Props
+
+| 属性        | 说明                 | 类型    | 默认值    |
+| ----------- | -------------------- | ------- | --------- |
+| type        | 图标类型             | 'normal' \| 'brand' | 'brand' |
+| size        | 组件尺寸，custom 时需配合 style 设置 | 'mini' \| 'small' \| 'medium' \| 'large' \| 'custom'  | 'medium' |
+| fullScreen  | 是否全屏             | boolean | false     |
+| blurBg      | 背景是否模糊（仅全屏时有效） | boolean | false     |
+| className   | 自定义类名           | string  | -         |
+| style       | 自定义样式           | React.CSSProperties | - |
+
+## 说明
+
+- `type=brand` 为品牌 loading，不可自定义颜色。
+- `type=normal` 继承父元素文字颜色，可通过 style.color 设置。
+- 支持全屏遮罩和背景模糊，适合页面级 loading 场景。

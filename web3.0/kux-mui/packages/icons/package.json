@@ -1,0 +1,30 @@
+{
+  "name": "@kux/icons",
+  "version": "1.1.13",
+  "homepage": "",
+  "license": "ISC",
+  "main": "./lib/node/index.js",
+  "module": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://nexus.kcprd.com/repository/npm-hosted/"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "generate": "node scripts/generate.js",
+    "watch": "rollup --environment NODE_ENV:development -c ./rollup.config.js --watch",
+    "build": "rollup --environment NODE_ENV:production -c ./rollup.config.js && yarn run path:promotion && yarn run copy:static",
+    "build:umd": "rollup -c ./umd.rollup.config.js",
+    "path:promotion": "node ./scripts/resolvePath.js",
+    "pub": "node ./scripts/publish.js",
+    "copy:static": "node ./scripts/copyStatic.js"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

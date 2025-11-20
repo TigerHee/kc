@@ -1,0 +1,15 @@
+export default {
+  "inviteB.manage.copy.share": "Copiatp! Condivid!",
+  "inviteB.manage.remark": "Annotazioni",
+  "inviteB.manage.commission.yourrate": "Il tuo tasso di commissioni",
+  "inviteB.manage.commisson.friendrate": "Sconto fee per gli invitati",
+  "inviteB.manage.poster.create": "Condividi",
+  "inviteB.manage.poster.share": "Condividi",
+  "69ti912QyqQK3RLThoqqNL": "Registrati per richiedere il pacchetto di benvenuto",
+  "h2RhjtaW236Cy1ofAMdsY7": "Vale fino a {{num}}  {{siteBaseCurrency}}!",
+  "ceWPbECZDHEFPo5wuNKZou": "Altro",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "Copiato!",
+  "sTkpRT7EiVTxqr6sApV5Aj": "Copia link",
+  "x8nfNnRNkgqeds6C4AfUC8": "Salva immagine",
+  "4EhrZujhYTKtPmKwo99tBr": "Codice referral: {rcode}"
+}

@@ -1,0 +1,104 @@
+@import '../../../../theme/vars.less';
+
+.securityNoticeDialog {
+  width: 480px;
+  :global {
+    .MuiDialog-paper {
+      padding: 38px 28px 0;
+    }
+    .MuiDialog-content {
+      padding-bottom: 4px;
+    }
+    .MuiDialogActions-spacing {
+      padding: 20px 0 0 0;
+      border: none;
+    }
+  }
+
+  .inputContainer {
+    margin-top: 0;
+    margin-bottom: 12px;
+    input {
+      height: 48px;
+    }
+
+    &.withPasteContainer {
+      .withPasteInput {
+        padding-right: 0;
+      }
+
+      .sendCode {
+        color: @color_new_primary;
+        background: none;
+        &:hover {
+          color: rgba(70, 197, 163, 1);
+        }
+      }
+      :global {
+        .Mui-focused {
+          .MuiButton-label {
+            color: @color_new_primary;
+          }
+        }
+      }
+    }
+
+    &.withIconContainer {
+      .withIconInput {
+        padding-right: 0;
+      }
+      .inputIconContainer {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .withIcon:hover {
+        color: @color_new_primary;
+      }
+      :global {
+        .Mui-focused {
+          .MuiButton-label {
+            color: @color_new_primary;
+          }
+        }
+      }
+    }
+  }
+
+  .buttonContainer {
+    button {
+      height: 48px;
+      font-weight: 600;
+    }
+  }
+
+  .secFormItem {
+    :global{
+      .ant-input-group,.ant-input-wrapper {
+        height: 40px;
+      }
+      .ant-input-group-addon{
+        height: 40px;
+        border: none;
+        background: rgba(1, 8, 30, 0.04);
+        span{
+          color: #2DBD96 !important;
+        }
+      }
+      input{
+        height: 40px;
+        border: none;
+        box-shadow: none;
+        background: rgba(1, 8, 30, 0.04);
+        &.ipt_pwd{
+          background: transparent;
+        }
+      }
+    }
+    
+  }
+
+}

@@ -1,0 +1,23 @@
+.newFooterSDK {
+  bottom: 10px;
+  list-style: none;
+
+  [dir='rtl'] & {
+    left: unset;
+    right: 16px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @include media-query('sm') {
+    left: 120px;
+
+    &::after {
+      left: 20px;
+
+      [dir='rtl'] & {
+        left: unset;
+        right: 20px;
+      }
+    }
+  }
+}

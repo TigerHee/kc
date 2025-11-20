@@ -1,0 +1,6 @@
+jmessage-sdk-web.2.6.0.min.js
+scripts/*.js
+**/lib/*.js
+**/es/*.js
+packages/**/__tests__/*.js
+packages/**/**/locale/**

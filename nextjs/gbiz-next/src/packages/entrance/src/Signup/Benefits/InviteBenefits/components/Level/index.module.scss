@@ -1,0 +1,107 @@
+@import 'src/styles/mixin.scss';
+
+.container {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 0.5px solid var(--kux-cover12);
+}
+.title {
+  color: var(--kux-text);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.description {
+  color: var(--kux-text40);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 6px;
+  span span {
+    color: var(--kux-brandGreen);
+    font-weight: 500;
+  }
+}
+.levelBox {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.levelItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  &:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}
+.levelLine {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  flex-grow: 0;
+}
+.levelProgress {
+  border-radius: 5px;
+  position: relative;
+  width: 36px;
+  max-width: initial;
+}
+[data-theme='dark'] {
+  .levelProgress {
+    background: linear-gradient(to bottom, rgba(227, 227, 227, 0.08) 0%, rgba(227, 227, 227, 0.00) 100%);
+    &.filled {
+      background: linear-gradient(to bottom, #01BC8D 2.08%, rgba(1, 188, 141, 0.00) 100%);
+    }
+  }
+}
+[data-theme='light'] {
+  .levelProgress {
+      background: linear-gradient(to bottom, rgba(29, 29, 29, 0.08) 0%, rgba(29, 29, 29, 0.00) 100%);
+    &.filled {
+      background: linear-gradient(to bottom, #01BC8D 2.08%, rgba(1, 188, 141, 0.00) 100%);
+    }
+  }
+}
+.levelTag {
+  transform: rotate(0.622deg) translateY(1px);
+  position: relative;
+  width: 20px;
+  height: 15px;
+}
+.levelAmount {
+  color: var(--kux-text);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-bottom: 4px;
+  margin-left: 0;
+  font-size: 14px;
+  &.filled {
+    color: var(--kux-brandGreen);
+  }
+}
+.levelDesc {
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 4px;
+  margin-left: 0;
+  color: var(--kux-text);
+  text-align: center;
+  max-width: 100px;
+  word-break: break-all;
+  display: flex;
+  align-items: center;
+  line-height: 150%;
+}
+.currentFillImg {
+  width: 11.6px;
+  height: 20px;
+  margin-left: 4px;
+}

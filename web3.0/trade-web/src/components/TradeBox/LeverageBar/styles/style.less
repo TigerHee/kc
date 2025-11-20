@@ -1,0 +1,44 @@
+
+body {
+  .maxTooltip {
+    max-width: 400px;
+    min-width: 300px;
+    padding: 0;
+    :global {
+      .MuiBox-root {
+        min-width: unset;
+      }
+    }
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: 12px;
+  }
+  .content {
+    transform: translateY(1px);
+    display: inline-flex;
+    align-items: center;
+    .transferIcon {
+      margin-left: 4px;
+      margin-top: -2px;
+      cursor: pointer;
+    }
+  }
+  .highlight {
+    :global {
+      .highlight {
+        opacity: 1;
+      }
+    }
+  }
+  .tooltipAction {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 12px;
+    span {
+      cursor: pointer;
+    }
+  }
+}

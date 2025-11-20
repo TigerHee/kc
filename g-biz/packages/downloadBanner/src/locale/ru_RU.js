@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Безопасная и простая глобальная торговля 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Зарегистрируйтесь и освойте рынки за секунду!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Осваивайте рынки в любом месте 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80K+ отзывов",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Пройдите верификацию, пополните счет и купите криптовалюту мгновенно!",
+  "rw8e32A8H7X3QtiKHS37EK": "Загрузить",
+  "tXwwyoSbqG4pgsoXomccjp": "Скачайте приложение {{brandName}}, чтобы получить до {{num}} {{siteBaseCurrency}} в виде вознаграждений.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Новые пользователи получают",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Получить",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> скачиваний",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ просмотров)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ просмотров)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Исключительно для новых пользователей: если ваш первый депозит или покупка криптовалюты составит более $50, вы получите таинственный бокс стоимостью до <span>$500</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Загрузить",
+  "csjK9uyQQyYMLprAYkKsRT": "Загрузите приложение {{brandName}}, чтобы продолжить свое криптопутешествие, и получите до <span>$500</span> в качестве вознаграждения в зоне для новичков.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Впервые внесите депозит или купите криптовалюту, чтобы получить таинственный бокс стоимостью до <span>$500</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Вознаграждения до <span>$500</span> для новых пользователей!",
+  "wLAfc8MZvoHbeNragecB4Z": "Торгуйте безопаснее и быстрее с помощью нашего мобильного приложения."
+}

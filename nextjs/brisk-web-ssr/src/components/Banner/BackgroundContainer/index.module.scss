@@ -1,0 +1,69 @@
+@import '@/styles/mixin.scss';
+
+.bannerBox {
+  position: relative;
+  // width: 100vw;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  height: calc(100vh - 72px);
+  @include media-query('sm') {
+    height: calc(100vh - 64px);
+  }
+
+  .backgound {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .maskLayer {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      background: var(--color-overlay);
+      [data-theme='light'] & {
+        opacity: 0.5;
+      }
+    }
+    .bannerVideo {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      // transition: opacity 0.5s ease-in-out;
+    }
+
+    .bannerImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      // transition: opacity 0.5s ease-in-out;
+    }
+
+    .fadeIn {
+      opacity: 1;
+    }
+
+    .fadeOut {
+      opacity: 0;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+  }
+}

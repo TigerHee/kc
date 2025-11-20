@@ -1,0 +1,116 @@
+/**
+ * Owner: sean.shi@kupotech.com
+ */
+@import 'src/styles/mixin.scss';
+
+.exDialog {
+  :global(.KuxModalHeader-root) {
+    padding: 36px 32px 16px;
+  }
+  
+  :global(.KuxDialog-content) {
+    overflow: unset;
+  }
+  
+  :global(.KuxModalFooter-root) {
+    padding: 28px 32px 32px;
+  }
+}
+
+.subTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  color: var(--kux-text);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--kux-text60);
+  margin-bottom: 4px;
+  
+  > span {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--kux-brandGreen);
+  }
+}
+
+.centerDesc {
+  @extend .desc;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 150%;
+}
+
+.bannerBox {
+  position: relative;
+  height: 250px;
+  margin: 16px -32px -20px;
+}
+
+.banner {
+  position: absolute;
+  width: 400px;
+  height: 222px;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.banner2 {
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: -57px auto 24px;
+}
+
+.exCheckboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  
+  :global(.KuxCheckbox-checked .KuxCheckbox-inner) {
+    background: var(--kux-text) !important;
+    border-color: var(--kux-text) !important;
+  }
+  
+  :global(label) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--kux-text60);
+    margin-right: 0 !important;
+    display: flex;
+    align-items: flex-start;
+    
+    :global(.KuxCheckbox-checkbox) {
+      top: 2px;
+    }
+    
+    :global(.KuxCheckbox-checkbox + span) {
+      line-height: unset;
+    }
+    
+    &::after {
+      content: unset;
+    }
+  }
+}
+
+.stepOne {
+  // 步骤一样式
+}
+
+.stepTwo {
+  // 步骤二样式
+}
+
+.stepThree {
+  // 步骤三样式
+}

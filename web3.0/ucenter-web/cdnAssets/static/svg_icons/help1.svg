@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/trade/support</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/trade/support" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9,0 C4.032,0 0,4.032 0,9 C0,13.968 4.032,18 9,18 C13.968,18 18,13.968 18,9 C18,4.032 13.968,0 9,0 Z M9.9,15.3 L8.1,15.3 L8.1,13.5 L9.9,13.5 L9.9,15.3 Z M11.763,8.325 L10.953,9.153 C10.305,9.81 9.9,10.35 9.9,11.7 L8.1,11.7 L8.1,11.25 C8.1,10.26 8.505,9.36 9.153,8.703 L10.269,7.569 C10.602,7.245 10.8,6.795 10.8,6.3 C10.8,5.31 9.99,4.5 9,4.5 C8.01,4.5 7.2,5.31 7.2,6.3 L5.4,6.3 C5.4,4.311 7.011,2.7 9,2.7 C10.989,2.7 12.6,4.311 12.6,6.3 C12.6,7.092 12.276,7.812 11.763,8.325 Z" id="Shape" fill="#5B6C7B"></path>
+    </g>
+</svg>

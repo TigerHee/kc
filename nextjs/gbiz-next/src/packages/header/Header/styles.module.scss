@@ -1,0 +1,221 @@
+@import 'src/styles/mixin.scss';
+
+.Nav {
+  // padding: 0 24px;
+  width: 100%;
+
+  // @include media-query('xl') {
+  //   padding: 0 24px;
+  // }
+
+  // @include media-query('sm') {
+  //   padding: 0 16px !important;
+  // }
+}
+
+.NavBar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 24px;
+
+  gap: 20px;
+
+  .borderBottom {
+    background-color: var(--kux-divider8);
+    height: 1px;
+    width: 100%;
+    z-index: -1;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include media-query('xl') {
+    padding: 0 24px;
+  }
+
+  @include media-query('sm') {
+    height: 64px;
+    padding: 0 16px;
+  }
+}
+
+.NavBarMiniMode {
+  height: 56px;
+}
+
+.NavBarInTrade {
+  height: 48px !important;
+}
+
+.Links {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  -webkit-box-pack: start;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+}
+
+.NavUserDom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.LogoLink {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.LogoImg {
+  width: 101px;
+  transition: all 0.3s ease;
+
+  @include media-query('xl') {
+    width: 103.71px;
+  }
+
+  &.inTrade {
+    width: 103.71px;
+  }
+}
+
+.PoweredByText {
+  font-size: 10px;
+  color: var(--kux-text);
+  font-weight: 400;
+  line-height: 100%;
+  margin-top: 2px;
+}
+
+.UnionBox {
+  // TODO:
+  // display: ${({ show }) => (show ? 'flex' : 'none')};
+  display: none;
+  flex: 1;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-primary); // 替换为 CSS 变量
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 120%;
+  overflow: hidden;
+  min-width: fit-content;
+
+  &.show {
+    display: flex;
+  }
+
+  span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @include media-query('sm') {
+    margin-left: 8px;
+    gap: 8px;
+    font-size: 20px;
+  }
+}
+
+.MenuBox {
+  width: 32px;
+  height: 32px;
+  background: var(--color-cover4); // 替换为 CSS 变量
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+}
+
+.NavLinks {
+  min-width: 350px;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: auto hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.NavLinksWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.Root {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+
+  & .logo {
+    vertical-align: middle;
+  }
+}
+
+// 用于控制组件的上下左右「margin」距离
+// const MarginWrapper = styled.div`
+//   margin-top: ${(props) => props.mt || 0}px;
+//   margin-bottom: ${(props) => props.mb || 0}px;
+//   margin-left: ${(props) => props.ml || 0}px;
+//   margin-right: ${(props) => props.mr || 0}px;
+// `;
+
+.HeaderNavLoadingMask {
+  height: 100%;
+  width: calc(100% - 121px);
+  min-width: 500px;
+  background-color: var(--color-overlay); // 替换为 CSS 变量
+  transition: all 0.38s ease;
+  position: absolute;
+  z-index: 3;
+  padding-left: 20px;
+
+  @include media-query('xl') {
+    padding-left: 0;
+  }
+
+  margin-left: 121px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.mobileSignUpBtnWrap {
+  // display: ${(props) => (props.showElement ? 'flex' : 'none')};
+  margin-right: 0px;
+
+  & .signUpBtnSm {
+    height: 28px;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  & .signUpBtnImg {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px 0 0;
+  }
+}

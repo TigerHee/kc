@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Icon/margin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/margin">
+            <path d="M10.2517503,5 L12.7749143,6.21287055 C12.7749143,6.21287055 11.6871741,6.82779681 10.611947,7.66617012 C9.53135707,8.50901236 8.39088336,9.59585878 7.71160435,10.7077313 C6.35930285,12.9270073 6.09027261,14.9880828 6,17 C6,17 6.84552361,15.0488604 7.46402503,14.1702666 C8.48026218,12.7250112 8.54014599,12.5587666 9.83166989,11.1698198 C11.0704603,9.83807538 11.9767615,9.05332936 13.5364219,7.96380158 C15.2641144,6.75629376 17.7783405,5.62028899 17.7783405,5.62028899" id="Fill-1" fill="#FFFFFF" transform="translate(11.889170, 11.000000) scale(-1, 1) rotate(93.000000) translate(-11.889170, -11.000000) "></path>
+            <circle id="椭圆形" fill="#58CCB6" opacity="0.318243118" cx="28.5" cy="14.5" r="4.5"></circle>
+            <circle id="椭圆形" stroke="#58CCB6" stroke-width="2" cx="28.5" cy="14.5" r="7.5"></circle>
+            <line x1="9" y1="30" x2="32" y2="21.2183013" id="路径-2" stroke="#58CCB6" stroke-width="2"></line>
+            <polygon id="三角形" stroke="#58CCB6" stroke-width="2" points="19.5 30 23 34.2889654 16 34.2889654"></polygon>
+            <circle id="椭圆形备份" stroke="#58CCB6" stroke-width="2" cx="8.5" cy="25.5" r="4.5"></circle>
+            <circle id="椭圆形" fill="#58CCB6" opacity="0.318243118" cx="8.5" cy="25.5" r="1.5"></circle>
+        </g>
+    </g>
+</svg>

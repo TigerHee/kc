@@ -1,0 +1,8 @@
+.modal {
+  :global(.kux-modal-content) {
+    padding-bottom: 0;
+  }
+  :global(.kux-modal-footer) {
+    padding-top: 12px;
+  }
+}

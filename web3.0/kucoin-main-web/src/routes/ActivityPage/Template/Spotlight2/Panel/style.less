@@ -1,0 +1,200 @@
+.panel {
+  margin-bottom: 18px;
+}
+
+.projectTop {
+  display: flex;
+  justify-content: space-between;
+  height: 98px;
+
+  padding: 15px 24px 0 30px;
+  background-image: url(~static/spotlight/spotlight_top.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .projectName {
+    color: #0093dd;
+    font-size: 27px;
+    line-height: 48px;
+    letter-spacing: 0;
+  }
+}
+
+.info {
+  display: flex;
+  padding: 40px 0;
+
+  .rows {
+    flex: 1;
+    padding-right: 12px;
+    .row {
+      display: flex;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .col {
+      width: 50%;
+      color: #ffffff;
+      letter-spacing: 0;
+
+      .title {
+        margin-bottom: 5px;
+        color: #98b3e4;
+        font-size: 12px;
+      }
+      .content {
+        font-size: 20px;
+        word-break: break-word;
+
+        > span {
+          margin-left: 5px;
+          color: #929fb3;
+          font-size: 12px;
+        }
+      }
+
+      &.intro {
+        &.single {
+          width: 100%;
+        }
+        .content {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: block;
+    flex: none;
+    width: 345px;
+    height: 190px;
+  }
+}
+
+.panelButton {
+  > button {
+    width: 100%;
+  }
+
+  :global {
+    .ant-btn-warning {
+      background-image: linear-gradient(-45deg, #ffb82c 0%, #f8a531 100%) !important;
+    }
+  }
+}
+
+.buyTip {
+  padding: 23px;
+  background: #182b4d;
+
+  .tip {
+    margin-left: 8px;
+    color: #ff5f73;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  a {
+    color: #0f7dff;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+}
+
+.input {
+  width: 150px !important;
+  color: #fff !important;
+  background: none !important;
+  border: 1px solid #4f6cb7 !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+
+  &:hover {
+    border: 1px solid #4f6cb7 !important;
+  }
+
+  input {
+    padding-right: 22px !important;
+  }
+
+  :global {
+    .ant-input-number-handler {
+      color: #fff !important;
+      > span {
+        color: #fff !important;
+      }
+    }
+    .ant-input-number-handler-wrap {
+      background: none !important;
+      border-left: 1px solid #4f6cb7 !important;
+      border-radius: 0 0 2px 2px !important;
+    }
+    .ant-input-number-handler-down {
+      border-top: 1px solid #4f6cb7 !important;
+    }
+  }
+}
+
+.buyInfo {
+  margin-bottom: 24px;
+  padding: 12px;
+  background: rgba(212, 218, 236, 0.27);
+
+  .infoRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    > div {
+      min-width: 50%;
+    }
+  }
+}
+
+.countdown {
+}
+
+.countdownBox {
+  color: #ffffff;
+
+  font-size: 29px;
+  letter-spacing: 0;
+  text-align: center;
+  background: #34528c;
+  border: 0 solid #3157a0;
+}
+
+.forgetPWDTip {
+  margin-top: 6px;
+  color: #0f7dff;
+  font-size: 12px;
+  letter-spacing: -0.09px;
+  text-align: right;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtip {
+  color: #333333;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-align: center;
+}
+.graytip {
+  color: #9b9b9b;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+.container {
+  // height: 800px;
+  padding: 120px 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  font-size:34px;
+  font-weight:500;
+  color:#fff;
+  line-height:48px;
+  margin-bottom: 85px;
+}
+.newsList {
+  display: flex;
+  margin-bottom: 12px;
+  &.down {
+    margin-top: 12px;
+    margin-bottom: unset;
+  }
+}
+.news {
+  width: 180px;
+  &:not(:last-child) {
+    margin-right: 29px;
+  }
+}
+.newsDate {
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 24px;
+}
+.newsContent {
+  font-size: 14px;
+  color: fade(#fff, 60);
+  line-height: 22px;
+}

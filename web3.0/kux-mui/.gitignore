@@ -1,0 +1,37 @@
+# dependencies
+/node_modules
+/packages/**/node_modules
+/packages/**/lib
+/packages/**/lib2
+/packages/**/es
+/packages/**/dist
+/packages/**/stats.html
+
+
+# test
+
+/__coverage__
+
+# production
+/.next
+/.serverlesss
+/out
+/dist
+
+# misc
+.DS_Store
+pm2-*.log
+npm-debug.log*
+.sentryclirc
+site-config.json
+
+.vscode/
+.idea/
+yarn-error.log
+package-lock.json
+.env
+.cache
+lerna-debug.log
+coverage
+config.sh
+.yalc

@@ -1,0 +1,197 @@
+@import '~themes/mix.less';
+
+.container {
+  width: 83.33%;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 93.75%; margin-top: 60px;});
+  .mediaQuerySm({width: 93.6%; margin-top: 40px;});
+
+  &.stepsContainer {
+    margin-top: 120px;
+    .mediaQueryMd({margin-top: 80px;});
+    .mediaQuerySm({margin-top: 40px;});
+  }
+}
+
+.title {
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  color: #00142a;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({font-size: 36px;line-height: 48px;margin: 0 0 20px;});
+  .mediaQuerySm({font-size: 24px; line-height: 36px;margin: 0 0 20px;});
+
+  &.youCanTitle {
+    transition: all 0.3s ease-in-out;
+    margin: 0 0 70px;
+    .mediaQueryMd({margin: 0 0 55px;});
+    .mediaQueryMd({margin: 0 0 50px;});
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+}
+.listItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  .awardPic {
+    .mediaQueryMd({margin-left: 20px; margin-right: 20px;});
+    .mediaQuerySm({margin-left: 0px; margin-right: 0px;});
+  }
+
+  &.one {
+    margin: 0 80px;
+    .mediaQueryMd({margin: 0 48px;});
+    .mediaQuerySm({width: 222px;flex-shrink: 0; position: relative; margin: 0 -100px 0 -99px;});
+    .awardPic {
+      width: 310px;
+      transition: all 0.3s ease-in-out;
+      .mediaQueryMd({width: 220px;});
+      .mediaQuerySm({width: 180px;});
+    }
+  }
+  &.two,
+  &.three {
+    .mediaQuerySm({width: 164px;flex-shrink: 0;});
+    .awardPic {
+      transition: all 0.3s ease-in-out;
+      margin-top: 92px;
+      width: 260px;
+      .mediaQueryMd({width: 160px;margin-top: 76px;});
+      .mediaQuerySm({width: 120px;margin-top: 246px;});
+    }
+  }
+}
+
+.line1 {
+  margin: 24px 0 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  color: #00142a;
+  white-space: nowrap;
+  .mediaQueryMd({margin: 24px 0 4px;});
+  .mediaQuerySm({margin: 12px 0 4px; font-size: 12px;line-height: 18px;font-weight: 400;});
+  span > span {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    background: linear-gradient(90deg, #3eaeff -0.34%, #90f33a 99.66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 48px;
+    margin: 0px 8px 0;
+    vertical-align: sub;
+    -webkit-text-stroke: 0.3px #00142a;
+    .mediaQueryMd({font-size: 36px;margin: 0px 6px 0;});
+    .mediaQuerySm({font-size: 24px; line-height: 36px;margin: 0px 4px 0;});
+  }
+}
+.line2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  color: rgba(0, 20, 42, 0.6);
+  .mediaQueryMd({font-weight: 400; font-size: 12px; line-height: 20px;});
+}
+
+.steps {
+  display: flex;
+  .mediaQueryMd({display: block;});
+}
+
+.stepsItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 24px;
+  border: 1px solid rgba(0, 20, 42, 0.2);
+  .mediaQueryMd({margin-left: 0;margin-bottom: 20px;});
+
+  & + .stepsItem {
+    margin-left: 24px;
+    .mediaQueryMd({margin-left: 0;});
+  }
+}
+
+.stepButton {
+  border-radius: 0 !important;
+  height: auto !important;
+  min-height: 40px;
+  padding: 5px 0 !important;
+  min-width: 116px !important;
+  .mediaQuerySm({min-height: 32px;});
+}
+
+.arrowRight {
+  width: 16px;
+  [dir='rtl'] & {
+    transform: rotate(180deg) /* rtl:ignore */;  
+  }
+}
+
+.step {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  background: rgba(0, 20, 42, 0.4);
+  height: 26px;
+  line-height: 26px;
+  padding-left: 13px;
+  position: relative;
+  &::before {
+    display: block;
+    content: '';
+    background: rgba(0, 20, 42, 0.4);
+    width: 2px;
+    height: 100%;
+    border-right: 1px;
+    position: absolute;
+    left: -3px;
+    top: 0;
+  }
+  &::after {
+    display: block;
+    content: '';
+    background-image: url('assets/newCoin/rectangle.svg');
+    background-size: 100%;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    [dir='rtl'] & {
+      transform: rotate(180deg) /* rtl:ignore */; 
+    }
+  }
+}
+
+.stepDesc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #00142a;
+  margin: 16px 0px 4px;
+  flex: 1;
+  .mediaQueryMd({margin: 16px 0px 16px;});
+}
+
+.stepsInfo {
+  margin: 24px 0 0 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: #00142a;
+  .mediaQueryMd({margin-top: 20px;});
+}

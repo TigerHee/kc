@@ -1,0 +1,208 @@
+.panel {
+  margin-bottom: 18px;
+}
+
+.projectTop {
+  height: 98px;
+  background-image: url(assets/spotlight/spotlight_top.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  padding: 15px 24px 0 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .projectName {
+    line-height: 48px;
+    font-size: 27px;
+    color: #0093DD;
+    letter-spacing: 0;
+  }
+}
+
+.info {
+  padding: 40px 0;
+  display: flex;
+
+  .rows {
+    flex: 1;
+    padding-right: 12px;
+    .row {
+      display: flex;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .col {
+      letter-spacing: 0;
+      color: #FFFFFF;
+      width: 50%;
+
+      .title {
+        font-size: 12px;
+        margin-bottom: 5px;
+        color: #98B3E4;
+      }
+      .content {
+        font-size: 20px;
+        word-break: break-word;
+
+        > span {
+          font-size: 12px;
+          margin-left: 5px;
+        }
+      }
+
+      &.intro {
+        &.single {
+          width: 100%;
+        }
+        .content {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    flex: none;
+    width: 345px;
+    height: 190px;
+    display: block;
+  }
+}
+
+.panelButton {
+  >button {
+    width: 100%;
+  }
+
+  :global {
+    .ant-btn-warning {
+      background-image: linear-gradient(-45deg, #FFB82C 0%, #F8A531 100%) !important;
+    }
+    .ant-btn-grey.disabled,
+    .ant-btn-grey[disabled] {
+      color: #fff;
+      background-color: #ccc;
+      border-color: #bcbcbc;
+      opacity: 0.6;
+    }
+  }
+}
+
+.buyTip {
+  background: #182B4D;
+  padding: 23px;
+
+  .tip {
+    font-size: 14px;
+    color: #FF5F73;
+    letter-spacing: 0;
+    margin-left: 8px;
+  }
+
+  a {
+    font-size: 14px;
+    color: #0F7DFF;
+    letter-spacing: 0;
+  }
+}
+
+.input {
+  width: 150px !important;
+  box-shadow: none !important;
+  border: 1px solid #4F6CB7 !important;
+  background: none !important;
+  color: #fff !important;
+  border-radius: 2px !important;
+
+  &:hover {
+    border: 1px solid #4F6CB7 !important;
+  }
+
+  input {
+    padding-right: 22px !important;
+  }
+
+  :global {
+    .ant-input-number-handler {
+      color: #fff !important;
+      >span {
+        color: #fff !important;
+      }
+    }
+    .ant-input-number-handler-wrap {
+      background: none !important;
+      border-radius: 0 0 2px 2px !important;
+      border-left: 1px solid #4F6CB7 !important;
+    }
+    .ant-input-number-handler-down {
+      border-top: 1px solid #4F6CB7 !important;
+    }
+  }
+}
+
+.buyInfo {
+  background: rgba(212,218,236,0.27);
+  padding: 12px;
+  margin-bottom: 24px;
+
+  .infoRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    >div {
+      min-width: 50%;
+    }
+  }
+}
+
+.countdown {
+
+}
+
+.countdownBox {
+  background: #34528C;
+  border: 0 solid #3157A0;
+
+  font-size: 29px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.forgetPWDTip {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #0F7DFF;
+  letter-spacing: -0.09px;
+  text-align: right;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.subtip {
+  font-size: 12px;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+}
+.graytip {
+  font-size: 12px;
+  color: #9B9B9B;
+  letter-spacing: 0;
+  text-align: center;
+}

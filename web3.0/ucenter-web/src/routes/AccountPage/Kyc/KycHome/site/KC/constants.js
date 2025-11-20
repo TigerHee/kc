@@ -1,0 +1,3 @@
+export const KYC_ACCOUNT_TRANSFER_TIPS = 'KYC_ACCOUNT_TRANSFER_TIPS';
+
+export const ONE_DAY = 24 * 60 * 60 * 1000;

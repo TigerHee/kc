@@ -1,0 +1,33 @@
+@import '@/styles/mixin.scss';
+
+.buyCoinFormBox {
+  width: 100%;
+  height: 100%;
+  display: none;
+  a:hover {
+    color: #ffffff;
+  }
+
+  &.visible {
+    display: block;
+  }
+}
+
+.total {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  color: var(--color-text);
+  @include media-query('sm') {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.span {
+  flex-shrink: 0;
+  margin-right: 10px;
+}

@@ -1,0 +1,7 @@
+{
+  "filesSrc": "dist",
+  "fileMatcher": [
+    "public-web/*/js/p__convert__index.*.js",
+    "public-web/*/js/p__convert__index~p__utransfer__index.*.js"
+  ]
+}

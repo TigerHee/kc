@@ -1,0 +1,75 @@
+@import '@/styles/mixin.scss';
+
+.tabBarWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: unset;
+  position: relative;
+  top: 0;
+  padding-bottom: 24px;
+  background: #fff;
+  z-index: 99;
+
+
+  &.sticky {
+    width: 1200px;
+    position: fixed;
+    // TODO 
+    top: 80px;
+  }
+
+}
+
+.tabWrap {
+  overflow-x: auto;
+}
+
+.tabTitle {
+  font-style: normal;
+  font-size: 24px;
+  line-height: 130%;
+  margin-bottom: 0;
+  font-weight: 400;
+  color: rgba(0, 13, 29, 0.4);
+  
+  @include media-query('lg') {
+    font-weight: 400;
+    font-size: 16px;
+
+    &.isActive {
+      font-weight: 500;
+    }  
+  }
+  
+  @include media-query('sm') {
+    font-size: 14px;
+  }
+
+  &.isActive {
+    font-weight: 600;
+    color: #000d1d;
+  }
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  
+  @include media-query('lg') {
+    width: 100%;
+    margin-top: 24px;
+  }
+  
+}
+
+.searchInput {
+  width: 168px;
+}
+
+
+.searchIconNormal {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text40);
+}

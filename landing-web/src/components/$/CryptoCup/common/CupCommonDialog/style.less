@@ -1,0 +1,62 @@
+.dialog {
+  width: ~`px2rem(300) `;
+  min-width: 300px;
+  flex: unset !important;
+  background: #f7f8fb !important;
+  border-radius: ~`px2rem(6) ` !important;
+  max-height: calc(100vh - 120px) !important;
+  max-width: 375px !important;
+
+  .dialog__btns_ok {
+    background: #7ff2c0;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #000d1d;
+    display: flex;
+    align-items: center;
+    // &:hover,
+    // &:active {
+    //   background: #7ff2c0;
+    // }
+  }
+  .dialog__btns_cancel {
+    line-height: 21px;
+    margin-top: 12px;
+    height: 21px;
+    color: rgba(45, 201, 133, 1);
+    &:hover,
+    &:active {
+      color: rgba(45, 201, 133, 1);
+    }
+  }
+
+  .close {
+    background-image: url(assets/cryptoCup/close.svg);
+    height: 15px;
+    width: 15px;
+    background-size: 100% 100%;
+    // display: none;
+  }
+
+  :global {
+    .KuxDialog-header {
+      font-weight: 500;
+      font-size: 16px;
+      color: #000d1d;
+      padding: 20px 24px 0px 24px;
+      * {
+        font-size: 16px;
+      }
+    }
+
+    .KuxDialog-content {
+      padding: 0 24px 12px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(0, 13, 29, 0.68);
+    }
+  }
+}

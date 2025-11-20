@@ -1,0 +1,114 @@
+/*
+ * owner: Borden@kupotech.com
+ */
+import React, { useEffect, forwardRef } from 'react';
+import { isFunction } from 'lodash';
+import { Dialog, MDialog, useResponsive } from '@kux/mui';
+import styled from '@emotion/styled';
+import useIsMobile from '@/hooks/common/useIsMobile';
+import useMemoizedFn from '@/hooks/common/useMemoizedFn';
+
+const MDialogPro = styled(MDialog)`
+  // TODO !important 解决3.0复写样式的污染全局坑，3.0下掉需删除
+  height: ${(props) => props.height || 0} !important;
+  .KuxDrawer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .KuxMDialog-content {
+    height: 100%;
+    padding: ${(props) => props.contentPadding || 0};
+    color: ${(props) => props.theme.colors.text60};
+  }
+`;
+const StyledDialog = styled(Dialog)`
+  .KuxModalHeader-close {
+    right: 32px !important;
+    left: auto !important;
+  }
+  .KuxDialog-body {
+    max-height: 100vh;
+  }
+  ${(props) => {
+    if (props.size === 'xlarge') {
+      return `
+        padding-left: 40px;
+        padding-right: 40px;
+        .KuxDialog-body {
+          max-width: 1440px;
+        }
+      `;
+    }
+  }}
+`;
+
+const MuiDialog = forwardRef((props, ref) => {
+  const {
+    open,
+    show,
+    onOk,
+    height,
+    onClose,
+    onCancel,
+    keyboard,
+    contentPadding,
+    centeredFooterButton,
+    ...otherProps
+  } = props;
+  const _show = open || show;
+  const _onClose = onCancel || onClose;
+
+  const { sm } = useResponsive();
+  const isMobile = useIsMobile();
+
+  const commonProps = {
+    ref,
+    onOk,
+    open: _show,
+    show: _show,
+    onClose: _onClose,
+    onCancel: _onClose,
+  };
+
+  useEffect(() => {
+    if (!isMobile && _show && keyboard) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      if (!isMobile && _show && keyboard) {
+        document.removeEventListener('keydown', handleKeyDown);
+      }
+    };
+  }, [isMobile, _show, keyboard, handleKeyDown]);
+
+  const handleKeyDown = useMemoizedFn((e) => {
+    if (e?.keyCode === 13) {
+      if (isFunction(onOk)) onOk();
+    } else if (e?.keyCode === 27) {
+      if (isFunction(_onClose)) _onClose();
+    }
+  });
+
+  return sm ? (
+    <StyledDialog centeredFooterButton={centeredFooterButton ?? false} {...otherProps} {...commonProps} />
+  ) : (
+    <MDialogPro
+      back={false}
+      maskClosable
+      height={height}
+      contentPadding={contentPadding}
+      centeredFooterButton={centeredFooterButton ?? true}
+      {...otherProps}
+      {...commonProps}
+    />
+  );
+});
+
+MuiDialog.defaultProps = {
+  height: 'auto',
+  // 是否支持键盘操作(esc关闭 + enter确定)。有弹窗套弹窗场景的，要看里外弹窗是否都开启了，注意事件会同时触发
+  keyboard: false,
+  contentPadding: '16px 16px',
+};
+
+export default MuiDialog;

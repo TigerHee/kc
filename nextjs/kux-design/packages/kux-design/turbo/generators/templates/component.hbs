@@ -1,0 +1,26 @@
+/**
+ * Owner: {{email}}
+ *
+ * @description {{ pascalCase componentName }} component
+ */
+
+import './style.scss'
+
+export interface I{{ pascalCase componentName }}Props {
+  children: React.ReactNode
+}
+
+/**
+ * {{ pascalCase componentName }} component
+{{#if componentCategory}}
+ * @category {{ componentCategory }}
+{{/if}}
+ */
+export function {{ pascalCase componentName }}(props: I{{ pascalCase componentName }}Props) {
+  return (
+    <div className="kux-{{kebabCase componentName}}{{#if componentCategory}} cat-{{ componentCategory }}{{/if}}">
+      <h1>{{ pascalCase componentName }} Component</h1>
+      {props.children}
+    </div>
+  )
+}

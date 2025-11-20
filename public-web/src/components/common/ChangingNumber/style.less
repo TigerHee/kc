@@ -1,0 +1,32 @@
+.changingWrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 22px;
+}
+
+.changingBg {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  opacity: 0.1;
+  &.left {
+    right: -6px;
+    left: -16px;
+  }
+  &.right {
+    right: -16px;
+    left: -6px;
+  }
+}
+
+.changingIcon {
+  // position: absolute;
+  // top: 0;
+  font-weight: normal;
+  &.left {
+    left: -14px;
+  }
+  &.right {
+    right: -14px;
+  }
+}

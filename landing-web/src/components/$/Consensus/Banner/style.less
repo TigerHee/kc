@@ -1,0 +1,115 @@
+@import '~themes/mix.less';
+
+.logoImg {
+  width: 118px;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({margin-top: 16px;});
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 85px 0 150px 0;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({padding: 75px 0 150px 0;});
+  .mediaQuerySm({padding: 30px 0 0;display:block;});
+}
+
+.conItems {
+  width: 50%;
+  .mediaQuerySm({width: 100%;});
+}
+
+.conHeight {
+  height: 432px;
+  .mediaQueryMd({height: 306px;});
+  .mediaQuerySm({height: unset;});
+}
+
+.title {
+  margin: 0 0;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 80px;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({font-size: 48px; line-height: 60px;});
+  .mediaQuerySm({font-size: 40px; line-height: 52px;});
+  & > span {
+    color: #21c397;
+  }
+}
+
+.subTitle {
+  margin: 20px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #ffffff;
+  .mediaQueryMd({margin: 12px 0 0;font-size: 16px; line-height: 26px;});
+}
+
+.btnGroup {
+  display: flex;
+  margin-top: 70px;
+  .mediaQueryMd({margin-top: 40px;});
+}
+
+.inputContainer {
+  width: 53.3% !important;
+  height: 70px !important;
+  border: solid !important;
+  border-image-source: linear-gradient(
+    95.84deg,
+    #66b9f3 5.15%,
+    #6cecc9 57.05%,
+    #78f264 98.27%
+  ) !important;
+  border-image-slice: 20 !important;
+  .mediaQueryMd({width: 222px !important;height: 48px !important;});
+  .mediaQuerySm({width: 62% !important;});
+}
+
+.inputContent {
+  color: #fff !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  .mediaQueryMd({font-size: 16px !important;});
+}
+
+.btnStyle {
+  margin-left: 20px;
+  width: 35% !important;
+  height: 70px !important;
+  border-radius: 0 !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: #00142A !important;
+  background: linear-gradient(270deg, #8AF9B6 0%, #55E1BB 100%) !important;
+  &:hover {
+    background: linear-gradient(270deg, #8DFFBB 0%, #24F5BD 100%) !important;
+  }
+  &:active {
+    background: linear-gradient(270deg, #72DE9D 0%, #27CEA1 100%) !important;
+  }
+  .mediaQueryMd({margin-left: 12px; width: 130px !important;height: 48px !important;font-size: 16px !important;});
+  .mediaQuerySm({margin-left: 4%; width: 34% !important;});
+}
+
+.btnDisable {
+  background: linear-gradient(270deg, #8AF9B6 0%, #55E1BB 100%) !important;
+}
+
+.diaStyle {
+  width: 520px !important;
+}
+
+.banner {
+  width: 690px;
+  margin-left: -40px;
+  margin-top: -92px;
+  .mediaQueryMd({width: 489px; margin-left: -34px; margin-top: -53px;});
+  .mediaQuerySm({width: 119%; margin-left: -12.8%; margin-top: 13px;});
+}

@@ -1,0 +1,13 @@
+{
+  "0e69c213ac414800a71a": "Continuar",
+  "122f15eb20c94800a85a": "Australia",
+  "1282a9de05204000a42e": "Ahora no",
+  "2441224b3dbb4000a184": "Serás redirigido en <span>{time}</span>s",
+  "327afb2cd06c4800a436": "Europa",
+  "3705a22def0d4800a1b9": "Actualización de la región de servicio",
+  "50184c5b65814800ab6a": "Según tu ubicación, te recomendamos cambiar al sitio <span>{site}</span> para obtener la mejor experiencia. ¿Te gustaría continuar?",
+  "5db2931fb7474800a935": "Según tus últimos detalles de KYC, tu cuenta ha sido trasladada a la plataforma <span>{site}</span>. Por motivos de cumplimiento normativo, serás redirigido automáticamente al sitio actualizado.",
+  "a4d911c5beb74000aa50": "Parece que estás en una región diferente",
+  "e60f7f265df84800a4e3": "Global",
+  "f8f20fdb54ed4800a803": "Cambiar ahora"
+}

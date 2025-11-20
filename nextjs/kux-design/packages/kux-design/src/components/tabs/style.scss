@@ -1,0 +1,364 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-tabs 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'tabs'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+
+@include defineThemeVar(slider-color, get-theme(backgroundOverlay), get-theme(cover8));
+@include defineThemeVar(slider-bkg, get-theme(cover8), get-theme(backgroundOverlay));
+@include defineThemeVar(slider-border, none, get-theme(divider8));
+
+@include component('tabs') {
+  position: relative;
+  &_line_small,
+  &_line_medium {
+    height: 40px;
+  }
+  &_line_large {
+    height: 48px;
+  }
+
+  [dir='rtl'] & {
+    .kux-tabs_scroll_left_icon {
+      transform: rotate(360deg);
+    }
+    .kux-tabs_scroll_right_icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .#{$prefix}_scroller {
+    position: relative;
+    white-space: nowrap;
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+    margin-bottom: 0px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .#{$prefix}_list {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    &_medium,
+    &_small {
+      padding-top: 8px;
+    }
+    &_large {
+      padding-top: 12px;
+    }
+  }
+
+  .#{$prefix}_scroll_left {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: start;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    left: 0px;
+    right: unset;
+
+    [dir='rtl'] & {
+      right: 0px;
+      left: unset;
+    }
+    [dir='ltr'] & {
+      left: 0px;
+      right: unset;
+    }
+
+    &_icon {
+      z-index: 1;
+      color: get-theme(icon60);
+    }
+    &_bkg {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 100%;
+      pointer-events: none;
+      width: 80px;
+      [dir='rtl'][data-theme='light'] & {
+        left: unset;
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 70%
+        );
+      }
+      [dir='rtl'][data-theme='dark'] & {
+        left: unset;
+        background-image: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgb(18, 18, 18) 70%);
+      }
+      [dir='ltr'][data-theme='light'] & {
+        background-image: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 70%
+        );
+      }
+      [dir='ltr'][data-theme='dark'] & {
+        background-image: linear-gradient(to left, rgba(18, 18, 18, 0) 0%, rgb(18, 18, 18) 70%);
+      }
+    }
+  }
+
+  .#{$prefix}_scroll_right {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: end;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    justify-content: flex-end;
+    left: unset;
+    right: 0px;
+    [dir='rtl'] & {
+      left: 0;
+      right: unset;
+    }
+    [dir='ltr'] & {
+      left: unset;
+      right: 0px;
+    }
+    &_icon {
+      z-index: 1;
+      color: get-theme(icon60);
+    }
+    &_bkg {
+      position: absolute;
+      top: 0px;
+      height: 100%;
+      pointer-events: none;
+      width: 80px;
+      [dir='rtl'][data-theme='light'] & {
+        background-image: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 70%
+        );
+      }
+      [dir='rtl'][data-theme='dark'] & {
+        background-image: linear-gradient(to left, rgba(18, 18, 18, 0) 0%, rgb(18, 18, 18) 70%);
+      }
+      [dir='ltr'][data-theme='light'] & {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 1) 70%
+        );
+      }
+      [dir='ltr'][data-theme='dark'] & {
+        background-image: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgb(18, 18, 18) 70%);
+      }
+    }
+  }
+
+  .#{$prefix}_tab {
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-text-stroke: unset;
+    -webkit-box-pack: center;
+    box-sizing: border-box;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    flex-shrink: 0;
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;
+    outline: 0px;
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0px;
+
+    &_line {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 130%;
+      background-color: transparent;
+      color: get-theme(text40);
+      &:not(:first-child) {
+        margin-left: 28px;
+      }
+
+      [dir='rtl'] & {
+        &:not(:last-child) {
+          margin-left: 28px;
+        }
+      }
+      [dir='ltr'] & {
+        &:not(:first-child) {
+          margin-left: 28px;
+        }
+      }
+      &:hover {
+        color: get-theme(text60);
+      }
+      &_active {
+        color: get-theme(text);
+        &:hover {
+          color: get-theme(text);
+        }
+      }
+
+      &_small {
+        font-size: 15px;
+      }
+      &_medium {
+        font-size: 16px;
+      }
+      &_large {
+        font-size: 20px;
+      }
+    }
+
+    &_bordered {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 130%;
+      color: get-theme(text40);
+      background: rgba(243, 243, 243, 0.02);
+      border: 1px solid rgba(243, 243, 243, 0.04);
+      font-size: 14px;
+      height: 34px;
+      border-radius: 100px;
+      padding: 0px 16px;
+      border: 1px solid get-theme(cover8);
+
+      &:not(:first-child) {
+        margin-left: 14px;
+      }
+      [dir='rtl'] & {
+        &:not(:last-child) {
+          margin-left: 14px;
+        }
+      }
+      [dir='ltr'] & {
+        &:not(:first-child) {
+          margin-left: 14px;
+        }
+      }
+
+      &:hover {
+        color: get-theme(text60);
+      }
+
+      &_active {
+        background-color: get-theme(brandGreen8);
+        color: get-theme(brandGreen);
+        border: 1px solid get-theme(brandGreen12);
+        &:hover {
+          color: get-theme(brandGreen);
+        }
+      }
+    }
+
+    &_slider {
+      flex-grow: 1;
+      font-weight: 500;
+      line-height: 130%;
+      color: get-theme(text40);
+      border-radius: 6px;
+      vertical-align: sub;
+
+      &:not(:first-child) {
+        margin-left: 4px;
+      }
+
+      &:hover {
+        color: get-theme(text60);
+      }
+
+      &_active {
+        color: get-theme(text);
+      }
+
+      &_small {
+        font-size: 12px;
+        padding: 6px 8px;
+        height: 25px;
+      }
+      &_medium {
+        font-size: 14px;
+        padding: 6px 12px;
+        height: 32px;
+      }
+      &_large {
+        font-size: 16px;
+        padding: 6px 12px;
+        height: 34px;
+      }
+    }
+  }
+
+  .#{$prefix}_underline_wrap {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: 0.3s;
+  }
+
+  .#{$prefix}_underline {
+    background: get-theme(text);
+    border-radius: 4px;
+    &_small {
+      height: 4px;
+      width: 16px;
+    }
+    &_medium {
+      height: 4px;
+      width: 24px;
+    }
+    &_large {
+      height: 6px;
+      width: 32px;
+    }
+  }
+
+  &_slider {
+    width: fit-content;
+    background-color: get-theme(slider-bkg);
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid get-theme(slider-border);
+
+    &_block {
+      width: 100%;
+    }
+  }
+
+  .#{$prefix}_slider_trans {
+    position: absolute;
+    width: 0;
+    border-radius: 8px;
+    pointer-events: none;
+    background-color: get-theme(slider-color);
+
+    &_small {
+      height: 25px;
+    }
+    &_medium {
+      height: 32px;
+    }
+    &_large {
+      height: 34px;
+    }
+  }
+}

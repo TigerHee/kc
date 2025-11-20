@@ -1,0 +1,1 @@
+export { default as MailAuthorize } from './components/MailAuthorize';

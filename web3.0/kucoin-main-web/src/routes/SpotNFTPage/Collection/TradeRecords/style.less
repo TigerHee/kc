@@ -1,0 +1,66 @@
+@greenColor: #2dbd96;
+.container {
+  min-height: 600px;
+  margin-top: 10px;
+  :global {
+    .ant-table-thead > tr > th {
+      color: rgba(1, 8, 30, 0.6);
+      font-size: 12px;
+      background: rgba(0, 20, 42, 0.04);
+    }
+    .ant-table-tbody > tr > td {
+      font-size: 14px;
+    }
+    .MuiDialog-actionRoot {
+      border-top: none;
+    }
+  }
+  .txId {
+    color: @greenColor;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+  .action {
+    color: @greenColor;
+  }
+  .chainDesc {
+    color: rgba(0, 20, 42, 0.6);
+    font-size: 12px;
+  }
+  .tokenContainer {
+    text-align: center;
+  }
+  .token {
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.note {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(0, 20, 42, 0.6);
+  margin-top: 12px;
+}
+
+.mobileItemLeft {
+  width: 20%;
+  overflow: hidden;
+}
+.mobileItemCenter {
+  width: 30%;
+  overflow: hidden;
+  text-align: center;
+}
+.mobileItemRight {
+  width: 30%;
+  overflow: hidden;
+  text-align: right;
+}
+
+.numFormat {
+  direction: ltr /* rtl:ignore */;
+}

@@ -1,0 +1,68 @@
+@import '~themes/mix.less';
+
+.previewWrap {
+  width: 100%;
+  height: 90px;
+  .mediaQuerySm({height: 100px;});
+}
+
+.previewInner {
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  color: #00142a;
+  font-size: 16px;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  .mediaQuerySm({height: 100px;});
+}
+
+.previewTitle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .mediaQuerySm({height: 30px;});
+}
+
+.previewTools {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  .mediaQuerySm({height: 70px; position: relative; align-items: center;});
+}
+
+.previewBtnGroup {
+  display: flex;
+  align-items: center;
+
+  & button {
+    margin-right: 12px;
+  }
+  & button:last-child {
+    margin-right: 24px;
+    .mediaQuerySm({margin-right: 0;});
+  }
+}
+
+.previewBtn {
+  width: 100px !important;
+  border: 2px solid #21C397 !important;
+  border-radius: 6px !important;
+}
+
+.previewTips {
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgba(0, 20, 42, 0.4);
+}

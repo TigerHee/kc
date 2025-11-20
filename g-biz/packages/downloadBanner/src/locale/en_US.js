@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Safe easy global trading 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Register and master markets in a sec!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Master markets anywhere 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80K+ Reviews",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Verify, deposit, and buy crypto ASAP!",
+  "rw8e32A8H7X3QtiKHS37EK": "Download",
+  "tXwwyoSbqG4pgsoXomccjp": "Download the {{brandName}} app to earn up to {{num}} {{siteBaseCurrency}} in rewards.",
+  "7dhofXiN9vaVRtVSNY9eCc": "New Users Get",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Claim Now",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> Downloads",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ Reviews)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ Reviews)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Exclusively for new users: if your first deposit or crypto purchase is more than $50, you will receive a mystery box worth up to <span>$500</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Download",
+  "csjK9uyQQyYMLprAYkKsRT": "Download the {{brandName}} app to continue your crypto journey, and receive up to <span>$500</span> in rewards in the Beginner Zone.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Deposit or buy crypto for the first time to get a mystery box worth up to <span>$500</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Up to <span>$500</span> in Rewards for New Users!",
+  "wLAfc8MZvoHbeNragecB4Z": "Safer and faster trades from app"
+}

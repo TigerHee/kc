@@ -1,0 +1,302 @@
+[
+  {
+    "name": "buttonColorPrimary",
+    "light": "#1D1D1D",
+    "dark": "#F3F3F3"
+  },
+  {
+    "name": "buttonColorSecondary",
+    "light": "fade(#1D1D1D, 0.04)",
+    "dark": "fade(#F3F3F3, 0.08)"
+  },
+  {
+    "name": "buttonTextPrimary",
+    "light": "#FFFFFF",
+    "dark": "#1D1D1D"
+  },
+  {
+    "name": "buttonTextSecondary",
+    "light": "#1D1D1D",
+    "dark": "#F3F3F3"
+  },
+  {
+    "name": "brandGreen",
+    "light": "#00B47D",
+    "dark": "#00B47D"
+  },
+  {
+    "name": "brandGreen60",
+    "light": "fade(#00B47D, 0.6)",
+    "dark": "fade(#00B47D, 0.6)"
+  },
+  {
+    "name": "brandGreen40",
+    "light": "fade(#00B47D, 0.4)",
+    "dark": "fade(#00B47D, 0.4)"
+  },
+  {
+    "name": "brandGreen20",
+    "light": "fade(#00B47D, 0.2)",
+    "dark": "fade(#00B47D, 0.2)"
+  },
+  {
+    "name": "brandGreen12",
+    "light": "fade(#00B47D, 0.12)",
+    "dark": "fade(#00B47D, 0.12)"
+  },
+  {
+    "name": "brandGreen8",
+    "light": "fade(#00B47D, 0.08)",
+    "dark": "fade(#00B47D, 0.08)"
+  },
+  {
+    "name": "brandGreen4",
+    "light": "fade(#00B47D, 0.04)",
+    "dark": "fade(#00B47D, 0.04)"
+  },
+  {
+    "name": "text",
+    "light": "#1D1D1D",
+    "dark": "#F3F3F3"
+  },
+  {
+    "name": "text60",
+    "light": "fade(#1D1D1D, 0.6)",
+    "dark": "fade(#F3F3F3, 0.6)"
+  },
+  {
+    "name": "text40",
+    "light": "fade(#1D1D1D, 0.48)",
+    "dark": "fade(#F3F3F3, 0.4)"
+  },
+  {
+    "name": "text30",
+    "light": "fade(#1D1D1D, 0.3)",
+    "dark": "fade(#F3F3F3, 0.3)"
+  },
+  {
+    "name": "text20",
+    "light": "fade(#1D1D1D, 0.2)",
+    "dark": "fade(#F3F3F3, 0.2)"
+  },
+  {
+    "name": "textEmphasize",
+    "light": "#FFFFFF",
+    "dark": "#1D1D1D"
+  },
+  {
+    "name": "cover16",
+    "light": "fade(#1D1D1D, 0.16)",
+    "dark": "fade(#F3F3F3, 0.16)"
+  },
+  {
+    "name": "cover12",
+    "light": "fade(#1D1D1D, 0.12)",
+    "dark": "fade(#F3F3F3, 0.12)"
+  },
+  {
+    "name": "cover8",
+    "light": "fade(#1D1D1D, 0.08)",
+    "dark": "fade(#F3F3F3, 0.08)"
+  },
+  {
+    "name": "cover4",
+    "light": "fade(#1D1D1D, 0.04)",
+    "dark": "fade(#F3F3F3, 0.04)"
+  },
+  {
+    "name": "cover2",
+    "light": "fade(#1D1D1D, 0.02)",
+    "dark": "fade(#F3F3F3, 0.02)"
+  },
+  {
+    "name": "icon",
+    "light": "#8C8C8C",
+    "dark": "#8C8C8C"
+  },
+  {
+    "name": "icon60",
+    "light": "fade(#8C8C8C, 0.6)",
+    "dark": "fade(#8C8C8C, 0.6)"
+  },
+  {
+    "name": "icon40",
+    "light": "fade(#8C8C8C, 0.4)",
+    "dark": "fade(#8C8C8C, 0.4)"
+  },
+  {
+    "name": "toolTips",
+    "light": "#2D2D2F",
+    "dark": "#2D2D2F"
+  },
+  {
+    "name": "divider8",
+    "light": "fade(#1D1D1D, 0.08)",
+    "dark": "fade(#F3F3F3, 0.08)"
+  },
+  {
+    "name": "divider4",
+    "light": "fade(#1D1D1D, 0.04)",
+    "dark": "fade(#F3F3F3, 0.04)"
+  },
+  {
+    "name": "dividerBlock",
+    "light": "#F9F9F9",
+    "dark": "#000000"
+  },
+  {
+    "name": "dividerInfoDashLine",
+    "light": "fade(#1D1D1D, 0.2)",
+    "dark": "fade(#F3F3F3, 0.2)"
+  },
+  {
+    "name": "bulletLayer",
+    "light": "#FFFFFF",
+    "dark": "#222223"
+  },
+  {
+    "name": "bulletLayerToast",
+    "light": "#6D6D6D",
+    "dark": "#8C8C8C"
+  },
+  {
+    "name": "bulletLayerToastWeb",
+    "light": "#222223",
+    "dark": "#FFFFFF"
+  },
+  {
+    "name": "backgroundWeb",
+    "light": "#F9F9F9",
+    "dark": "#222222"
+  },
+  {
+    "name": "backgroundApp",
+    "light": "#F9F9F9",
+    "dark": "#121212"
+  },
+  {
+    "name": "backgroundOverlay",
+    "light": "#FFFFFF",
+    "dark": "#121212"
+  },
+  {
+    "name": "mask",
+    "light": "fade(#000D1D, 0.3)",
+    "dark": "fade(#000000, 0.6)"
+  },
+  {
+    "name": "brandRed",
+    "light": "#F65454",
+    "dark": "#F65454"
+  },
+  {
+    "name": "brandRed60",
+    "light": "fade(#F65454, 0.6)",
+    "dark": "fade(#F65454, 0.6)"
+  },
+  {
+    "name": "brandRed40",
+    "light": "fade(#F65454, 0.4)",
+    "dark": "fade(#F65454, 0.4)"
+  },
+  {
+    "name": "brandRed20",
+    "light": "fade(#F65454, 0.2)",
+    "dark": "fade(#F65454, 0.2)"
+  },
+  {
+    "name": "brandRed12",
+    "light": "fade(#F65454, 0.12)",
+    "dark": "fade(#F65454, 0.12)"
+  },
+  {
+    "name": "brandRed8",
+    "light": "fade(#F65454, 0.08)",
+    "dark": "fade(#F65454, 0.08)"
+  },
+  {
+    "name": "brandRed4",
+    "light": "fade(#F65454, 0.04)",
+    "dark": "fade(#F65454, 0.04)"
+  },
+  {
+    "name": "complementaryYellow",
+    "light": "#F8B200",
+    "dark": "#F8B200"
+  },
+  {
+    "name": "complementaryYellow60",
+    "light": "fade(#F8B200, 0.6)",
+    "dark": "fade(#F8B200, 0.6)"
+  },
+  {
+    "name": "complementaryYellow40",
+    "light": "fade(#F8B200, 0.4)",
+    "dark": "fade(#F8B200, 0.4)"
+  },
+  {
+    "name": "complementaryYellow20",
+    "light": "fade(#F8B200, 0.2)",
+    "dark": "fade(#F8B200, 0.2)"
+  },
+  {
+    "name": "complementaryYellow12",
+    "light": "fade(#F8B200, 0.12)",
+    "dark": "fade(#F8B200, 0.12)"
+  },
+  {
+    "name": "complementaryYellow8",
+    "light": "fade(#F8B200, 0.08)",
+    "dark": "fade(#F8B200, 0.08)"
+  },
+  {
+    "name": "complementaryYellow4",
+    "light": "fade(#F8B200, 0.04)",
+    "dark": "fade(#F8B200, 0.04)"
+  },
+  {
+    "name": "walletGreen",
+    "light": "#18CA51",
+    "dark": "#0CC372"
+  },
+  {
+    "name": "walletGreen60",
+    "light": "fade(#18CA51, 0.6)",
+    "dark": "fade(#0CC372, 0.6)"
+  },
+  {
+    "name": "walletGreen40",
+    "light": "fade(#18CA51, 0.4)",
+    "dark": "fade(#0CC372, 0.4)"
+  },
+  {
+    "name": "walletGreen20",
+    "light": "fade(#18CA51, 0.2)",
+    "dark": "fade(#0CC372, 0.2)"
+  },
+  {
+    "name": "walletGreen12",
+    "light": "fade(#18CA51, 0.12)",
+    "dark": "fade(#0CC372, 0.12)"
+  },
+  {
+    "name": "walletGreen8",
+    "light": "fade(#18CA51, 0.08)",
+    "dark": "fade(#0CC372, 0.08)"
+  },
+  {
+    "name": "walletGreen4",
+    "light": "fade(#18CA51, 0.04)",
+    "dark": "fade(#0CC372, 0.04)"
+  },
+  {
+    "name": "illustrationGreen",
+    "light": "#D3F475",
+    "dark": "#D3F475"
+  },
+  {
+    "name": "illustrationGreen2",
+    "light": "#25D17F",
+    "dark": "#25D17F"
+  }
+]

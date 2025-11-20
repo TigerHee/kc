@@ -1,0 +1,11 @@
+{
+  "feeInfoMap": {},
+  "agreedRisk": false,
+  "showRiskModal": false,
+  "priceLimitRate": null,
+  "type": "customPrise",
+  "leverUnit": 5,
+  "tradeType": "TRADE",
+  "maintenanceStatus": {},
+  "formValues": {}
+}

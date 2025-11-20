@@ -1,0 +1,13 @@
+.img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    [dir='rtl'] & {
+        margin-right: unset;
+        margin-left: 12px;
+    }
+}

@@ -1,0 +1,10 @@
+export const PASSKEY_BIZ_TYPE = {
+  BIND_PASSKEY: 'RV_BIND_PASSKEY',
+  UNBIND_PASSKEY: 'RV_UNBIND_PASSKEY',
+};
+
+export const PASSKEY_OPERATE_TYPE = {
+  SET_PASSKEY: 'SET_PASSKEY', // 从 0 -> 1 创建 passkey
+  BIND_PASSKEY: 'BIND_PASSKEY', // 从 1 -> n 创建 passkey
+  UNBIND_PASSKEY: 'UNBIND_PASSKEY',
+};

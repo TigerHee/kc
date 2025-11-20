@@ -1,0 +1,48 @@
+.menuItemIcon {
+  // width: 20px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  & img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+}
+
+.menuItemIcon.drawerMenu {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  & img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+}
+
+.menuItemDotWrapper {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 8px;
+}
+
+.menuItemDot {
+  width: 4px;
+  height: 4px;
+  background: var(--color-text);
+  border-radius: 100%;
+}

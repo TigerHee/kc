@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1098px" height="397px" viewBox="0 0 1098 397" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="22.0922851%" cy="20.6092813%" fx="22.0922851%" fy="20.6092813%" r="101.29208%" gradientTransform="translate(0.220923,0.206093),scale(1.000000,0.997709),rotate(39.723343),translate(-0.220923,-0.206093)" id="radialGradient-1">
+            <stop stop-color="#B2BBFF" offset="0%"></stop>
+            <stop stop-color="#0D15AF" offset="100%"></stop>
+        </radialGradient>
+        <filter x="-16.0%" y="-16.0%" width="132.1%" height="132.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <radialGradient cx="22.0922851%" cy="20.6092813%" fx="22.0922851%" fy="20.6092813%" r="101.29208%" gradientTransform="translate(0.220923,0.206093),scale(1.000000,0.997709),rotate(39.723343),translate(-0.220923,-0.206093)" id="radialGradient-3">
+            <stop stop-color="#6F3980" offset="0%"></stop>
+            <stop stop-color="#0D15AF" offset="100%"></stop>
+        </radialGradient>
+        <filter x="-27.1%" y="-27.0%" width="154.2%" height="154.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="2.45814732" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <radialGradient cx="22.0922851%" cy="20.6092813%" fx="22.0922851%" fy="20.6092813%" r="101.29208%" gradientTransform="translate(0.220923,0.206093),scale(1.000000,0.997709),rotate(39.723343),translate(-0.220923,-0.206093)" id="radialGradient-5">
+            <stop stop-color="#FBB2FF" stop-opacity="0.565358922" offset="0%"></stop>
+            <stop stop-color="#4824A7" stop-opacity="0.74425385" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="22.0922851%" cy="20.6092813%" fx="22.0922851%" fy="20.6092813%" r="101.368329%" gradientTransform="translate(0.220923,0.206093),scale(0.997159,1.000000),rotate(39.578683),translate(-0.220923,-0.206093)" id="radialGradient-6">
+            <stop stop-color="#2B3DC4" offset="0%"></stop>
+            <stop stop-color="#690BE4" offset="100%"></stop>
+        </radialGradient>
+        <filter x="-27.4%" y="-27.5%" width="154.8%" height="155.0%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="4.65680804" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <radialGradient cx="30.3680918%" cy="33.9265686%" fx="30.3680918%" fy="33.9265686%" r="126.398666%" gradientTransform="translate(0.303681,0.339266),scale(1.000000,0.833136),rotate(83.865211),translate(-0.303681,-0.339266)" id="radialGradient-8">
+            <stop stop-color="#2CA3FF" offset="0%"></stop>
+            <stop stop-color="#0084FF" stop-opacity="0.316491168" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="用户告知页面-按钮禁用-copy" transform="translate(-170.000000, -257.000000)" fill-rule="nonzero">
+            <g id="bg" transform="translate(170.000000, 257.000000)">
+                <g id="Group" transform="translate(0.000000, 17.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="1088" height="380"></rect>
+                    <rect id="Rectangle" stroke="#979797" fill="#F3F5F9" opacity="0" x="0.5" y="245.5" width="60" height="105"></rect>
+                    <ellipse id="Oval-5-Copy-10" fill="url(#radialGradient-1)" opacity="0.459765625" filter="url(#filter-2)" cx="980.253472" cy="101.753012" rx="93.5381944" ry="93.753012"></ellipse>
+                    <ellipse id="Oval-5-Copy-13" fill="url(#radialGradient-3)" opacity="0.459765625" filter="url(#filter-4)" cx="1074.38368" cy="191.35241" rx="13.6163194" ry="13.6475904"></ellipse>
+                    <ellipse id="Oval-5" fill="url(#radialGradient-5)" cx="790.809028" cy="106.5" rx="43.8090278" ry="43.9096386"></ellipse>
+                </g>
+                <g id="Group-2" transform="translate(71.000000, 228.000000)">
+                    <ellipse id="Oval-5-Copy-4" fill="url(#radialGradient-6)" opacity="0.298381696" filter="url(#filter-7)" cx="25.4814815" cy="25.4090909" rx="25.4814815" ry="25.4090909"></ellipse>
+                    <path d="M49.1326369,169 C78.9628856,169 92.7351189,132.785291 112.854309,99.7595939 C132.973499,66.7338972 138.926865,15.3636364 93.287405,15.3636364 C47.6479447,15.3636364 6.67799683,33.8674808 0.866263474,82.4988854 C-4.94546988,131.13029 19.3023883,169 49.1326369,169 Z" id="Oval-5-Copy-5" fill="url(#radialGradient-8)" opacity="0.700223214"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

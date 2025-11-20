@@ -1,0 +1,80 @@
+@import '@/styles/mixin.scss';
+
+.security {
+  padding-top: 344px;
+  color: var(--kux-text);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 43% auto;
+  background-position: right bottom;
+  overflow: hidden;
+  background-blend-mode: lighten;
+  mix-blend-mode: lighten;
+
+  [dir='rtl'] & {
+    background-position: left bottom;
+  }
+  @media (max-width: 1460px) {
+    background-size: calc(85% - 700px) auto;
+  }
+  @include media-query('lg') {
+    padding-top: 120px;
+    background-size: calc(90% - 700px) auto;
+  }
+  @media (max-width: 1100px) {
+    background-size: 30% auto;
+  }
+  @include media-query('sm') {
+    padding: 80px 16px 0;
+  }
+}
+.securityLight {
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+.h5bg {
+  width: 320px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 8px;
+  color: var(--kux-text);
+  @include media-query('sm') {
+    font-size: 24px;
+    margin-top: -32px;
+  }
+}
+
+.desc {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text60);
+  max-width: 800px;
+  margin: 0 auto;
+  @include media-query('sm') {
+    font-size: 14px;
+  }
+  a {
+    color: var(--kux-text60);
+    text-decoration: underline;
+  }
+}
+
+.arcContainer {
+  width: 75vw;
+  max-width: 1260px;
+  margin-top: 472px;
+}

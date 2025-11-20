@@ -1,0 +1,190 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-preview 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'preview'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('preview') {
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: get-theme(mask);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+
+  // 顶部菜单栏
+  &_header {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    height: 44px;
+    background-color: get-theme(mask);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 16px;
+    z-index: 10;
+    cursor: default;
+  }
+
+  &_header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &_header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px; // 图标间距16px
+  }
+
+  &_header-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // 图片展示区域 - 小屏幕默认样式
+  &_content {
+    width: calc(100vw - 32px); // 左右各16px
+    height: calc(100vh - 32px); // 上下各16px，与左右间距保持一致
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+  }
+
+  // 图片容器
+  &_image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // 图片样式
+  &_image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+    
+    &:active {
+      cursor: grabbing;
+    }
+    
+    // 当图片被拖动时的样式
+    &:hover {
+      cursor: grab;
+    }
+  }
+
+  // 箭头样式 - 小屏幕（底部）
+  &_arrow {
+    position: absolute;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    // 小屏幕箭头在底部居中
+    bottom: 24px;
+    transform: translateY(0);
+
+    &--left {
+      inset-inline-start: calc(50% - 44px - 16px); // 居中位置减去箭头宽度和间距的一半
+    }
+
+    &--right {
+      inset-inline-start: calc(50% + 16px); // 居中位置加上间距的一半
+    }
+  }
+
+  // 箭头圆圈 - 小屏幕默认样式
+  &_arrow-circle {
+    width: 44px;
+    height: 44px;
+    background-color: get-theme(mask);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+
+    .kux-icon {
+      color: #fff;
+      [dir="rtl"] & {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      background-color: get-theme(text40);
+    }
+  }
+
+  // 中屏幕适配 - 使用 responsive(lg)
+  @include responsive(md) {
+    &_content {
+      width: calc(100vw - 32px); // 左右各16px
+      height: calc(100vh - 32px); // 上下各16px，与左右间距保持一致
+    }
+
+    &_arrow {
+      // 中屏幕箭头在左右两边
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+      transition: all 0.2s ease;
+
+      &--left {
+        inset-inline-start: 16px; // 与内容区域左边距保持一致
+      }
+
+      &--right {
+        inset-inline-start: unset;
+        inset-inline-end: 16px; // 与内容区域右边距保持一致
+      }
+    }
+  }
+
+  // 大屏幕适配
+  @include responsive(lg) {
+    &_content {
+      width: calc(100vw - 160px); // 左右各80px
+      height: calc(100vh - 160px); // 上下各80px，与左右间距保持一致
+    }
+
+    &_arrow {
+      &--left {
+        inset-inline-start: 80px; // 与内容区域左边距保持一致
+      }
+
+      &--right {
+        inset-inline-end: 80px; // 与内容区域右边距保持一致
+      }
+    }
+  }
+}

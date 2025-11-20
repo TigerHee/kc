@@ -1,0 +1,18 @@
+// eslint-disable-next-line simple-import-sort/imports
+import './src/utils/computedPx';
+
+import {AppRegistry, LogBox} from 'react-native';
+
+import App from './src/App';
+import {MeasureTTIHelper} from 'utils/performance';
+
+LogBox.ignoreLogs([
+  'AsyncStorage has been extracted',
+  'Module KRN',
+  'Overriding preevious layout animation',
+]);
+
+MeasureTTIHelper.initStart();
+
+// 与 scripts/buildBundle.js中的moduleName一致
+AppRegistry.registerComponent('krn_follow_trade', () => App);

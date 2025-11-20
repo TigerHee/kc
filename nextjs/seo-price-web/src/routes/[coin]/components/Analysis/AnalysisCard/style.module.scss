@@ -1,0 +1,125 @@
+@import '@/styles/mixin.scss';
+
+.cardWrapper {
+
+  width: 100%;
+  max-width: 768px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 13, 29, 0.08);
+  border-radius: 12px;
+  margin-bottom: 24px;
+
+  @include media-query('lg') {
+    margin-bottom: 20px;
+    padding: 12px;
+  }
+
+}
+
+.cardHeader {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 13, 29, 0.08);
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &.vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+}
+
+.titleWrapper {
+  margin-right: 2px;
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--color-text);
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+
+    [dir='rtl'] & {
+      transform: rotateY(-180deg);
+    }
+  }
+
+  @include media-query('lg') {
+    font-size: 16px;
+  }
+
+  &.vertical {
+    margin-bottom: 16px;
+  }
+
+}
+
+.titleText {
+  vertical-align: middle;
+}
+
+.optWrapper {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 90px;
+
+  &.bizTypeLarge {
+    min-width: 48%;
+  }
+
+  &.bizTypeSmall {
+    min-width: 36%;
+  }
+}
+
+.businessTypesSelect {
+
+  margin-right: 12px;
+
+  :global(.KuxTabs-Container) {
+    padding-top: 0 !important;
+  }
+
+  :global(.KuxTabs-lineContainer) {
+    display: flex !important;
+    height: 28px !important;
+    padding: 2px !important;
+    background: #f7f8fb !important;
+    border-radius: 4px !important;
+  }
+
+  :global(.KuxTab-TabItem) {
+    flex: 1 !important;
+    height: 28px !important;
+    margin-left: 0 !important;
+    padding: 0 10px !important;
+    color: var(--color-text40) !important;
+    background: #f7f8fb !important;
+  }
+
+  :global(.KuxTab-selected) {
+    color: var(--color-text) !important;
+  }
+
+}
+
+.timeSelect {
+  min-width: 90px;
+  height: 32px;
+}
+
+.cardContent {
+  width: 100%;
+  padding-top: 16px;
+}

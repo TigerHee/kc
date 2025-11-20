@@ -1,0 +1,37 @@
+{
+  "name": "@kc/request",
+  "version": "0.0.1",
+  "description": "提供统一的网络请求库，涵盖现有的通用请求/响应拦截器和数据自动加解密功能",
+  "keywords": [],
+  "license": "ISC",
+  "author": "derek.zhang@kupotech.com",
+  "main": "./output/index.js",
+  "types": "./output/index.d.ts",
+  "files": [
+    "output",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "rm -rf output && tsc",
+    "sort": "sort-package-json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@noble/ciphers": "^1.2.1",
+    "axios": "^1.8.4",
+    "base64-js": "^1.5.1",
+    "lodash.debounce": "^4.0.8",
+    "path-to-regexp": "2.2.1"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.9",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "sort-package-json": "^3.2.1"
+  }
+}

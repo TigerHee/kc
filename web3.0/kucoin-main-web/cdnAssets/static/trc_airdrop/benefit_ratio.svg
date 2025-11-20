@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="750px" height="43px" viewBox="0 0 750 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>date</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-1.62860002%" y1="-5.55111512e-15%" x2="101.236074%" y2="-5.55111512e-15%" id="linearGradient-1">
+            <stop stop-color="#8AA6CF" offset="0%"></stop>
+            <stop stop-color="#304367" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy" transform="translate(-193.000000, -1528.000000)">
+            <g id="date-copy" transform="translate(193.000000, 1523.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" fill-rule="nonzero" x="9.70322581" y="25" width="729.682581" height="4" rx="2"></rect>
+                <text id="4.30" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="0" y="47">5.07</tspan>
+                </text>
+                <text id="5.04" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="102.854194" y="47">5.11</tspan>
+                </text>
+                <text id="5.09" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="206.67871" y="47">5.16</tspan>
+                </text>
+                <text id="5.14" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="312.443871" y="47">5.21</tspan>
+                </text>
+                <text id="5.21" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="415.298065" y="47">5.28</tspan>
+                </text>
+                <text id="5.31" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="518.152258" y="47">6.07</tspan>
+                </text>
+                <text id="6.14" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="622.947097" y="47">6.21</tspan>
+                </text>
+                <text id="8.07" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#9DC4FF">
+                    <tspan x="725.80129" y="47">8.14</tspan>
+                </text>
+                <text id="20%" font-family="Ubuntu-Medium, Ubuntu" font-size="13" font-weight="400" fill="#F2C06F">
+                    <tspan x="51.4270968" y="15">20%</tspan>
+                </text>
+                <text id="12%" font-family="Ubuntu-Medium, Ubuntu" font-size="13" font-weight="400" fill="#F1C885">
+                    <tspan x="154.28129" y="15">12%</tspan>
+                </text>
+                <text id="10%" font-family="Ubuntu-Medium, Ubuntu" font-size="13" font-weight="400" fill="#F0CD94">
+                    <tspan x="256.165161" y="15">10%</tspan>
+                </text>
+                <text id="8%" font-family="Ubuntu-Medium, Ubuntu" font-size="13" font-weight="400" fill="#F3D19A">
+                    <tspan x="364.84129" y="15">8%</tspan>
+                </text>
+                <text id="5%" font-family="Ubuntu-Medium, Ubuntu" font-size="13" font-weight="400" fill="#F5DCB4">
+                    <tspan x="467.695484" y="15">5%</tspan>
+                </text>
+                <text id="3%" font-family="Ubuntu-Medium, Ubuntu" font-size="13" font-weight="400" fill="#F3DEBA">
+                    <tspan x="570.549677" y="15">3%</tspan>
+                </text>
+                <text id="1%" font-family="Ubuntu-Medium, Ubuntu" font-size="13" font-weight="400" fill="#FFFFFF">
+                    <tspan x="676.314839" y="15">1%</tspan>
+                </text>
+                <ellipse id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="11.643871" cy="27" rx="1.94064516" ry="2"></ellipse>
+                <ellipse id="Oval-Copy" fill="#FFFFFF" fill-rule="nonzero" cx="115.468387" cy="27" rx="1.94064516" ry="2"></ellipse>
+                <ellipse id="Oval-Copy-2" fill="#FFFFFF" fill-rule="nonzero" cx="219.292903" cy="27" rx="1.94064516" ry="2"></ellipse>
+                <ellipse id="Oval-Copy-3" fill="#FFFFFF" fill-rule="nonzero" cx="323.117419" cy="27" rx="1.94064516" ry="2"></ellipse>
+                <ellipse id="Oval-Copy-4" fill="#FFFFFF" fill-rule="nonzero" cx="425.971613" cy="27" rx="1.94064516" ry="2"></ellipse>
+                <ellipse id="Oval-Copy-5" fill="#FFFFFF" fill-rule="nonzero" cx="529.796129" cy="27" rx="1.94064516" ry="2"></ellipse>
+                <ellipse id="Oval-Copy-6" fill="#FFFFFF" fill-rule="nonzero" cx="633.620645" cy="27" rx="1.94064516" ry="2"></ellipse>
+                <ellipse id="Oval-Copy-7" fill="#FFFFFF" fill-rule="nonzero" cx="737.445161" cy="27" rx="1.94064516" ry="2"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

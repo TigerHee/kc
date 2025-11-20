@@ -1,0 +1,297 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+import { fade } from 'utils/colorManipulator';
+
+// 老版本配色
+const oldThemeColors = {
+  light: {
+    // 彩色-1
+    primary: '#21C397',
+    primary87: fade('#21C397', 0.87),
+    primary80: fade('#21C397', 0.8),
+    primary74: fade('#21C397', 0.74),
+    primary60: fade('#21C397', 0.6),
+    primary38: fade('#21C397', 0.38),
+    primary24: fade('#21C397', 0.24),
+    primary20: fade('#21C397', 0.2),
+    primary16: fade('#21C397', 0.16),
+    primary12: fade('#21C397', 0.12),
+    primary8: fade('#21C397', 0.08),
+    // 彩色-2
+    secondary: '#ED6666',
+    secondary80: fade('#ED6666', 0.8),
+    secondary74: fade('#ED6666', 0.74),
+    secondary60: fade('#ED6666', 0.6),
+    secondary38: fade('#ED6666', 0.38),
+    secondary16: fade('#ED6666', 0.16),
+    secondary12: fade('#ED6666', 0.12),
+    secondary8: fade('#ED6666', 0.08),
+    secondary4: fade('#ED6666', 0.04),
+    // 彩色-3
+    inferior: '#FFB547',
+    inferior74: fade('#FFB547', 0.74),
+    inferior60: fade('#FFB547', 0.6),
+    inferior38: fade('#FFB547', 0.38),
+    inferior20: fade('#FFB547', 0.2),
+    inferior16: fade('#FFB547', 0.16),
+    inferior12: fade('#FFB547', 0.12),
+    inferior8: fade('#FFB547', 0.08),
+    inferior4: fade('#FFB547', 0.04),
+    // 深色背景&深色字体共用
+    complementary: '#00142A',
+    complementary87: fade('#00142A', 0.87),
+    complementary80: fade('#00142A', 0.8),
+    complementary74: fade('#00142A', 0.74),
+    complementary60: fade('#00142A', 0.6),
+    complementary40: fade('#00142A', 0.4),
+    complementary38: fade('#00142A', 0.38),
+    complementary24: fade('#00142A', 0.24),
+    complementary20: fade('#00142A', 0.2),
+    complementary16: fade('#00142A', 0.16),
+    complementary12: fade('#00142A', 0.12),
+    complementary8: fade('#00142A', 0.08),
+    complementary6: fade('#00142A', 0.06),
+    complementary4: fade('#00142A', 0.04),
+    complementary2: fade('#00142A', 0.02),
+    complementary0: fade('#00142A', 0),
+    // 浅色背景-1
+    background: '#FFFFFF',
+    background70: fade('#FFFFFF', 0.7),
+    background38: fade('#FFFFFF', 0.38),
+    // 浅色背景-2
+    background2: '#FBFBFB',
+    // 深色背景-3
+    background3: '#2D323F',
+    // 浅色字体
+    surface: '#FDFFFF',
+    surface87: fade('#FDFFFF', 0.87),
+    surface80: fade('#FDFFFF', 0.8),
+    surface60: fade('#FDFFFF', 0.6),
+    surface50: fade('#FDFFFF', 0.5),
+    surface38: fade('#FDFFFF', 0.38),
+    surface24: fade('#FDFFFF', 0.24),
+    surface16: fade('#FDFFFF', 0.16),
+    surface12: fade('#FDFFFF', 0.12),
+    surface8: fade('#FDFFFF', 0.08),
+    surface4: fade('#FDFFFF', 0.04),
+    surface0: fade('#FDFFFF', 0),
+    //mask背景色
+    mask: fade('#000000', 0.6),
+    //弹窗内容背景色
+    drawer: '#FFFFFF',
+  },
+  dark: {
+    // 彩色-1
+    primary: '#21C397',
+    primary87: fade('#21C397', 0.87),
+    primary80: fade('#21C397', 0.8),
+    primary74: fade('#21C397', 0.74),
+    primary60: fade('#21C397', 0.6),
+    primary38: fade('#21C397', 0.38),
+    primary24: fade('#21C397', 0.24),
+    primary20: fade('#21C397', 0.2),
+    primary16: fade('#21C397', 0.16),
+    primary12: fade('#21C397', 0.12),
+    primary8: fade('#21C397', 0.08),
+    // 彩色-2
+    secondary: '#ED6666',
+    secondary80: fade('#ED6666', 0.8),
+    secondary74: fade('#ED6666', 0.74),
+    secondary60: fade('#ED6666', 0.6),
+    secondary38: fade('#ED6666', 0.38),
+    secondary16: fade('#ED6666', 0.16),
+    secondary12: fade('#ED6666', 0.12),
+    secondary8: fade('#ED6666', 0.08),
+    secondary4: fade('#ED6666', 0.04),
+    // 彩色-3
+    inferior: '#FFB547',
+    inferior74: fade('#FFB547', 0.74),
+    inferior60: fade('#FFB547', 0.6),
+    inferior38: fade('#FFB547', 0.38),
+    inferior20: fade('#FFB547', 0.2),
+    inferior16: fade('#FFB547', 0.16),
+    inferior12: fade('#FFB547', 0.12),
+    inferior8: fade('#FFB547', 0.08),
+    inferior4: fade('#FFB547', 0.04),
+    // 深色背景&深色字体共用
+    complementary: '#E1E8F5',
+    complementary87: fade('#E1E8F5', 0.87),
+    complementary80: fade('#E1E8F5', 0.8),
+    complementary74: fade('#E1E8F5', 0.74),
+    complementary60: fade('#E1E8F5', 0.6),
+    complementary40: fade('#E1E8F5', 0.4),
+    complementary38: fade('#E1E8F5', 0.38),
+    complementary24: fade('#E1E8F5', 0.24),
+    complementary20: fade('#E1E8F5', 0.2),
+    complementary16: fade('#E1E8F5', 0.16),
+    complementary12: fade('#E1E8F5', 0.12),
+    complementary8: fade('#E1E8F5', 0.08),
+    complementary6: fade('#E1E8F5', 0.06),
+    complementary4: fade('#E1E8F5', 0.04),
+    complementary2: fade('#E1E8F5', 0.02),
+    complementary0: fade('#E1E8F5', 0),
+    // 浅色背景-1
+    background: '#191E29',
+    background70: fade('#191E29', 0.7),
+    background38: fade('#191E29', 0.38),
+    // 浅色背景-2
+    background2: '#11151F',
+    // 深色背景-3
+    background3: '#2D323F',
+    // 浅色字体
+    surface: '#FDFFFF',
+    surface87: fade('#FDFFFF', 0.87),
+    surface80: fade('#FDFFFF', 0.8),
+    surface60: fade('#FDFFFF', 0.6),
+    surface50: fade('#FDFFFF', 0.5),
+    surface38: fade('#FDFFFF', 0.38),
+    surface24: fade('#FDFFFF', 0.24),
+    surface16: fade('#FDFFFF', 0.16),
+    surface12: fade('#FDFFFF', 0.12),
+    surface8: fade('#FDFFFF', 0.08),
+    surface4: fade('#FDFFFF', 0.04),
+    surface0: fade('#FDFFFF', 0),
+    //mask背景色
+    mask: fade('#000000', 0.6),
+    //弹窗内容背景色
+    drawer: '#2B2F39',
+  },
+};
+
+// 新版本配色
+// 亮暗通用
+const baseColor = {
+  primary: '#01BC8D',
+  primary88: fade('#01BC8D', 0.88),
+  primary87: fade('#01BC8D', 0.87),
+  primary80: fade('#01BC8D', 0.8),
+  primary74: fade('#01BC8D', 0.74),
+  primary60: fade('#01BC8D', 0.6),
+  primary40: fade('#01BC8D', 0.4),
+  primary38: fade('#01BC8D', 0.38),
+  primary24: fade('#01BC8D', 0.24),
+  primary20: fade('#01BC8D', 0.2),
+  primary16: fade('#01BC8D', 0.16),
+  primary12: fade('#01BC8D', 0.12),
+  primary8: fade('#01BC8D', 0.08),
+  primary4: fade('#01BC8D', 0.04),
+
+  secondary: '#F66754',
+  secondary88: fade('#F66754', 0.88),
+  secondary80: fade('#F66754', 0.8),
+  secondary74: fade('#F66754', 0.74),
+  secondary60: fade('#F66754', 0.6),
+  secondary40: fade('#F66754', 0.4),
+  secondary38: fade('#F66754', 0.38),
+  secondary20: fade('#F66754', 0.2),
+  secondary16: fade('#F66754', 0.16),
+  secondary12: fade('#F66754', 0.12),
+  secondary8: fade('#F66754', 0.08),
+  secondary4: fade('#F66754', 0.04),
+
+  complementary: '#F8B200',
+  complementary88: fade('#F8B200', 0.88),
+  complementary74: fade('#F8B200', 0.74),
+  complementary60: fade('#F8B200', 0.6),
+  complementary40: fade('#F8B200', 0.4),
+  complementary38: fade('#F8B200', 0.38),
+  complementary20: fade('#F8B200', 0.2),
+  complementary16: fade('#F8B200', 0.16),
+  complementary12: fade('#F8B200', 0.12),
+  complementary8: fade('#F8B200', 0.08),
+  complementary4: fade('#F8B200', 0.04),
+
+  // 字体特例主色
+  textPrimary: '#01BC8D',
+  icon: '#8C8C8C',
+  icon40: fade('#8C8C8C', 0.4),
+  icon60: fade('#8C8C8C', 0.6),
+  link: '#32BB5E',
+  tip: '#2D2D2F',
+};
+
+const light = {
+  ...baseColor,
+  divider: '#F9F9F9',
+  divider8: fade('#1D1D1D', 0.08),
+  divider4: fade('#1D1D1D', 0.04),
+  // 覆盖类
+  cover: '#1D1D1D',
+  cover2: fade('#1D1D1D', 0.02),
+  cover4: fade('#1D1D1D', 0.04),
+  cover8: fade('#1D1D1D', 0.08),
+  cover12: fade('#1D1D1D', 0.12),
+  cover16: fade('#1D1D1D', 0.16),
+  cover20: fade('#1D1D1D', 0.2),
+  cover40: fade('#1D1D1D', 0.4),
+  // 背景类
+  base: '#F7F8FB',
+  background: '#F9F9F9',
+  backgroundMajor: '#FFFFFF',
+  overlay: '#FFFFFF',
+  overlay60: fade('#FFFFFF', 0.6),
+  // 文案类
+  text: '#1D1D1D',
+  text60: fade('#1D1D1D', 0.6),
+  text40: fade('#1D1D1D', 0.4),
+  text30: fade('#1D1D1D', 0.3),
+  text24: fade('#1D1D1D', 0.24),
+  text20: fade('#1D1D1D', 0.2),
+  textEmphasis: '#FFFFFF',
+  // 弹窗浮层
+  layer: '#FFFFFF',
+  mask: fade('#000D1D', 0.3),
+  toast: '#222223',
+  // 按钮相关
+  primaryButtonText: '#FFFFFF',
+  primaryButtonBackground: '#1D1D1D',
+  secondaryButtonText: '#1D1D1D',
+  secondaryButtonBackground: fade('#1D1D1D', 0.04),
+};
+
+const dark = {
+  ...baseColor,
+  divider: '#0D0D0D',
+  divider8: fade('#F3F3F3', 0.08),
+  divider4: fade('#F3F3F3', 0.04),
+  // 覆盖类
+  cover: '#F3F3F3',
+  cover2: fade('#F3F3F3', 0.02),
+  cover4: fade('#F3F3F3', 0.04),
+  cover8: fade('#F3F3F3', 0.08),
+  cover12: fade('#F3F3F3', 0.12),
+  cover16: fade('#F3F3F3', 0.16),
+  cover20: fade('#F3F3F3', 0.2),
+  cover40: fade('#F3F3F3', 0.4),
+  // 背景类
+  base: '#121212',
+  background: '#121212',
+  backgroundMajor: '#0B0B0B',
+  overlay: '#121212',
+  overlay60: fade('#121212', 0.6),
+  // 文案类
+  text: '#F3F3F3',
+  text60: fade('#F3F3F3', 0.6),
+  text40: fade('#F3F3F3', 0.4),
+  text30: fade('#F3F3F3', 0.3),
+  text24: fade('#F3F3F3', 0.24),
+  text20: fade('#F3F3F3', 0.2),
+  textEmphasis: '#1D1D1D',
+  // 弹窗浮层
+  layer: '#222223',
+  mask: fade('#000000', 0.6),
+  toast: '#FFFFFF',
+  // 按钮相关
+  primaryButtonText: '#FFFFFF',
+  primaryButtonBackground: '#01BC8D',
+  secondaryButtonText: '#F3F3F3',
+  secondaryButtonBackground: fade('#F3F3F3', 0.04),
+};
+
+export default {
+  light: oldThemeColors.light,
+  dark: oldThemeColors.dark,
+  lightV2: light,
+  darkV2: dark,
+};

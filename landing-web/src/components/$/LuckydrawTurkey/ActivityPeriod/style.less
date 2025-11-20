@@ -1,0 +1,48 @@
+@import '~themes/mix.less';
+
+.container {
+  position: relative;
+  margin: -113px auto 0;
+  width: 83.33%;
+  max-width: 1200px;
+  padding: 61px 71px 46px 102px;
+  backdrop-filter: blur(80px);
+  background: #dffff6
+    linear-gradient(100.66deg, rgba(223, 255, 246, 0.8) 0%, rgba(224, 237, 255, 0.8) 100%);
+  border-radius: 2px;
+  .mediaQueryMd({width: 93.75%; margin-top: -79px; padding-right: 62px;});
+  .mediaQuerySm({width: 93.6%; margin-top: -58px; padding: 42px 20px 24px 36px;});
+}
+
+.title {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: #24a581;
+  .mediaQuerySm({font-size: 24px;margin-bottom: 16px});
+}
+
+.time {
+  margin: 0 0 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #00142a;
+  .mediaQuerySm({margin-bottom: 16px});
+}
+
+.intro {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #00142a;
+}
+
+.periodImg {
+  height: 192px;
+  position: absolute;
+  top: 15px;
+  left: 56px;
+  .mediaQuerySm({top: 20px;left: 12px});
+}

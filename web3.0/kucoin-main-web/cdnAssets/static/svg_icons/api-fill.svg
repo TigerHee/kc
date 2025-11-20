@@ -1,0 +1,28 @@
+
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#22B4FF" offset="0%"></stop>
+            <stop stop-color="#0F7DFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M44.6783333,31.2222222 L44.6666667,31.2222222 L44.6666667,27 L42.3333333,27 L42.3333333,31.2222222 L37.6666667,31.2222222 L37.6666667,27 L35.3333333,27 L35.3333333,31.2222222 L35.3216667,31.2222222 C34.1666667,31.2169444 33,32.2725 33,33.3280556 L33,39.1283333 L37.0833333,42.8333333 L37.0833333,46 L42.9166667,46 L42.9166667,42.8333333 L47,39.1230556 L47,33.3227778 C47,32.2725 45.8333333,31.2169444 44.6783333,31.2222222 Z" id="path-2"></path>
+        <filter x="-50.0%" y="-26.3%" width="200.0%" height="173.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="账户中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="账号概览-copy" transform="translate(-347.000000, -391.000000)">
+            <g id="Group-10" transform="translate(327.000000, 293.000000)">
+                <g id="Group-13-Copy-2" transform="translate(0.000000, 82.000000)">
+                    <circle id="Oval-Copy-9" fill="url(#linearGradient-1)" fill-rule="nonzero" opacity="0.502139137" cx="40" cy="36" r="20"></circle>
+                    <g id="Path">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

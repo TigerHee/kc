@@ -1,0 +1,26 @@
+import { useEffect, useState } from 'react';
+
+const DEFAULT_OPTIONS = {
+  config: { attributes: true, childList: true, subtree: true },
+};
+export default function useMutationObservable(targetEl, cb, options = DEFAULT_OPTIONS) {
+  const [observer, setObserver] = useState<MutationObserver | null>(null);
+
+  useEffect(() => {
+    const obs: MutationObserver = new MutationObserver(cb);
+
+    setObserver(obs);
+  }, [cb, options, setObserver]);
+
+  useEffect(() => {
+    if (!observer) return;
+    const { config } = options;
+    observer.observe(targetEl, config);
+
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, [observer, targetEl, options]);
+}

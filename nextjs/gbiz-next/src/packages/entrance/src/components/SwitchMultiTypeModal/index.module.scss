@@ -1,0 +1,108 @@
+@import 'src/styles/mixin.scss';
+
+.content {
+  padding-bottom: 48px;
+  @include media-query('sm') {
+    padding: 24px 16px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 16px;
+  height: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--kux-cover12);
+  @include media-query('sm') {
+    height: 72px;
+    width: 100%;
+  }
+
+  .validateItemWithIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+
+    .validateItem {
+      height: 48px;
+      width: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      .typeIcon {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--kux-text);
+        img {
+          width: 32px;
+          height: 32px;
+        }
+        @include media-query('sm') {
+          width: 32px;
+          height: 32px;
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+
+      .typeName {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: var(--kux-text);
+        margin-left: 8px;
+        @include media-query('sm') {
+          margin-left: 0px;
+        }
+      }
+    }
+
+    .plusIcon {
+      margin: 0 0 0 16px;
+      height: 24px;
+      width: 24px;
+      color: var(--kux-icon);
+      @include media-query('sm') {
+        margin: 0 0 0 12px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .iconWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .arrowIcon {
+      justify-self: flex-end;
+      font-size: 20px;
+      color: var(--kux-text60);
+    }
+  }
+}
+
+.customDialog {
+  :global(.KuxModalHeader-root) {
+    min-height: 90px;
+    height: auto !important;
+    padding: 32px 32px 24px;
+  }
+  :global(.KuxModalFooter-root) {
+    border-top: 1px solid var(--kux-divider8);
+  }
+}

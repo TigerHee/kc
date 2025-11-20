@@ -1,0 +1,21 @@
+.stepWrapper {
+  margin-top: 32px;
+  :global {
+    .kux-steps-content {
+      background-color: transparent;
+      padding: 0 !important;
+    }
+  }
+}
+
+.alertWrapper {
+  margin-top: 24px;
+  
+  .multipleSteps {
+    margin-top: 24px;
+  }
+
+  :global(.kux-alert-item) {
+    max-width: 100%;
+  }
+}

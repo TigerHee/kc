@@ -1,0 +1,41 @@
+.tipModal {
+  :global(.kux-modal-body) {
+    min-height: unset;
+  }
+  .container {
+    display: flex;
+    flex-flow: nowrap column;
+
+    .title {
+      color: var(--kux-text);
+      font-weight: 600;
+      font-size: 20px;
+      font-style: normal;
+      line-height: 140%; /* 28px */
+    }
+
+    .content {
+      margin-bottom: 32px;
+      color: var(--kux-text60);
+      font-weight: 400;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 140%; /* 22.4px */
+
+      a {
+        cursor: pointer;
+        color: var(--kux-text);
+        font-weight: 400;
+        text-decoration: underline;
+
+        &:hover {
+          color: var(--kux-text);
+        }
+      }
+    }
+
+    .btn {
+      margin-bottom: 16px;
+    }
+  }
+}

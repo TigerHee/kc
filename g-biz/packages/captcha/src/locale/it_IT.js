@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'Annulla',
+  'gfa_btn': 'Conferma',
+  'verify_img_tip': 'Inserisci i caratteri',
+  'verify_img_title': "Verifica dell'immagine",
+};

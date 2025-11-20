@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'fr_FR',
+  '2HVcFSJMKfjBCfPSUu8PbB': 'Notifications',
+  'all.clear': 'Tout supprimer',
+  'all.read': 'Tout lire',
+  'confirm': 'Confirmer',
+  'delete.message.confirm': 'Voulez-vous vraiment supprimer tous les messages de notifications ?',
+  'table.empty': 'Aucune donnée',
+  'today': "Aujourd'hui",
+  'yesterday': 'Hier',
+};

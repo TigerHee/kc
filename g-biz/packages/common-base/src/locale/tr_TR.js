@@ -1,0 +1,17 @@
+export default {
+  '3pJd1o7HS7Mc7RP61KBt3j':
+    "<span class='highlight'>E-posta adresinin</span> doğru olduğundan emin olunuz.",
+  '5H1kxNCtmaz678kvjrsyPF': 'Bağlantının süresi dolmuşsa veya e-postayı almadıysanız tıklayınız:',
+  '8E7WgVPbNC4K56218gDkPu':
+    "<span class='highlight'>Spam veya Önemsiz Klasörünüzü</span> kontrol edin.",
+  '8JDS5CK7Qg2C7eFKb5cYvq': 'Yetkilendirme Gerekli',
+  'aWraMbu1VTMzskoUX44puZ':
+    'Güvenlik için, doğrulama e-postasını talep ettiğinizle aynı cihazda doğrulama bağlantısına tıklamalısınız.',
+  'bGGSwLk9n6gSxapYQMzad4': 'E-postayı almadınız mı?',
+  'baXa9AEkqjrk9YkLe9nM7g': 'Risk Uyarısı',
+  'iBsXv5QsHeP8wpAWSNFZaS': 'Gönderildi',
+  'puaUwRAmKgrg7fdRQ3F2mN': 'tekrar gönder.',
+  'qvXxQhQy1SeuAxmM51aFE3':
+    "<span class='highlight'>{{email}}</span> adresine doğrulama e-postası gönderildi. Lütfen bu sayfayı açık tutun ve yetkilendirmeyi tamamlamak için e-postadaki talimatları izleyin.",
+  'vt2AqpbRG2bxpioX9zDQYS': '{{a}}sn sonra tekrar gönderilebilir.',
+};

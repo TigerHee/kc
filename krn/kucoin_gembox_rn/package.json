@@ -1,0 +1,62 @@
+{
+  "name": "gembox_rn",
+  "version": "1.1.6",
+  "appVersion": "3.60.0",
+  "private": true,
+  "scripts": {
+    "start": "yarn run init && cross-env RUN_ENV=sit react-native start --port 8082",
+    "lint": "eslint ./src --ext .js",
+    "build-ios:sit": "yarn run init && cross-env PLATFORM=ios RUN_ENV=sit node src/scripts/buildBundle",
+    "build-android:sit": "yarn run init && cross-env PLATFORM=android RUN_ENV=sit node src/scripts/buildBundle",
+    "build-ios": "yarn run init && cross-env PLATFORM=ios RUN_ENV=prod node src/scripts/buildBundle",
+    "build-android": "yarn run init && cross-env PLATFORM=android RUN_ENV=prod node src/scripts/buildBundle",
+    "build:sit": "yarn build-ios:sit && yarn build-android:sit",
+    "build": "yarn build-ios && yarn build-android",
+    "unused-check": "yarn run init && cross-env PLATFORM=ios RUN_ENV=prod UNUSED_CHECK=1 node src/scripts/buildBundle",
+    "unused-check:delete": "yarn run init && cross-env PLATFORM=ios RUN_ENV=prod UNUSED_CHECK=2 node src/scripts/buildBundle",
+    "init": "node src/scripts/autoRegisterModels.js"
+  },
+  "dependencies": {
+    "@emotion/native": "11.0.0",
+    "@emotion/react": "11.8.1",
+    "@kc/socket": "2.4.1-beta.1",
+    "@krn/bridge": "^0.0.12",
+    "@krn/ui": "2.1.4",
+    "@react-navigation/native": "6.0.8",
+    "@react-navigation/native-stack": "6.5.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "cross-env": "^7.0.3",
+    "dva-core": "2.0.4",
+    "dva-loading": "3.0.22",
+    "dva-model-extend": "0.1.2",
+    "lodash": "4.17.21",
+    "qs": "6.10.3",
+    "react": "17.0.2",
+    "react-native": "0.66.4",
+    "react-native-actions-sheet": "^0.6.0",
+    "react-native-i18n": "2.0.15",
+    "react-native-safe-area-context": "3.4.1",
+    "react-native-screens": "3.13.0",
+    "react-redux": "7.2.6",
+    "react-use": "^17.3.2",
+    "redux": "4.1.2",
+    "rn-intersection-observer": "0.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/runtime": "^7.16.5",
+    "@krn/build": "1.1.4",
+    "@krn/eslint": "1.0.1",
+    "krn_base_bundle": "1.0.6",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "yorkie": "^2.0.0"
+  },
+  "volta": {
+    "node": "14.19.3",
+    "yarn": "1.22.21"
+  },
+  "gitHooks": {
+    "pre-commit": "yarn lint"
+  }
+}

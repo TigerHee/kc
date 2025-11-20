@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="25px" viewBox="0 0 28 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#F25064" offset="0%"></stop>
+            <stop stop-color="#FA647E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="投票上币" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="投票上币-copy-2" transform="translate(-1070.000000, -1277.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Group-18" transform="translate(320.000000, 898.000000)">
+                <g id="Group-Copy-2" transform="translate(0.000000, 344.000000)">
+                    <g id="Group-17">
+                        <g id="Group" transform="translate(661.000000, 32.000000)">
+                            <g id="Group-15" transform="translate(1.000000, 0.000000)">
+                                <path d="M102,27.3870968 C101.876211,27.3870968 101.753895,27.3569715 101.641895,27.2967211 C101.503368,27.2221252 98.2141053,25.4303909 94.8747368,22.4953321 C92.8985263,20.7595446 91.3216842,18.9835901 90.184,17.2162429 C88.7338947,14.9625882 88,12.7132372 88,10.5313093 C88,6.37833017 91.4705263,3 95.7368421,3 C97.1810526,3 98.7151579,3.52647438 100.056211,4.4833093 C100.840211,5.04277799 101.507789,5.71700949 102,6.4328425 C102.492211,5.71700949 103.159789,5.04277799 103.943789,4.4833093 C105.284842,3.52647438 106.818947,3 108.263158,3 C112.529474,3 116,6.37833017 116,10.5313093 C116,12.7132372 115.264632,14.9625882 113.816,17.2162429 C112.679789,18.9835901 111.101474,20.7595446 109.126737,22.4953321 C105.787368,25.4303909 102.498105,27.2221252 102.359579,27.2967211 C102.247579,27.3569715 102.125263,27.3870968 102.001474,27.3870968 L102,27.3870968 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

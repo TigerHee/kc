@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="34px" viewBox="0 0 41 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>icon_chaxun</title>
+    <desc>Created with Sketch.</desc>
+    <g id="着陆页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="币币兑换-landingpage" transform="translate(-1081.000000, -840.000000)">
+            <g id="兑换步骤" transform="translate(121.000000, 733.000000)">
+                <g id="编组-31" transform="translate(0.000000, 104.000000)">
+                    <g id="编组-12">
+                        <g id="icon_chaxun" transform="translate(961.000000, 4.000000)">
+                            <path d="M19.0244961,27 L2,27 C0.8954305,27 2.09738034e-15,26.1045695 0,25 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 L36,0 C37.1045695,-2.02906125e-16 38,0.8954305 38,2 L38,9.02639749 L38,9.02639749" id="路径" stroke="#01081E" stroke-width="2" stroke-linecap="round"></path>
+                            <rect id="矩形" fill="#01081E" x="5" y="9" width="2" height="13" rx="1"></rect>
+                            <rect id="矩形备份-4" fill="#01081E" x="10" y="5" width="2" height="17" rx="1"></rect>
+                            <rect id="矩形" fill="#01081E" x="6" y="31" width="26" height="2" rx="1"></rect>
+                            <path d="M27,7 C32.5228475,7 37,11.4771525 37,17 C37,19.5288598 36.0613033,21.8384753 34.5133403,23.5994159 L39.1819805,28.267767 C39.5725048,28.6582912 39.5725048,29.2914562 39.1819805,29.6819805 C38.7914562,30.0725048 38.1582912,30.0725048 37.767767,29.6819805 L33.0489946,24.9636961 C31.3693598,26.2414662 29.2732625,27 27,27 C21.4771525,27 17,22.5228475 17,17 C17,11.4771525 21.4771525,7 27,7 Z M27,9 C22.581722,9 19,12.581722 19,17 C19,21.418278 22.581722,25 27,25 C31.418278,25 35,21.418278 35,17 C35,12.581722 31.418278,9 27,9 Z" id="形状结合" fill="#24AE8F" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

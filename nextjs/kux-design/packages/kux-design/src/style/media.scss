@@ -1,0 +1,72 @@
+@use 'sass:map';
+
+/**
+ * 媒体查询断点配置
+ * 用法：
+ * @include respond-up(md) {
+ *   // 在 md 及以上屏幕宽度的样式
+ * }
+ *
+ * @include respond-down(lg) {
+ *   // 在 lg 以下屏幕宽度的样式
+ * }
+ *
+ * @include respond-between(md, lg) {
+ *   // 在 md 和 lg 之间的样式
+ * }
+ */
+$breakpoints: (
+  md: 768px,
+  lg: 1200px,
+  xl: 1440px,
+);
+
+/**
+  * 移动优先
+ **/
+@mixin responsive($breakpoint) {
+  $width: map.get($breakpoints, $breakpoint);
+
+  @if $width == null {
+    @error "No value found for '#{$breakpoint}' in \$breakpoints map.";
+  }
+
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+/**
+ * 大屏幕优先
+ */
+@mixin responsive-down($breakpoint) {
+  $width: map.get($breakpoints, $breakpoint);
+
+  @if $width == null {
+    @error "No value found for '#{$breakpoint}' in \$breakpoints map.";
+  }
+
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+/**
+ * 响应式区间
+ * 用法：
+ * @include respond-between(md, lg) {
+ *   // 在 md 和 lg 之间的样式
+ * }
+ */
+@mixin responsive-between($breakpoint-min, $breakpoint-max) {
+  $width-min: map.get($breakpoints, $breakpoint-min);
+  $width-max: map.get($breakpoints, $breakpoint-max);
+
+  @if $width-min == null or $width-max == null {
+    @error "No value found for '#{$breakpoint-min}' or '#{$breakpoint-max}' in \$breakpoints map.";
+  }
+
+  @media (min-width: $width-min) and (max-width: $width-max) {
+    @content;
+  }
+}

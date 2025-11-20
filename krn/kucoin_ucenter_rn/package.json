@@ -1,0 +1,69 @@
+{
+  "name": "kucoin_ucenter_rn",
+  "version": "1.0.37",
+  "appVersion": "3.60.0",
+  "private": true,
+  "scripts": {
+    "start": "yarn run modelWatch && cross-env react-native start --port=8082",
+    "lint": "eslint ./src --ext .js",
+    "build-ios": "yarn run init && cross-env PLATFORM=ios node src/scripts/buildBundle",
+    "build-android": "yarn run init && cross-env PLATFORM=android node src/scripts/buildBundle",
+    "build:sit": "yarn build-ios && yarn build-android",
+    "build": "yarn build-ios && yarn build-android",
+    "init": "cross-env NO_WATCH=1 node src/scripts/autoRegisterModels.js",
+    "modelWatch": "yarn runModelWatch",
+    "prerunModelWatch": "ps aux | grep -v grep | grep autoRegisterModels | awk '{print $2}' | xargs kill -9",
+    "runModelWatch": "nohup node src/scripts/autoRegisterModels.js >/dev/null 2>&1 &",
+    "unused-check": "yarn run init && cross-env PLATFORM=ios UNUSED_CHECK=1 node src/scripts/buildBundle",
+    "unused-check:delete": "yarn run init && cross-env PLATFORM=ios UNUSED_CHECK=2 node src/scripts/buildBundle"
+  },
+  "dependencies": {
+    "@emotion/native": "11.0.0",
+    "@emotion/react": "11.8.1",
+    "@krn/bridge": "0.0.33",
+    "@krn/toolkit": "1.0.4-beta.5",
+    "@krn/ui": "2.5.6-beta.21",
+    "@react-navigation/native": "6.0.8",
+    "@react-navigation/native-stack": "6.5.0",
+    "@sentry/react-native": "5.23.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "cross-env": "^7.0.3",
+    "decimal.js": "^10.2.1",
+    "dva-core": "2.0.4",
+    "dva-loading": "3.0.22",
+    "dva-model-extend": "0.1.2",
+    "lodash": "4.17.21",
+    "moment": "^2.18.1",
+    "qs": "6.10.3",
+    "react": "17.0.2",
+    "react-native": "0.66.4",
+    "react-native-actions-sheet": "^0.6.0",
+    "react-native-i18n": "2.0.15",
+    "react-native-safe-area-context": "3.4.1",
+    "react-native-screens": "3.13.0",
+    "react-redux": "7.2.6",
+    "react-use": "^17.3.2",
+    "redux": "4.1.2",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/runtime": "^7.16.5",
+    "@krn/basic-mapping": "1.0.10-beta.1",
+    "@krn/build": "1.1.7-beta.1",
+    "@krn/eslint": "1.0.1",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "yorkie": "^2.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "volta": {
+    "node": "14.19.3",
+    "yarn": "1.22.21"
+  },
+  "gitHooks": {
+    "pre-commit": "eslint ./src"
+  }
+}

@@ -1,0 +1,89 @@
+.container {
+  overflow: hidden;
+  margin-bottom: 240px;
+  .info {
+    width: 1200px;
+
+    margin: 0 auto 85px;
+  }
+  .title {
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.87);
+    // margin-bottom: 24px;
+  }
+  .subTitle {
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.87);
+    width: 792px;
+  }
+  .supports {
+    position: relative;
+    margin: 0 50px;
+    height: 596px;
+  }
+  .supportsWrapper{
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .supportItem{
+      width: 288px;
+      height: 271px;
+      background-image: linear-gradient(334.51deg, #0e2636 10.66%, #051529 145.98%), linear-gradient(150.63deg, rgba(88, 204, 182, 0.33), #58CCB6);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      margin: 0 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      h1{
+        margin: 32px 32px 16px;
+        padding-bottom: 16px;
+        padding-right: 30px;
+        color:#69FFE3;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        border-bottom: 1px solid rgba(188, 200, 224, 0.12);
+      }
+      p{
+        margin: 0 32px 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: rgba(225, 232, 245, 0.4);
+      }
+    }
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  .container {
+    overflow: hidden;
+    padding: ~`px2rem(24) `;
+    margin-bottom: ~`px2rem(100) `;
+    .info {
+      width: 100%;
+      margin: 0 auto ~`px2rem(60) `;
+    }
+    .title {
+      font-size: ~`px2rem(24) `;
+      color: rgba(255, 255, 255, 0.87);
+      // margin-bottom: ~`px2rem(32) `;
+    }
+    .subTitle {
+      font-size: ~`px2rem(14) `;
+      line-height: ~`px2rem(22) `;
+      color: rgba(255, 255, 255, 0.87);
+      width: 100%;
+    }
+    .supportsWrapper{
+      margin: 0 auto;
+      .supportItem {
+        width: 328px;
+      }
+    }
+  }
+}

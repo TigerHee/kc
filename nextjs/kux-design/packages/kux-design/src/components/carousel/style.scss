@@ -1,0 +1,109 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-carousel 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'carousel'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('carousel') {
+  position: relative;
+  color: #000;
+
+  &-inner {
+    position: relative;
+    width: 100%;
+  }
+
+  &-list {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    justify-content: flex-start;
+    transform: translateX(calc(-100% / var(--kux-carousel-item-visible, 1) * var(--kux-carousel-offset, 0)));
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+
+    [dir="rtl"] & {
+      transform: translateX(calc(100% / var(--kux-carousel-item-visible, 1) * var(--kux-carousel-offset, 0)));
+    }
+  }
+
+  &-item {
+    flex: 0 0 calc(100% / var(--kux-carousel-item-visible, 1));
+    padding-inline: calc(var(--kux-carousel-item-gap, 0) / 2);
+    box-sizing: border-box;
+  }
+
+  &-indicators {
+    margin-block-start: 10px;
+  }
+
+  &-indicator {
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    margin-inline: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    
+    &::before {
+      content: ' ';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #000;
+      opacity: inherit;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+
+  &-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    background-color: get-theme(cover4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: get-theme(text);
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    &.is-prev {
+      inset-inline-start: -56px;
+      transform: translateY(-50%);
+    }
+
+    &.is-next {
+      inset-inline-end: -56px;
+      transform: translateY(-50%);
+    }
+  }
+}

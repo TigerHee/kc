@@ -1,0 +1,14 @@
+.px2remMixin() {
+  @functions: ~`(function() {
+      this.px2rem = function($px, $base = 14.0625) {
+        return ($px / $base) + 'rem';
+      }
+    })()`
+}
+.px2remMixin();
+
+
+// 320px -> 12px
+// 360px -> 13.5px
+// 375px -> 14.0625px
+@baseFontSize: 14.0625;

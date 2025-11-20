@@ -1,0 +1,116 @@
+/**
+ * Owner: roger@kupotech.com
+ */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 24px;
+  text-decoration: none;
+
+  padding-inline-start: 16px;
+  // margin-inline-start: 16px;
+  padding-inline-end: 16px;
+
+  &:hover {
+    background: var(--color-cover2);
+    border-radius: 12px;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+
+  max-width: fit-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .symbolName {
+    font-size: 14px;
+    max-width: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .symbolTag {
+    margin-left: 6px;
+    min-width: fit-content;
+  }
+}
+
+.listWrapper {
+  width: 100%;
+  height: 420px;
+  //   min-width: ${(props) => (props.width ? `${props.width}px` : '268px')};
+
+  & > div {
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background: var(--color-cover8);
+    }
+  }
+}
+
+.emptyWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  & > div {
+    align-self: center !important;
+  }
+}
+
+.emptyPlaceholder {
+  margin-top: 24px;
+}
+
+.virtualizedMask {
+  height: 100%;
+  // max-height: 100%;
+  overflow-y: auto;
+  // overflow-x: hidden;
+  // flex: 1;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    // background: var(--color-cover8);
+  }
+}
+
+.listLoading {
+  height: 32px;
+  width: 32px;
+}
+
+.inDrawerWrapper {
+  margin-inline-start: 0;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}

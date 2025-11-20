@@ -1,0 +1,13 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  font-size: 24px;
+  line-height: 130%;
+  color: #000d1d;
+  font-weight: 600;
+  margin: 32px 0 24px 0;
+  @include media-query("sm") {
+    margin: 20px 0 12px 0;
+    font-size: 18px;
+  }
+}

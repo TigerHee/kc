@@ -1,0 +1,53 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+}
+
+.priceWrapper {
+  border-radius: 12px;
+  background: #f9f9f9;
+  padding: 24px;
+  @include media-query("sm") {
+    padding: 16px;
+  }
+}
+
+.infoWrapper {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.moreCont {
+  padding: 12px 12px 0 12px;
+  border-radius: 4px;
+  // TODO 完善这里的fade函数
+  // border: 1px solid ) => fade(theme.colors.text, 0.08)};
+  border: 1px solid;
+  // background: ) => fade(theme.colors.text, 0.02)};
+  margin-bottom: 30px;
+
+  &.hidden {
+    display: none;
+  }
+
+  @include media-query("sm") {
+    margin-bottom: 20px;
+  }
+}
+
+.rowWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.dividerWrapper {
+  padding: 28px 0px;
+  hr {
+    width: 100%;
+    margin: 0px !important;
+    border: 0.5px solid rgba(29, 29, 29, 0.08);
+  }
+  @include media-query("sm") {
+    padding: 16px 0;
+  }
+}

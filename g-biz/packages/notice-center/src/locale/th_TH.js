@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'th_TH',
+  '2HVcFSJMKfjBCfPSUu8PbB': 'การแจ้งเตือน',
+  'all.clear': 'ลบทั้งหมด',
+  'all.read': 'อ่านทั้งหมด',
+  'confirm': 'ยืนยัน',
+  'delete.message.confirm': 'คุณแน่ใจหรือไม่ที่จะลบข้อความแจ้งเตือนทั้งหมด',
+  'table.empty': 'ไม่มีข้อมูล',
+  'today': 'ในวันนี้',
+  'yesterday': 'เมื่อวาน',
+};

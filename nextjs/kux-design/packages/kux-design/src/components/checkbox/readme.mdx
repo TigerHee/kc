@@ -1,0 +1,111 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as Stories from './stories';
+
+<Meta title="base/Checkbox/Readme" />
+
+# Checkbox 组件
+
+`Checkbox` 组件用于在表单中提供多选功能，支持单独使用和组合使用（CheckboxGroup）。本组件支持受控与非受控用法，支持多种尺寸、禁用、半选等状态。
+
+## 组件结构
+
+- **Checkbox**：复选框基础组件，支持单独使用或与 CheckboxGroup 组合。
+- **CheckboxGroup**：复选框组，用于批量管理一组复选框的选中状态。
+- **CheckBoxBase**：底层实现，封装了基础的 input 逻辑和样式。
+- **context.tsx**：提供 CheckboxGroup 的上下文管理。
+- **tools.tsx**：工具函数，如 composeRef。
+- **type.tsx**：类型定义。
+- **style.scss**：样式文件。
+
+## 基本用法
+
+```tsx
+import Checkbox from './checkbox';
+
+<Checkbox>选项A</Checkbox>
+<Checkbox disabled>禁用选项</Checkbox>
+```
+
+## 复选框组用法
+
+```tsx
+import { CheckboxGroup } from './group';
+
+<CheckboxGroup
+  options={['苹果', '香蕉', '橙子']}
+  defaultValue={['苹果']}
+  onChange={(values) => console.log(values)}
+/>;
+```
+
+或自定义内容：
+
+```tsx
+<CheckboxGroup>
+  <Checkbox value="a">A</Checkbox>
+  <Checkbox value="b">B</Checkbox>
+</CheckboxGroup>
+```
+
+## 属性说明
+
+### Checkbox
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| checked | 是否选中 | boolean |  |
+| defaultChecked | 默认是否选中 | boolean |  |
+| disabled | 是否禁用 | boolean | false |
+| onChange | 变化时回调 | (event) => void |  |
+| value | 选项值 | string \| number |  |
+| size | 尺寸 | 'small' \| 'basic' \| 'large' | 'small' |
+| className | 自定义类名 | string |  |
+| classNames | 自定义类名对象 | `{ wrapper?: string; checkbox?: string; input?: string; inner?: string; }` |  |
+| style | 自定义样式 | React.CSSProperties |  |
+
+### CheckboxGroup
+
+| 属性         | 说明           | 类型                                    | 默认值  |
+| ------------ | -------------- | --------------------------------------- | ------- |
+| options      | 选项列表       | (ICheckboxOption \| string \| number)[] |         |
+| value        | 选中值数组     | (string \| number)[]                    |         |
+| defaultValue | 默认选中值数组 | (string \| number)[]                    |         |
+| onChange     | 变化时回调     | (value: (string \| number)[]) => void   |         |
+| disabled     | 是否禁用       | boolean                                 | false   |
+| name         | 原生 name 属性 | string                                  |         |
+| className    | 自定义类名     | string                                  |         |
+| classNames   | 自定义类名对象 | Record\<string, string\>                |         |
+| size         | 尺寸           | 'small' \| 'basic' \| 'large'           | 'small' |
+
+## 受控与非受控
+
+- 受控用法：通过 `checked`/`value` 属性控制选中状态，并通过 `onChange` 响应变化。
+- 非受控用法：通过 `defaultChecked`/`defaultValue` 设置初始状态，组件内部维护选中状态。
+
+## 进阶用法
+
+### 自定义样式
+
+可通过 `className` 或 `classNames` 属性自定义样式类名，覆盖默认样式。
+
+## 类型定义
+
+详见 [type.tsx](./type.tsx)。
+
+## 相关文件
+
+- [checkbox.tsx](./checkbox.tsx)
+- [group.tsx](./group.tsx)
+- [base.tsx](./base.tsx)
+- [context.tsx](./context.tsx)
+- [tools.tsx](./tools.tsx)
+- [type.tsx](./type.tsx)
+- [style.scss](./style.scss)
+
+## Storybook 示例
+
+详见 [stories.tsx](./stories.tsx)。
+
+---
+
+如有问题请联系组件负责人：sean.shi@kupotech.com

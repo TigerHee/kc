@@ -1,0 +1,54 @@
+@import 'src/styles/mixin.scss';
+
+.form {
+  :global(.mtSpace) {
+    margin-top: 8px;
+    @include media-query('sm') {
+      margin-top: 0;
+    }
+  }
+  :global(.KuxCol-col) {
+    width: 100%;
+  }
+  :global(.KuxForm-item .KuxForm-itemHelp) {
+    display: none !important;
+  }
+  :global(.KuxForm-itemError.KuxForm-item .KuxForm-itemHelp) {
+    display: flex !important;
+  }
+
+  .newPassword {
+    margin-bottom: 32px;
+  }
+  @include media-query('sm') {
+    :global(& > .KuxForm-item:nth-of-type(1)) {
+      margin-bottom: 8px; // 需要间距为32px，其中 formItem 的错误文字高度为24px，需要补齐 8px
+    }
+    :global(.KuxInput-togglePwdIcon) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  margin-bottom: 32px; // 需要总间距 40px，但是 mtSpace 已经有 8px 了
+  color: var(--kux-text);
+  word-break: break-word;
+  @include media-query('sm') {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  &.inDrawer {
+    font-size: 36px;
+    @include media-query('sm') {
+      font-size: 24px;
+    }
+  }
+}
+
+.button {
+  margin-top: 40px;
+}

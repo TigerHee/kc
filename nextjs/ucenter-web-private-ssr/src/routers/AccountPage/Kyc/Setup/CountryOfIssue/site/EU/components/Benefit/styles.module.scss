@@ -1,0 +1,146 @@
+@import "@/theme/mixin.scss";
+
+.benefitBox {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: var(--kux-cover2);
+  padding: 16px 16px 20px 16px;
+  gap: 20px;
+  @include media-query('sm') {
+    gap: 18px;
+  }
+}
+
+.unlockBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rewardMsg {
+  display: flex;
+  padding: 8px 10px;
+  align-items: flex-start;
+  word-break: break-word;
+  gap: 6px;
+  border-radius: 8px;
+  background: var(--kux-brandGreen4);
+  color: var(--kux-text60);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 140%; /* 18.2px */
+  & > p {
+    padding-top: 1px;
+  }
+  & > p > span {
+    color: var(--kux-primary);
+  }
+}
+
+.unlockInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  & > div:first-child {
+    color: var(--kux-text40);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%; /* 19.6px */
+  }
+  & > ul:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: var(--kux-text60);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%; /* 19.6px */
+    & > li {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      min-width: 120px;
+      @include media-query('sm') {
+        min-width: 100px;
+      }
+    }
+  }
+}
+
+.divider {
+  background: var(--kux-divider4);
+  height: 0.5px;
+}
+
+.collectBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--kux-text40);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
+.collectList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .collectItem {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 20px;
+    & + .collectItem {
+      border-top: 1px solid var(--kux-divider4);
+      padding-top: 16px;
+    }
+  }
+
+  .collectStepNum {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    padding: 1px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--kux-text);
+    color: var(--kux-textEmphasize);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+    margin-top: 1px;
+  }
+
+  .collectStepContent {
+    .collectStepTitle {
+      color: var(--kux-text);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 140%; /* 22.4px */
+    }
+
+    .collectStepDesc {
+      color: var(--kux-text40);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      margin-top: 10px;
+    }
+
+    .collectStepList {
+      padding-left: 1em;
+      margin-top: 10px;
+      color: var(--kux-text30);
+      li {
+        list-style: disc;
+        >span {
+          color: var(--kux-text);
+        }
+      }
+    }
+  }
+}

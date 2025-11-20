@@ -1,0 +1,31 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './stories';
+
+<Meta title="base/Tooltip/Readme" />
+
+# Tooltip
+
+[Figma](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42835-46818&m=dev)
+
+Popover 组件的变体。根据设计规范在移动端时全部由click触发，且打开内容为弹窗。
+
+## 基本使用
+
+```jsx
+import { Tooltip } from '@kucoin/kux-design';
+
+<Tooltip           
+  content='Lorem ipsum dolor sit amet consectetur. Vitae suspendisse rhoncus justo bibendum turpis est mi nulla arcu. '
+  className='custom-tooltip'
+  showArrow={false}
+  onShow={() => {console.log('Tooltip show')}}
+  onHide={() => {console.log('Tooltip hide')}}
+>
+  <Button>click me</Button>
+</Tooltip>
+
+```
+
+## 特殊说明
+
+在移动端打开时因为使用的Modal.info(), 一切样式设置都无效。

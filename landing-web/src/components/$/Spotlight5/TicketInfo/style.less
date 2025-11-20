@@ -1,0 +1,150 @@
+.ticket {
+  margin-bottom: 18px;
+}
+.ticketBoxWrap{
+  background:  fade(#0A112A, 50);
+}
+
+.ticketBox {
+  padding: 20px 24px;
+}
+
+.withNumber() {
+  color: #FFFFFF;
+  letter-spacing: 0;
+
+
+  a {
+    font-size: 24px;
+    vertical-align: baseline;
+    cursor: default;
+  }
+}
+
+.impress {
+  color: #58CCB6;
+}
+
+.title {
+  font-size: 16px;
+
+  .withNumber();
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  .seeRule{
+    font-size: 14px;
+    color: #929FB3;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.selfTickets {
+  font-size: 16px;
+  color: #58CCB6;
+  letter-spacing: 0;
+  margin-left: 34px;
+  cursor: pointer;
+}
+
+.rows {
+  padding: 24px 0;
+}
+
+.row {
+  .withNumber();
+
+  background: fade(#FFFFFF, 8);
+  padding: 12px 18px 12px 28px;
+  position: relative;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 14px;
+  a {
+    font-size: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background: #58CCB6;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+.tip {
+
+  font-size: 12px;
+  color: #929FB3;
+  letter-spacing: 0;
+}
+
+.lotteryNums {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-height: 316px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 16px;
+
+  .lotteryNum {
+    width: 80px;
+    // padding: 0 13px;
+    height: 25px;
+    line-height: 23px;
+    text-align: center;
+    border: 1px solid #929FB3;
+
+    font-size: 12px;
+    color: #333;
+    letter-spacing: -0.12px;
+    text-align: center;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    background-clip: border-box !important;
+
+    &:nth-child(4n) {
+      margin-right: 0 !important;
+    }
+
+    &.yes {
+      color: #fff;
+      border: 1px solid #FFB82C;
+      background: #FFB82C;
+      position: relative;
+
+      .win {
+        position: absolute;
+        width: 53px;
+        height: 19px;
+        line-height: 17px;
+        text-align: center;
+        font-size: 12px;
+        background: #fff;
+        border: 1px solid #FFB82C;
+        color: #FFB82C;
+        letter-spacing: 0;
+
+        left: 50%;
+        top: -10%;
+        transform: translateX(-50%) translateY(-50%) scale(0.75);
+      }
+    }
+  }
+}

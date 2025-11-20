@@ -1,0 +1,12 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  & > li:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  @include media-query("sm") {
+    & > li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

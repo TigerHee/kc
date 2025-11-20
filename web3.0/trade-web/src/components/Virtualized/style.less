@@ -1,0 +1,23 @@
+.staticList {
+  &:focus {
+    outline: none;
+  }
+
+  :global {
+    :focus {
+      outline: none;
+    }
+  }
+}
+/* rtl:begin:ignore */
+[dir='rtl'] {
+  body {
+    :global {
+      .ReactVirtualized__Grid,
+      .ReactVirtualized__List {
+        direction: rtl !important;
+      }
+    }
+  }
+}
+/* rtl:end:ignore */

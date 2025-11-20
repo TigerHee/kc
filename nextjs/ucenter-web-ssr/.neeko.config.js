@@ -1,0 +1,52 @@
+module.exports = {
+  dir: './public/locales',
+  standard: 'en.js',
+  target: 'bn_BD.js',
+  template: 'template.csv',
+  jsSyntax: '',
+  jsTemplate: '',
+  ext: '.json',
+  nextNS: 'common',
+  projectId: '6322431568fc858e93c219.43107766',
+  diffConfig: {
+    // 需要扫描的目录，必填
+    includeDirs: ['./src'],
+    // 跳过扫描的目录
+    excludeDirs: ['./src/assets', './src/styles'],
+    // 扫描的文件后缀，必填
+    ext: ['js', 'jsx', 'ts', 'tsx'],
+    // 国际化方法名，必填
+    functionNames: ['_t', '_tHTML'],
+    keepKeys: [],
+    keepKeysWithTaskId: [
+      // '525f4b8c-1c61-4178-a91d-2c16fe2ada47',
+      // 'c18d7804-5bc2-4879-808c-a72a03b841b5',
+    ],
+  },
+  codeMap: {
+    en: 'en',
+    de_DE: 'de',
+    es_ES: 'es',
+    fr_FR: 'fr',
+    hi_IN: 'hi',
+    id_ID: 'id',
+    it_IT: 'it',
+    ko_KR: 'ko',
+    ms_MY: 'ms',
+    nl_NL: 'nl',
+    pt_PT: 'pt',
+    ru_RU: 'ru',
+    tr_TR: 'tr',
+    vi_VN: 'vi',
+    zh_CN: 'zh_CN',
+    zh_HK: 'zh-hant',
+    ja_JP: 'ja',
+    th_TH: 'th',
+    bn_BD: 'bn',
+    fil_PH: 'fil',
+    pl_PL: 'pl',
+    ar_001: 'ar',
+    ur_PK: 'ur',
+    uk_UA: 'uk',
+  },
+};

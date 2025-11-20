@@ -1,0 +1,17 @@
+export default {
+  "wtvAa6fsU5APWF5H3bEqQN": "<1>Gizlilik Politikasını</1> ve <3>Kullanım Koşullarını</3> Görüntüleyin",
+  "3Dn54WPNF5VzE5PZNVQ42C": "Doğrulamayı Yeniden Yap",
+  "aGLiVVCYQQc3qbqz9Rugmb": "Uyarı",
+  "aZursHyMzqCf8q23258vE2": "İptal",
+  "g3qDpMcCoxeKi1vbF8pmJ5": "Kimlik doğrulamanızı gereken sürede tamamlamadığınız için durumunuz Doğrulanmamış olarak değiştirildi. Lütfen kimlik doğrulamayı tekrar yapın.",
+  "hKKLHfYD47D8jZ3bRWr8Nb": "Yeniden Doğrulama Yap",
+  "hXuuxGgQZ3pYpPEhtXFepB": "Kimlik doğrulama bilgilerinize göre, yerel yasalar ve düzenlemeler nedeniyle hizmet sağlayamadığımız bir ülkede veya bölgede ikamet ediyorsunuz. Durumun neden olduğu tüm rahatsızlık için özür dileriz.",
+  "s7bVrYwynBGUQWmFfoTnsA": "İlgili politikalar hakkında daha fazla bilgi için <1>Kullanıcı Sözleşmemize</1> bakınız.",
+  "ugX6gMQu3aTn5fgBnWUC2o": "Bu ülkede/bölgede ikamet etmiyorsanız, lütfen kimlik doğrulamanızı <1>{{date}} (UTC) </1> tarihinden önce yeniden yapın. Aksi takdirde, <3>kimlik doğrulama durumunuz doğrulanmamış sayılacaktır</3>.",
+  "2vW7TMpb66typtNx1LDyNt": "Kimlik Doğrulama",
+  "262ee07aefe84000a800": "Eğer bu bölgeden değilseniz, hizmetinizde herhangi bir kesinti olmaması için lütfen kimlik doğrulamanızı derhal tekrar gönderiniz.",
+  "0e5612829fed4800a0b7": "Şimdi Geçiş Yap",
+  "8b2da0659a454800a2cc": "Site Geçişi",
+  "96f0872977434800a621": "Belki Sonra",
+  "ed57cb44a83b4800a23d": "Kimlik bilgilerinize dayanarak, daha iyi bir deneyim için {{targetSiteName}} kullanmanızı öneririz."
+}

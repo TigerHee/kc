@@ -1,0 +1,229 @@
+.fixedBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  pointer-events: auto;
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .dividerIcon {
+    color: var(--kux-cover12);
+    height: 16px;
+    margin: 0 4px 0 8px;
+  }
+}
+.text {
+  width: auto;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--kux-text);
+
+  span {
+    display: inline-flex;
+    min-height: 10px;
+    align-items: center;
+  }
+}
+.countryLogo {
+  width: 24px;
+  margin-right: 6px;
+}
+.triangleIcon {
+  color: var(--kux-text60);
+  transition: transform 0.3s;
+  transform-origin: center;
+  transform: rotate(0deg);
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+.extendDrawer {
+  height: 100vh;
+}
+.extendHeader {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  padding: 12px 22px;
+  color: var(--kux-text);
+}
+
+.overlay {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--kux-cover4);
+  background: var(--kux-backgroundOverlay);
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
+  position: absolute;
+  left: 0;
+  top: 25px;
+  display: block;
+  flex-direction: column;
+  z-index: 10;
+  height: unset;
+
+  &.overlayH5 {
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    position: unset;
+    display: flex;
+    height: 100%;
+    background: var(--kux-bulletLayer);
+  }
+
+  .activeItem {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 48px;
+    color: var(--kux-primary);
+    position: relative;
+  }
+
+  .overlayHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 16px 8px;
+    flex-shrink: 0;
+
+    &.overlayHeaderH5 {
+      padding: 0;
+    }
+
+    :global(.kux-input .kux-input-small) {
+      height: 40px;
+    }
+  }
+
+  .overlayBody {
+    max-height: 360px;
+    overflow: auto;
+    margin: 0;
+    flex: 1;
+    padding-bottom: 0;
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background: var(--kux-cover16);
+    }
+  }
+  .overlayBodyH5 {
+    max-height: unset;
+    margin: 0 0 34px;
+    padding-bottom: 34px;
+  }
+
+  .overlayBox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .overlayBodyDrawer {
+    max-height: 290px;
+  }
+
+  .overlayBodyForgetPwd {
+    max-height: 200px;
+  }
+
+  .overlayItem {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    color: var(--kux-text);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    background: transparent;
+    transition: background 0.2s;
+    &:hover {
+      background: var(--kux-cover2);
+    }
+
+    &.overlayItemH5 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+
+
+.overlayItemDisabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  &:hover {
+    color: var(--kux-text);
+  }
+}
+.highLight {
+  color: var(--kux-textPrimary);
+}
+.disabledText,
+.notSupportedWrapper {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: var(--kux-text60);
+  margin-left: 8px;
+  display: inline-block;
+  background: var(--kux-cover4);
+  border-radius: 4px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+}
+
+.nodata {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+  img {
+    width: 150px;
+    height: 110px;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--kux-text60);
+  }
+  .subTitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    margin-top: 4px;
+    color: var(kux-text40);
+  }
+}
+
+.content {
+  display: flex;
+}

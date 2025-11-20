@@ -1,0 +1,32 @@
+@import '@/styles/mixin.scss';
+
+.watchFilmLink {
+  position: absolute;
+  // bottom: 120px;
+  bottom: 12vh;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  .playIcon {
+    width: 20px;
+    height: 20px;
+    [dir='rtl'] & {
+      transform: rotate(180deg);
+    }
+  }
+
+  .linkText {
+    color: var(--kux-text);
+    text-underline-offset: 2px;
+    text-decoration: underline;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    @include media-query('sm') {
+      font-size: 14px;
+    }
+  }
+}

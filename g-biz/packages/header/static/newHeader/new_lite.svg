@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Icon/lite</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/lite">
+            <rect id="Rectangle" stroke="#58CCB6" stroke-width="2" x="6" y="9" width="28" height="20" rx="2"></rect>
+            <rect id="Rectangle" fill="#58CCB6" opacity="0.319999993" x="9" y="12" width="22" height="14"></rect>
+            <rect id="Rectangle" fill="#58CCB6" x="8" y="33" width="24" height="2" rx="1"></rect>
+            <polyline id="Path-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="13 21 16.5 18 20.5 22.5 28 16"></polyline>
+        </g>
+    </g>
+</svg>

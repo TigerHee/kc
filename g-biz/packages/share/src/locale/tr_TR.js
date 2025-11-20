@@ -1,0 +1,15 @@
+export default {
+  "inviteB.manage.copy.share": "Kopyalandı! Şimdi paylaşın!",
+  "inviteB.manage.remark": "Açıklamalar",
+  "inviteB.manage.commission.yourrate": "Komisyon oranınız",
+  "inviteB.manage.commisson.friendrate": "Arkadaşınızın komisyon indirimi",
+  "inviteB.manage.poster.create": "Hemen paylaşın",
+  "inviteB.manage.poster.share": "Hemen paylaşın",
+  "69ti912QyqQK3RLThoqqNL": "Hoş Geldin Paketi Almak için Kaydolun",
+  "h2RhjtaW236Cy1ofAMdsY7": "Değeri {{num}}  {{siteBaseCurrency}}'ye kadar çıkıyor!",
+  "ceWPbECZDHEFPo5wuNKZou": "Dahası",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "Kopyalandı!",
+  "sTkpRT7EiVTxqr6sApV5Aj": "Linki kopyala",
+  "x8nfNnRNkgqeds6C4AfUC8": "Resmi Kaydet",
+  "4EhrZujhYTKtPmKwo99tBr": "Referans Kodu: {rcode}"
+}

@@ -1,0 +1,46 @@
+@import './typograhy.scss';
+/** 
+ * 通用样式
+ */
+// 根据 vars.scss 中的主题色生成css变量
+@each $theme, $map in $kux-theme {
+  $prefix: #{$ns}-;
+  @if $theme == light {
+    :root, [data-theme='#{$theme}'] {
+      @each $key, $value in $map {
+        --#{$prefix}#{$key}: #{$value};
+      }
+    }
+  } @else {
+    // 非light主题，包含data-theme没有的情况
+    [data-theme='#{$theme}'] {
+      @each $key, $value in $map {
+        --#{$prefix}#{$key}: #{$value};
+      }
+    }
+  }
+}
+
+/**
+ * 停止所有动画
+ */
+.is-pause-animate * {
+  animation-play-state: paused !important;
+}
+
+/**
+ * 元素宽度100%
+ */
+.is-full-width {
+  width: 100%;
+}
+
+
+// 手型指针
+.#{$ns}-pointer {
+  cursor: pointer;
+}
+// 高亮颜色(默认主题色)
+.#{$ns}-highlight {
+  color: get-theme(brandGreen); 
+}

@@ -1,0 +1,12 @@
+@import "src/styles/mixin.scss";
+
+.date {
+  margin-right: 42px;
+  color: var(--color-text40);
+  font-size: 14px;
+  line-height: var(--single-line-height);
+
+  @include media-query('sm') {
+    font-size: 12px;
+  }
+}

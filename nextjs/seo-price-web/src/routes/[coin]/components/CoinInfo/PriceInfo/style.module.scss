@@ -1,0 +1,69 @@
+@import '@/styles/mixin.scss';
+
+.priceLabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+
+  @include media-query('lg') {
+    font-size: 12px;
+  }
+}
+
+.priceInfo {
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+
+}
+
+.priceColumn {
+
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+
+  &>span {
+    flex: auto;
+    margin-bottom: 4px;
+    color: var(--color-text40);
+    font-size: 14px;
+    line-height: 130%;
+
+    @include media-query('sm') {
+      flex-basis: 40%;
+    }
+
+    @include media-query('lg') {
+      font-size: 12px;
+    }
+  }
+
+  &>dd {
+    margin-top: 8px;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+
+    @include media-query('lg') {
+      font-size: 14px;
+    }
+  }
+
+}
+
+.priceSpan {
+  color: var(--color-text) !important;
+
+  &.lessZero {
+    color: var(--color-secondary) !important;
+  }
+
+  &.greaterZero {
+    color: var(--color-primary) !important;
+  }
+}

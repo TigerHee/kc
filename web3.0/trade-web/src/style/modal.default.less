@@ -1,0 +1,109 @@
+.tradeModal.tradeModal {
+  :global {
+    .ant-modal-content {
+      padding: 32px;
+      .ant-modal-close-x {
+        width: 55px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 25px;
+      }
+      .ant-modal-header {
+        background: transparent !important;
+        padding: 0;
+        height: 28px;
+        border-bottom: none;
+        .ant-modal-title {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      .ant-modal-body {
+        padding: 0;
+        .ant-card {
+          padding: 0;
+          background: transparent;
+          .ant-card-head {
+            padding: 0;
+            background: transparent;
+            .ant-card-head-title {
+              padding: 16px 0;
+              font-size: 13px;
+              letter-spacing: 0;
+              border-bottom: 1px solid;
+            }
+          }
+          .ant-card-body {
+            padding: 0;
+            .ant-row {
+              margin-top: 10px;
+              font-size: 12px;
+              letter-spacing: 0;
+            }
+            .ant-table-thead>tr,
+            .ant-table-tbody>tr
+            {
+              background-color: transparent;
+            }
+            .ant-table-thead>tr>th,
+            .ant-table-tbody>tr>td {
+              padding: 16px 0;
+              font-size: 13px;
+              background-color: transparent;
+              font-size: 12px;
+              letter-spacing: 0;
+              border-bottom: 1px solid;
+              &::last-of-type {
+                text-align: right;
+              }
+            }
+            .ant-table-tbody>tr>td {
+              padding: 13px 0;
+            }
+            .ant-row+.ant-row {
+              margin-top: 8px;
+            }
+            .ant-modal-body {
+              max-height: 600px;
+              overflow-y: auto;
+            }
+            .ant-table-placeholder {
+              border: none;
+            }
+          }
+        }
+        .ant-form {
+          padding: 24px 0 0 0;
+          .ant-row {
+            display: flex;
+            align-items: center;
+            .ant-form-item-label {
+              margin: 0;
+              label {
+                font-size: 12px;
+                letter-spacing: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .formWrapper {
+    :global {
+      .ant-form-item-label label {
+        white-space: normal;
+      }
+    }
+    .buttons {
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between; 
+      button {
+        width: 200px;
+        height: 48px;
+      }
+    }
+  }
+}

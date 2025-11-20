@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="支付方式-copy-4" transform="translate(0.000000, -53.000000)">
+            <g id="支付方式" transform="translate(-1.000000, -41.000000)">
+                <g id="微信" transform="translate(1.000000, 0.000000)">
+                    <g id="Group" transform="translate(0.000000, 94.000000)">
+                        <circle id="Oval-6" fill="#29D19F" cx="9" cy="9" r="9"></circle>
+                        <text id="微" font-family="PingFangSC-Medium, PingFang SC" font-size="10" font-weight="400" fill="#FFFFFF">
+                            <tspan x="4" y="13">微</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,56 @@
+
+
+.operationPanel{
+
+  // padding: ~`px2rem(14)` ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1c212a;
+  // background: rgba(184,198,216,0.08);
+
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: fade(#0B0F15, 59);
+}
+.operationPanelWrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 199;
+  // width: 100vw;
+  // height: 100%;
+  // background-color: fade(#0B0F15, 59);
+  overflow: hidden; // 防止滚动条出现
+  // visibility: hidden;
+}
+
+// 进出场动画
+:global{
+  .operation-panel-enter {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  .operation-panel-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 400ms, transform 400ms;
+  }
+  .operation-panel-exit {
+    opacity: 1;
+  }
+  .operation-panel-exit-active {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+}

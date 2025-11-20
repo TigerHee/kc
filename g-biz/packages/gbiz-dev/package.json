@@ -1,0 +1,40 @@
+{
+  "name": "gbiz-dev",
+  "version": "1.2.0",
+  "description": "gbiz dev project",
+  "private": true,
+  "author": "梁骥 <jhellscream@kucoin.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/gbiz-dev.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://nac.kucoin.com:1149/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.kucoin.net:kumex-web/G-BIZ.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@kc/mui": "^0.7.0",
+    "@kc/utm-link": "^2.0.7",
+    "@kufox/icons": "1.11.0",
+    "dva": "^2.6.0-beta.22",
+    "hoist-non-react-statics": "^3.3.2",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-slick": "^0.28.1"
+  }
+}

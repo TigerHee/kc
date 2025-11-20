@@ -1,0 +1,88 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { toast } from './index';
+import * as ToastStories from './stories';
+
+<Meta title="base/Toast/Readme" />
+
+# Toast 组件
+
+用于在页面右上角弹出提示信息，支持多种类型。
+
+## API
+
+### toast(message, options?)
+弹出一条提示, 返回toast ID
+
+```ts
+toast(message: React.ReactNode, options?: {
+  id?: string; // 自定义 ID
+  className?: string; // 自定义类名
+  // 提示类型, 默认 'info'
+  type?: 'info' | 'success' | 'error' | 'warning';
+  duration?: number; // 毫秒, 0表示不自动关闭
+}): string;
+```
+
+下面为弹出不同类型的快捷方法：
+```ts
+toast.success(message, options?)
+toast.error(message, options?)
+toast.info(message, options?)
+toast.warning(message, options?)
+```
+
+### toast.promise(promise, messages)
+用于 promise 异步流程提示。
+
+```ts
+// 返回一个 toast ID, 为 loading toast 的id
+toast.promise<T>(
+  /**
+   * Promise 对象
+   */
+  promise: Promise<T>,
+  messages: {
+    /**
+     * 加载中提示内容
+     */
+    loading: ReactNode;
+    /**
+     * 成功的消息内容
+     * 可以是 ReactNode 或者一个函数，接收成功的结果并返回消息内容
+     */
+    success: ReactNode | ((res: T) => ReactNode);
+    /**
+     * 错误的消息内容
+     * 可以是 ReactNode 或者一个函数，接收错误对象并返回消息内容
+     */
+    error: ReactNode | ((err: any) => ReactNode);
+  }
+): string;
+```
+
+### toast.remove(id?: string)
+关闭指定 id 的 toast, 如果不传 id 则关闭所有 toast。
+
+
+---
+
+## 示例
+
+<ToastStories.ShowCase />
+
+<ToastStories.PromiseToast />
+
+```tsx
+toast('普通提示');
+toast.success('操作成功');
+toast.error('操作失败');
+toast.info('信息提示');
+toast.warning('警告提示');
+
+// Promise 用法
+toast.promise(fetchData(), {
+  loading: '加载中...',
+  success: '加载成功',
+  error: '加载失败',
+});
+```

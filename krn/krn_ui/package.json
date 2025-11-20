@@ -1,0 +1,47 @@
+{
+  "name": "@krn/ui",
+  "version": "2.5.5",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "yarn run init && react-native start --port=8082",
+    "init": "node ./example/scripts/generateDemoSourceCode.js",
+    "build": "rm -rf ./lib/* && BABEL_ENV=production babel --config-file ./babel.config.js --out-dir ./lib ./src --copy-files",
+    "prepublishOnly": "yarn run build",
+    "release": "natasha-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.kucoin.net/tiny/krn_ui.git"
+  },
+  "author": "willen@kupotech.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/runtime": "^7.18.0",
+    "@natasha/release": "1.0.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "metro-react-native-babel-preset": "^0.70.3",
+    "prettier": "^2.6.2",
+    "react-syntax-highlighter": "^15.5.0"
+  },
+  "volta": {
+    "node": "14.19.3"
+  },
+  "dependencies": {
+    "@emotion/native": "11.0.0",
+    "@emotion/react": "11.8.1",
+    "@krn/bridge": "0.0.12",
+    "@miblanchard/react-native-slider": "^2.1.0",
+    "@react-navigation/native": "6.0.8",
+    "@react-navigation/native-stack": "6.5.0",
+    "hex-rgb": "^5.0.0",
+    "intl": "^1.2.5",
+    "prop-types": "^15.8.1",
+    "react": "17.0.2",
+    "react-native": "0.66.4",
+    "react-native-actions-sheet": "0.8.10",
+    "react-native-i18n": "2.0.15"
+  }
+}

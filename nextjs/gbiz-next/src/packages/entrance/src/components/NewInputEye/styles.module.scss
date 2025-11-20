@@ -1,0 +1,11 @@
+
+.togglePwd {
+  margin-left: 12px;
+}
+
+.clearIcon {
+  visibility: hidden;
+  &.showNotice {
+    visibility: visible;
+  }
+}

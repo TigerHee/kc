@@ -1,0 +1,119 @@
+@import '../../theme/mix';
+.modal {
+  :global {
+    .ant-modal-body {
+      padding: 28px 40px 40px;
+    }
+    .ant-row {
+      padding: 24px 40px 36px;
+    }
+    .ant-checkbox-group-item {
+      margin-right: 20px;
+      margin-bottom: 16px;
+    }
+    .ant-modal-footer {
+      padding: 0 16px 16px;
+      border: none;
+    }
+    .ant-form-item {
+      margin-bottom: 24px;
+      padding: 0;
+    }
+    .ant-form-item-label {
+      line-height: 20px;
+    }
+    .ant-form-item-required {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .inlineFormItem {
+    :global {
+      .ant-form-item-control-wrapper {
+        display: inline-block;
+        .ant-form-item-control {
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .colOption {
+    margin-bottom: 20px;
+  }
+  .numbericInput {
+    display: inline-block;
+    width: 90px;
+    margin: 0 8px;
+  }
+  .switch {
+    margin-top: 3px;
+  }
+  .borderBottom {
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .switchCol {
+    text-align: right;
+  }
+  .accountChangeWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    & > span {
+      width: 135px;
+      &:first-child {
+        color: #0f7dff;
+        text-align: right;
+      }
+      &:last-child {
+        text-align: left;
+      }
+    }
+  }
+  .switchIcon {
+    width: 23px;
+    height: 23px;
+    margin: 0 10px -6px;
+    cursor: pointer;
+  }
+  .desc {
+    margin: -16px 0 16px;
+    color: #9b9b9b;
+    font-size: 12px;
+    letter-spacing: -0.09px;
+    text-align: left;
+  }
+  .itemWrapper {
+    position: relative;
+  }
+  .availableBalance {
+    position: absolute;
+    top: 60px;
+    right: 1px;
+    z-index: 1000;
+    max-width: 220px;
+    color: #888888;
+    font-size: 13px;
+    text-align: right;
+    .ellipsis();
+    a,.link_for_a {
+      display: inline-block;
+      color: #0075ff;
+      font-weight: 500;
+      border-bottom: 1px dashed #ccc;
+    }
+  }
+  .label {
+    line-height: 20px;
+    vertical-align: middle;
+    svg {
+      width: 13px;
+      height: 13px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+  }
+}

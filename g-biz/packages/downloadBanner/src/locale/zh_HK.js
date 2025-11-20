@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "安全、便捷，隨時隨地交易",
+  "evsRWTcozWk2pEFSUsfw28": "30s 輕鬆註冊，1 分鐘掌握行情",
+  "jpbjxHSFSvzbMtW9MsUSh6": "隨時隨地掌握行情",
+  "mNJrrvGzgxR6JhQ8u82crp": "(8W+評價)",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "1 分鐘完成認證、充值、買幣",
+  "rw8e32A8H7X3QtiKHS37EK": "下載",
+  "tXwwyoSbqG4pgsoXomccjp": "下載 {{brandName}} App，領取 {{num}} {{siteBaseCurrency}} 獎勵",
+  "7dhofXiN9vaVRtVSNY9eCc": "新用戶現在可領取",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "免費領取",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>500W+</1>下載次數",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(10W+評價)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16k+評價)",
+  "awPHBDRwtLBxNEMctyUMJZ": "新人專享：首次入金金額>$50，可在「新人專區」領取最高價值<span>$500</span>盲盒一個",
+  "bc25RyyCduDizpfpxEcMEi": "下載 App",
+  "csjK9uyQQyYMLprAYkKsRT": "下載 {{brandName}} App 繼續加密之旅，在「新人專區」可享最高<span>$500</span>獎勵",
+  "oiiFHQ3NZu5zSYqpSGreye": "完成首次入金可獲即得最高價值<span>$500</span>盲盒！",
+  "pgBahZcxwoUfbjzJwqpmY7": "新人可享最高價值<span>$500</span>盲盒！",
+  "wLAfc8MZvoHbeNragecB4Z": "在 App 交易更安全更快捷"
+}

@@ -1,0 +1,14 @@
+.modal {
+  :global(.kux-modal-header) {
+    padding-bottom: 0;
+  }
+  :global(.kux-modal-footer) {
+    padding-bottom: 44px;
+  }
+  :global(.kux-empty-title) {
+    text-align: center;
+  }
+  :global(.kux-empty-description) {
+    text-align: center;
+  }
+}

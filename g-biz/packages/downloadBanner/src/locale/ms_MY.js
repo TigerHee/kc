@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Dagangan global mudah selamat 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Daftar dan kuasai pasaran dalam sesaat!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Kuasai pasaran di mana-mana sahaja 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80K+ Ulasan",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Sahkan, deposit, dan beli kripto secepat mungkin!",
+  "rw8e32A8H7X3QtiKHS37EK": "Muat Turun",
+  "tXwwyoSbqG4pgsoXomccjp": "Muat turun aplikasi {{brandName}} untuk perolehi ganjaran sehingga {{num}} {{siteBaseCurrency}}.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Pengguna Baharu Terima",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Tuntut Sekarang",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> Muat Turun",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ Ulasan)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ Ulasan)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Secara eksklusif untuk pengguna baharu: jika deposit pertama atau pembelian kripto anda adalah lebih daripada $50, anda akan menerima kotak misteri yang bernilai sehingga <span>$500</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Muat Turun",
+  "csjK9uyQQyYMLprAYkKsRT": "Muat turun aplikasi {{brandName}} untuk meneruskan pengembaraan kripto anda, dan menerima ganjaran sehingga <span>$500</span> dalam Zon Pemula.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Deposit atau beli kripto buat kali pertama untuk mendapatkan kotak misteri yang bernilai sehingga <span>$500</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Ganjaran Sehingga <span>$500</span> untuk Pengguna Baharu!",
+  "wLAfc8MZvoHbeNragecB4Z": "Jalankan dagangan dengan lebih selamat dan lebih pantas dengan menggunakan aplikasi mudah alih kami."
+}

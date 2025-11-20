@@ -1,0 +1,69 @@
+@import '../styles.module';
+
+.botItem {
+    padding: 12px 24px;
+    display: block;
+
+    &:hover {
+        background: var(--color-cover2);
+    }
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 8px 0 4px;
+}
+
+.note {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    /* 15.6px */
+    color: var(--color-text40);
+    margin-top: 4px;
+}
+
+.scroller {
+    @extend .container;
+    overflow-y: auto;
+    background-clip: border-box !important;
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: var(--color-cover8);
+    }
+}
+
+
+.clipScrollerBar {
+    overflow: hidden;
+    border-radius: 0px 16px 16px 0px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.MSpin {
+    display: block;
+    align-self: baseline;
+    width: 100% !important;
+    height: 100% !important;
+}

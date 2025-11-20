@@ -1,0 +1,89 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-poster 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'poster'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('poster') {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &_content {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+  }
+
+  &_footer {
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    padding: 0px 16px;
+    // border-radius: 12px 12px 0 0;
+    background: #2D2D2F;
+
+    &-text {
+      flex: 1;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 1.1;
+      color: #f3f3f3;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
+      transform: scale(0.95);
+      transform-origin: left center;
+      @include ellipsis(2);
+    }
+
+    &-subtitle {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: rgba(243, 243, 243, 0.6);
+      transform: scale(0.9);
+      transform-origin: left center;
+    }
+
+    &-leading {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    &-logo {
+      width: 40px;
+      min-width: 40px;
+      max-width: 40px;
+      height: 40px;
+    }
+    
+    &-trailing {
+      width: 48px;
+      min-width: 48px;
+      max-width: 48px;
+      height: 48px;
+      background: #f3f3f3;
+      padding: 2px;
+      box-sizing: border-box;
+      > canvas {
+        width: 44px !important;
+        height: 44px !important;
+      }
+    }
+  }
+}

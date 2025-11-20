@@ -1,0 +1,49 @@
+@import '~themes/vars.less';
+
+:global {
+  .ant-tooltip {
+    max-width: 450px !important;
+    &.ant-tooltip-placement-top, &.ant-tooltip-placement-topLeft, &.ant-tooltip-placement-topRight {
+      .ant-tooltip-arrow {
+        border-top-color: @white;
+      }
+    }
+
+    &.ant-tooltip-placement-bottom, &.ant-tooltip-placement-bottomLeft, &.ant-tooltip-placement-bottomRight {
+      .ant-tooltip-arrow {
+        border-bottom-color: @white;
+      }
+    }
+
+    &.ant-tooltip-placement-left, &.ant-tooltip-placement-leftTop, &.ant-tooltip-placement-leftBottom {
+      .ant-tooltip-arrow {
+        border-left-color: @white;
+      }
+    }
+
+    &.ant-tooltip-placement-right, &.ant-tooltip-placement-rightTop, &.ant-tooltip-placement-rightBottom {
+      .ant-tooltip-arrow {
+        border-right-color: @white;
+      }
+    }
+
+    .ant-tooltip-content {
+      .ant-tooltip-inner {
+        color: @color-black;
+        background: fade(@white, 95%);
+        // min-width: 130px;
+      }
+    }
+  }
+
+  // hack tips
+  @media screen and (max-width: 1000px) {
+    .ant-tooltip {
+      max-width: none !important;
+    }
+
+    .ant-tooltip-content {
+      white-space: nowrap;
+    }
+  }
+}

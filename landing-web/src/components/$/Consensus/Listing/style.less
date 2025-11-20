@@ -1,0 +1,55 @@
+@import '~themes/mix.less';
+
+.out {
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.bigWord {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 75px;
+  .mediaQueryMd({display: none;});
+}
+
+.tabContent {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 12px));
+  grid-gap: 48px 24px;
+  .mediaQuerySm({grid-gap: 24px 24px;});
+}
+
+.imgBox {
+  pointer-events: none;
+  width: 100%;
+  margin-top: 88px;
+  position: relative;
+  .mediaQuerySm({margin-top: 44px;});
+}
+
+.applyImg {
+  width: 100%;
+}
+
+.btnStyle {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: auto !important;
+  height: 70px !important;
+  border-radius: 0 !important;
+  padding: 0 40px !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  color: #00142a !important;
+  background: linear-gradient(270deg, #8af9b6 0%, #55e1bb 100%) !important;
+  &:hover {
+    background: linear-gradient(270deg, #8dffbb 0%, #24f5bd 100%) !important;
+  }
+  &:active {
+    background: linear-gradient(270deg, #72de9d 0%, #27cea1 100%) !important;
+  }
+  .mediaQueryMd({width: auto !important;height: 60px !important;font-size: 20px !important;top: 40px;});
+  .mediaQuerySm({width: auto !important;height: 48px !important;font-size: 16px !important;});
+}

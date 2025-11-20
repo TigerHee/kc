@@ -1,0 +1,40 @@
+@import '~themes/mix.less';
+
+.container {
+  width: 100%;
+  padding: 80px 0 0;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({padding: 60px 24px 0 24px;});
+  .mediaQuerySm({padding: 40px 12px 0 12px;});
+}
+.inner {
+  margin: 0 auto;
+  width: 83.3%;
+  max-width: 1200px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 100%;});
+
+  img {
+    width: 100%;
+  }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeIcon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}

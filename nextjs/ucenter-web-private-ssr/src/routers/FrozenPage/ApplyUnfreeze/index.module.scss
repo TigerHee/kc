@@ -1,0 +1,43 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+
+.styledAlert {
+  :global {
+    .KuxAlert-description {
+      margin: 0;
+    }
+  }
+}
+
+.containerWrapper {
+  max-width: 580px;
+  margin: 26px auto 88px;
+  height: auto;
+  min-height: calc(100vh - 80px);
+  @media (max-width: 600px) {
+    margin: 16px 16px 88px 16px;
+  }
+
+  :global {
+    [dir='rtl'] & {
+      .KuxAlert-icon {
+        padding-right: unset;
+        padding-left: 8px;
+      }
+    }
+  }
+}
+
+.styledTitle {
+  color: var(--kux-text);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 0;
+  margin: 0 0 16px 0;
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+

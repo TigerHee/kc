@@ -1,0 +1,85 @@
+.wrapper {
+  padding: 16px;
+}
+.title {
+  font-size: 24px;
+}
+.text {
+  font-size: 12px;
+}
+.img {
+  margin: 16px 0;
+  width: 100%;
+}
+
+.sa_modal {
+  :global {
+    .MuiDialog-paper {
+      width: 480px;
+      padding: 0 24px;
+
+      .MuiButtonBase-root {
+        height: 40px;
+        padding: 0 12px;
+      }
+    }
+  }
+}
+
+.addressTipsNew {
+  width: 100%;
+  height: auto;
+  background: rgba(255, 181, 71, 0.12);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #D88B19;
+}
+
+
+.innerWrapper {
+  padding: 0;
+}
+.innerImg {
+  margin: 12px 0 16px;
+  width: 100%;
+  > img {
+    border-radius: 8px;
+  }
+}
+.innerTip {
+  color: rgba(0, 20, 42, 0.4);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+.innerTipBlod {
+  color: #00142A;
+}
+
+.innerTipDesc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(0, 20, 42, 0.6);
+  > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    > span {
+      display: inline-block;
+      flex: 1;
+    }
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #737E8D;
+      margin-right: 8px;
+    }
+  }
+}

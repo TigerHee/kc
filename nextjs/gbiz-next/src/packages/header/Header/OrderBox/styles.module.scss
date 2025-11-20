@@ -1,0 +1,245 @@
+@import 'src/styles/mixin.scss';
+
+.overlayWrapper {
+  // jsx style 实现
+  // width: ${inDrawer ? 'auto' : isLong_language ? '340px' : '320px'};
+  margin-bottom: 0;
+  border-radius: 4px;
+  padding: 8px 0;
+  background: var(--color-layer);
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  max-height: calc(100vh - 100px);
+  border: 1px solid var(--kux-cover4);
+  overflow: auto;
+  overflow-x: hidden;
+  margin-top: 14px;
+
+  @include media-query('sm') {
+    margin-top: 22px;
+  }
+
+  & .textIcon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 12px 0 24px;
+    color: var(--kux-icon);
+
+    &.tradeIcon {
+      width: 20px;
+      height: 20px;
+    }
+
+    [dir='rtl'] & {
+      margin: 0 24px 0 16px;
+    }
+  }
+}
+
+.overlayWrapperInDrawer {
+  padding: 0;
+  background: transparent;
+  box-shadow: unset;
+  border-radius: unset;
+  margin-top: 0;
+  border: none;
+  overflow: unset;
+
+  @include media-query('sm') {
+    margin-top: 0;
+  }
+
+  & .textIcon {
+    margin: 0 16px 0 12px;
+
+    [dir='rtl'] & {
+      margin: 0 16px 0 12px;
+    }
+  }
+}
+
+.collapseIcon {
+  width: 16px !important;
+  height: 16px !important;
+  color: var(--kux-icon60) !important;
+  transition: all 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.collapseIconActive {
+  transform: rotate(-180deg);
+}
+
+.menuItemDotWrapper {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 8px;
+}
+
+.menuItemDot {
+  width: 4px;
+  height: 4px;
+  background: var(--color-text);
+  border-radius: 100%;
+}
+
+.overlayWrapperInTrade {
+  margin-top: 14px;
+
+  @include media-query('sm') {
+    margin-top: 14px;
+  }
+}
+
+@keyframes move {
+  0% {
+    right: 20px;
+  }
+
+  100% {
+    right: 18px;
+  }
+}
+
+@keyframes move-rtl {
+  0% {
+    left: 20px /*! @noflip */;
+  }
+
+  100% {
+    left: 18px /*! @noflip */;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    fill: #737e8d;
+  }
+
+  100% {
+    fill: #18bb97;
+  }
+}
+
+.menuItem {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-text);
+  text-decoration: none !important;
+  font-size: 14px;
+  position: relative;
+  word-break: break-all;
+  border-radius: unset;
+
+  &:hover {
+    color: var(--color-text);
+    background: var(--color-cover2);
+  }
+
+  & .arrow {
+    display: none;
+  }
+
+  &:hover .arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    animation: move 0.3s linear forwards;
+    -webkit-animation: move 0.3s linear forwards;
+
+    & path {
+      animation: changeColor 0.3s linear forwards;
+      -webkit-animation: changeColor 0.3s linear forwards;
+    }
+
+    [dir='rtl'] & {
+      transform: rotate(180deg) translateY(50%);
+      right: unset /*! @noflip */;
+      left: 20px /*! @noflip */;
+      animation: move-rtl 0.3s linear forwards;
+      -webkit-animation: move-rtl 0.3s linear forwards;
+    }
+  }
+}
+
+.menuItemInDrawer {
+  height: 56px;
+  color: var(--color-text60);
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.menuItemText {
+  box-sizing: border-box;
+  flex: 1;
+  word-break: break-all;
+  white-space: break-spaces;
+  line-height: 140%;
+  padding-right: 24px;
+  font-weight: 400;
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 24px;
+  }
+}
+
+.historyText {
+  margin-inline-start: 56px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text60);
+}
+
+.historyTextInDrawer {
+  margin-inline-start: 0;
+  font-size: 16px;
+}
+
+.divider {
+  width: 85% !important;
+  margin: 8px 24px !important;
+  background: var(--color-divider4) !important;
+}
+
+.dividerInDrawer {
+  margin: 12px auto !important;
+  width: calc(100% - 24px) !important;
+}
+
+.textWrapper {
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  & .arrow {
+    margin: 2px 0px 0 4px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+
+    .arrow {
+      transform: rotate(-180deg);
+    }
+  }
+
+  @include media-query('xl') {
+    font-size: 14px;
+  }
+}

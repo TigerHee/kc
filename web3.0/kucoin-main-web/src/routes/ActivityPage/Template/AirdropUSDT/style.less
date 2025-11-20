@@ -1,0 +1,239 @@
+@import '../../module/mix';
+
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 200px;
+  margin-bottom: 18px;
+  color: #929fb3;
+
+  font-size: 20px;
+  letter-spacing: 0;
+
+  word-break: break-word;
+
+  img {
+    max-width: 100% !important;
+  }
+}
+
+.panel {
+  .baseFrame();
+  width: 800px;
+  padding: 24px;
+}
+.title {
+  margin-bottom: 26px;
+  color: #d2dcef;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  & > div {
+    color: #f2c06f;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 0;
+
+    span {
+      margin-left: 8px;
+      font-size: 16px;
+    }
+
+    &:last-child {
+      display: flex;
+      justify-content: center;
+
+      div {
+        display: flex;
+        // width: 88px;
+        height: 40px;
+        margin-left: 8px;
+        padding-right: 16px;
+        color: #0b193d;
+        font-size: 16px;
+        line-height: 40px;
+        letter-spacing: 0;
+        letter-spacing: 0;
+        text-align: center;
+        background-image: linear-gradient(44deg, #24b884 0%, #51e36f 100%);
+        border-radius: 4px;
+        cursor: pointer;
+
+        img {
+          margin: 0 8px 0 16px;
+        }
+
+        &:last-child {
+          background-image: linear-gradient(-132deg, #baccf0 0%, #7396bb 99%, #0f7dff 100%);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.depositSVG {
+  width: 16px !important;
+  height: 16px !important;
+  background: url(~static/trc_airdrop/deposit.svg) no-repeat;
+}
+
+.withdrawSVG {
+  width: 16px !important;
+  height: 16px !important;
+  background: url(~static/trc_airdrop/withdraw.svg) no-repeat;
+}
+
+.tips {
+  margin-bottom: 24px;
+  color: #d2dcef;
+  font-size: 14px;
+  letter-spacing: 0;
+
+  span {
+    span {
+      color: #f2c06f;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.balance {
+  span {
+    margin-right: 8px;
+    color: #6f88ad;
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+}
+
+.ruleImg {
+  width: 775px;
+  height: 66px;
+  margin-top: 27px;
+  background: url(~static/trc_airdrop/benefit_ratio.svg) no-repeat;
+  cursor: pointer;
+}
+
+.popContainer {
+  :global {
+    .ant-popover-inner {
+      background-color: #293958;
+    }
+    .ant-popover-arrow {
+      background-color: #293958;
+      border-right-color: #293958;
+      border-bottom-color: #293958;
+    }
+    .ant-popover-buttons {
+      display: flex;
+      width: 162px;
+      height: 35px;
+      margin-bottom: 24px;
+    }
+    .ant-popover-message {
+      width: 352px;
+      margin-bottom: 24px;
+      padding: 8px;
+      background: #ffeacb;
+      border-radius: 4px;
+    }
+  }
+}
+
+.text {
+  color: #6f88ad;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.highlight {
+  color: #f2c06f;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.formContainer {
+  width: 400px;
+  // height: 433px;
+  padding: 8px;
+  div {
+    width: 100%;
+    color: #d2dcef;
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+  .depositTip {
+    margin-bottom: 24px;
+    padding: 8px;
+    padding-left: 25px;
+    color: #0b193d;
+    font-size: 12px;
+    letter-spacing: 0;
+    background: #ffeacb;
+    border-radius: 4px;
+  }
+  .balanceInfo {
+    display: inline-block;
+    color: #0f7dff;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0;
+    border-bottom: 1px dashed #ccc;
+    cursor: pointer;
+  }
+  .btns {
+    width: 100%;
+  }
+  .halfBtns {
+    width: 162px;
+  }
+  .input {
+    :global {
+      .ant-input-wrapper {
+        border: 1px solid #6f88ad;
+      }
+      .ant-input {
+        color: white;
+        background-color: #293958;
+      }
+      .ant-input-group-addon {
+        color: #d2dcef;
+        font-size: 13px;
+        background-color: #293958;
+      }
+    }
+  }
+}
+
+.warnIcon {
+  margin-right: 5px;
+  margin-left: -16px;
+  color: #eb5252;
+}
+
+.paginate {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0px;
+  :global {
+    .ant-pagination {
+      li {
+        .basePage();
+        a {
+          .basePage();
+        }
+      }
+      .ant-pagination-item-active {
+        border: 1px solid #0f7dff;
+      }
+    }
+  }
+}

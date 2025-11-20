@@ -1,0 +1,45 @@
+.CommonTitle {
+  padding-top: 20px;
+  h2 {
+    margin-bottom: 0;
+    color: #d2dcef;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      color: #6f88ad;
+      font-size: 14px;
+    }
+    a, .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      margin-left: 10px;
+      padding: 0 8px;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0;
+      border-radius: 4px;
+      &.wait_start {
+        background-image: linear-gradient(-135deg, #257ee7 0%, #3056ff 100%, #0f7dff 100%);
+      }
+      &.processing {
+        background-image: linear-gradient(44deg, #24b84f 0%, #51e36f 100%);
+      }
+      &.pending_award {
+        background-image: linear-gradient(-135deg, #ffb82c 0%, #f8a531 100%);
+      }
+      &.over {
+        background-image: linear-gradient(-132deg, #baccf0 0%, #7396bb 99%, #0f7dff 100%);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.idea
+
+# ignore vs code project config files
+.vscode
+.husky
+.vs
+
+# ignore logs
+logs
+*.log
+*.tar
+*.gz
+
+# ignore 3rd party lib
+# node_modules
+
+# Ignore built files
+dist/**/*
+# google-chrome-stable_current_amd64.deb
+
+# ignore test converage
+coverage
+
+# git
+.gitignore
+.git
+

@@ -1,0 +1,32 @@
+@import 'src/styles/mixin.scss';
+
+.simplifyLogoDivider {
+    background: var(--kux-cover8);
+    opacity: 0.4;
+    font-size: 21px;
+    margin: 0 !important;
+}
+
+.simplifyLogoSuffixContent {
+    color: var(--kux-brandGreen);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include media-query('sm') {
+        font-size: 20px;
+    }
+}
+
+.menuBox {
+    @include media-query('sm') {
+        display: flex;
+    }
+}
+
+.navLinksWrapper {
+    @include media-query('sm') {
+        gap: 12px;
+    }
+}

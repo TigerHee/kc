@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title> Icon/ Icon/topbar/geren</title>
+    <desc>Created with Sketch.</desc>
+    <g id="-Icon/-Icon/topbar/geren" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <path d="M12,5 C14.209139,5 16,6.790861 16,9 C16,10.3814726 15.2996738,11.5993753 14.234679,12.3180505 C17.4890434,13.2609821 19.8880947,16.2176275 19.9961932,19.7508207 L20,20 L19,20 C19,16.2145483 15.9952166,13.1309013 12.2406498,13.004059 L12,13 C8.21454828,13 5.13090132,16.0047834 5.00405902,19.7593502 L5,20 L4,20 C4,16.3572241 6.43472941,13.2831098 9.7656551,12.3161901 C8.70032615,11.5993753 8,10.3814726 8,9 C8,6.790861 9.790861,5 12,5 Z M12,6 C10.3431458,6 9,7.34314575 9,9 C9,10.6568542 10.3431458,12 12,12 C13.6568542,12 15,10.6568542 15,9 C15,7.34314575 13.6568542,6 12,6 Z" id="Combined-Shape" fill="#01081E"></path>
+        </g>
+    </g>
+</svg>

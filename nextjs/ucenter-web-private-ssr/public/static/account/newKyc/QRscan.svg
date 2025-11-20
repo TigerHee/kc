@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>QRscan</title>
+    <desc>Created with Sketch.</desc>
+    <g id="QRscan" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/Notice/ic_info">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+        </g>
+        <path d="M22,8 L20,8 L20,4 L4,4 L4,8 L2,8 L2,2 L22,2 L22,8 Z" id="形状结合" fill="#24AE8F"></path>
+        <path d="M22,22 L20,22 L20,18 L4,18 L4,22 L2,22 L2,16 L22,16 L22,22 Z" id="形状结合备份" fill="#24AE8F" transform="translate(12.000000, 19.000000) scale(1, -1) translate(-12.000000, -19.000000) "></path>
+        <rect id="矩形" fill="#24AE8F" x="2" y="11" width="20" height="2"></rect>
+    </g>
+</svg>

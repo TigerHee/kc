@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpOrDownNumber renders Number 1`] = `
+Array [
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Array [
+          Object {
+            "color": "#1D1D1D",
+          },
+          undefined,
+        ],
+        false,
+      ]
+    }
+  >
+    --
+  </Text>,
+  "\\\\",
+]
+`;
+
+exports[`UpOrDownNumber renders Percent 1`] = `
+Array [
+  <Text
+    allowFontScaling={false}
+    style={
+      Object {
+        "fontFamily": "Roboto-Regular",
+        "textAlign": "left",
+      }
+    }
+  >
+    --
+  </Text>,
+  "\\\\",
+]
+`;

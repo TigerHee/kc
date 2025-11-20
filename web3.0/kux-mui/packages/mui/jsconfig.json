@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "utils/*": ["./src/utils/*"],
+      "themes/*": ["./src/themes/*"],
+      "context/*": ["./src/context/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "hocs/*": ["./src/hocs/*"],
+      "emotion/*": ["./src/emotion/*"],
+    }
+  }
+}

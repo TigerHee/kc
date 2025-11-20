@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Sicheres und einfaches globales Trading rund um die Uhr.",
+  "evsRWTcozWk2pEFSUsfw28": "Registrieren Sie sich und beherrschen Sie die Märkte in Sekundenschnelle!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Meistern Sie Märkte überall und rund um die Uhr.",
+  "mNJrrvGzgxR6JhQ8u82crp": "Über 80.000 Bewertungen",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Verifizieren, einzahlen und kaufen Sie Krypto im Handumdrehen!",
+  "rw8e32A8H7X3QtiKHS37EK": "Herunterladen",
+  "tXwwyoSbqG4pgsoXomccjp": "Laden Sie die {{brandName}} App herunter und verdienen Sie bis zu {{num}} {{siteBaseCurrency}} in Belohnungen.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Neue Nutzer erhalten",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Jetzt einlösen",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> Downloads",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(Über 100.000 Bewertungen)",
+  "qqJX78TFyekdKwwT6nVVWU": "(Über 16.000 Bewertungen)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Exklusiv für neue Nutzer: Wenn Ihre erste Einzahlung oder Ihr erster Kryptokauf mehr als 50 USD beträgt, erhalten Sie eine Mystery Box im Wert von bis zu <span>500 USD</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Herunterladen",
+  "csjK9uyQQyYMLprAYkKsRT": "Laden Sie die {{brandName}}-App herunter, um Ihre Krypto-Reise fortzusetzen, und erhalten Sie bis zu <span>500 USD</span> an Belohnungen in der Neueinsteiger-Zone.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Zahlen Sie zum ersten Mal ein oder kaufen Sie Kryptowährungen und erhalten Sie eine Mystery Box im Wert von bis zu <span>500 USD</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Bis zu <span>500 USD</span> an Prämien für neue Nutzer!",
+  "wLAfc8MZvoHbeNragecB4Z": "Handeln Sie sicherer und schneller mit unserer mobilen App."
+}

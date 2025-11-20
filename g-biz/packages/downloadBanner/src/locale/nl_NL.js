@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Veilig en eenvoudig overal 24/7 handelen.",
+  "evsRWTcozWk2pEFSUsfw28": "Registreer en beheers de markten in een oogwenk!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Beheers de markt overal 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80K+ beoordelingen",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Z.s.m verifiëren, storten en crypto kopen!",
+  "rw8e32A8H7X3QtiKHS37EK": "Downloaden",
+  "tXwwyoSbqG4pgsoXomccjp": "Download de {{brandName}} app om tot {{num}} {{siteBaseCurrency}} aan beloningen te verdienen.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Nieuwe gebruikers krijgen",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Nu claimen",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> Downloads",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ Beoordelingen)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ Beoordelingen)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Exclusief voor nieuwe gebruikers: als uw eerste storting of crypto-aankoop meer dan 50 dollar bedraagt, ontvangt u een mystery-box ter waarde van maximaal <span>500 dollar</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Downloaden",
+  "csjK9uyQQyYMLprAYkKsRT": "Download de {{brandName}}-app om uw crypto-avontuur voort te zetten en ontvang in de beginnerszone beloningen ter waarde van maximaal <span>500 dollar</span>!",
+  "oiiFHQ3NZu5zSYqpSGreye": "Stort of koop voor de eerste keer crypto en ontvang een mystery-box ter waarde van maximaal <span>500 dollar</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Beloningen voor nieuwe gebruikers ter waarde van maximaal <span>500 dollar</span>!",
+  "wLAfc8MZvoHbeNragecB4Z": "Handel veiliger en sneller met onze mobiele app."
+}

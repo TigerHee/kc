@@ -1,0 +1,140 @@
+@color-main-text: #00142a; /* 亮色主题文字/标题 l 正文 */
+@color-sub-text: rgba(0, 20, 42, 0.6); /* 亮色主题文字/次要文字 */
+@color-active: #ffb547; /* 辅色 */
+@color-white: #fff; // 白色字体
+@color-main: #2dbd96;
+@color-text: #e1e8f5; /* 文本色 */
+.progressBody {
+  display: flex;
+  margin: ~`px2rem(32) ` 0;
+}
+.progressBar {
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: ~`px2rem(4) `;
+  overflow: hidden;
+  vertical-align: middle;
+  background-color: #172037;
+  border-radius: ~`px2rem(2) `;
+}
+.progressBarBg {
+  counter-reset: percent var(--percent);
+  position: relative;
+  height: inherit;
+  /*宽度计算*/
+  width: calc(100% * var(--percent) / 100);
+  background-color: var(--bgColor);
+  border-radius: ~`px2rem(2) `;
+}
+
+.progressItem {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: ~`px2rem(12) `;
+  line-height: ~`px2rem(20) `;
+  color: rgba(0, 20, 42, 0.6);
+  margin-right: ~`px2rem(12) `;
+}
+
+.progressItemSmall {
+  flex: auto;
+  width: ~`px2rem(30) `;
+}
+.progressDot {
+  width: ~`px2rem(12) `;
+  height: ~`px2rem(12) `;
+  background: #e9eaed;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: ~`px2rem(-2) `;
+  z-index: 2;
+}
+
+.unfinishedBg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: ~`px2rem(24) `;
+  height: ~`px2rem(24) `;
+  margin-bottom: ~`px2rem(4) `;
+  border-radius: 50%;
+  background: rgba(188, 200, 224, 0.12);
+  cursor: pointer;
+  img {
+    width: ~`px2rem(16) `;
+  }
+}
+
+.finishedBg {
+  .unfinishedBg();
+  position: absolute;
+  z-index: 4;
+  img {
+    width: ~`px2rem(24) `;
+  }
+}
+.progressPrize {
+  position: absolute;
+  right: ~`px2rem(-18) `;
+  z-index: 2;
+}
+.progressAmount {
+  position: absolute;
+  top: ~`px2rem(28) `;
+  color: @color-text;
+  white-space: nowrap;
+}
+@media (min-width: @kc-mb-width) {
+  .progressBody {
+    margin: 32px 0;
+  }
+  .progressBar {
+    height: 4px;
+  }
+  .progressItem {
+    font-size: 12px;
+    line-height: 20px;
+    margin-right: 12px;
+  }
+  .progressItemSmall {
+    flex: auto;
+    width: 30px;
+  }
+  .progressDot {
+    width: 12px;
+    height: 12px;
+    left: -2px;
+  }
+
+  .unfinishedBg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    img {
+      width: 16px;
+    }
+  }
+
+  .finishedBg {
+    .unfinishedBg();
+    position: absolute;
+    img {
+      width: 24px;
+    }
+    z-index: 4;
+  }
+  .progressPrize {
+    position: absolute;
+    right: -18px;
+    z-index: 2;
+  }
+  .progressAmount {
+    top: 28px;
+  }
+}

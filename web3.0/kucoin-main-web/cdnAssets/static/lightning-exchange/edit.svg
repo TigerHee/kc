@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="59px" viewBox="0 0 57 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>编组 5</title>
+    <desc>Created with Sketch.</desc>
+    <g id="着陆页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="币币兑换-兑换账单-空状态" transform="translate(-689.000000, -410.000000)">
+            <g id="编组-5" transform="translate(690.000000, 410.000000)">
+                <path d="M42.9074999,1 L51,1 C53.209139,1 55,2.790861 55,5 L55,48 C55,50.209139 53.209139,52 51,52 L10,52 C7.790861,52 6,50.209139 6,48 L6,5 C6,2.790861 7.790861,1 10,1 L18.9416847,1 L18.9416847,1" id="路径" stroke="#01081E" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M41,58 L4,58 C1.790861,58 0,56.209139 0,54 L0,17" id="路径" stroke="#01081E" stroke-width="2" stroke-linecap="round"></path>
+                <g id="编组-4" transform="translate(12.000000, 9.000000)">
+                    <rect id="矩形" fill="#01081E" x="0" y="15" width="30" height="2" rx="1"></rect>
+                    <rect id="矩形" stroke="#01081E" stroke-width="2" x="1" y="0" width="9" height="8" rx="2"></rect>
+                    <rect id="矩形备份" fill="#01081E" x="0" y="22" width="22" height="2" rx="1"></rect>
+                    <rect id="矩形备份-2" fill="#01081E" x="0" y="29" width="15" height="2" rx="1"></rect>
+                </g>
+                <rect id="矩形备份-3" fill="#01081E" x="22" y="0" width="18" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

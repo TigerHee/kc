@@ -1,0 +1,312 @@
+@import '~theme/mix.less';
+// @import '~theme/vars';
+
+.por {
+  color: #000D1D;
+  :global {
+    .por_page {
+      .por_oper {
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 122px;
+        background-size: 300px;
+      }
+      .not_login {
+        .por-card {
+          .card-head {
+            background: initial;
+            .card-head-wrapper {
+              text-align: center;
+              .card-title {
+                color: rgba(0, 13, 29, 0.3);
+                display: inline-block;
+              }
+            }
+          }
+          .card-body {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+        }
+      }
+      .por_wrap {
+        display: flex;
+        justify-content: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        background: #fff;
+        .por_content {
+          flex-basis: 1200px;
+        }
+        &.por_intro {
+          background: #E1EBDC;
+        }
+        &.por_ratio {
+          background: #F7F8FA;
+        }
+      }
+      .flex_start.flex_start {
+        justify-content: flex-start;
+        .words {
+          max-width: 100%;
+        }
+      }
+      .intro {
+        background-color: #fff;
+        padding-top: 80px;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-top: 1px solid rgba(29, 29, 29, 0.16);
+        >div{
+          display: inline-block;
+        }
+        .words {
+          width: 48.33%;
+          margin-top: 60px;
+          .title {
+            font-weight: 600;
+            font-size: 24px;
+          }
+          .des {
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+      .setp_content {
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+      .step_info {
+        text-align: center;
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba(0, 13, 29, 0.4);
+      }
+      .por_card {
+        width: 380px;
+        margin-left: 90px;
+        .card-body {
+          height: calc(200px - 36px);
+        }
+      }
+      .oper_area {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        .step_show.step_show {
+          color: #01BC8D;
+        }
+        .copy {
+          background: rgba(0, 13, 29, 0.04);
+          border-radius: 22px;
+          padding-left: 8px;
+          padding-right: 8px;
+          min-width: 100px;
+          display: inline-block;
+          text-align: center;
+          font-weight: 600;
+          font-size: 18px;
+          color: rgba(0, 13, 29, 0.68);
+          .copy_btn {
+            vertical-align: -4px;
+          }
+        }
+        .oper_step {
+          >div {
+            margin-bottom: 16px;
+          }
+        }
+        .link_site {
+          text-align: right;
+          a {
+            color: rgba(0, 13, 29, 0.68);
+          }
+        }
+      }
+    }
+    .por_login {
+      text-align: center;
+      .KuxButton-root {
+        background-color: #fff;
+        color: #01BC8D;
+      }
+    }
+    .rr_content {
+      .rr_list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        >div {
+          flex-basis: 25%;
+        }
+      }
+    }
+
+  }
+  :global {
+    // 一些可以公用的样式
+    .por_center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .por_title {
+      margin:50px 0 16px;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 130%;
+    }
+    .por_title_des {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      margin-bottom: 40px;
+    }
+    .por_down {
+      margin-top: 16px;
+      min-height: 24px;
+    }
+  }
+  // 一些重置样式
+  :global {
+    .KuxStep-title {
+      vertical-align: super;
+    }
+    .KuxStep-stepContent {
+      margin-bottom: 22px;
+    }
+  }
+  // 响应式样式 1200px
+  :global {
+    .mediaQueryFl({
+      .rr_content {
+        .rr_list {
+          >div {
+            flex-basis: 50%;
+            text-align: center;
+            >div{
+              display: inline-block;
+            }
+          }
+          .rr_card {
+            width: 90%;
+            min-width: 320px;
+          }
+        }
+      }
+      .cardList {
+        .card_wrap+.card_wrap {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    });
+    // 1024px
+    .mediaQueryMd({
+      .por_oper.por_oper.por_oper {
+        background-position-x: 0;
+      }
+      .info.info.info{
+        flex-wrap: wrap;
+        .words {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          .por_card {
+            margin-left: 0;
+          }
+        }
+        .words.words.words {
+          max-width: inherit;
+        }
+      }
+      .intro_wrap {
+        flex-wrap: wrap;
+        margin-top: 50px;
+        >div {
+          flex-basis: 100%;
+        }
+        >div:last-child {
+         text-align: center;
+        }
+      }
+      .por_intro {
+        .intro_img {
+          margin-top: -65px;
+          margin-left: 80px;
+        }
+      }
+    });
+    // 768px
+    .mediaQuerySm({
+      .por_page {
+        .intro.intro {
+          padding-top: 60px;
+        }
+        .por_wrap.por_wrap {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .intro_img {
+          img {
+            height: 280px;
+          }
+        }
+      }
+      .rr_content {
+        .rr_list {
+          >div {
+            flex-basis: 100%;
+          }
+        }
+      }
+      .cardList {
+        .card_wrap {
+          flex-basis: 100%;
+          .card {
+            width: 100%;
+            flex-wrap: wrap;
+            height: 400px;
+            padding-left: 0;
+            .card_oper_wrap{
+              height: 120px;
+              text-align: center;
+              >div {
+                margin-top: 30px;
+                flex-basis: 100%;
+              }
+            }
+            .card_img_wrap {
+              flex-basis: auto;
+              .card_img {
+                position: static;
+                margin-left: 30px;
+              }
+            }
+            >div {
+              flex-basis: 100%;
+            }
+            .btn_oper {
+              text-align: center;
+              margin-top: -10px;
+            }
+          }
+        }
+      }
+      .info.info.info{
+        flex-wrap: wrap;
+        .words {
+          margin-top: 40px;
+        }
+      }
+    });
+  }
+}

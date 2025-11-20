@@ -1,0 +1,8 @@
+/node_modules
+/.idea
+.DS_Store
+.vscode
+/src/group.js
+/src/languages.js
+/dist
+yarn-error.log

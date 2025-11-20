@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="通知栏" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="通知体系-copy" transform="translate(-704.000000, -445.000000)" fill="#F5A623" fill-rule="nonzero">
+            <g id="Group-9" transform="translate(520.000000, 373.000000)">
+                <path d="M200,72 C191.168,72 184,79.16 184,88 C184,96.84 191.168,104 200,104 C208.832,104 216,96.84 216,88 C216,79.16 208.832,72 200,72 Z M201.6,96 L198.4,96 L198.4,92.8 L201.6,92.8 L201.6,96 Z M201.6,89.6 L198.4,89.6 L198.4,80 L201.6,80 L201.6,89.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,83 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as Stories from './stories';
+
+<Meta title="base/Dropdown/Readme" />
+
+# Dropdown 组件
+
+Dropdown 组件是一个下拉菜单组件，支持点击和悬停触发，提供完整的下拉菜单功能。
+
+## 特性
+
+- 支持点击和悬停触发
+- 自动定位和边界检测
+- 自定义样式支持
+- 动画过渡效果
+- TypeScript 类型支持
+
+## 基础用法
+
+### 点击触发
+
+```tsx
+import { Dropdown, Button } from '@kux/design';
+
+const MyDropdown = () => {
+  const overlay = (
+    <div>
+      <div className="kux-dropdown__item">菜单项 1</div>
+      <div className="kux-dropdown__item">菜单项 2</div>
+      <div className="kux-dropdown__item">菜单项 3</div>
+    </div>
+  );
+
+  return (
+    <Dropdown overlay={overlay} trigger="click">
+      <Button>点击显示下拉菜单</Button>
+    </Dropdown>
+  );
+};
+```
+
+### 悬停触发
+
+```tsx
+<Dropdown overlay={overlay} trigger="hover">
+  <Button>悬停显示下拉菜单</Button>
+</Dropdown>
+```
+
+### 带分隔线的菜单
+
+```tsx
+const overlay = (
+  <div>
+    <div className="kux-dropdown__item">编辑</div>
+    <div className="kux-dropdown__item">复制</div>
+    <div className="kux-dropdown__divider"></div>
+    <div className="kux-dropdown__item">删除</div>
+  </div>
+);
+```
+
+## API
+
+### Dropdown Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+|------|------|------|--------|
+| overlay | 下拉内容 | `ReactNode` | - |
+| children | 触发器内容 | `ReactNode` | - |
+| trigger | 触发方式 | `'click' \| 'hover'` | `'click'` |
+| className | 自定义类名 | `string` | - |
+| style | 自定义样式 | `CSSProperties` | - |
+| popperClassName | Popper 类名 | `string` | - |
+| popperStyle | Popper 样式 | `CSSProperties` | - |
+| anchorProps | 锚点元素属性 | `HTMLAttributes<HTMLDivElement>` | - |
+
+### CSS 类名
+
+- `kux-dropdown` - 主容器
+- `kux-dropdown__overlay` - 下拉内容
+- `kux-dropdown__item` - 菜单项
+- `kux-dropdown__divider` - 分隔线

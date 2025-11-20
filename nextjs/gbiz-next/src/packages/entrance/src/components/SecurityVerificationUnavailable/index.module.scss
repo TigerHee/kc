@@ -1,0 +1,79 @@
+@import 'src/styles/mixin.scss';
+
+.customDialog {
+  :global(.KuxModalHeader-root) {
+    min-height: 90px;
+    height: auto !important;
+    padding: 32px 32px 24px;
+  }
+  
+  :global(.KuxModalFooter-root) {
+    border-top: 1px solid var(--kux-divider8);
+  }
+}
+
+.content {
+  padding-bottom: 48px;
+  
+  @include media-query('sm') {
+    padding: 16px;
+    padding-bottom: 34px;
+  }
+}
+
+.typeContent {
+  & + & {
+    margin-top: 32px;
+  }
+  
+  @include media-query('sm') {
+    margin-top: 0px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--kux-cover12);
+  
+  @include media-query('sm') {
+    border: none;
+    padding: 0px;
+    height: 48px;
+  }
+}
+
+.typeInfoBox {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: var(--kux-text40);
+  font-size: 14px;
+  line-height: 130%;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 12px;
+  
+  @include media-query('sm') {
+    margin-bottom: 4px;
+    padding-top: 8px;
+  }
+}
+
+.typeName {
+  color: var(--kux-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.arrowIcon {
+  font-size: 20px;
+  color: var(--kux-icon60);
+}

@@ -1,0 +1,8 @@
+/node_modules
+.DS_Store
+yarn-error.log
+.neeko
+.neeko.config.js
+.neeko.task.json
+/public
+.idea

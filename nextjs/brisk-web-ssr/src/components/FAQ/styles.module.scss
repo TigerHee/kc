@@ -1,0 +1,36 @@
+@import '@/styles/mixin.scss';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 271px 0 0;
+
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    color: var(--kux-text);
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+@include media-query('lg') {
+  .container {
+    padding: 240px 32px 0;
+  }
+}
+
+@include media-query('sm') {
+  .container {
+    padding: 120px 16px 0;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+.collapseItem {
+  margin-bottom: 24px;
+}

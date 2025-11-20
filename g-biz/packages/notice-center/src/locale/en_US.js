@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'en_US',
+  '2HVcFSJMKfjBCfPSUu8PbB': 'Notifications',
+  'all.clear': 'Delete All',
+  'all.read': 'Read All',
+  'confirm': 'Confirm',
+  'delete.message.confirm': 'Are you sure to delete all the notification messages?',
+  'table.empty': 'No data',
+  'today': 'Today',
+  'yesterday': 'Yesterday',
+};

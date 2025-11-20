@@ -1,0 +1,213 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+
+.spanTitle {
+  text-align: left;
+  @media (max-width: 600px) {
+    line-height: 150%;
+  }
+}
+
+.title {
+  color: var(--kux-text);
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 16px;
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.confirm {
+  color: var(--kux-text);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
+.remind {
+  color: var(--kux-text);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 32px 36px;
+  margin-top: 40px;
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: var(--kux-cover8);
+  @media (max-width: 600px) {
+    margin-top: 16px;
+    padding: 24px 20px;
+  }
+}
+
+.checkStyle {
+  margin-top: 40px;
+  padding-left: 3px;
+}
+
+.codeError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    color: red;
+  }
+}
+
+.containerWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--kux-overlay);
+  transition: padding 0.3s;
+  :global {
+    [dir='rtl'] & {
+      .KuxAlert-icon {
+        padding-right: unset;
+        padding-left: 8px;
+      }
+    }
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 580px;
+  margin: 26px auto 88px auto;
+  @media (max-width: 600px) {
+    padding: 0px 16px 88px 16px;
+  }
+}
+
+.tiplist {
+  margin-top: 20px;
+  color: var(--kux-text60);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  list-style-type: disc;
+  padding-left: 14px;
+  li {
+    margin-bottom: 14px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.failedIcon {
+  width: 180px;
+  height: 180px;
+}
+
+.failedText {
+  margin-top: 24px;
+  color: var(--kux-text);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.alertWrapper {
+  margin-top: 12px;
+}
+
+.freezeSubStyle {
+  padding: 4px 0 8px;
+  & > label {
+    margin-bottom: 8px;
+    line-height: 0;
+  }
+}
+
+.desc {
+  color: var(--kux-text60);
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.positionCont {
+  width: 100%;
+  padding: 4px 0;
+  border: 0.6px solid;
+  border-color: var(--kux-cover8);
+  border-radius: 16px;
+  margin-top: 24px;
+}
+
+.positionItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid;
+  border-color: var(--kux-cover8);
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.positionTitle {
+  color: var(--kux-text);
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.positionRow {
+  color: var(--kux-text60);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  span {
+    margin-right: 20px;
+  }
+}
+
+.remindTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: var(--kux-text);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  border-radius: 2px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  color: var(--kux-text60);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+  img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+}
+
+.flexBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+

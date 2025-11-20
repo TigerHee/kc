@@ -1,0 +1,28 @@
+{
+  "name": "@kc/trade",
+  "version": "0.0.1",
+  "description": "交易业务组件",
+  "keywords": [
+    "spot",
+    "futures",
+    "margin",
+    "bot"
+  ],
+  "license": "ISC",
+  "author": "clyne@kupotech.com",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "build-watch": "rm -rf lib && tsc --watch",
+    "sort": "sort-package-json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "typescript": "^5.9.2"
+  }
+}

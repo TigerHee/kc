@@ -1,0 +1,43 @@
+/**
+ * Owner: vijay.zhou@kupotech.com
+ */
+import React from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetServerSideProps, GetServerSidePropsContext } from 'next';
+import { withCommonProps } from '@/tools/withCommonServerProps';
+import { getTenantConfig } from '@/tenant';
+import { safeDynamic } from '@/tools/safeDynamic';
+import { COMMON_GBIZ_TRANS_NS_LIST } from '@/config/base';
+
+const PageRouterComponent = safeDynamic(() => import(/* webpackChunkName: "r__account__kyc__setup__identity-type__index" */ '@/routers/AccountPage/Kyc/Setup/IdentityType'), {
+  ssr: false,
+});
+
+type PageWithActiveBrandKeys = React.FC & {
+  activeSiteConfig?: () => boolean;
+};
+
+const Page: PageWithActiveBrandKeys = () => {
+  return <PageRouterComponent />;
+};
+
+const activeSiteConfig = () => {
+  const tenantConfig = getTenantConfig();
+  return ['KC_ROUTE'].includes(tenantConfig.siteRoute) &&
+  ['global', 'europe'].includes(tenantConfig.kyc.siteRegion);
+};
+
+export const getServerSideProps: GetServerSideProps = withCommonProps({
+  activeSiteConfig,
+})(async (ctx: GetServerSidePropsContext, commonData) => {
+  return {
+    props: {
+      ...commonData,
+      ...(await serverSideTranslations(ctx.locale || 'en', COMMON_GBIZ_TRANS_NS_LIST)),
+    },
+  };
+});
+
+Page.activeSiteConfig = activeSiteConfig;
+
+export default Page;

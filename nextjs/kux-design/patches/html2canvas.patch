@@ -1,0 +1,34 @@
+diff --git a/dist/html2canvas.esm.js b/dist/html2canvas.esm.js
+index dab56ad9b2319b51aea92c3f6cd8929ec8536e4a..faddbe9272d8f9ef69fdf972bd34ef13fb0deab3 100644
+--- a/dist/html2canvas.esm.js
++++ b/dist/html2canvas.esm.js
+@@ -5392,7 +5392,11 @@ var DocumentCloner = /** @class */ (function () {
+                 !child.hasAttribute(IGNORE_ATTRIBUTE) &&
+                 (typeof this.options.ignoreElements !== 'function' || !this.options.ignoreElements(child)))) {
+             if (!this.options.copyStyles || !isElementNode(child) || !isStyleElement(child)) {
+-                clone.appendChild(this.cloneNode(child, copyStyles));
++               if (child && typeof child.hasAttribute === 'function' && child.hasAttribute('data-html2canvas-usechild')) {
++                    clone.appendChild(this.cloneNode(child.firstChild, copyStyles));
++                } else {
++                    clone.appendChild(this.cloneNode(child, copyStyles));
++                }
+             }
+         }
+     };
+diff --git a/dist/html2canvas.js b/dist/html2canvas.js
+index 84cb30d701da7baf13f14107fb28b3ea42db49f6..ad138aaaaf13e54bfe10b5db5ffe83f2a272b964 100644
+--- a/dist/html2canvas.js
++++ b/dist/html2canvas.js
+@@ -5398,7 +5398,11 @@
+                     !child.hasAttribute(IGNORE_ATTRIBUTE) &&
+                     (typeof this.options.ignoreElements !== 'function' || !this.options.ignoreElements(child)))) {
+                 if (!this.options.copyStyles || !isElementNode(child) || !isStyleElement(child)) {
+-                    clone.appendChild(this.cloneNode(child, copyStyles));
++                    if (child && typeof child.hasAttribute === 'function' && child.hasAttribute('data-html2canvas-usechild')) {
++                        clone.appendChild(this.cloneNode(child.firstChild, copyStyles));
++                    } else {
++                        clone.appendChild(this.cloneNode(child, copyStyles));
++                    }
+                 }
+             }
+         };

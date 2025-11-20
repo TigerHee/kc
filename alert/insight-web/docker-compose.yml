@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: '${IMAGE_NAME}' # 从环境变量设置镜像名称
+    ports:
+      - 443:443
+    restart: unless-stopped
+    platform: linux/amd64
+    networks:
+      - insight-network
+networks:
+  insight-network:
+    driver: bridge

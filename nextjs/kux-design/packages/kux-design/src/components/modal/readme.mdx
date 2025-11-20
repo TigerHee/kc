@@ -1,0 +1,239 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ModalStories from './stories';
+
+<Meta title="base/Modal/Readme" />
+{/* <Meta  /> */}
+
+# Modal 对话框
+
+[Figma](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42786-39613&p=f&m=dev)
+
+Modal 对话框是一个在当前页面打开一个浮层，承载相关操作或内容的组件。
+
+## 特性
+
+- 支持多种尺寸和定位方式
+- 支持自定义头部、内容和底部
+- 支持移动端响应式设计
+- 支持抽屉模式
+- 支持嵌套使用
+- 支持静态调用方法
+- 支持异步关闭
+
+## 代码演示
+
+### 基础用法
+
+[Figma对应效果](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42786-40396&m=dev)
+
+最基本的对话框用法。
+
+```tsx
+import { Modal, Button } from '@kucoin/kux-design';
+
+function Demo() {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>打开对话框</Button>
+      <Modal
+        isOpen={visible}
+        title="基础对话框"
+        onClose={() => setVisible(false)}
+      >
+        这是一个基础对话框
+      </Modal>
+    </>
+  );
+}
+```
+
+### 移动端响应式模式
+
+[Figma对应效果](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42824-25721&m=dev)
+
+设置 mobileTransform 属性为 true，移动端会自动适配。相当于之前的 MDialog 组件。
+
+```tsx
+import { Modal, Button } from '@kucoin/kux-design';
+
+function MobileTransform() {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>打开对话框</Button>
+      <Modal
+        isOpen={visible}
+        mobileTransform
+        title="移动端响应式"
+        onClose={() => setVisible(false)}
+      >
+        移动端响应式
+      </Modal>
+    </>
+  );
+}
+```
+
+### 桌面端抽屉模式
+
+[Figma对应效果](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42816-42362&m=dev)
+
+设置 drawTransform 属性为 true，pc端会自动适配为抽屉模式。相当于之前的 Drawer 组件。
+
+```tsx
+import { Modal, Button } from '@kucoin/kux-design';
+
+function DrawTransform() {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>打开对话框</Button>
+      <Modal
+        isOpen={visible}
+        drawTransform
+        title="桌面端抽屉模式"
+        onClose={() => setVisible(false)}
+      >
+        桌面端抽屉模式
+      </Modal>
+    </>
+  );
+}
+```
+
+### full 模式
+
+[Figma对应效果](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42786-40396&m=dev)
+
+设置 mode 属性为 'full'，会适配为铺满屏幕的弹窗。
+
+```tsx
+import { Modal, Button } from '@kucoin/kux-design';
+
+function DrawTransform() {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>打开对话框</Button>
+      <Modal
+        isOpen={visible}
+        mode='full'
+        title="h5 full 模式"
+        onClose={() => setVisible(false)}
+      >
+        h5 full 模式
+      </Modal>
+    </>
+  );
+}
+```
+
+### simple 模式
+
+[Figma对应效果](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42786-40396&m=dev)
+
+设置 mode 属性为 'simple'，会适配为铺满屏幕的弹窗。
+
+```tsx
+import { Modal, Button } from '@kucoin/kux-design';
+
+function DrawTransform() {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setVisible(true)}>打开对话框</Button>
+      <Modal
+        isOpen={visible}
+        mode='simple'
+        title="h5 simple 模式"
+        onClose={() => setVisible(false)}
+      >
+        h5 simple 模式
+      </Modal>
+    </>
+  );
+}
+```
+
+## API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| isOpen | 对话框是否可见 | boolean | false |
+| size | 对话框尺寸 | 'small' \| 'medium' \| 'large' | 'small' |
+| title | 标题 | ReactNode | - |
+| width | 宽度 | string | - |
+| okText | 确认按钮文字 | ReactNode | '确定' |
+| cancelText | 取消按钮文字 | ReactNode | '取消' |
+| onOk | 点击确定回调 | () => void | - |
+| onCancel | 点击取消回调 | () => void | - |
+| onClose | 关闭对话框回调 | () => void | - |
+| mask | 是否显示遮罩层 | boolean | true |
+| maskClosable | 点击遮罩层是否可以关闭 | boolean | true |
+| showCloseX | 是否显示右上角关闭按钮 | boolean | true |
+| header | 自定义头部 | ReactNode | - |
+| footer | 自定义底部 | ReactNode | - |
+| mobileTransform | 是否启用移动端响应式 | boolean | false |
+| drawTransform | 是否以抽屉形式展示 | boolean | false |
+| drawAnchor | 抽屉展开方向 | 'left' \| 'right' | 'right' |
+| isTouchEnabled | 是否支持触摸手势 | boolean | false |
+| footerDirection | 底部按钮排列方向 | 'vertical' \| 'horizontal' | 'horizontal' |
+| closeSync | 是否同步关闭对话框 | boolean | true |
+| zIndex | 设置对话框的 z-index | number | - |
+
+### 静态方法
+
+#### Modal.confirm(config)
+
+`Modal.confirm` 方法用于快速创建一个确认对话框，常用于需要用户确认操作的场景。
+
+```tsx
+Modal.confirm(cfg:
+  Omit<IModalProps, 'children' | 'isOpen' | 'onClose' | 'onOk'> & { content: ReactNode }): Promise<boolean>
+```
+
+参数与 `Modal` 相同，但无需传入 `isOpen`  `onClose` `onOk` `onCancel`, 同时 okText 和 cancelText 也可不传, 使用 setup 中的 getOkText 和 getCancelText 方法获取默认值.
+
+示例:
+```tsx
+import { Modal } from '@kucoin/kux-design';
+
+Modal.confirm({
+  title: '确认操作',
+  content: '您确定要执行此操作吗？',
+}).then(res => {
+  if (res) {
+    console.log('用户点击了确认');
+  } else {
+    console.log('用户点击了取消');
+  }
+});
+```
+
+#### Modal.info(config)
+
+`Modal.info` 方法用于快速创建一个信息提示对话框，常用于展示一些非操作性的提示信息。
+
+```tsx
+Modal.info(cfg: Omit<IModalProps, 'children' | 'isOpen' | 'onClose' | 'onOk'> & { content: ReactNode }): Promise<void>
+```
+
+参数与 `Modal.confirm` 相同, 但是不会显示取消按钮.
+
+
+```tsx
+Modal.info({
+  title: '信息提示',
+  content: '这是一条信息提示',
+});
+```
+
+## 注意事项
+
+1. 在移动端使用时，建议开启 `mobileTransform` 以获得更好的用户体验

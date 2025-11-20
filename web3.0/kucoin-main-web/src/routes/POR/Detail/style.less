@@ -1,0 +1,93 @@
+.por_detail {
+  background: #fff;
+  padding: 44px 0;
+  .table_container{
+    min-width: 590px;
+    display: inline-block;
+    border: 1px solid rgba(115, 126, 141, 0.24);
+    margin-bottom: 40px;
+    &.isSm{
+      min-width: 100%;
+      width: 100%;
+    }
+    :global {
+      table {
+        thead{
+          th{
+            padding: 14px 12px;
+            border-bottom: none;
+            background: #F2F5FA;
+          }
+        }
+        tbody{
+          td{
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+  .btn_copy{
+    margin-bottom: 16px;
+    display: block;
+  }
+  .btn_underline{
+    text-decoration: underline;
+    padding:0 24px;
+    margin-bottom: 10px;
+  }
+  .btn_download{
+    background: #000D1D;
+    display: block;
+    &:hover,&.isDownload{
+      background: #000D1D;
+      opacity: 0.6;
+    }
+  }
+}
+.pro_intro {
+  padding: 44px 0;
+  background: #fafafb;
+  h2{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 24px;
+  }
+  .description{
+    display: flex;
+    margin-bottom: 32px;
+    min-height: 64px;
+    i{
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background:#000D1D;
+      color: #fff;
+      font-weight: 600;
+      font-size: 12px;
+      text-align: center;
+      line-height: 130%;
+      font-style: normal;
+      margin-right: 16px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    div {
+      h3{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color:#000D1D;
+        margin-bottom: 7px;
+      }
+      p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: rgba(0, 13, 29, 0.68);
+        margin:0;
+      }
+    }
+  }
+}

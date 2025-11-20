@@ -1,0 +1,66 @@
+@import '@/styles/mixin.scss';
+
+.wrapperLink {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: var(--color-primary8);
+  border-radius: 4px;
+
+  &.bizActivity {
+    background-color: var(--color-complementary8);
+  }
+}
+
+.styledIcon {
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-left: 16px;
+  margin-right: 12px;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 5px;
+    height: 5px;
+    background: var(--color-secondary);
+    border: 1px solid #fff9f0;
+    border-radius: 100%;
+    content: ' ';
+
+    &.unread {
+      display: block;
+    }
+  }
+  
+}
+
+.closeIcon {
+  margin-left: auto;
+  margin-right: 12px;
+  cursor: pointer;
+  height: 100%;
+  width: 16px;
+  height: 16px;
+}
+
+.title {
+  max-width: px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-complementary);
+
+  &.typeActivity {
+    color: var(--color-primary);
+  }
+
+  &.full {
+    max-width: 587px;
+  }
+}

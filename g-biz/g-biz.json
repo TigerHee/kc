@@ -1,0 +1,30 @@
+{
+  "web_type": "static",
+  "pre_copy": false,
+  "node_version": "v20.17.0",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:20.17.0-bullseye",
+  "offline_params": {
+      "build_cmd": "yarn run build:sit",
+      "dist_copy": {
+          "on_opts": true,
+          "copy_file": "lib",
+          "copy_path": "g-biz",
+          "copy_cmd": "rsync",
+          "exclude_file": [
+              "externals"
+          ],
+          "delete_opts": false
+      },
+      "cdn_copy": {
+          "on_opts": true,
+          "copy_file": "lib",
+          "copy_path": "g-biz",
+          "copy_cmd": "rsync",
+          "exclude_file": [],
+          "delete_opts": false
+      },
+      "other_opts": ""
+  },
+  "url": "ssh://git@bitbucket.kucoin.net/kufd/g-biz.git",
+  "app_type": "web"
+}

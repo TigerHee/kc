@@ -1,0 +1,51 @@
+@import '@/styles/mixin.scss';
+
+.pagination {
+  display: flex;
+  gap: 28px;
+  @include media-query('lg') {
+    gap: 24px;
+  }
+  @include media-query('sm') {
+    gap: 20px;
+  }
+}
+
+.ArrowWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--kux-cover12);
+  border-radius: 28px;
+  cursor: pointer;
+  [dir='rtl'] & {
+    transform: rotate(180deg);
+  }
+  @include media-query('lg') {
+    width: 48px;
+    height: 48px;
+  }
+  @include media-query('sm') {
+    width: 40px;
+    height: 40px;
+  }
+}
+.ArrowWrapDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.ArrowIcon {
+  color: var(--kux-text);
+  width: 28px !important;
+  height: 28px !important;
+  @include media-query('lg') {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  @include media-query('sm') {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}

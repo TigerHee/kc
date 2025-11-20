@@ -1,0 +1,17 @@
+# Ignore artifacts:
+node_modules/
+dist/
+temp/
+logs/
+/node_modules
+/logs
+/output
+/shells/**/*
+!/shells/default.sh
+.env
+pm2-out.log
+pm2-error.log
+.idea/
+old-service/
+
+tempDist/

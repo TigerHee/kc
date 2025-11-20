@@ -1,0 +1,25 @@
+.dialog {
+  :global(.KuxDialog-body) {
+    :global(.KuxDialog-content) {
+      padding: 32px 32px 16px;
+    }
+  }
+}
+.dialogContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 32px 16px;
+}
+
+.imgWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 9px;
+  margin-bottom: 8px;
+  img {
+    max-width: 136px;
+    height: auto;
+    pointer-events: none;
+  }
+}

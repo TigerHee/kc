@@ -1,0 +1,12 @@
+.animatedContentBox {
+  /* 防止布局偏移 */
+  will-change: transform, opacity;
+}
+
+/* SSR 兼容：初始状态隐藏，避免闪现 */
+.hidden {
+  opacity: 0 !important;
+  transform: translateY(50px) !important;
+  /* 禁用过渡效果，避免初始状态闪现 */
+  transition: none !important;
+}

@@ -1,0 +1,654 @@
+@import '~theme/vars';
+@import '~theme/mix.less';
+
+@primary: #24ae8f;
+
+.formWrapper {
+  max-width: 384px;
+  min-height: 50vh;
+  margin: 0 auto !important;
+
+  .formTitle {
+    margin: 48px 0;
+    color: #00142a;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+  }
+
+  :global {
+    .ant-alert-message {
+      font-size: 13px;
+    }
+
+    .KuxAlert-description {
+      margin-top: 0;
+    }
+
+    .KuxAlert-icon {
+      padding-right: 8px;
+      padding-left: unset;
+    }
+  }
+
+  .tip {
+    max-width: 384px;
+    margin: -8px auto 16px auto;
+    border-radius: 5px;
+
+    [dir='rtl'] & {
+      text-align: right;
+    }
+
+    u {
+      cursor: pointer;
+    }
+
+    :global {
+      .ant-alert-message {
+        font-size: 13px;
+      }
+
+      .KuxAlert-description {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .warning {
+    padding: 9px 16px;
+    color: rgba(0, 20, 42, 0.6);
+    font-size: 14px;
+    line-height: 22px;
+    background: rgba(255, 181, 71, 0.12);
+    border: 1px solid rgba(255, 181, 71, 0.12);
+    border-radius: 4px;
+  }
+
+  .formBody {
+    max-width: 384px;
+    margin: 16px auto 0;
+    padding-bottom: 48px;
+    :global {
+      .ant-form-item-required::before {
+        display: none !important;
+      }
+
+      .ant-select-selection {
+        height: auto !important;
+
+        .ant-select-selection-selected-value {
+          line-height: normal !important;
+        }
+      }
+
+      [dir='rtl'] & {
+        .KuxForm-itemRowContainer .KuxCol-col {
+          text-align: right /* rtl:ignore */;
+        }
+      }
+
+      [dir='rtl'] & {
+        .ant-form-item-label {
+          text-align: right;
+        }
+      }
+
+      [dir='rtl'] & {
+        .KuxInput-togglePwdIcon {
+          transform: scaleX(-1);
+        }
+      }
+    }
+  }
+
+  .switchBtn {
+    display: block;
+    margin: -18px 0 24px 0;
+    color: #888;
+    font-size: 13px;
+  }
+}
+
+.mobileCode {
+  :global {
+    .ant-select-dropdown-menu,
+    .ant-select-dropdown-menu-item {
+      padding: 0;
+    }
+  }
+}
+
+.mobileCodeOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  padding: 0 16px;
+  border-bottom: 1px solid #f6f8f9;
+
+  & > span:last-child {
+    color: #9b9b9b;
+  }
+}
+
+.mobileCodeExplain {
+  height: 36px;
+  color: #9b9b9b;
+  font-size: 12px;
+  line-height: 36px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.g2faCode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid rgba(7, 8, 9, 0.16);
+  border-radius: 2px;
+
+  // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  .code {
+    margin-left: 8px;
+    color: @primary;
+    font-size: 13px;
+    word-break: break-all;
+  }
+}
+
+.g2faHelp {
+  & > div {
+    padding-bottom: 24px;
+    color: #333;
+    font-size: 13px;
+
+    &:not(:first-child) {
+      padding-top: 24px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    h4 {
+      position: relative;
+      font-weight: 500;
+      font-size: 16px;
+
+      [dir='rtl'] & {
+        text-align: right;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        width: 6px;
+        height: 6px;
+        border: 1px solid #0f7dff;
+        border-radius: 6px;
+        transform: translateY(-50%);
+        content: ' ';
+      }
+    }
+  }
+
+  .desc {
+    [dir='rtl'] & {
+      text-align: right;
+    }
+  }
+
+  .stores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 148px;
+      height: 48px;
+      border: 1px solid rgba(1, 8, 30, 0.16);
+      border-radius: 4px;
+
+      img {
+        height: 26px;
+        margin-top: 2px;
+      }
+
+      .imgBigger {
+        height: 30px;
+      }
+
+      span {
+        display: inline-block;
+        max-width: 84px;
+        margin-left: 12px;
+        color: #010627;
+        font-size: 12px;
+        font-family: PingFangSC-Regular;
+        line-height: 16px;
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+.sendBtn {
+  display: inline-block;
+  padding: 0;
+}
+
+.success {
+  padding-top: 92px;
+  text-align: center;
+
+  h4 {
+    margin: 16px 0;
+    color: #4a4a4a;
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  p {
+    color: #ff5f73;
+  }
+
+  :global {
+    .anticon {
+      color: #01aa78;
+      font-size: 56px;
+    }
+  }
+}
+
+// cmpt card title
+
+.cmpt_ct_flex {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0px 12px;
+  font-size: 14px;
+  line-height: 20px;
+
+  .mediaQuerySm( {
+      padding: 0
+    }
+
+  );
+}
+
+.cmpt_ct_back {
+  // color: #2dbd96;
+  color: rgba(29, 29, 29, 0.6);
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.cmpt_ct_icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(29, 29, 29, 0.6);
+  transform: rotate(180deg);
+}
+.cmpt_ct_text {
+  margin-left: 8px;
+}
+
+.cmpt_ct_title {
+  margin-left: 8px;
+  padding-left: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border-left: 1px solid #d8d8d8;
+}
+
+.depositTip {
+  display: block;
+  margin-top: 8px;
+  color: #2dbd96;
+  font-size: 12px;
+  text-align: right;
+
+  &:hover {
+    color: #2dbd96;
+  }
+}
+
+.applySuccess {
+  padding-top: 92px;
+  text-align: center;
+
+  img {
+    width: 55px;
+    height: 55px;
+  }
+
+  h4 {
+    margin: 16px 0;
+    color: #4a4a4a;
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  .applyTip {
+    margin: 0;
+    color: #4a4a4a;
+    font-size: 14px;
+  }
+
+  .applyWarning {
+    margin: 0;
+    color: @primary;
+    font-size: 14px;
+  }
+}
+
+.AlertCmpt {
+  margin-bottom: 16px;
+
+  :global {
+    .KuxAlert-description {
+      margin-top: 0;
+    }
+    .KuxAlert-icon {
+      padding-right: 8px;
+      padding-left: unset;
+    }
+  }
+}
+
+.AlertInfo {
+  display: inline-block;
+  color: #333333;
+  font-size: 13px;
+  background-color: rgba(245, 166, 35, 0.2);
+  border: none;
+  border-radius: 5px;
+}
+
+.vcCountrySelector {
+  :global {
+    .ant-select-selection__rendered,
+    .ant-select-selection--single {
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-select-selection__rendered {
+      width: 100%;
+    }
+  }
+}
+
+.safePageTip {
+  background: rgba(253, 168, 41, 0.08) !important;
+  border: 1px solid rgba(253, 168, 41, 0.08) !important;
+
+  :global {
+    .ant-alert-message {
+      color: #333333 !important;
+    }
+  }
+}
+
+.alertMessage {
+  & > div {
+    text-align: left;
+
+    &:nth-child(1) {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.prompt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+  margin-bottom: 24px;
+  padding: 11px 0;
+  padding: 8px 12px;
+  font-size: 13px;
+  text-align: center;
+  background: rgba(245, 166, 35, 0.08);
+  border-radius: 5px;
+
+  a {
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    color: #f5a623;
+  }
+}
+
+.withMinHeight {
+  min-height: 680px;
+}
+
+.promptContent {
+  flex: 1;
+  text-align: left /* rtl:right */;
+  word-break: break-all;
+
+  & > div:not(:first-child) {
+    margin-top: 0.5em;
+  }
+}
+
+.deleteformWrapper {
+  .formTitle {
+    margin: 20px auto 24px auto;
+    font-weight: 500;
+  }
+
+  > * {
+    max-width: 416px;
+    margin: 12px auto;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .delTip {
+    margin: 24px auto 16px auto;
+    font-size: 14px;
+    line-height: 22px;
+    border: 1px solid rgba(115, 126, 141, 0.16);
+    border-radius: 8px;
+    counter-reset: index;
+  }
+
+  .delTipTitle {
+    margin-bottom: 4px;
+    color: #00142a;
+    font-weight: 500;
+  }
+
+  .reasonTitle {
+    margin-bottom: 8px;
+    color: #00142a;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .tipItem {
+    display: flex;
+    flex-direction: row;
+    color: rgba(0, 20, 42, 0.6);
+
+    &::before {
+      margin-right: 4px;
+      content: counter(index) '. ';
+      counter-increment: index;
+    }
+  }
+
+  .delformBody {
+    margin: 16px auto;
+    border: 1px solid rgba(115, 126, 141, 0.16);
+    border-radius: 8px;
+  }
+
+  .delReasons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .delReasons,
+  .noticeCheck {
+    :global {
+      .ant-checkbox-wrapper {
+        display: flex;
+        color: rgba(0, 20, 42, 0.6);
+      }
+
+      .ant-checkbox.ant-checkbox-checked + span {
+        color: #2dbd96;
+      }
+
+      .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #2dbd96;
+        border-color: #2dbd96;
+      }
+
+      .ant-checkbox-checked:after {
+        border-color: #2dbd96;
+      }
+
+      .ant-checkbox {
+        height: 14px;
+        margin-top: 5px;
+      }
+
+      .ant-checkbox-input {
+        height: auto;
+      }
+
+      .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .readNotice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 14px;
+
+    .noticeCheck {
+      margin-bottom: 8px;
+      margin-left: 14px;
+
+      :global {
+        .ant-checkbox.ant-checkbox-checked + span {
+          color: rgba(0, 20, 42, 0.6);
+        }
+      }
+    }
+
+    .noticeFooter {
+      margin-top: 12px;
+      color: rgba(0, 20, 42, 0.4);
+      font-size: 12px;
+      line-height: 20px;
+
+      a {
+        color: #21c397;
+      }
+    }
+  }
+}
+
+.promtAlert {
+  color: #eb6666;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.delSuccessContent {
+  display: flex;
+  flex-direction: column;
+
+  > img,
+  > span {
+    margin: 0 auto;
+  }
+
+  img {
+    width: 48px;
+    height: 48px;
+  }
+
+  > span {
+    padding: 12px 0 24px 0;
+    color: #00142a;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.formTitle {
+  margin-bottom: 40px;
+  color: #00142a;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.linkbtn {
+  color: #2dbd96;
+}
+
+.linkbtn:hover {
+  color: #2dbd96;
+}
+
+.abnormalBox {
+  margin-bottom: 24px;
+
+  & > div > span {
+    padding: 0;
+    color: #21c397 !important;
+    font-size: 12px;
+    line-height: unset;
+  }
+}
+
+.abnormalBtn {
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+}
+
+.alertWrapper {
+  margin-bottom: 24px;
+
+  :global {
+    .KuxAlert-description {
+      margin-top: 0;
+    }
+
+    .KuxAlert-icon {
+      padding-right: 8px;
+      padding-left: unset;
+    }
+  }
+}

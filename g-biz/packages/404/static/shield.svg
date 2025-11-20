@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="159px" viewBox="0 0 130 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>盾牌</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="6.04391733%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4AD7C2" offset="0%"></stop>
+            <stop stop-color="#24AE8F" offset="100%"></stop>
+        </linearGradient>
+        <path d="M115.350554,16.4732326 C114.02214,16.5472592 112.767528,16.5472592 111.439114,16.5472592 C78.0811808,16.5472592 63.3948339,1.5938853 63.3210332,1.4458321 C61.6236162,-0.404832987 58.7453875,-0.47885959 56.900369,1.22375229 L56.6789668,1.4458321 C56.5313653,1.5938853 41.0332103,17.7316848 4.64944649,16.4732326 C2.1402214,16.399206 0.073800738,18.3238977 0,20.8408022 L0,84.2075746 C0,101.973959 6.05166052,127.883271 58.3763838,147.7224 C59.4095941,148.092533 60.5904059,148.092533 61.6236162,147.7224 C113.948339,127.883271 120,101.973959 120,84.2075746 L120,20.9888554 C120,18.4719509 118.00738,16.4732326 115.498155,16.4732326 L115.350554,16.4732326 L115.350554,16.4732326 Z" id="path-2"></path>
+        <filter x="-8.8%" y="-3.7%" width="117.5%" height="114.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.56384938   0 0 0 0 0.722061821   0 0 0 0 0.600368587  0 0 0 0.212139423 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-15.0%" y="-8.8%" width="130.0%" height="125.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="8.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0648674586   0 0 0 0 0.635296563   0 0 0 0 0.637737772  0 0 0 0.380982299 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="-2" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.789824695   0 0 0 0 0.888045825   0 0 0 0 1  0 0 0 0.222710883 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="73.2349403%" y1="104.154972%" x2="27.405711%" y2="30.2760591%" id="linearGradient-5">
+            <stop stop-color="#A4FFBD" offset="0%"></stop>
+            <stop stop-color="#C8FFF7" offset="99.6436867%"></stop>
+        </linearGradient>
+        <path d="M53.7796663,93.4004706 C49.913673,93.4004706 46.7796663,90.2664639 46.7796663,86.4004706 C46.7796663,82.5344774 49.913673,79.4004706 53.7796663,79.4004706 L72.7786663,79.4004706 L72.7796663,36.4004706 C72.7796663,32.5344774 75.913673,29.4004706 79.7796663,29.4004706 C83.6456595,29.4004706 86.7796663,32.5344774 86.7796663,36.4004706 L86.7796663,86.4004706 L86.7796663,86.4004706 C86.7796663,90.2664639 83.6456595,93.4004706 79.7796663,93.4004706 L53.7796663,93.4004706 Z" id="path-6"></path>
+        <filter x="-20.0%" y="-6.2%" width="140.0%" height="125.0%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0284129634   0 0 0 0 0.401268116   0 0 0 0 0.317510799  0 0 0 0.203070367 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-21.2%" y="-7.0%" width="142.5%" height="126.6%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="3" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="-2" dy="-3" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.779094417   0 0 0 0 1   0 0 0 0 0.728353659  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="404" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="注册-状态展示" transform="translate(-1142.000000, -468.000000)">
+            <g id="盾牌" transform="translate(1147.000000, 468.000000)">
+                <g id="路径" opacity="0.748000372" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                </g>
+                <g id="形状结合" transform="translate(66.779666, 61.400471) rotate(-315.000000) translate(-66.779666, -61.400471) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                    <use fill="url(#linearGradient-5)" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-6"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

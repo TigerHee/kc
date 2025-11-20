@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="video">
+<path id="Vector" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.66 13.73L13.38 14.47L12.1 15.21C10.45 16.16 9.1 15.38 9.1 13.48V12V10.52C9.1 8.61 10.45 7.84 12.1 8.79L13.38 9.53L14.66 10.27C16.31 11.22 16.31 12.78 14.66 13.73Z" fill="url(#paint0_linear_1877_105526)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1877_105526" x1="-3.09192" y1="11.5644" x2="29.5996" y2="11.5644" gradientUnits="userSpaceOnUse">
+<stop stop-color="#01BC8D"/>
+<stop offset="1" stop-color="#01BC8D" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'ms_MY',
+  '2HVcFSJMKfjBCfPSUu8PbB': 'Notifikasi',
+  'all.clear': 'Padamkan Semua',
+  'all.read': 'Baca Semua',
+  'confirm': 'OK',
+  'delete.message.confirm': 'Mahu padamkan semua mesej?',
+  'table.empty': 'Tiada data',
+  'today': 'Hari ini',
+  'yesterday': 'Semalam',
+};

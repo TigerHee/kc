@@ -1,0 +1,227 @@
+{
+  "siteType": "europe",
+  "basicProperties": {
+    "siteName": "欧洲站",
+    "shareGlobalAccount": 1,
+    "walletType": 2,
+    "storageType": 2,
+    "siteDomainType": 1,
+    "siteDomain": "www.kucoin.com",
+    "siteRegion": "eu",
+    "brandType": 2,
+    "logoType": 2
+  },
+  "extProperties": [],
+  "functions": [
+    {
+      "code": "api_broker",
+      "value": true
+    },
+    {
+      "code": "fast_trade",
+      "value": true
+    },
+    {
+      "code": "spot_growth",
+      "value": true
+    },
+    {
+      "code": "3rd_party",
+      "value": false
+    },
+    {
+      "code": "convert",
+      "value": true
+    },
+    {
+      "code": "seo",
+      "value": true
+    },
+    {
+      "code": "trading_bot",
+      "value": false
+    },
+    {
+      "code": "financial_system",
+      "value": true
+    },
+    {
+      "code": "kyc",
+      "value": true
+    },
+    {
+      "code": "home_page",
+      "value": true
+    },
+    {
+      "code": "affiliate",
+      "value": true
+    },
+    {
+      "code": "nd_broker",
+      "value": false
+    },
+    {
+      "code": "spot",
+      "value": true
+    },
+    {
+      "code": "option",
+      "value": false
+    },
+    {
+      "code": "reconciliation_system",
+      "value": true
+    },
+    {
+      "code": "etf",
+      "value": true
+    },
+    {
+      "code": "payment",
+      "value": true
+    },
+    {
+      "code": "kucard",
+      "value": true
+    },
+    {
+      "code": "platform_growth",
+      "value": true
+    },
+    {
+      "code": "tax_platform",
+      "value": true
+    },
+    {
+      "code": "copy_trading",
+      "value": false
+    },
+    {
+      "code": "loan",
+      "value": false
+    },
+    {
+      "code": "data_center",
+      "value": true
+    },
+    {
+      "code": "invite_rebate",
+      "value": true
+    },
+    {
+      "code": "api",
+      "value": true
+    },
+    {
+      "code": "message_center",
+      "value": true
+    },
+    {
+      "code": "margin",
+      "value": true
+    },
+    {
+      "code": "web3_wallet",
+      "value": true
+    },
+    {
+      "code": "customer_service_system",
+      "value": true
+    },
+    {
+      "code": "financing",
+      "value": true
+    },
+    {
+      "code": "personal_center",
+      "value": true
+    },
+    {
+      "code": "rebate_business",
+      "value": true
+    },
+    {
+      "code": "p2p",
+      "value": false
+    },
+    {
+      "code": "search",
+      "value": true
+    },
+    {
+      "code": "fiat_deposit",
+      "value": true
+    },
+    {
+      "code": "futures",
+      "value": true
+    },
+    {
+      "code": "risk_control_system",
+      "value": true
+    },
+    {
+      "code": "currency",
+      "value": true
+    },
+    {
+      "code": "k_line",
+      "value": true
+    },
+    {
+      "code": "kucoin_pay",
+      "value": false
+    },
+    {
+      "code": "basic_bench",
+      "value": true
+    },
+    {
+      "code": "express",
+      "value": true
+    },
+    {
+      "code": "ucenter",
+      "value": true
+    },
+    {
+      "code": "activity_bench",
+      "value": true
+    },
+    {
+      "code": "kyb",
+      "value": true
+    },
+    {
+      "code": "compliance_exhibition_platform",
+      "value": true
+    }
+  ],
+  "bizConfigs": [
+    {
+      "code": "contract_liquidity",
+      "value": "ats"
+    },
+    {
+      "code": "shield_currency",
+      "value": "USDT"
+    },
+    {
+      "code": "spot_liquidity",
+      "value": "ats"
+    },
+    {
+      "code": "is_allowed_multilevel_rebate",
+      "value": "not_allow_multi"
+    },
+    {
+      "code": "quote_currency",
+      "value": "USDC"
+    },
+    {
+      "code": "rebate_range",
+      "value": "cross_site_rebate"
+    }
+  ]
+}

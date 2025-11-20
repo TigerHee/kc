@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="安全设置" transform="translate(-559.000000, -430.000000)">
+            <g id="Group-8" transform="translate(559.000000, 430.000000)">
+                <path d="M12,0 C5.37225,0 0,5.37 0,12 C0,18.63 5.37225,24 12,24 C18.62775,24 24,18.63 24,12 C24,5.37 18.62775,0 12,0 Z" id="Path" fill="#FFD8DD"></path>
+                <path d="M16.24275,15.18 C16.536,15.4725 16.536,15.9525 16.24275,16.245 C15.95025,16.5375 15.47475,16.5375 15.1815,16.245 L12.0045,13.065 L8.805,16.2675 C8.5095,16.56 8.031,16.56 7.7355,16.2675 C7.44075,15.9675 7.44075,15.4875 7.7355,15.195 L10.935,11.9925 L7.758,8.82 C7.46475,8.5275 7.46475,8.0475 7.758,7.755 C8.04975,7.4625 8.52525,7.4625 8.8185,7.755 L11.9955,10.935 L15.219,7.71 C15.5145,7.4175 15.99225,7.4175 16.28775,7.71 C16.5825,8.01 16.5825,8.4825 16.28775,8.7825 L13.065,12.0075 L16.24275,15.18 Z" id="Path" fill="#E2485B"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,43 @@
+body {
+
+  .pwdInput{
+    // background: rgba(184,198,216,0.08);
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+    height: 40px;
+    font-size: 16px;
+    width: 40px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:not(:first-of-type) {
+      margin-left: 12px;
+    }
+    &.active{
+      box-shadow: none;
+      outline: none;
+      // border: 1px solid #1ABB97;
+    }
+  }
+  .pwdRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hiddenInput{
+    opacity: 0;
+    height: 0;
+    // width: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // pointer-events: none;
+  }
+
+  .pwdWrapper{
+    position: absolute!important;
+  }
+}

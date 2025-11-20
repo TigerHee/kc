@@ -1,0 +1,101 @@
+@import "@/styles/mixin.scss";
+
+.coinBaseInfoBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @include media-query("sm") {
+    margin-bottom: 12px;
+  }
+}
+
+.selectWrapper {
+  min-width: 111px;
+  margin-left: auto;
+  .KuxSelect-root {
+    fieldset {
+      right: 0 !important;
+    }
+  }
+}
+
+// CoinName styles
+.coinWrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.coinIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 11px;
+  object-fit: cover;
+  border: none;
+  @include media-query("sm") {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
+}
+
+.coinNameBox {
+  flex: 1;
+  h1 {
+    display: inline;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  div {
+    display: inline;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.coinFullName {
+  margin: 0 8px 0 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--color-text);
+  word-break: break-all;
+  @include media-query("sm") {
+    margin: 0;
+    font-size: 20px;
+  }
+}
+
+.coinName {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0px;
+  font-weight: 400;
+  color: var(--color-text40);
+  @include media-query("sm") {
+    font-size: 16px;
+  }
+}
+
+
+.alertWrapper {
+  display: flex;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  align-items: flex-start;
+  word-break: break-word;
+  border-radius: 8px;
+  font-weight: 400;
+  background: rgba(248, 178, 0, 0.08);
+  gap: 8px;
+
+  .alert {
+    color: rgba(29, 29, 29, 0.6);
+    font-size: 14px;
+    margin: 0px;
+    line-height: 130%;
+  }
+}
+

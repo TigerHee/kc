@@ -1,0 +1,32 @@
+@import 'src/styles/mixin.scss';
+
+.container {
+  color: var(--kux-buttonColorPrimary);
+  font-size: 16px;
+}
+
+.labelTitle {
+  color: var(--kux-text60);
+  display: flex;
+  align-items: center;
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--kux-text60);
+    margin-right: 8px;
+  }
+}
+
+.inputWrapper {
+  display: block;
+  
+  &.hidden {
+    display: none;
+  }
+}

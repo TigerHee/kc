@@ -1,0 +1,8 @@
+// 用户迁移的顶飘类型
+export const TRANSFER_NOTICE_TYPE = 'TRANSFER_NOTICE_TYPE';
+
+// 英国规则限制的顶飘类型
+export const ENGLAND_DISMISS_NOTICE_TYPE = 'ENGLAND_DISMISS_NOTICE_TYPE';
+
+// IP限制的顶飘类型
+export const IP_DISMISS_NOTICE_TYPE = 'IP_DISMISS_NOTICE_TYPE';

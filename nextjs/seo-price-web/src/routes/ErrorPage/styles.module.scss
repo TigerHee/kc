@@ -1,0 +1,59 @@
+@import "@/styles/mixin.scss";
+
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #ffffff;
+  margin-top: -24px;
+  text-align: center;
+  background-color: #192399;
+  background-image: radial-gradient(circle at 50% 20%, #192399, #0f1248);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1024px;
+  height: 1024px;
+  background-image: get-asset('/static/global/code_bg.svg');
+  background-repeat: no-repeat;
+
+  background-position: center;
+  background-size: 100% 100%;
+
+  [dir="rtl"] & {
+    direction: ltr;
+  }
+
+  &[data-code="404"] {
+    background-image: get-asset('/static/global/code_bg_404.svg');
+  }
+
+  h1 {
+    margin-bottom: 49px;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  .backHome {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 100px;
+    color: #ffffff;
+
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    background: #0d75ee;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

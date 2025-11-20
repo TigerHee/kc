@@ -1,0 +1,19 @@
+@import '@/styles/mixin.scss';
+
+.priceAllBoxWrap {
+  background-color: #fff;
+  min-height: 80vh;
+}
+
+.priceAllMain {
+  padding: 0 24px;
+  
+  @include media-query('lg') {
+  padding: 0 16px;
+  }
+}
+
+.priceAllList {
+  max-width: 1200px;
+  margin: 0 auto;
+}

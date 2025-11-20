@@ -1,0 +1,21 @@
+@import 'src/styles/mixin.scss';
+
+.SvgIcon {
+  width: 16px;
+  height: 16px;
+  filter: drop-shadow(16px 0px var(--color-primary));
+  transform: translateX(-16px);
+  @include media-query('sm') {
+    width: 12px;
+    height: 12px;
+  }
+  [dir='rtl'] & {
+    transform: translateX(16px);
+  }
+}
+
+.IconWrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}

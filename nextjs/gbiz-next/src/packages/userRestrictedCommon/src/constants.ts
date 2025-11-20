@@ -1,0 +1,16 @@
+export const ONE_DAY_TIMESTAMP = 24 * 60 * 60 * 1000;
+
+export const ACCOUNT_TRANSFER_SPECIAL_DIALOG = 'ACCOUNT_TRANSFER_SPECIAL_DIALOG';
+export const ACCOUNT_TRANSFER_HOMEPAGE_SPECIAL_DIALOG = 'ACCOUNT_TRANSFER_HOMEPAGE_SPECIAL_DIALOG';
+
+/**
+ * 用户能否迁移开关的路由配置
+ *
+ * 首页: FRONT_PAGE
+ * 业务的页面: BIZ_PAGE
+ *
+ */
+
+export const FRONT_PAGE = 'FRONT_PAGE';
+export const BIZ_PAGE = 'BIZ_PAGE';
+

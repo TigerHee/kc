@@ -1,0 +1,49 @@
+.select {
+  width: 250px;
+  .langItem {
+    display: inline-block;
+    width: 50%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background: #eee;
+    }
+    &.bgGray {
+      color: #0093dd;
+      background: #eee;
+    }
+  }
+}
+
+.selectPop {
+  :global {
+    .ant-popover-arrow {
+      top: 5px !important;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.pointer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    i {
+      transform: scale(0.6) rotate(180deg);
+    }
+  }
+  i {
+    transform: scale(0.6);
+    transition: transform 0.2s;
+  }
+}
+
+.displayArrow {
+  transform: rotate(180deg);
+}

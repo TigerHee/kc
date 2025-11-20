@@ -1,0 +1,17 @@
+{
+  "packages": ["packages/*"],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "**/*.md",
+        "**/.neeko.config.js"
+      ]
+    },
+    "bootstrap": {
+      "ignore": "component-*"
+    }
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

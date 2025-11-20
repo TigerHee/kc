@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "24時間365日安全で簡単にグローバル取引。",
+  "evsRWTcozWk2pEFSUsfw28": "短時間で口座を開設し、市場にアクセス。",
+  "jpbjxHSFSvzbMtW9MsUSh6": "24時間365日いつでも利用可能。",
+  "mNJrrvGzgxR6JhQ8u82crp": "レビュー数8万以上",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "認証、入金、仮想通貨購入をすぐにできます。",
+  "rw8e32A8H7X3QtiKHS37EK": "ダウンロード",
+  "tXwwyoSbqG4pgsoXomccjp": "{{brandName}}アプリをダウンロードして最大{{{num}}} {{siteBaseCurrency}}の報酬を獲得しましょう。",
+  "7dhofXiN9vaVRtVSNY9eCc": "新規ユーザー特典",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "今すぐ請求",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>500万超</1>ダウンロード",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(10万件超のレビュー)",
+  "qqJX78TFyekdKwwT6nVVWU": "(1.6万件超のレビュー)",
+  "awPHBDRwtLBxNEMctyUMJZ": "新規ユーザー限定：初回入金または仮想通貨購入が50ドルを超えると、最大<span>500ドル</span>相当のミステリーボックスをプレゼントします。",
+  "bc25RyyCduDizpfpxEcMEi": "ダウンロード",
+  "csjK9uyQQyYMLprAYkKsRT": "{{brandName}}アプリをダウンロードして仮想通貨の旅を続け、初心者ゾーンで最大<span>500ドル</span>の報酬を受け取りましょう。",
+  "oiiFHQ3NZu5zSYqpSGreye": "初めて仮想通貨を入金または購入すると、最大<span>500ドル</span>相当のミステリーボックスを獲得します。",
+  "pgBahZcxwoUfbjzJwqpmY7": "新規ユーザーには最大<span>500ドル</span>の報酬をプレゼント！",
+  "wLAfc8MZvoHbeNragecB4Z": "モバイルアプリでより安全で迅速な取引を。"
+}

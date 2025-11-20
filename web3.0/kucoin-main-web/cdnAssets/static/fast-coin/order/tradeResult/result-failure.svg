@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="86px" viewBox="0 0 92 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>失败-白</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-539.000000, -234.000000)">
+            <g id="失败-白" transform="translate(544.000000, 249.000000)">
+                <g id="钱包" transform="translate(26.000000, 0.000000)">
+                    <rect id="矩形" fill="#E1E4E5" transform="translate(21.183106, 21.280647) rotate(-56.000000) translate(-21.183106, -21.280647) " x="4.78310559" y="8.48064737" width="32.8" height="25.6"></rect>
+                    <rect id="矩形" fill="#EFEFEF" transform="translate(30.000000, 25.649168) rotate(-28.000000) translate(-30.000000, -25.649168) " x="13.6" y="12.8491682" width="32.8" height="25.6"></rect>
+                    <rect id="矩形" fill="#DADEE1" x="0" y="19.2" width="52" height="39.2" rx="3.2"></rect>
+                    <rect id="矩形" fill="#F6F6F6" x="38.4" y="33.6" width="16.8" height="11.2" rx="1.6"></rect>
+                    <circle id="椭圆形" fill="#D2D5D6" cx="44" cy="39.2" r="2.4"></circle>
+                </g>
+                <g id="成功" transform="translate(0.000000, 11.000000)">
+                    <circle id="椭圆形" fill="#DB5E5E" cx="30" cy="30" r="30"></circle>
+                    <g id="16/Selected" transform="translate(30.000000, 30.500000) rotate(-45.000000) translate(-30.000000, -30.500000) translate(12.000000, 12.000000)" fill="#FFFFFF">
+                        <polygon id="Path" transform="translate(17.890858, 18.527564) rotate(-315.000000) translate(-17.890858, -18.527564) " points="5.37161851 27.7322403 27.095535 6.00832381 30.410098 9.32288685 8.68618154 31.0468033"></polygon>
+                        <polygon id="Path" transform="translate(17.890858, 18.527564) rotate(-45.000000) translate(-17.890858, -18.527564) " points="5.37161851 27.7322403 27.095535 6.00832381 30.410098 9.32288685 8.68618154 31.0468033"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

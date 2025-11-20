@@ -1,0 +1,15 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-text 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'text'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('text') {
+  color: get-theme(text);
+  word-break: break-word;
+  margin: 0;
+
+  &_link {
+    color: get-theme(brandGreen);
+  }
+}

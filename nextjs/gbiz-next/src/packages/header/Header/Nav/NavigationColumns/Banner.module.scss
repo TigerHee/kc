@@ -1,0 +1,65 @@
+.bannerContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 32px 16px;
+  color: var(--kux-text40);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.functionTitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  color: var(--kux-text);
+}
+
+.functionDesc {
+  margin-top: 10px;
+}
+
+.functionButton {
+  margin-top: 40px;
+}
+
+.activityTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.imageBox {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .activityImage {
+    width: 100%;
+    border-radius: 12px;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.activityName {
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text);
+}
+
+.activityDesc {
+  margin-top: 4px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.rightBorder {
+  border-right: 1px solid var(--kux-divider8);
+}
+.leftBorder {
+  border-left: 1px solid var(--kux-divider8);
+}

@@ -1,0 +1,46 @@
+.activityPageWrapper {
+  min-height: 80vh;
+  padding-bottom: 240px;
+  background: #0b193d;
+  background-clip: unset !important;
+  .activityPageContent {
+    width: 800px;
+    margin: 0 auto;
+    :global {
+      .ant-tabs-tab {
+        width: 400px;
+        height: 48px;
+        margin: 0 !important;
+        padding: 0;
+        color: #d2dcef;
+        font-size: 16px;
+        line-height: 48px;
+        text-align: center;
+        background: linear-gradient(-135deg, #243352 0%, #1e335b 99%, #0f7dff 100%);
+        &:after {
+          display: none;
+        }
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        &:last-child {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+        &.ant-tabs-tab-active {
+          background: #554dff !important;
+        }
+      }
+      .ant-tabs-ink-bar {
+        display: none !important;
+      }
+      .ant-tabs-bar {
+        margin: 36px 0;
+      }
+    }
+  }
+  .fullPageContent {
+    width: 100%;
+  }
+}

@@ -1,0 +1,56 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  margin-bottom: 32px;
+
+  @include media-query('sm') {
+    margin-bottom: 20px;
+  }
+
+  .price_tabs {
+    :global(.KuxTabs-scroller) {
+      :global(.KuxTabs-Container) {
+        width: max-content !important;
+        div {
+          font-size: 20px !important;
+          transition: none !important;
+          @include media-query('sm') {
+            font-size: 15px !important;
+            }
+        }
+      }
+    }
+  }
+}
+
+.strickWrapper {
+  padding-bottom: 0px;
+  background: #fff;
+  z-index: 99;
+
+  position: relative;
+  top: 0px;
+
+  &.sticky {
+    position: fixed;
+  }
+}
+
+.labelWrapper {
+  position: relative;
+  padding: 0 5px;
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.dot {
+  position: absolute;
+  right: 1px;
+  top: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #f65454;
+  
+}

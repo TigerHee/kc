@@ -1,0 +1,145 @@
+.shareMobile {
+  height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  :global {
+    .KuxDialog-header,
+    .KuxDialog-footer {
+      display: none;
+    }
+    .KuxDialog-content {
+      width: 100% !important;
+      height: 100% !important;
+      padding: 0 !important;
+    }
+  }
+}
+
+.shareContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contentCenter {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+
+    .poster {
+      width: 240px;
+    }
+  }
+
+  .shareView {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+
+    .top {
+      width: 100%;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 12px;
+      font-size: 18px;
+      line-height: 30px;
+      position: relative;
+      color: #00142a;
+      font-weight: 500;
+
+      .closeIcon {
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        padding: 7px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .shareList {
+      width: 100%;
+      margin-top: 4px;
+      padding-bottom: 24px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .shareItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: auto;
+        padding: 8px 0;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        span {
+          font-size: 12px;
+          color: rgba(0, 20, 42, 0.6);
+          line-height: 14px;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+.dark_view {
+  background: #11151F !important;
+  * {
+    color: #fff !important;
+  }
+}
+
+.dark_svg_for_copy {
+  :global {
+    .J-first-path {
+      stroke: #fff !important;
+      stroke-opacity: 0.3;
+    }
+    path {
+      stroke: #fff !important;
+      stroke-opacity: 1;
+    }
+    rect {
+      stroke: #fff !important;
+      stroke-opacity: 1;
+    }
+  }
+}
+
+.dark_svg_for_save {
+  :global {
+    .J-save-first-path {
+      stroke: #fff !important;
+      stroke-opacity: 0.3;
+    }
+    .J-save-second-path {
+      fill: #fff !important;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+  background-color: #FFFFFF;
+  .content {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 24px;
+      color: #01081E;
+      line-height: 36px;
+      font-weight: 500;
+    }
+    .kcs {
+      font-size: 12px;
+      color: rgba(1,8,30,0.38);
+      line-height: 22px;
+      margin-left: 4px;
+    }
+    .table {
+      margin-top: 16px;
+      :global {
+        .ant-table-thead {
+          th {
+            border-bottom: none;
+            .ant-table-column-title {
+              font-size: 14px;
+              color: rgba(1,8,30,0.6);
+            }
+          }
+        }
+        .ant-table-tbody {
+          td {
+            font-size: 16px;
+            color: #01081E;
+          }
+          tr:hover {
+            td {
+              background: #fff;
+            }
+          }
+        }
+        .ant-table-content {
+          .ant-table-placeholder {
+            border-bottom: none;
+            .ant-empty-image {
+              height: 80px;
+              background-image: url(~assets/showcase/staking/no-data-bg.svg);
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              svg {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      &.noLoginTable {
+        .noLogin {
+          height: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a {
+            text-decoration: underline;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  .wrapper {
+    padding: 0 ~`px2rem(16)` ~`px2rem(28)` ~`px2rem(16)`;
+    .content {
+      width: 100%;
+      .title {
+        font-size: ~`px2rem(20)`;
+        line-height: ~`px2rem(36)`;
+      }
+      .kcs {
+        font-size: ~`px2rem(12)`;
+        line-height: ~`px2rem(22)`;
+        margin-left: ~`px2rem(4)`;
+      }
+      .table {
+        margin-top: ~`px2rem(12)`;
+        :global {
+          .ant-table-thead {
+            th {
+              padding: ~`px2rem(16)`;
+              .ant-table-column-title {
+                font-size: ~`px2rem(12)`;
+              }
+            }
+          }
+          .ant-table-tbody {
+            td {
+              padding: ~`px2rem(16)`;
+              font-size: ~`px2rem(16)`;
+            }
+          }
+          .ant-table-content {
+            .ant-table-placeholder {
+              .ant-empty-image {
+                height: ~`px2rem(80)`;
+              }
+            }
+          }
+        }
+        &.noLoginTable {
+          .noLogin {
+            height: ~`px2rem(150)`;
+          }
+        }
+      }
+    }
+  }
+}

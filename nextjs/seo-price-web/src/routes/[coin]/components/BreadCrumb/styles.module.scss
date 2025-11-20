@@ -1,0 +1,24 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  svg#share {
+    [dir="rtl"] & {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.extendedLink {
+  color: inherit;
+}
+
+.breadCrumbStyled {
+  flex: 1;
+  [dir="rtl"] & .rightArrow {
+    transform: rotate(180deg);
+  }
+}

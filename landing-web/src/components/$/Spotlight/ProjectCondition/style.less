@@ -1,0 +1,86 @@
+.condition {
+  margin-bottom: 18px;
+}
+
+.head {
+  color: #D4DAEC;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 16px;
+
+  .title {
+    font-size: 18px;
+    margin-right: 9px;
+    vertical-align: middle;
+  }
+  .note {
+    font-size: 12px;
+    vertical-align: middle;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 15px;
+    background: #0F7DFF;
+    border-radius: 4px;
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+}
+
+.conditionIcon {
+  height: 53px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 21px;
+}
+
+@box-size: (800 /4 ) - 12px;
+@box3-size: (800 /3 ) - 12px;
+
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  .box {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+
+      display: none;
+    }
+
+    &:hover .arrow{
+      display: block;
+    }
+  }
+  &[data-col="3"] {
+    .box {
+      width: @box3-size;
+      height: @box3-size;
+    }
+  }
+  &[data-col="4"] {
+    .box {
+      width: @box-size;
+      height: @box-size;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "build_report_url": "https://jenkins.kcprd.com/job/code-check/job/ci-web-build/4071/",
+  "check_report_url": "https://check-web-node.sit.kucoin.net/app/projects/website/dashboard",
+  "project": "website",
+  "user": "Clyne@kupotech.com",
+  "commit_id": "8dc0314e5c70b64e66f8b11721a8507f2a40af1a",
+  "branch": "release/futures-multi-brand",
+  "commit_url": "https://bitbucket.kucoin.net/projects/KUWE/repos/website/commits/8dc0314e5c70b64e66f8b11721a8507f2a40af1a",
+  "pipeline_table": [
+    {
+      "item": "INFRA",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "E2E",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "KUXOLD",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "NEXUS",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "OWNER:CHECK",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "SIZE",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "TYPESCRIPT",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "ESLINT",
+      "result": "✅ 通过",
+      "reason": "🈚️"
+    },
+    {
+      "item": "UNITS",
+      "result": "✅ 通过",
+      "reason": "<font color='red'>--0.56%</font>"
+    }
+  ],
+  "coverage_table": [
+    {
+      "type": "lines",
+      "total": "1586",
+      "covered": "1470",
+      "percentage": "92.68%"
+    },
+    {
+      "type": "statements",
+      "total": "1676",
+      "covered": "1543",
+      "percentage": "92.06%"
+    },
+    {
+      "type": "functions",
+      "total": "424",
+      "covered": "378",
+      "percentage": "89.15%"
+    },
+    {
+      "type": "branches",
+      "total": "923",
+      "covered": "771",
+      "percentage": "83.53%"
+    }
+  ]
+}

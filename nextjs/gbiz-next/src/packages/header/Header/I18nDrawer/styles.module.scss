@@ -1,0 +1,41 @@
+@import 'src/styles/mixin.scss';
+
+.cusDrawer {
+  :global {
+    .kux-modal-content {
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      height: 100%;
+    }
+  }
+}
+
+.headerCloseWrapper {
+  position: relative;
+  height: 80px;
+  padding: 0 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  inset-inline-end: 32px;
+  top: 23px;
+  border: 2px solid var(--kux-cover8);
+  z-index: 1000;
+  border-radius: 100%;
+  cursor: pointer;
+  @include media-query('sm') {
+    inset-inline-end: 28px;
+  }
+}

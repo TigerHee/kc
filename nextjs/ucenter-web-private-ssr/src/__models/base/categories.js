@@ -1,0 +1,81 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+import base from 'common/models/base';
+import { maxPrecision } from 'config/base';
+import extend from 'dva-model-extend';
+import { getCoinsCategory } from 'services/market';
+import createDecimals from 'utils/createDecimals';
+import { delay } from 'utils/delay';
+import numberFixed from 'utils/numberFixed';
+import precision from 'utils/precision';
+import { IS_SERVER_ENV } from 'kc-next/env';
+
+// 接口失败最大重试次数
+let retryTimes = 5;
+
+export default extend(base, {
+  namespace: 'categories',
+  state: {},
+  reducers: {},
+  effects: {
+    *pull(action, { call, put }) {
+      try {
+        const { data } = yield call(getCoinsCategory);
+        const map = {};
+        const coinNamesMap = {};
+        const poolCoinsMap = {};
+        const kumexCoinsMap = {};
+        const list = [];
+        data.pool.forEach((item) => {
+          poolCoinsMap[item.currency] = item;
+        });
+        data.kumex.forEach((item) => {
+          kumexCoinsMap[item.currency] = item;
+        });
+        data.kucoin.forEach((item) => {
+          item.precision = parseInt(item.precision || maxPrecision, 10);
+          precision(item.coin, item.precision);
+          const newItem = {
+            ...item,
+            key: item.currency,
+            coin: item.currency,
+            // icon: `${ASSETS_PATH}/${item.currency}.png`,
+            step: numberFixed(1 / Math.pow(10, item.precision)),
+            decimals: createDecimals(item.precision),
+            isContractEnabled: !!kumexCoinsMap[item.currency],
+            isPoolEnabled: !!poolCoinsMap[item.currency],
+          };
+          map[item.currency] = newItem;
+          coinNamesMap[item.currencyName] = newItem;
+          list.push(newItem);
+        });
+
+        yield put({ type: 'reset', payload: map });
+        yield put({
+          type: 'coins/update',
+          payload: {
+            list,
+            coinNamesMap,
+            poolCoinsMap,
+            kumexCoinsMap,
+            poolCoins: data.pool,
+            kumexCoins: data.kumex,
+          },
+        });
+      } catch (e) {
+        if (--retryTimes) {
+          yield call(delay, 3000);
+          yield put({ type: 'pull' });
+        }
+      }
+    },
+  },
+  subscriptions: IS_SERVER_ENV ? {} : {
+    // setUp({ dispatch }) {
+    //   setTimeout(() => {
+    //     dispatch({ type: 'pull' });
+    //   });
+    // },
+  },
+});

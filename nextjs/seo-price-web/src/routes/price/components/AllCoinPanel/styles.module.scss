@@ -1,0 +1,99 @@
+@import '@/styles/mixin.scss';
+
+.allCoinPanelWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  
+  @include media-query('lg') {
+  margin-bottom: 24px;
+  }
+  
+  @include media-query('lg') {
+  margin: 16px 0;
+  }
+}
+
+.item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  padding-right: 0;
+  
+  &.isLeft {
+    padding: 16px;
+    padding-left: 0;
+  }
+  
+  @include media-query('lg') {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    
+    &.isLeft {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.itemContent {
+  display: flex;
+  align-items: center;
+}
+
+.itemOrder {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  color: rgba(0, 13, 29, 0.4);
+  margin-right: 4px;
+  width: 36px;
+}
+
+.paginationWrap {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+
+.arrowIcon {
+  transform: rotate(0);
+}
+[dir=rtl] .arrowIcon {
+  transform: rotate(180deg);
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(29, 29, 29, 0.40);
+  cursor: not-allowed;
+  &:hover {
+    color: rgba(29, 29, 29, 0.40);
+  }
+  font-size: 14px;
+  line-height: 130%;
+  margin-right: 14px;
+  img {
+    margin-right: 12px;
+  }
+
+  &.traded {
+    color: #000;
+    cursor: pointer;
+    &:hover {
+      color: #000;
+    }
+  }
+}

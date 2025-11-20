@@ -1,0 +1,230 @@
+@import '@/style/index.scss';
+
+@include component('steps') {
+  --steps-indicator-size: 20px;
+  @include responsive(md) {
+    --steps-indicator-size: 24px;
+  }
+
+  .#{$prefix}-content {
+    display: flex;
+    background: get-theme(cover2);
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 8px;
+  }
+}
+
+@include component('step') {
+  display: flex;
+  line-height: 1.3;
+  flex-direction: row;
+  gap: 12px;
+
+  @include responsive(md) {
+    gap: 16px;
+  }
+
+  .#{$prefix}-indicator {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .#{$prefix}-content {
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include responsive(md) {
+      padding-bottom: 32px;
+    }
+  }
+
+  &:not(.#{$prefix}-last) {
+    .#{$prefix}-indicator {
+      &::before {
+        position: absolute;
+        content: '';
+        top: calc(var(--steps-indicator-size));
+        height: calc(100% - var(--steps-indicator-size) / 2);
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 1px dashed get-theme(divider8); /* 虚线 */
+        z-index: 0;
+        [dir='rtl'] & {
+          width: calc(50% + var(--size));
+          left: calc(-1 * var(--horizontal-padding));
+        }
+      }
+    }
+
+    &.#{$prefix}-last .#{$prefix}-indicator {
+      &::before {
+        width: calc(50% - (var(--steps-indicator-size) / 2));
+        right: calc(50% + (var(--steps-indicator-size) / 2));
+        left: initial;
+        [dir='rtl'] & {
+          right: initial;
+          left: calc(50% + (var(--steps-indicator-size) / 2));
+        }
+      }
+    }
+  }
+
+  &.#{$prefix}-divider-after_highlight {
+    .#{$prefix}-tag {
+      color: get-theme(textEmphasize);
+      background-color: get-theme(text);
+    }
+  }
+
+  .#{$prefix}-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: var(--steps-indicator-size);
+    height: var(--steps-indicator-size);
+    border-radius: 50%;
+    color: get-theme(textEmphasize);
+    background-color: get-theme(text20);
+    font-size: 13px;
+    font-weight: 500;
+    &::after {
+      line-height: 1;
+      content: attr(data-content);
+    }
+    @include responsive(md) {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &.#{$prefix}-pass,
+  &.#{$prefix}-finish,
+  &.#{$prefix}-warning,
+  &.#{$prefix}-error {
+    .#{$prefix}-tag {
+      background-color: inherit;
+    }
+  }
+
+  &.#{$prefix}-warning .#{$prefix}-tag {
+    color: get-theme(complementaryYellow);
+    &::after {
+      content: '';
+    }
+  }
+  &.#{$prefix}-error .#{$prefix}-tag {
+    color: get-theme(brandRed);
+    &::after {
+      content: '';
+    }
+  }
+
+  /* 图标尺寸/颜色 */
+  & .#{$prefix}-finish_icon,
+  & .#{$prefix}-warning_icon,
+  & .#{$prefix}-error_icon,
+  & .#{$prefix}-loading_icon {
+    width: var(--steps-indicator-size);
+    height: var(--steps-indicator-size);
+
+    @include responsive(md) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  & .#{$prefix}-finish_icon,
+  & .#{$prefix}-pass_icon {
+    color: get-theme(text);
+  }
+  & .#{$prefix}-warning_icon {
+    color: get-theme(complementaryYellow);
+  }
+  & .#{$prefix}-error_icon {
+    color: get-theme(brandRed);
+  }
+  & .#{$prefix}-loading_icon {
+    color: get-theme(brandBlue);
+    animation: spin 1s linear infinite;
+  }
+
+  .#{$prefix}-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .#{$prefix}-title {
+    color: get-theme(text);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+    .highlight {
+      color: get-theme(brandGreen);
+      font-weight: 600;
+    }
+    @include responsive(md) {
+      font-size: 20px;
+    }
+  }
+
+  .#{$prefix}-desc {
+    margin: 4px 0 0;
+    color: get-theme(text40);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    .highlight {
+      color: get-theme(brandGreen);
+      font-weight: 500;
+    }
+    @include responsive(md) {
+      margin: 12px 0 0;
+      font-size: 16px;
+    }
+  }
+
+  &.#{$prefix}-warning {
+    .#{$prefix}-desc {
+      color: get-theme(complementaryYellow);
+    }
+  }
+  &.#{$prefix}-error {
+    .#{$prefix}-desc {
+      color: get-theme(brandRed);
+    }
+  }
+
+  .#{$prefix}-action {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .#{$prefix}-action-text {
+      color: get-theme(brandGreen);
+      font-size: 14px;
+      font-weight: 500;
+
+      @include responsive(md) {
+        font-size: 20px;
+      }
+    }
+
+    .#{$prefix}-action-icon {
+      width: 18px;
+      height: 18px;
+      color: get-theme(icon60);
+    }
+  }
+}

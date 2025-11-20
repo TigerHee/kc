@@ -1,0 +1,55 @@
+@default-width: 40px;
+@default-height: 48px;
+
+.outter {
+  position: relative;
+  display: block;
+  width: @default-width;
+  height: @default-height;
+  overflow: hidden;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: @default-width;
+  height: 2 * @default-height;
+
+  &.up {
+    animation: move-up 0.3s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  &.down {
+    animation: move-down 0.3s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  .number {
+    width: @default-width;
+    height: @default-height;
+    line-height: @default-height;
+    text-align: center;
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

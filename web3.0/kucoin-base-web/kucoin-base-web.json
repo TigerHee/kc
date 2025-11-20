@@ -1,0 +1,27 @@
+{
+  "web_type": "static",
+  "pre_copy": false,
+  "node_version": "v14.19.3",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:14.19.3",
+  "offline_params": {
+    "build_cmd": "yarn run build:sit",
+    "build_offline": "yarn run build:offline",
+    "dist_copy": {
+      "on_opts": true,
+      "copy_file": "dist",
+      "copy_path": "kucoin-base-web",
+      "copy_cmd": "rsync",
+      "exclude_file": ["kucoin-base-web"],
+      "delete_opts": false
+    },
+    "cdn_copy": {
+      "on_opts": true,
+      "copy_file": "dist/kucoin-base-web/{ver}",
+      "copy_path": "kucoin-base-web/{ver}",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": false
+    },
+    "other_opts": ""
+  }
+}

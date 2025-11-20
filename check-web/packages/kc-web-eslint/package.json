@@ -1,0 +1,17 @@
+{
+  "name": "kc-web-eslint",
+  "version": "0.4.9",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "release": "natasha-release"
+  },
+  "dependencies": {
+    "@natasha/release": "^1.0.1",
+    "@umijs/fabric": "^3.0.0",
+    "eslint-plugin-es-x": "^7.2.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-kupo-lint": "0.0.6-beta.0",
+    "eslint-plugin-ui-module": "1.0.8"
+  }
+}

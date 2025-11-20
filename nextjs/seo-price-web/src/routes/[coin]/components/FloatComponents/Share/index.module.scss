@@ -1,0 +1,27 @@
+.buttonWrapper:global(.KuxButton-root) {
+  width: 48px !important;
+  height: 48px !important;
+  cursor: pointer !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  background: #f6f6f6f2 !important;
+  
+  & > svg {
+    margin: 0 !important;
+  }
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text);
+
+  [dir=rtl] & {
+    display: none;
+  }
+}
+

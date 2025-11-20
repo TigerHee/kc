@@ -1,0 +1,59 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.infoBox {
+  width: 64%;
+
+  @include media-query('lg') {
+    width: 100%;
+  }
+
+}
+
+.panelBox {
+  width: 36%;
+
+  @include media-query('lg') {
+    width: 100%;
+    height: 116px;
+  }
+
+  [dir='rtl'] & {
+    direction: ltr /*! @noflip */ ;
+
+    & * {
+      direction: ltr /*! @noflip */ ;
+    }
+  }
+
+}
+
+.infoTitle {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.infoDesc {
+
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 13, 29, 0.4);
+
+}
+
+.infoTip {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 13, 29, 0.4);
+
+  .strong {
+    color: #000d1d;
+    font-weight: 500;
+  }
+}

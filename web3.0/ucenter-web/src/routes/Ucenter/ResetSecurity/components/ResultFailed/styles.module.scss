@@ -1,0 +1,46 @@
+.content {
+  padding: 47.5px 24px 0;
+}
+
+.title {
+  margin-top: 8px;
+  color: var(--kux-text);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%; /* 33.6px */
+}
+
+.reasons {
+  margin-top: 8px;
+  color: var(--kux-brandRed);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.helper {
+  margin-top: 16px;
+  padding: 20px 8px;
+  padding-left: 28px;
+  border-radius: 12px;
+  background: var(--kux-cover2);
+  color: var(--kux-text40);
+
+  a {
+    color: var(--kux-text40);
+    text-decoration: underline;
+  }
+
+  li {
+    list-style: disc;
+  }
+}
+
+.btnWrapper {
+  margin: 40px auto 0;
+  max-width: 240px;
+}

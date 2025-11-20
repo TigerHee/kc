@@ -1,0 +1,17 @@
+{
+  "extends": "@kux/tsconfig/jsx",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowImportingTsExtensions": false,
+    "moduleResolution": "node",
+    "noEmit": false,
+    "declaration": true,
+    "outDir": "dist",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": ["src/**/*"]
+}

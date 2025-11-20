@@ -1,0 +1,114 @@
+@import '~themes/mix.less';
+
+.pageWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  background: #0e1018;
+  display: flex;
+  justify-content: center;
+  .mediaQueryMd({padding: 0 24px;});
+  .mediaQuerySm({padding: 0 12px;});
+}
+
+.pageInner {
+  width: 83.3%;
+  max-width: 1200px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  .mediaQueryMd({width: 100%;});
+}
+
+.commonTabTitle {
+  display: inline-block;
+  position: relative;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  background: linear-gradient(91.99deg, #ffffff 0%, #89f8b7 132.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 120px;
+  margin-bottom: 48px;
+  padding-left: 29px;
+  .mediaQueryMd({margin-top: 110px;padding-left: 28px;margin-bottom: 24px;});
+  .mediaQuerySm({margin-top: 88px;padding-left: 16px;font-size: 24px;});
+
+  &::before {
+    display: block;
+    content: '';
+    width: 12px;
+    height: 26px;
+    background-image: url('../../../assets/consensus/rectangle.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 14px;
+    .mediaQueryMd({top: 16px;});
+    .mediaQuerySm({width: 8px; height: 16px;top: 18px;});
+  }
+}
+
+.commonInfoBox {
+  margin-top: 48px;
+  .mediaQuerySm({margin-top: 24px;});
+  :global {
+    img {
+      display: block;
+      width: 420px;
+    }
+  }
+}
+
+.commonInfoTitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  color: #ffffff;
+  .mediaQuerySm({font-size: 16px; line-height: 26px;});
+}
+
+.commonInfoDesc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(225, 232, 245, 0.4);
+  margin-top: 12px;
+  margin-bottom: 0;
+  .mediaQuerySm({font-size: 14px; line-height: 22px;margin-top: 6px;});
+}
+
+.commonTabContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.commonHalf {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  &:nth-of-type(1) {
+    padding-right: 12px;
+  }
+}
+
+.commonFoot {
+  font-weight: 500 !important;
+  font-size: 24px;
+  line-height: 38px;
+  .mediaQuerySm({font-size: 16px; line-height: 26px;});
+  :global {
+    .g-jumplink {
+      font-size: 24px;
+      line-height: 38px;
+      .mediaQuerySm({font-size: 16px; line-height: 26px;});
+    }
+  }
+}

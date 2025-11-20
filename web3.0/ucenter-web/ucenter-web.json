@@ -1,0 +1,29 @@
+{
+  "web_type": "static",
+  "pre_copy": false,
+  "node_version": "v22.14.0",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:22.14.0-bullseye",
+  "offline_params": {
+    "build_cmd": "yarn run build:sit",
+    "build_offline": "yarn run build:offline",
+    "dist_copy": {
+      "on_opts": true,
+      "copy_file": "dist",
+      "copy_path": "ucenter-web",
+      "copy_cmd": "rsync",
+      "exclude_file": ["ucenter-web"],
+      "delete_opts": true
+    },
+    "cdn_copy": {
+      "on_opts": true,
+      "copy_file": "dist/ucenter-web/{ver}",
+      "copy_path": "ucenter-web/{ver}",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": false
+    },
+    "other_opts": ""
+  },
+  "url": "ssh://git@bitbucket.kucoin.net/kuc/ucenter-web.git",
+  "app_type": "web"
+}

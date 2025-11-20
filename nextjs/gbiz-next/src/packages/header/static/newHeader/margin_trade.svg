@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="35px" viewBox="0 0 40 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>币币交易备份</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="导航栏下拉最小宽度备份-4" transform="translate(-879.000000, -449.000000)">
+            <g id="Icon/margin" transform="translate(875.000000, 444.000000)">
+                <rect id="矩形" x="4" y="4" width="40" height="40"></rect>
+                <path d="M11.757,6 L14.58,7.357 C14.58,7.357 13.363,8.045 12.16,8.983 C10.951,9.926 9.675,11.142 8.915,12.386 C7.402,14.869 7.101,17.175 7,19.426 C7,19.426 7.946,17.243 8.638,16.26 C9.775,14.643 9.842,14.457 11.287,12.903 C12.673,11.413 13.687,10.535 15.432,9.316 C17.365,7.965 20.178,6.694 20.178,6.694" id="Fill-1" fill="#FFFFFF" fill-rule="evenodd" transform="translate(13.589000, 12.713000) scale(-1, 1) rotate(93.000000) translate(-13.589000, -12.713000) "></path>
+                <circle id="椭圆形" fill="#23AF91" fill-rule="evenodd" opacity="0.318243118" cx="34" cy="16" r="6"></circle>
+                <circle id="椭圆形" stroke="#23AF91" stroke-width="2" cx="34" cy="16" r="9"></circle>
+                <path d="M11.1728354,34.8754023 L38.1442302,24" id="路径-2" stroke="#23AF91" stroke-width="2"></path>
+                <polygon id="三角形" stroke="#23AF91" stroke-width="2" points="26.5 33.4856159 31 39 22 39"></polygon>
+                <circle id="椭圆形备份" stroke="#23AF91" stroke-width="2" cx="10" cy="30" r="5"></circle>
+                <circle id="椭圆形" fill="#23AF91" fill-rule="evenodd" opacity="0.318243118" cx="10" cy="30" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

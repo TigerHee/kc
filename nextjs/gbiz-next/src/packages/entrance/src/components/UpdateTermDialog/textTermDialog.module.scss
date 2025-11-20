@@ -1,0 +1,35 @@
+.textDialogContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 32px 16px;
+
+  :global(.agreement-btns) {
+    align-items: center;
+  }
+}
+
+.textRetainDialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 32px 16px;
+}
+
+.imgWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 9px;
+  margin-bottom: 8px;
+  img {
+    max-width: 136px;
+    height: auto;
+    pointer-events: none;
+  }
+}
+
+.textTermExitButton {
+  width: 100%;
+  margin-top: 12px;
+  color: var(--kux-text60);
+}

@@ -1,0 +1,233 @@
+
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="4. 组件库中的工具方法" />
+
+# 组件库中的工具方法
+
+## getCssSafeArea
+env()在真机上支持度并不高，所以提供了`getCssSafeArea`用于获取安全区域环境信息。
+`getCssSafeArea`有两个参数：
+- varName: 'safe-area-inset-bottom' | 'safe-area-inset-top' | 'safe-area-inset-right' | 'safe-area-inset-left'。
+- fallback: number。回退值
+
+```tsx
+import { getCssSafeArea } from '@kux/design';
+
+const MyComponent = () => {
+  return (
+    <div style={{
+      "--kux-safe-area-inset-bottom": getCssSafeArea('safe-area-inset-bottom', 20) // 然后在样式文件中以css变量使用，
+      "padding-bottom": `${getCssSafeArea('safe-area-inset-bottom', 20)}` // 或者直接使用`
+    }}>
+      安全区域
+    </div>
+  );
+};
+```
+
+## copyToClipboard
+`copyToClipboard`用于将文本复制到剪贴板。
+
+定义如下：
+```ts
+// 优先使用 Clipboard API，如果不支持则使用 execCommand
+// 如果复制成功返回 true，否则返回 false
+copyToClipboard(text: string): Promise<boolean>;
+```
+
+
+示例:
+```tsx
+import { copyToClipboard } from '@kux/design';
+
+const MyComponent = () => {
+  const handleCopy = () => {
+    copyToClipboard('要复制的文本');
+  };
+
+  return (
+    <div>
+      <button onClick={handleCopy}>复制文本</button>
+    </div>
+  );
+};
+```
+
+## flattenReactChildren
+`flattenReactChildren`用于将React子元素扁平化处理，支持处理Fragment包裹的内容, 返回一个React元素数组。
+
+定义如下：
+```ts
+flattenReactChildren(children: ReactNode): ReactElement[];
+```
+
+```tsx
+import { flattenReactChildren } from '@kux/design';
+
+const MyComponent = () => {
+  const children = (
+    <>
+      <div>Child 1</div>
+      <div>Child 2</div>
+      <Fragment>
+        <div>Child 3</div>
+        <div>Child 4</div>
+      </Fragment>
+    </>
+  );
+
+  const flatChildren = flattenReactChildren(children);
+
+  return (
+    <div>
+      {flatChildren.map((child, index) => (
+        <div key={index}>{child}</div>
+      ))}
+    </div>
+  );
+};
+```
+
+## 图片加载相关
+组件库中提供了一系列用于处理图片加载和转换的工具方法，主要包括加载图片、将图片转换为Base64字符串等功能。
+
+定义如下：
+```ts
+// 加载图片资源，返回一个Promise，解析为HTMLImageElement。
+loadImage(src: string): Promise<HTMLImageElement>;
+
+// 将图片转换为Base64字符串，返回一个Base64编码的字符串
+// 格式为 `data:image/png;base64,...`
+convertImageToBase64(img: HTMLImageElement): string;
+
+// 加载图片并转换为Base64字符串，返回一个Promise，解析为Base64字符串
+// 该方法结合了loadImage和convertImageToBase64的功能
+//  若加载失败，可以通过fallback函数提供一个回退逻辑, 若 fallback 未提供, 则返回一个空字符串
+loadImageAsBase64(src: string, fallback?: (url: string, error: Error) => Promise<string>): Promise<string>;
+
+/**
+ * 带缓存的加载图片并转换为base64编码
+ * @param url 图片地址
+ * @param timeout 过期时间, 不传则长期缓存
+ * @param fallback 失败的回调函数, 用于返回替代值
+ * @returns 
+ */
+loadImageAsBase64WithCache(src: string, timeout?: number, fallback?: (url: string, error: Error) => Promise<string>): Promise<string>;
+```
+
+示例:
+```tsx
+import { loadImageAsBase64 } from '@kux/design';
+const MyComponent = () => {
+  const [imgStr, setImgStr] = useState('');
+  const handleLoadImage = async () => {
+    try {
+      const img = await loadImageAsBase64('https://example.com/image.jpg');
+      setImgStr(img);
+    } catch (error) {
+      console.error('Error loading image:', error);
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={handleLoadImage}>加载图片</button>
+      {imgStr && <img src={imgStr} alt="Loaded" />}
+    </div>
+  );
+};
+```
+
+## preciseTimer
+`preciseTimer`是一个精确的定时器工具，提供了更高精度的定时功能, 可以尽可能的减少因alert/confirm等阻塞页面进程以及页面退到后台进程被中止的定时器误差.
+
+** 注意: 本方法只能减少误差, 无法完全消除**
+
+定义如下：
+```ts
+/**
+ * 精确定时器
+ * @param fn 回调函数
+ * @param timeout 超时时间
+ * @param precision 时间精度要求, 默认 100ms
+ * 
+ * 注意: 
+ * * 该方法会尽可能减少误差, 但无法完全消除误差
+ * * 在特定场景下, 定时器可能会提前触发(修正后会导致方法实际上可能晚于预期时间触发, 10ms 以内)
+ */
+preciseTimer(fn: () => void, timeout: number, precision?: number): void;
+```
+
+```tsx
+import { preciseTimer } from '@kux/design';
+const MyComponent = () => {
+  const handleTimer = () => {
+    preciseTimer(() => {
+      console.log('定时器触发');
+    }, 1000, 50); // 1秒后触发，精度为50ms
+  };
+  return (
+    <div>
+      <button onClick={handleTimer}>启动定时器</button>
+      <button onClick={() => alert('测试阻塞')}>测试阻塞</button>
+    </div>
+  );
+};
+```
+
+## createSingletonListener
+`createSingletonListener`是一个用于创建单例事件监听器的工具方法，确保在同一时间只有一个事件监听器被激活。
+
+定义如下：
+```ts
+/**
+ * 创建单例事件监听器
+ * @param subscribe 事件订阅函数, 返回一个取消订阅函数
+ * @param getSnapshot 获取快照函数, 用于获取当前状态
+ */
+
+createSingletonListener<T>(subscribe: (setState: (state: T) => void) => () => void, getSnapshot: () => T): {
+  /**
+   * 获取当前状态的hook
+  */
+  useValue: () => T;
+  /**
+   * 获取当前状态的值, 即 getSnapshot
+   */
+  get: () => T;
+  /**
+   * 订阅状态变化
+   * @param listener 状态变化的监听函数
+   * @returns 取消订阅的函数
+   */
+  subscribe: (listener: () => void) => () => void;
+};
+```
+
+组件库中的 `useIsMobile` 及 `useIsDark` 即是使用 `createSingletonListener` 创建的单例监听器, 避免重复订阅底层事件。
+
+示例:
+```tsx
+import { createSingletonListener } from '@kux/design';
+
+// 创建一个监听窗口大小变化的单例监听器
+const listenWindowResize = createSingletonListener(
+  (callback) => {
+    window.addEventListener('resize', callback);
+    return () => window.removeEventListener('resize', callback);
+  },
+  () => window.innerWidth // 获取当前窗口宽度作为状态
+);
+
+const MyComponent = () => {
+  const width = listenWindowResize.useValue();
+
+  return (
+    <div>
+      <p>Width: {width}</p>
+      <button onClick={() => console.log(listenWindowResize.get())}>获取当前宽度</button>
+    </div>
+  );
+};
+```

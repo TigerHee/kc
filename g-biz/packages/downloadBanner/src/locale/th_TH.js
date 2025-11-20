@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "เทรดทั่วโลกได้อย่างปลอดภัยและง่ายดายตลอด 24/7",
+  "evsRWTcozWk2pEFSUsfw28": "ลงทะเบียนและทำกำไรได้ใน 1 วินาที!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "ทำกำไรได้ทุกที่ทุกเวลาตลอด 24/7",
+  "mNJrrvGzgxR6JhQ8u82crp": "รีวิว 80K+",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "ยืนยันตัวตน ฝาก และซื้อคริปโตได้ทันที!",
+  "rw8e32A8H7X3QtiKHS37EK": "ดาวน์โหลด",
+  "tXwwyoSbqG4pgsoXomccjp": "ดาวน์โหลดแอป {{brandName}} เพื่อรับรางวัลสูงสุด {{num}} {{siteBaseCurrency}}",
+  "7dhofXiN9vaVRtVSNY9eCc": "ผู้ใช้ใหม่จะได้รับ",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "รับเลย",
+  "fHvhAMzEfxA6w2B25nHkiJ": "ดาวน์โหลดแล้ว <1>5M+</1> ครั้ง",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ รีวิว)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ รีวิว)",
+  "awPHBDRwtLBxNEMctyUMJZ": "พิเศษสำหรับผู้ใช้ใหม่: หากคุณฝากหรือซื้อคริปโตครั้งแรกมูลค่ามากกว่า $50 คุณจะได้รับกล่องสุ่มมูลค่าสูงถึง <span>$500</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "ดาวน์โหลด",
+  "csjK9uyQQyYMLprAYkKsRT": "ดาวน์โหลดแอป {{brandName}} เพื่อเดินทางไปในโลกคริปโต และรับรางวัลสูงสุด <span>$500</span> ในโซนผู้เริ่มต้น",
+  "oiiFHQ3NZu5zSYqpSGreye": "ฝากหรือซื้อคริปโตเป็นครั้งแรกเพื่อรับกล่องสุ่มมูลค่าสูงถึง <span>$500</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "รางวัลสูงถึง <span>$500</span> สำหรับผู้ใช้ใหม่!",
+  "wLAfc8MZvoHbeNragecB4Z": "เทรดได้อย่างปลอดภัยและรวดเร็วยิ่งขึ้นโดยใช้แอปมือถือของเรา"
+}

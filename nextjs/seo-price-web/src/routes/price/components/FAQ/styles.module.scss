@@ -1,0 +1,84 @@
+@import '@/styles/mixin.scss';
+
+.itemFAQ {
+  display: inline-block;
+  vertical-align: top;
+  width: calc((100% - 48px) / 2);
+  font-size: 18px;
+
+  @include media-query('lg') {
+    display: block;
+    vertical-align: unset;
+    width: auto;
+  }
+}
+
+.itemFAQMargin {
+  margin-right: 48px;
+
+  @include media-query('lg') {
+    margin-right: 0;
+  }
+}
+
+.priceAllFAQ {
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  
+  @include media-query('lg') {
+  margin-bottom: 24px;
+  }
+  
+  @include media-query('sm') {
+  margin-bottom: 16px;
+  }
+  
+}
+
+.question {
+  
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 130%;
+  color: #000d1d;
+  margin-bottom: 0;
+  
+  @include media-query('lg') {
+  font-size: 16px;
+  }
+  
+  &[data-isactive='true'] {
+  color: #01bc8d;
+  }
+  
+}
+
+.answer {
+  
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(0, 13, 29, 0.4);
+  margin-bottom: 12px;
+  
+  @include media-query('lg') {
+  font-size: 12px;
+  }
+  
+  :global(.price-all-coin),
+  :global(.price-online-coin) {
+    color: rgba(0, 13, 29, 1);
+    font-weight: 600;
+  }
+  
+}
+
+.answerTitle {
+  
+  font-weight: 600;
+  color: rgba(0, 13, 29, 1);
+  
+}

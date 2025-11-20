@@ -1,0 +1,6 @@
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="8" height="8" fill="#E1E8F5" fill-opacity="0.68"/>
+<line x1="2" y1="2.65" x2="8" y2="2.65" stroke="#212732" stroke-width="0.7"/>
+<line x1="2" y1="4.65" x2="6" y2="4.65" stroke="#212732" stroke-width="0.7"/>
+<line x1="2" y1="6.65" x2="8" y2="6.65" stroke="#212732" stroke-width="0.7"/>
+</svg>

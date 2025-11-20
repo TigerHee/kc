@@ -1,0 +1,39 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+unicode.zh_CN.json
+
+# production
+/dist
+.idea
+.vscode
+
+# misc
+.DS_Store
+npm-debug.log*
+package-lock.json
+yarn-*.log
+site-config.json
+.xversion
+.yalc
+yalc.lock
+.prettierrc.json
+unused-files.json
+
+.neeko/
+.neeko.task.json
+jest.config.debug.js
+build
+
+#download
+download/
+.vault
+.locale
+
+# unit test
+coverage/
+reports/
+cypress/
+
+/.env.local

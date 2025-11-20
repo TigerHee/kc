@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>clock</title>
+    <desc>Created with Sketch.</desc>
+    <g id="账户中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="审核中-个人" transform="translate(-797.000000, -285.000000)" fill-rule="nonzero">
+            <g id="Fill-22-Copy-8" transform="translate(797.000000, 285.000000)">
+                <g id="clock">
+                    <circle id="Shape" fill="#FFE5BE" cx="24" cy="24" r="24"></circle>
+                    <path d="M25.5714286,25.6208571 L25.5714286,13.2857143 C25.5714286,12.576 24.9954286,12 24.2857143,12 C23.576,12 23,12.576 23,13.2857143 L23,26.1428571 C23,26.5067143 23.1517143,26.8345714 23.396,27.0672857 C23.4178571,27.093 23.4345714,27.12 23.4577143,27.1431429 L30.8207143,32.5074286 C31.3221429,33.0088571 32.136,33.0088571 32.6387143,32.5074286 C33.1414286,32.006 33.1401429,31.1908571 32.6387143,30.6881429 L25.5701429,25.6195714 L25.5714286,25.6208571 Z" id="Path" stroke="#FDA829" fill="#FDA829"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

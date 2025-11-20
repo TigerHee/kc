@@ -1,0 +1,31 @@
+{
+  "url": "ssh://git@bitbucket.kucoin.net/kuc/xxx.git",
+  "app_type": "web",
+  "web_type": "static",
+  "pre_copy": true,
+  "node_version": "v22.14.0",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:22.14.0-bullseye",
+  "offline_params": {
+    "build_cmd": "yarn run build:all",
+    "dist_copy": {
+      "on_opts": true,
+      "copy_file": "dist",
+      "copy_path": "ssr-fast-template",
+      "copy_cmd": "rsync",
+      "exclude_file": [
+        "ssr-fast-template",
+        "server-functions"
+      ],
+      "delete_opts": true
+    },
+    "cdn_copy": {
+      "on_opts": true,
+      "copy_file": "dist/ssr-fast-template/{ver}",
+      "copy_path": "ssr-fast-template/{ver}",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": false
+    },
+    "other_opts": ""
+  }
+}

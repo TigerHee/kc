@@ -1,0 +1,214 @@
+
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="5. 组件库中的Hooks" />
+
+# 组件库中的Hooks
+
+## useDir
+`useDir` 是一个用于监控并、获取当前页面方向的 Hook。它会根据 `dir` 属性的值返回 `'ltr'` 或 `'rtl'`。 页面未设置 `dir` 属性时，默认返回 `'ltr'`。
+
+```tsx
+import { useDir } from '@kux/design';
+
+const MyComponent = () => {
+  const dir = useDir();
+
+  return (
+    <div>
+      当前方向: {dir}
+    </div>
+  );
+};
+```
+
+## useIsDark
+`useIsDark` 是一个用于判断当前主题是否为暗黑模式的 Hook, 通过监控根元素的 `[data-theme]` 属性变化实现。它会根据 `theme` 属性的值返回 `true` 或 `false`。
+
+```tsx
+import { useIsDark } from '@kux/design';
+const MyComponent = () => {
+  const isDark = useIsDark();
+
+  return (
+    <div>
+      当前主题是暗黑模式: {isDark ? '是' : '否'}
+    </div>
+  );
+};
+```
+
+## useTheme
+`useTheme` 是一个用于获取当前主题的 Hook。它会监控根元素的 `[data-theme]` 属性值变化并返回其值作为属性名称
+（如 `'light'`、`'dark'` 或自定义主题）, 若 data-theme 属性未设置，则默认返回 `''`。
+
+```tsx
+import { useTheme } from '@kux/design';
+const MyComponent = () => {
+  const theme = useTheme();
+  return (
+    <div>
+      当前主题: {theme}
+    </div>
+  );
+};
+```
+
+## useIsMobile
+`useIsMobile` 是一个用于判断当前设备是否为移动端的 Hook。它会根据屏幕宽度判断是否小于等于 768px。
+
+若要判断更多尺寸，可以使用 `useResponsive` Hook。
+
+```tsx
+import { useIsMobile } from '@kux/design';
+const MyComponent = () => {
+  const isMobile = useIsMobile();
+
+  return (
+    <div>
+      当前设备是移动端: {isMobile ? '是' : '否'}
+    </div>
+  );
+};
+```
+
+## useResponsive
+`useResponsive` 是一个用于获取当前屏幕尺寸信息的 Hook, 可用于检测各种尺寸.
+
+定义如下:
+```ts
+/**
+ * 响应式屏幕尺寸类型
+ * - sm: 小屏幕 (小于等于 768px)
+ * - md: 中屏幕 (大于 768px 且小于等于 1200px)
+ * - lg: 大屏幕 (大于 1200px 且小于等于 1440px)
+ * - xl: 超大屏幕 (大于 1440px)
+ */
+export type IViewportSize =  'sm' | 'md' | 'lg' | 'xl';
+
+/**
+ * 获取当前屏幕尺寸类型
+*/
+export function useResponsive(): IViewportSize
+
+/**
+ * 比较两个屏幕尺寸对象
+ * @param a 第一个屏幕尺寸对象
+ * @param b 第二个屏幕尺寸对象
+ * @returns 返回比较结果, 0 表示相等, -1 表示 a 小于 b, 1 表示 a 大于 b
+ */
+*/
+export function compareViewportSize(a: IViewportSize, b: IViewportSize): number
+```
+
+
+```tsx
+import { useResponsive, compareViewportSize } from '@kux/design';
+
+const MyComponent = () => {
+  const size = useResponsive();
+  if (size === 'md') {
+    console.log('屏幕尺寸为中屏幕 (大于 768px 且小于等于 1200px)');
+  }
+  if (compareViewportSize(size, 'md') >= 0) {
+    console.log('屏幕尺寸 > = 1200px');
+  }
+
+  return (
+    <div>
+      <p>当前屏幕尺寸: {size}</p>
+    </div>
+  );
+};
+```
+
+## useLockScroll
+`useLockScroll` 是一个用于锁定或解锁页面滚动的 Hook。它可以在需要时阻止页面滚动，通常用于模态框或侧边栏等组件, ** 本UI库内置的组件已经使用了该 Hook, 一般不需要再手动使用 **。
+
+定义如下：
+```ts
+// isOpen: 是否锁定滚动
+// container: 要锁定滚动的容器，一般不用传(默认会找到滚动容器, 找不到则使用 document.body), 不符合预期时才需要手动指定
+export function useLockScroll(isOpen: boolean, container?: HTMLElement)
+```
+
+
+```tsx
+import { useLockScroll } from '@kux/design';
+const MyComponent = () => {
+  const [isLocked, setIsLocked] = useState(false)
+  // 展示当前组件时始终滚动锁定, 组件销毁时会自动恢复滚动
+  useLockScroll(isLocked);
+
+  return (
+    <div>
+      <button onClick={() => setIsLocked(true)}>锁定滚动</button>
+      <button onClick={() => setIsLocked(false)}>解锁滚动</button>
+    </div>
+  );
+};
+```
+
+## useSingletonCallback
+`useSingletonCallback` 是一个用于创建单例回调函数的 Hook。它可以确保函数在同一时间只有一个实例在执行，避免多次调用导致的性能问题。
+
+注意它与 debounce 不同, debounce 只是解决了频繁调用的问题, 对于异步或者重型任务, 无法保证只有一个任务在调用. 而 useSingletonCallback 是确保同一时间只有一个实例在执行, 适用于需要确保函数执行的唯一性场景。
+
+定义如下:
+```ts
+/**
+ * 传入一个函数, 返回一个元组(固定类型的数组)
+ * * fn: 包装后的函数
+ * * isRunning: 函数是否正在执行
+ * * error: 函数执行过程中发生的错误, 如果没有发生错误则为 null
+*/
+export function useSingletonCallback<T extends (...args: any[]) => any>(callback: T): [fn: T, isRunning: boolean, error: Error | null];
+``` 
+
+
+```tsx
+
+import { useSingletonCallback } from '@kux/design';
+const MyComponent = () => {
+
+  const [handleClick, isRunning] = useSingletonCallback(async () => {
+    const result = await fetch('https://api.example.com/data');
+    const data = await result.json();
+    console.log(data);
+  });
+
+  return (
+    <div>
+      <button onClick={handleClick}>点击我发送请求</button>
+    </div>
+  );
+};
+```
+
+## useZIndex
+`useZIndex` 是一个用于获取当前最高 z-index 的 Hook。它会返回一个数字，表示当前最高的 z-index 值. 用于有浮层的场景, 比如对话框、tooltip、popover 等组件, ** 本UI库内置的组件已经使用了该 Hook, 一般不需要再手动使用 **。
+
+定义如下:
+
+```ts
+
+/**
+ * @param visible 是否可见, 如果为 true 则返回当前最高 z-index, false 则将 z-index  -1
+ * 使用该参数可以保证蒙层在不断显示隐藏过程中始终是显示那一刻的最高 z-index
+ */
+export function useZIndex(visible: boolean): number;
+```
+
+```tsx
+
+import { useZIndex } from '@kux/design';
+const MyComponent = () => {
+  const zIndex = useZIndex(true); // 传入 true 获取当前最高 z-index
+
+  return (
+    <div style={{ zIndex }}>
+      <p>当前最高 z-index: {zIndex}</p>
+    </div>
+  );
+};
+```

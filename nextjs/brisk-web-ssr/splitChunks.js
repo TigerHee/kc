@@ -1,0 +1,60 @@
+module.exports = {
+  react: {
+    test: /[\\/]node_modules[\\/](react|react-dom|react-router)[\\/]/,
+    name: 'react',
+    chunks: 'all',
+    priority: 30,
+  },
+  'gbiz-next': {
+    test: /[\\/]node_modules[\\/]gbiz-next[\\/]/,
+    name: 'gbiz-next',
+    chunks: 'all',
+    priority: 30,
+  },
+  'next-dist': {
+    test: /[\\/]node_modules[\\/]next\/dist[\\/]/,
+    name: 'next-dist',
+    chunks: 'all',
+    priority: 30,
+  },
+  'kc-next': {
+    test: /[\\/]node_modules[\\/]kc-next[\\/]/,
+    name: 'kc-next',
+    chunks: 'all',
+    priority: 30,
+  },
+  'kux-mui': {
+    test: /[\\/]node_modules[\\/]@kux[\\/]mui-next[\\/]/,
+    name: 'kux-mui',
+    chunks: 'all',
+    priority: 30,
+  },
+  'kux-icons': {
+    test: /[\\/]node_modules[\\/]@kux[\\/]icons[\\/]/,
+    name: 'kux-icons',
+    chunks: 'all',
+    priority: 30,
+  },
+  sentry: {
+    test: /[\\/]node_modules[\\/](@sentry[\\/]|@sentry-)/,
+    name: 'sentry',
+    chunks: 'all',
+    priority: 30,
+  },
+  i18n: {
+    test: /[\\/]node_modules[\\/](i18next(?:-[^\\/]+)?|[^\\/]+-i18next)[\\/]/,
+    name: 'i18n',
+    chunks: 'all',
+    priority: 30,
+  },
+  'combined-vendors': {
+    test: /[\\/]node_modules[\\/]/,
+    name: 'combined-vendors',
+    chunks: 'all',
+    priority: 10,
+    enforce: true,
+    reuseExistingChunk: true,
+    minSize: 0,
+    maxSize: 614400,
+  },
+};

@@ -1,0 +1,49 @@
+@import 'src/styles/mixin.scss';
+
+.CusDialog {
+  z-index: 1001;
+  .KuxDialog-body {
+    margin: auto 28px;
+    .KuxModalFooter-root {
+      display: flex;
+      justify-content: center;
+      .KuxModalFooter-buttonWrapper {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  }
+}
+
+.NoticeImg {
+  width: 136px;
+  height: 136px;
+}
+
+.Content {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Text {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  color: var(--color-text);
+  @include media-query('sm') {
+    font-size: 20px;
+  }
+}
+
+.Des {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-text60);
+}

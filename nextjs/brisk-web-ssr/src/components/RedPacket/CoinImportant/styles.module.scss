@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-break: break-all;
+}
+.smallFontSize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.biggerAmount {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 4px;
+  /* 这里写死颜色不然换成黑夜模式字就看不清楚了 */
+  color: #1D1D1D;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+}
+.coinUnit {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+
+  [dir='rtl'] & {
+    margin-right: 4px;
+  }
+  [dir='ltr'] & {
+    margin-left: 4px;
+  }
+}
+.spacer{
+  width: 4px;
+}
+.commonAmount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 10px;
+  text-align: right;
+}

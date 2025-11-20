@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Bezpieczny i łatwy handel globalny 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Zarejestruj się i opanuj rynki w kilka sekund!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Opanuj rynki w dowolnym miejscu 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80K+ recenzji",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Zweryfikuj się, wpłać środki i kup kryptowalutę JAK NAJSZYBCIEJ!",
+  "rw8e32A8H7X3QtiKHS37EK": "Pobierz",
+  "tXwwyoSbqG4pgsoXomccjp": "Pobierz aplikację {{brandName}}, aby zdobyć do {{num}} {{siteBaseCurrency}} w ramach nagród.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Nowi użytkownicy otrzymują",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Odbierz teraz",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5 mln+</1> pobrań",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100k+ recenzji)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16k+ recenzji)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Wyłącznie dla nowych użytkowników: jeśli Twoja pierwsza wpłata lub zakup kryptowaluty przekorczy 50 USD, otrzymasz tajemnicze pudełko o wartości do <span>500 USD</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Pobierz",
+  "csjK9uyQQyYMLprAYkKsRT": "Pobierz aplikację {{brandName}}, aby kontynuować swoją przygodę z kryptowalutami i otrzymaj do <span>500 USD</span> w ramach nagród w Strefie dla początkujących.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Wpłać lub kup kryptowalutę po raz pierwszy, aby otrzymać tajemnicze pudełko o wartości do <span>500 USD</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Do <span>500 USD</span> w ramach nagród dla nowych użytkowników!",
+  "wLAfc8MZvoHbeNragecB4Z": "Handluj bezpieczniej i szybciej, korzystając z naszej aplikacji mobilnej."
+}

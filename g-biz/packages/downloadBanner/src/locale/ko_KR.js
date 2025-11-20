@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "전 세계 어디서나 연중무휴 안전하고 편리한 거래.",
+  "evsRWTcozWk2pEFSUsfw28": "간편하게 가입하고 시장을 마스터하세요!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "언제 어디서든 시장을 마스터하세요.",
+  "mNJrrvGzgxR6JhQ8u82crp": "후기 8만여 개",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "간편하게 인증, 입금, 암호화폐 구매를 완료할 수 있습니다!",
+  "rw8e32A8H7X3QtiKHS37EK": "다운로드",
+  "tXwwyoSbqG4pgsoXomccjp": "{{brandName}} 앱을 다운로드하고 최대 {{num}} {{siteBaseCurrency}}를 보상으로 받으세요.",
+  "7dhofXiN9vaVRtVSNY9eCc": "신규 사용자 혜택",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "지금 받기",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>500만+</1> 다운로드",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(10만+개 후기)",
+  "qqJX78TFyekdKwwT6nVVWU": "(1.6만+개 후기)",
+  "awPHBDRwtLBxNEMctyUMJZ": "신규 사용자 특별 혜택: $50를 초과한 첫 입금 또는 암호화폐 구매 시 최대 <span>$500</span> 상당의 미스터리 박스를 드립니다!",
+  "bc25RyyCduDizpfpxEcMEi": "다운로드하기",
+  "csjK9uyQQyYMLprAYkKsRT": "{{brandName}} 앱을 다운로드하고 암호화폐 여정을 이어나가세요. 초보자 혜택 존에서 최대 <span>$500</span> 보상을 받으세요.",
+  "oiiFHQ3NZu5zSYqpSGreye": "첫 입금 또는 암호화폐 구매를 완료하고 최대 <span>$500</span> 상당의 미스터리 박스를 받으세요!",
+  "pgBahZcxwoUfbjzJwqpmY7": "신규 사용자에게 최대 <span>$500</span> 보상을 드립니다!",
+  "wLAfc8MZvoHbeNragecB4Z": "{{brandName}} 모바일 앱으로 보다 안전하고 빠르게 거래하세요."
+}

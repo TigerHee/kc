@@ -1,0 +1,24 @@
+@import '@/styles/mixin.scss';
+
+.ellipse {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+  right: -20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+
+  @include media-query('sm') {
+    bottom: -5px;
+    right: 0;
+  }
+  @include media-query('lg') {
+    bottom: -5px;
+    right: 0;
+  }
+}
+
+.ellipseHover {
+  bottom: -5px;
+  right: 0;
+}

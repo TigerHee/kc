@@ -1,0 +1,113 @@
+@import 'src/styles/mixin.scss';
+
+.b {
+  color: var(--kux-text);
+}
+
+.formItemTipWrapper {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 4px;
+  width: 100%;
+  line-height: 100%;
+
+  @include media-query('sm') {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+
+  .voiceCodeText {
+    color: var(--kux-text);
+    font-size: 12px !important;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.codeWrapper {
+  :global(.KuxForm-itemHelp) {
+    min-height: 0px;
+  }
+}
+
+.formItem {
+  margin-bottom: 28px;
+  &.hasHelp {
+    :global(.kux-form__item-help) {
+      display: block;
+    }
+  }
+  :global(.kux-form__item-help) {
+    display: none;
+  }
+  :global(.kux-form__item--error) {
+    :global(.kux-form__item-help) {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      justify-content: flex-start;
+      margin-top: 0px;
+    }
+  }
+  :global(.KuxCol-col) {
+    width: 100%;
+  }
+}
+
+.formItemLabel {
+  [dir='rtl'] & {
+    text-align: left;
+  }
+}
+
+.formItemTipText {
+  display: inline;
+  color: var(--kux-text40);
+  font-size: 13px;
+  width: auto;
+  line-height: 140%;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 6px;
+}
+
+.input {
+  :global(.KuxInput-prefix) {
+    display: none !important;
+  }
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--kux-brandGreen);
+}
+
+.baseText {
+  color: var(--kux-text);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+
+  &.disabled {
+    cursor: default;
+    color: inherit;
+  }
+
+  &:not(.disabled) {
+    cursor: pointer;
+    color: var(--kux-text);
+  }
+}

@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { IconShowCase } from './helper/icons';
+import { KuxIconInfo } from './helper/build-info';
+
+<Meta title="3. 图标" />
+# 图标
+
+图标由 `@kux/iconpack` 提供，包含了常用的图标集合。<KuxIconInfo />
+
+注意: `@kux/design` 已经依赖了 `@kux/iconpack` 包, 安装 `@kux/design` 时会自动安装 `@kux/iconpack`
+，因此一般情况下不需要单独安装。 **但如果你使用 pnpm 管理依赖 时, 需要手动安装 `@kux/iconpack` 避免出现找不到依赖的问题**。
+
+
+## 基本用法
+
+```tsx
+import { ActivityCenterIcon, ArrowLeft2Icon, PriceRiseIcon } from '@kux/iconpack';
+
+<ActivityCenterIcon  style={{ color: '#8c8c8c' }} />
+// ← 图标, 在RTL下会自动对称反转, 变为 →
+<ArrowLeft2Icon rtl />
+
+// ↑ 图标, 加上 inverted 会 中心180deg旋转 实际会变为 ↓
+<PriceRiseIcon size="large" inverted />
+```
+
+<Callout type="tip">
+  在带方向的图标上使用 `rtl` 属性，可以在 RTL 模式下自动对称翻转图标方向。
+  如: `<ArrowLeft2Icon rtl />`
+</Callout>
+
+## 图标列表
+
+<IconShowCase />
+
+
+## 属性说明
+
+| 属性        | 说明                                 | 类型                    | 默认值   |
+|-----------|------------------------------------|-----------------------|--------|
+| size      | 图标尺寸，支持数字或 `tiny`(12) / `small`(16) / `medium`(24) / `large`(32)  |   string \| number   | 24 |
+| style     | 自定义样式（颜色/大小等）                   | React.CSSProperties     | -      |
+| inverted  | 是否 180 度旋转
+| rtl       | 是否在 rtl 模式下对称反转, 用于适配RTL下带方向的图标               | boolean                 | false  |
+
+除了上述特殊属性外, 还支持所有 SVG 元素的标准属性, 比如 `className`, `onClick` 等。

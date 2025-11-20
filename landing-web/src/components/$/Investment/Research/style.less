@@ -1,0 +1,118 @@
+.container {
+  overflow: hidden;
+  margin-bottom: 126px;
+  .info {
+    width: 1200px;
+    margin: 0 auto 80px;
+  }
+  .title {
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.87);
+    // margin-bottom: 24px;
+  }
+  .subTitle {
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.87);
+    width: 792px;
+  }
+  .research {
+    width: 1200px;
+    margin: 0 auto;
+    :global{
+      .slick-slider{
+        display: flex;
+        align-items: center;
+      }
+    }
+    .prevArrow{
+      color: #58CCB6;
+      transform: rotate(180deg);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .nextArrow{
+      color: #58CCB6;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+  }
+  .item {
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    cursor: pointer;
+    img{
+      display: inline-block;
+      width: 94px;
+      height: 110px;
+      margin-bottom: 36px;
+    }
+    div{
+      font-size: 20px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+  
+}
+
+@media (max-width: @kc-mb-width) {
+  .container {
+    overflow: hidden;
+    padding: ~`px2rem(24)` ~`px2rem(24)` ~`px2rem(120)`;
+    margin-bottom: 0;
+    .info {
+      width: 100%;
+      margin: 0 auto ~`px2rem(60) `;
+    }
+    .title {
+      font-size: ~`px2rem(24) `;
+      color: rgba(255, 255, 255, 0.87);
+      // margin-bottom: ~`px2rem(32) `;
+    }
+    .subTitle {
+      font-size: ~`px2rem(14) `;
+      line-height: ~`px2rem(22) `;
+      color: rgba(255, 255, 255, 0.87);
+      width: 100%;
+    }
+    .research {
+      width: 100%;
+      margin: 0 auto;
+      :global{
+        .slick-slider{
+          display: flex;
+          align-items: center;
+        }
+      }
+      .prevArrow{
+        color: #58CCB6;
+        transform: rotate(180deg);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .nextArrow{
+        color: #58CCB6;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+    }
+    .item {
+      width: ~`px2rem(127) `;
+      height: ~`px2rem(118) `;
+      text-align: center;
+      img{
+        display: inline-block;
+        width: ~`px2rem(71) `;
+        height: ~`px2rem(76) `;
+        margin-bottom: 36px;
+      }
+      div{
+        font-size: ~`px2rem(14) `;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.87);
+      }
+    }
+  }
+}

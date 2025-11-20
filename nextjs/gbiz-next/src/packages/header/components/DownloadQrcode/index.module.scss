@@ -1,0 +1,145 @@
+@import 'src/styles/mixin.scss';
+
+.contentWrapper {
+  padding-right: 594px;
+
+  [dir='rtl'] & {
+    padding-right: 0;
+    padding-left: 594px;
+  }
+
+  @include media-query('lg') {
+    padding-right: 0;
+
+    [dir='rtl'] & {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  @include media-query('sm') {
+    padding-right: 0;
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    [dir='rtl'] & {
+      padding: 0 16px;
+    }
+  }
+}
+
+.container {
+  background: #fff;
+  border-radius: 21.5px;
+  overflow: hidden;
+  width: 172px;
+  height: 172px;
+}
+
+.mainTitle {
+  padding-top: 24px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--kux-text);
+
+  @include media-query('lg') {
+    padding-top: 0;
+  }
+
+  @include media-query('sm') {
+    padding-top: 0;
+    font-size: 28px;
+    text-align: center;
+    max-width: unset;
+  }
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text60);
+  @include media-query('sm') {
+    font-size: 16px;
+    margin-top: 12px;
+    text-align: center;
+  }
+}
+
+.viewMoreLink {
+  color: var(--kux-text60);
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.qrCodeBox {
+  margin-top: 48px;
+  display: flex;
+
+  @include media-query('sm') {
+    margin-top: 32px;
+  }
+}
+
+.scanQrCodeTips {
+  margin-top: 48px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text60);
+  @include media-query('sm') {
+    margin-top: 32px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.appShowcase {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 579px;
+  height: 724px;
+  z-index: 1;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include media-query('lg') {
+    width: 382px;
+    height: 478px;
+  }
+
+  @include media-query('sm') {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 68px;
+    img {
+      bottom: -5px;
+      position: relative;
+    }
+  }
+  [dir='rtl'] & {
+    right: unset;
+    left: 0;
+  }
+}
+
+.shimmerBackground {
+  position: absolute;
+  z-index: 0;
+  left: 0px;
+  bottom: 0px;
+  height: 210px;
+  width: 100%;
+  opacity: 0.6;
+  background: radial-gradient(68.15% 100% at 50% 100%, #85cbb4 0%, rgba(18, 18, 18, 0) 100%);
+}

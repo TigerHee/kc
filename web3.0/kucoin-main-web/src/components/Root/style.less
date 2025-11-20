@@ -1,0 +1,57 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+.root {
+  background-color: #f3f5f9;
+  &.light {
+    background: #ffffff;
+  }
+  &.dark {
+    background: #121212;
+  }
+}
+
+.body {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-height: 80vh;
+  .root[data-path='/referral'] & {
+    min-height: initial;
+  }
+
+  &.onlymain {
+    min-height: 100vh;
+  }
+}
+.root[data-path='/'] {
+  overflow: hidden;
+  background-color: transparent;
+}
+
+// --- 自助服务页面样式 end  ---
+
+.root[data-path^='/404'] {
+    // 整个页面的最低高度应该铺满屏幕，不确定其他页面情况，只改/404页面
+    min-height: 100vh;
+}
+
+.root[data-path='/listing'] {
+  background-color: #fff;
+  .body {
+    min-height: 515px;
+  }
+}
+
+.root[data-path='/ethereum-upgrade'],
+.root[data-path='/web3-wallet'],
+.root[data-path='/copy-trading'],
+.root[data-path='/mining-pool'] {
+  background-color: #f9f9f9;
+}
+
+.root[data-path='/about-us'] {
+  .body {
+    min-height: unset;
+  }
+}

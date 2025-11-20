@@ -1,0 +1,308 @@
+.panel {
+  margin-bottom: 18px;
+  .bgColorWrap{
+    background: #01081E;
+  }
+}
+
+.projectTop {
+  height: 98px;
+  background-image: url(assets/spotlight/spotlight_top.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  padding: 15px 24px 0 30px;
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #01081E;
+  .projectName {
+    line-height: 48px;
+    font-size: 27px;
+    color: #58CCB6;
+    letter-spacing: 0;
+  }
+}
+
+.info {
+  padding: 40px 0;
+  display: flex;
+
+  .rows {
+    flex: 1;
+    padding-right: 12px;
+    .row {
+      display: flex;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .col {
+
+      letter-spacing: 0;
+      color: #FFFFFF;
+      width: 50%;
+
+      .title {
+        font-size: 12px;
+        margin-bottom: 5px;
+        color: #98B3E4;
+      }
+      .content {
+        font-size: 20px;
+        word-break: break-word;
+
+        > span {
+          color: #929FB3;
+          font-size: 12px;
+          margin-left: 5px;
+        }
+      }
+
+      &.intro {
+        &.single {
+          width: 100%;
+        }
+        .content {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    flex: none;
+    width: 345px;
+    height: 190px;
+    display: block;
+  }
+}
+
+.panelButton {
+  >button {
+    width: 100%;
+    color: #01081E;
+    font-weight: 500;
+  }
+
+  :global {
+    .ant-btn-primary {
+      background-color: #58CCB6;
+      border-color: #58CCB6;
+    }
+    .ant-btn-warning {
+      background-image: linear-gradient(-45deg, #FFB82C 0%, #F8A531 100%) !important;
+    }
+    .ant-btn-warning:hover, .ant-btn-warning:focus {
+      color: #01081E;
+      border-color: #FFFFFF;
+    }
+    .ant-btn-grey.disabled,
+    .ant-btn-grey[disabled],
+    .ant-btn-success {
+      color: #fff;
+      background-color: rgba(255,255,255,0.38);
+      border-color: transparent;
+      border-radius: ~`px2rem(4)`;
+    }
+    .ant-btn-success:hover, .ant-btn-success:focus {
+      color: #FFFFFF;
+      border-color: transparent;
+    }
+  }
+
+
+}
+
+.buyTip {
+  background: #182B4D;
+  padding: 23px;
+
+  .tip {
+    font-size: 14px;
+    color: #FF5F73;
+    letter-spacing: 0;
+    margin-left: 8px;
+  }
+
+  a {
+    font-size: 14px;
+    color: #0F7DFF;
+    letter-spacing: 0;
+  }
+}
+
+.input {
+  width: 150px !important;
+  box-shadow: none !important;
+  border: 1px solid #4F6CB7 !important;
+  background: none !important;
+  color: #fff !important;
+  border-radius: 2px !important;
+
+  &:hover {
+    border: 1px solid #4F6CB7 !important;
+  }
+
+  input {
+    padding-right: 22px !important;
+  }
+
+  :global {
+    .ant-input-number-handler {
+      color: #fff !important;
+      >span {
+        color: #fff !important;
+      }
+    }
+    .ant-input-number-handler-wrap {
+      background: none !important;
+      border-radius: 0 0 2px 2px !important;
+      border-left: 1px solid #4F6CB7 !important;
+    }
+    .ant-input-number-handler-down {
+      border-top: 1px solid #4F6CB7 !important;
+    }
+  }
+}
+
+.buyInfo {
+  background: rgba(212,218,236,0.27);
+  padding: 12px;
+  margin-bottom: 24px;
+
+  .infoRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    >div {
+      min-width: 50%;
+    }
+  }
+}
+
+.countdown {
+
+}
+
+.countdownBox {
+  background: #34528C;
+  border: 0 solid #3157A0;
+
+  font-size: 29px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.forgetPWDTip {
+  margin-top: 6px;
+
+  font-size: 12px;
+  color: #0F7DFF;
+  letter-spacing: -0.09px;
+  text-align: right;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.subtip {
+
+  font-size: 12px;
+  color: #333333;
+  letter-spacing: 0;
+  text-align: center;
+}
+.graytip {
+
+  font-size: 12px;
+  color: #9B9B9B;
+  letter-spacing: 0;
+  text-align: center;
+}
+.successModalWrapper{
+  :global{
+    .ant-modal-body{
+      padding: 0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  }
+}
+.titleArea{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.88);
+  background: linear-gradient(180deg, #3AFFA1 0%, #0A9A91 100%);
+  height: 132px;
+  div{
+    margin-top: -15px;
+  }
+}
+.contentArea{
+  padding: 16px 24px 24px;
+  background: linear-gradient(0deg, rgba(184, 198, 216, 0.12), rgba(184, 198, 216, 0.12)), #10141C;
+}
+.successModalButton{
+  height: 40px;
+  background: #29CD97;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 40px;
+  margin: 16px auto 0;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.failInfo{
+  width: 282px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  margin-left: -141px;
+  background: linear-gradient(0deg, rgba(237, 110, 114, 0.08), rgba(237, 110, 114, 0.08)), linear-gradient(0deg, rgba(216, 216, 216, 0.08), rgba(216, 216, 216, 0.08)), #01081E;
+  box-shadow: 0px 2px 8px rgba(0, 10, 30, 0.16);
+  border-radius: 4px;
+  z-index: 10;
+  -webkit-transition: all 1s ease-in;  
+  -moz-transition: all 1s ease-in;  
+  transition: all 1s ease-in;  
+  div{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #F75858;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #F75858;
+  }
+  span{
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.87);
+    margin-left: 10px;
+  }
+}

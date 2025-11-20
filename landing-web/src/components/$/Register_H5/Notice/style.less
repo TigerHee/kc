@@ -1,0 +1,111 @@
+@keyframes move {
+  0%,
+  65% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  85% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  95% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes move {
+  0%,
+  65% {
+    -webkit-transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(10deg);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+  }
+  80% {
+    -webkit-transform: rotate(10deg);
+  }
+  85% {
+    -webkit-transform: rotate(-10deg);
+  }
+  90% {
+    -webkit-transform: rotate(10deg);
+  }
+  95% {
+    -webkit-transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes wordsLoop {
+  0% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes wordsLoop {
+  0% {
+    -webkit-transform: translateX(60%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+.notice {
+  width: 100%;
+  height: ~`px2rem(30) `;
+  padding: 0 ~`px2rem(12) `;
+  background: #22283b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: ~`px2rem(12) `;
+  color: #ffffff;
+  .noticeImg {
+    width: ~`px2rem(17) `;
+    height: ~`px2rem(17) `;
+    margin-right: ~`px2rem(7) `;
+    animation: move 2s 0s infinite;
+    -webkit-animation: move 2s 0s infinite;
+  }
+  .tipBox {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+  .tipText {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .tipAnimate {
+    animation: wordsLoop 10s linear infinite normal;
+    -webkit-animation: wordsLoop 10s  linear infinite normal;
+  }
+  .closeImg {
+    width: ~`px2rem(14) `;
+    height: ~`px2rem(14) `;
+    margin-left: ~`px2rem(4) `;
+    cursor: pointer;
+  }
+}

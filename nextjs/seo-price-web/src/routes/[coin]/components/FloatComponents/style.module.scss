@@ -1,0 +1,14 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: fixed;
+  bottom: 88px;
+  right: 40px;
+  @media screen and (max-width: 1580px) {
+    right: 12px;
+  }
+}
+

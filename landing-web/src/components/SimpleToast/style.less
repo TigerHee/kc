@@ -1,0 +1,39 @@
+.toast {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  padding: ~`px2rem(8) ` ~`px2rem(12) `;
+  color: #ffffff;
+  font-size: ~`px2rem(14) `;
+  line-height: 130%;
+  text-align: center;
+  background: #737e8d;
+  border-radius: ~`px2rem(4) `;
+  box-shadow: 0px 0.675325px 6.75325px rgba(0, 0, 0, 0.1);
+
+  // 768断点 pc适配的样式
+  @media (min-width: 768px) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    background: #737e8d;
+    border-radius: 4px;
+    box-shadow: 0px 0.675325px 6.75325px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.rcNotificationContainer {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  z-index: 9999;
+  width: fit-content;
+  max-width: 95%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,21 @@
+diff --git a/package.json b/package.json
+index 4f49d6773f5ef149bbca7cb98adafd82fddfd4a7..9ede4bc9db488697e5465fd6526c76db39188e0f 100644
+--- a/package.json
++++ b/package.json
+@@ -8,12 +8,14 @@
+         ".": {
+             "require": "./dist/cjs/index.js",
+             "import": "./dist/es/index.mjs",
+-            "default": "./dist/cjs/index.js"
++            "default": "./dist/cjs/index.js",
++            "types": "./types/index.d.ts"
+         },
+         "./three": {
+             "require": "./dist/cjs/three-entry.js",
+             "import": "./dist/es/three-entry.mjs",
+-            "default": "./dist/cjs/three-entry.js"
++            "default": "./dist/cjs/three-entry.js",
++            "types": "./types/three-entry.d.ts"
+         },
+         "./package.json": "./package.json"
+     },

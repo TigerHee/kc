@@ -1,0 +1,119 @@
+/**
+ * Owner: sean.shi@kupotech.com
+ */
+@import 'src/styles/mixin.scss';
+
+.dropdownMenu {
+  position: absolute;
+  top: 56px;
+  margin: 0 0 0;
+  padding: 0;
+  width: 100%;
+  max-height: 336px;
+  overflow-y: auto;
+  background: var(--kux-overlay);
+  border: 1px solid var(--kux-cover4);
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.dropdownMenuItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 56px;
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  list-style: none;
+  color: var(--kux-text40);
+  cursor: pointer;
+  word-wrap: break-word;
+  direction: ltr;
+
+  [dir='rtl'] & {
+    justify-content: flex-end;
+  }
+
+  &:hover {
+    background-color: var(--kux-cover2);
+  }
+}
+
+.suffixText {
+  direction: ltr;
+  color: var(--kux-text);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  margin-bottom: 8px;
+  color: var(--kux-text);
+  word-break: break-word;
+
+  &.fromDrawer {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  @include media-query('sm') {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 8px;
+
+    &.fromDrawer {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.tips {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--kux-text60);
+  margin-bottom: 37px;
+
+  @include media-query('sm') {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+.extendForm {
+  .mtSpace {
+    margin-top: 8px;
+
+    @include media-query('sm') {
+      margin-top: 0;
+    }
+  }
+}
+
+.formItemBox {
+  position: relative;
+  z-index: 1;
+
+  @include media-query('sm') {
+    margin-bottom: 8px;
+  }
+}
+
+.accountInput {
+  .KuxInput-prefix {
+    display: none;
+
+    &.showPrefix {
+      display: inline-flex;
+    }
+  }
+}
+
+.bindEmailButton {
+  margin-top: 16px;
+}

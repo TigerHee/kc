@@ -1,0 +1,28 @@
+{
+  "url": "ssh://git@bitbucket.kucoin.net/kuc/landing-web.git",
+  "app_type": "web",
+  "web_type": "static",
+  "pre_copy": true,
+  "node_version": "v14.19.3",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:14.19.3",
+  "offline_params": {
+    "build_cmd": "yarn run build",
+    "dist_copy": {
+      "on_opts": true,
+      "copy_file": "dist",
+      "copy_path": "land",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": true
+    },
+    "cdn_copy": {
+      "on_opts": true,
+      "copy_file": "dist",
+      "copy_path": "landing-web/{ver}",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": true
+    },
+    "other_opts": ""
+  }
+}

@@ -1,0 +1,81 @@
+// http://10.2.2.103:4000/?path=/story/basic--color
+// colors
+@color_primary: #24AE8F;
+@color_primary74: fade(#24AE8F, 74);
+@color_primary60: fade(#24AE8F, 60);
+@color_primary38: fade(#24AE8F, 38);
+@color_primary16: fade(#24AE8F, 16);
+@color_primary8: fade(#24AE8F, 8);
+@color_secondary: #DC5656;
+@color_secondary74: fade(#DC5656, 74);
+@color_secondary60: fade(#DC5656, 60);
+@color_secondary38: fade(#DC5656, 38);
+@color_secondary16: fade(#DC5656, 16);
+@color_secondary8: fade(#DC5656, 8);
+@color_complementary: #EFA842;
+@color_complementary74: fade(#EFA842, 74);
+@color_complementary60: fade(#EFA842, 60);
+@color_complementary38: fade(#EFA842, 38);
+@color_complementary16: fade(#EFA842, 16);
+@color_complementary8: fade(#EFA842, 8);
+@color_highEmphasis: #01081E;
+@color_mediumEmphasis: fade(#01081E, 87);
+@color_body: fade(#01081E, 60);
+@color_disabled: fade(#01081E, 38);
+@color_border: fade(#01081E, 16);
+@color_divider: fade(#01081E, 8);
+@color_tableHeader: fade(#01081E, 4);
+@color_secondTableHeader: fade(#01081E, 4);
+@color_resting: fade(#01081E, 0);
+@color_background: #fff;
+@color_surface: #fff;
+@color_mongoliaBc: rgba(255, 255, 255, 0.7);
+@color_cardBc: rgba(245, 245, 246, 1);
+@color_line: rgba(235, 235, 237, 1);
+@color_bgLine: rgba(235, 235, 237, 1);
+@color_cardBc1: #FFFFFF;
+@color_cardBc2: rgba(245, 245, 246, 1);
+
+// http://10.2.2.103:4000/?path=/story/basic--font
+// font
+.font_sm() {
+  font-size: 12px;
+  line-height: 20px;
+}
+.font_md() {
+  font-size: 14px;
+  line-height: 22px;
+}
+.font_lg() {
+  font-size: 16px;
+  line-height: 24px;
+}
+.font_xl() {
+  font-size: 20px;
+  line-height: 28px;
+}
+.font_x2l() {
+  font-size: 24px;
+  line-height: 36px;
+}
+.font_x3l() {
+  font-size: 34px;
+  line-height: 48px;
+}
+.font_x4l() {
+  font-size: 48px;
+  line-height: 72px;
+}
+.font_x5l() {
+  font-size: 60px;
+  line-height: 88px;
+}
+
+// http://10.2.2.103:4000/?path=/story/basic--shadow
+// shadow
+@color_dark_surface: #01081E;
+@shadow_base: 0 0 8px 0 fade(@color_dark_surface, 8);
+@shadow_medium: 0 2px 8px 0 fade(@color_dark_surface, 16);
+@shadow_high: 0 3px 4px 0 fade(@color_dark_surface, 16), 0 1px 16px 0 fade(@color_dark_surface, 8);
+@shadow_left: -3px 0 4px 0 fade(@color_dark_surface, 16), -1px 0 24px 0 fade(@color_dark_surface, 16);
+@shadow_right: 3px 0 4px 0 fade(@color_dark_surface, 16), 1px 0 24px 0 fade(@color_dark_surface, 16);

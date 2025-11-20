@@ -1,0 +1,52 @@
+/**
+ * Owner: sean.shi@kupotech.com
+ */
+@import 'src/styles/mixin.scss';
+
+.agreeFormItem {
+  display: flex;
+
+  & + & {
+    margin-top: 12px;
+  }
+
+  :global(.KuxForm-itemHelp) {
+    display: none !important;
+  }
+
+  :global(.KuxForm-itemError .KuxForm-itemHelp) {
+    display: block !important;
+
+    :global(.KuxForm-itemError) {
+      padding-left: 26px;
+    }
+  }
+
+  :global(.kux-checkbox-wrapper) {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+
+    :global(.kux-checkbox) {
+      margin-top: 4px;
+    }
+  }
+
+  .agreeLabel {
+    color: var(--kux-text60);
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+
+    a {
+      cursor: pointer;
+      color: var(--kux-text);
+      font-weight: 700;
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--kux-text);
+      }
+    }
+  }
+}

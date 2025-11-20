@@ -1,0 +1,75 @@
+@import '~themes/mix.less';
+
+.container {
+  margin: 80px auto 0;
+  width: 83.33%;
+  max-width: 1200px;
+  .mediaQueryMd({width: 93.75%;});
+  .mediaQuerySm({margin-top: 60px; width: 93.6%;});
+}
+
+.title {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: #00142a;
+  .mediaQueryMd({font-size: 36px;});
+  .mediaQuerySm({font-size: 24px; line-height: 36px;});
+}
+
+.flexbox {
+  display: flex;
+  .mediaQueryMd({display: block;});
+}
+
+.flexItem {
+  position: relative;
+  flex: 1 1 0;
+  padding: 40px 24px;
+  border: 1px solid rgba(0, 20, 42, 0.08);
+  border-radius: 12px;
+
+  & + .flexItem {
+    margin-left: 24px;
+    .mediaQueryMd({margin: 24px 0 0;});
+  }
+}
+
+.curStep {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  padding: 0 22px;
+  line-height: 30px;
+  font-size: 14px;
+  color: rgba(0, 20, 42, 0.6);
+  background: rgba(0, 20, 42, 0.04);
+  border-radius: 0px 12px;
+}
+
+.stepIcon {
+  width: 48px;
+}
+
+.stepText {
+  height: 104px;
+  margin: 16px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #00142a;
+  .mediaQueryMd({height: auto;});
+}
+
+.stepButton {
+  height: auto !important;
+  min-height: 40px;
+  padding: 5px 14px !important;
+  .mediaQuerySm({min-height: 32px;});
+}
+
+.arrowRight {
+  width: 16px;
+}

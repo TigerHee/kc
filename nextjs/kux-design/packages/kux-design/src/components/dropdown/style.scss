@@ -1,0 +1,79 @@
+@import '@/style/index.scss';
+
+// Dropdown 组件样式
+@include component('dropdown') {
+  display: inline-flex;
+  position: relative;
+
+  // 触发器样式
+  .#{$prefix}_trigger {
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  // 下拉内容样式
+  .#{$prefix}_overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background: get-theme(background-primary);
+    border: 1px solid get-theme(border-primary);
+    border-radius: get-theme(border-radius-md);
+    box-shadow: get-theme(shadow-md);
+    min-width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s ease-in-out;
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  // 定位容器样式
+  .#{$prefix}_popper {
+    position: relative;
+    z-index: 1000;
+
+    &--open {
+      .#{$prefix}_overlay {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  // 下拉菜单项样式
+  .#{$prefix}_item {
+    padding: get-theme(spacing-sm) get-theme(spacing-md);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: get-theme(background-secondary);
+    }
+
+    &:first-child {
+      border-top-left-radius: get-theme(border-radius-md);
+      border-top-right-radius: get-theme(border-radius-md);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: get-theme(border-radius-md);
+      border-bottom-right-radius: get-theme(border-radius-md);
+    }
+  }
+
+  // 分隔线样式
+  .#{$prefix}_divider {
+    height: 1px;
+    background-color: get-theme(border-primary);
+    margin: get-theme(spacing-xs) 0;
+  }
+}

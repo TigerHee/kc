@@ -1,0 +1,134 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as Stories from './stories';
+
+<Meta title="base/Form/Readme" />
+
+# Form 组件
+
+Form 组件是基于 `rc-field-form` 构建的表单组件，提供了完整的表单功能，包括验证、布局、错误处理等。
+
+## 特性
+
+- 支持垂直和水平布局
+- 完整的表单验证功能
+- 错误信息显示
+- 帮助信息支持
+- 高阶组件 `withForm` 支持
+- TypeScript 类型支持
+
+## 基础用法
+
+### 基础表单
+
+```tsx
+import { Form, FormItem, useForm } from '@kux/design';
+
+const MyForm = () => {
+  const [form] = useForm();
+
+  const onFinish = (values) => {
+    console.log('Form values:', values);
+  };
+
+  return (
+    <Form form={form} onFinish={onFinish}>
+      <FormItem
+        name="username"
+        label="用户名"
+        rules={[{ required: true, message: '请输入用户名' }]}
+      >
+        <input placeholder="请输入用户名" />
+      </FormItem>
+      <FormItem>
+        <button type="submit">提交</button>
+      </FormItem>
+    </Form>
+  );
+};
+```
+
+### 水平布局
+
+```tsx
+<Form 
+  layout="horizontal"
+  labelCol={{ span: 6 }}
+  wrapperCol={{ span: 18 }}
+>
+  <FormItem name="username" label="用户名">
+    <input />
+  </FormItem>
+</Form>
+```
+
+### 带帮助信息
+
+```tsx
+<FormItem
+  name="email"
+  label="邮箱"
+  help="请输入有效的邮箱地址"
+  rules={[
+    { required: true, message: '请输入邮箱' },
+    { type: 'email', message: '请输入有效的邮箱地址' }
+  ]}
+>
+  <input placeholder="请输入邮箱" />
+</FormItem>
+```
+
+## API
+
+### Form Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+|------|------|------|--------|
+| layout | 表单布局 | `'horizontal' \| 'vertical'` | `'vertical'` |
+| labelCol | 标签列配置 | `object` | - |
+| wrapperCol | 包装器列配置 | `object` | - |
+| requiredMark | 必填标记 | `boolean \| 'optional'` | `true` |
+| name | 表单名称 | `string` | - |
+
+### FormItem Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+|------|------|------|--------|
+| name | 字段名 | `string \| string[]` | - |
+| label | 标签 | `ReactNode` | - |
+| help | 帮助信息 | `ReactNode` | - |
+| rules | 验证规则 | `Rule[]` | - |
+| validateStatus | 验证状态 | `'success' \| 'warning' \| 'error' \| 'validating' \| 'info'` | - |
+| required | 是否必填 | `boolean` | - |
+| noStyle | 是否无样式 | `boolean` | `false` |
+| keepHelpMounted | 是否保持帮助信息挂载 | `boolean` | `true` |
+
+### Hooks
+
+#### useForm
+
+```tsx
+const [form] = useForm();
+```
+
+#### useFormInstance
+
+```tsx
+const form = useFormInstance();
+```
+
+### 高阶组件
+
+#### withForm
+
+```tsx
+import { withForm } from '@kux/design';
+
+const MyComponent = ({ form, values }) => {
+  // 组件逻辑
+};
+
+const WrappedComponent = withForm({
+  name: 'myForm',
+  layout: 'vertical'
+})(MyComponent);
+```

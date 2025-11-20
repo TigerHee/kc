@@ -1,0 +1,12 @@
+{
+  "activeSymbol": "",
+  "changePosition": null,
+  "positionMap": {},
+  "tagMap": {},
+  "targetPriceMap": {
+    "BTC-BTC": 1
+  },
+  "leverageVisible": false,
+  "borrowSizeMap": {},
+  "assetsList": []
+}

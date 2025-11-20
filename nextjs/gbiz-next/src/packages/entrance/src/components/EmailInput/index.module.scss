@@ -1,0 +1,50 @@
+.formItemBox {
+  position: relative;
+  z-index: 1;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 56px;
+  margin: 0 0 0;
+  padding: 0;
+  width: 100%;
+  max-height: 336px;
+  overflow-y: auto;
+  background: var(--kux-backgroundOverlay);
+  border: 1px solid var(--kux-cover4);
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+
+.dropdownMenuItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 56px;
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  list-style: none;
+  color: var(--kux-text40);
+  cursor: pointer;
+  word-wrap: break-word;
+  direction: ltr;
+  &:hover {
+    background-color: var(--kux-cover2);
+  }
+  [dir='rtl'] & {
+    justify-content: flex-end;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.suffixText {
+  direction: ltr;
+  color: var(--kux-text);
+}

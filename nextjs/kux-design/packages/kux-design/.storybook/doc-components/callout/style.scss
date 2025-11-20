@@ -1,0 +1,48 @@
+
+.callout {
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 1em 0 !important;
+  border: 1px solid;
+  background-color: var(--callout-bg, #f6f8fa);
+  font-size: 14px;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &-icon {
+    margin-right: 8px;
+  }
+
+  &-body {
+    line-height: 1.6;
+  }
+
+  &-note {
+    border-color: #ccc;
+    background-color: #f6f8fa;
+    --callout-bg: #f6f8fa;
+  }
+  
+  &-tip {
+    border-color: #7ee787;
+    background-color: #f0fff4;
+    --callout-bg: #f0fff4;
+  }
+  
+  &-warning {
+    border-color: #f2c200;
+    background-color: #fffdef;
+    --callout-bg: #fffdef;
+  }
+  
+  &-danger {
+    border-color: #ff8182;
+    background-color: #fff0f0;
+    --callout-bg: #fff0f0;
+  }
+}

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test pureToolTip visible 1`] = `
+<div>
+  <div
+    class="wrapper"
+  >
+    <div />
+    <div
+      class="tooltip undefined"
+      style="opacity: 1; pointer-events: inherit;"
+    >
+      <div
+        class="tooltipContent"
+      >
+        <div
+          class="tooltipArrow undefined"
+        />
+        <div
+          class="tooltipInner"
+          role="tooltip"
+        >
+          这里是tooltip标题
+          <span
+            class="pointer"
+            role="button"
+            style="display: inline-flex;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test pureToolTip visible 2`] = `
+<div>
+  <div
+    class="wrapper"
+  >
+    <div />
+    <div
+      class="tooltip undefined"
+      style="opacity: 0; pointer-events: none;"
+    >
+      <div
+        class="tooltipContent"
+      >
+        <div
+          class="tooltipArrow undefined"
+        />
+        <div
+          class="tooltipInner"
+          role="tooltip"
+        >
+          这里是tooltip标题
+          <span
+            class="pointer"
+            role="button"
+            style="display: inline-flex;"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

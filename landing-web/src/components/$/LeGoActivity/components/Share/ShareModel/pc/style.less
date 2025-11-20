@@ -1,0 +1,163 @@
+.sharePc {
+  max-width: 600px !important;
+
+  :global {
+    .MuiDialog-paperFullWidth {
+      width: 600px;
+      padding: 38px 0 0;
+      background: #2b2c30;
+      border-radius: 4px;
+    }
+    .MuiDialog-closeX {
+      svg {
+        color: rgba(115, 126, 141, 1);
+      }
+    }
+    .MuiDialog-titleRoot {
+      position: absolute;
+      top: 14px;
+      left: 24px;
+      width: 80%;
+      margin-bottom: 0;
+      h2 {
+        color: #E1E8F5;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+      }
+    }
+
+    .KuxDialog-header{
+      padding-top: 10px;
+      padding-left: 24px;
+
+      div:first-of-type {
+        top: 16px;
+        right: 24px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          color: rgba(115, 126, 141, 1);
+        }
+      }
+    }
+
+    .KuxDialog-content {
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &.withWhite {
+    :global {
+      .MuiDialog-paperFullWidth {
+        background: #fff;
+      }
+      .MuiDialog-titleRoot {
+        h2 {
+          color: #000D1D;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 24px;
+
+  .poster {
+    width: 265px;
+    height: 454px;
+    background: #fff;
+  }
+
+  .copyIcon {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(216, 216, 216, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    right: 16px;
+    bottom: 80px;
+    cursor: pointer;
+  }
+
+  .downIcon {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(216, 216, 216, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    cursor: pointer;
+  }
+}
+
+.shareView {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+
+  .shareItem, .copyShareItem {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:  72px;
+    height: auto;
+    padding: 12px 0;
+    cursor: pointer;
+
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(0, 13, 29, 0.68);
+      line-height: 130%;
+      margin-top: 4px;
+    }
+    &.white {
+      span {
+        color: rgba(0, 13, 29, 0.68);
+      }
+    }
+  }
+}
+
+
+
+.download {
+  width: 100%;
+  margin: 20px 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > span {
+    min-width: 265px;
+    display: inline-block;
+    padding: 6px 0;
+    background: #01BC8D;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+}

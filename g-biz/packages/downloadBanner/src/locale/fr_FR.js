@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Trading mondial facile et sûr, 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Inscrivez-vous et maîtrisez les marchés en une seconde !",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Maîtrisez les marchés n'importe où, 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "Plus de 80 000 commentaires",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Vérifiez, déposez et achetez des cryptos dès que possible !",
+  "rw8e32A8H7X3QtiKHS37EK": "Télécharger",
+  "tXwwyoSbqG4pgsoXomccjp": "Téléchargez l'application {{brandName}} et gagnez les récompenses allant jusqu'à {{num}} {{siteBaseCurrency}}.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Les nouveaux utilisateurs obtiennent",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Recevez maintenant",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>Plus de 5 millions de</1> téléchargements",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(Plus de 100 000 avis)",
+  "qqJX78TFyekdKwwT6nVVWU": "(Plus de 16 000 avis)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Exclusivement pour les nouveaux utilisateurs: si votre premier dépôt ou achat de cryptos est supérieur à 50 $, vous recevrez une boîte mystère d’une valeur allant jusqu’à <span>500 $</span> !",
+  "bc25RyyCduDizpfpxEcMEi": "Télécharger",
+  "csjK9uyQQyYMLprAYkKsRT": "Téléchargez l'application {{brandName}} pour continuer votre parcours dans les cryptos et recevez jusqu'à <span> 500 $</span> de récompenses dans la Zone Débutant.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Déposez ou achetez des cryptos pour la première fois pour obtenir une boîte mystère d’une valeur allant jusqu’à <span>500 $</span> !",
+  "pgBahZcxwoUfbjzJwqpmY7": "Jusqu’à <span>500 $</span> de récompenses pour les nouveaux utilisateurs !",
+  "wLAfc8MZvoHbeNragecB4Z": "Effectuez des transactions plus sûres et plus rapides grâce à notre application mobile."
+}

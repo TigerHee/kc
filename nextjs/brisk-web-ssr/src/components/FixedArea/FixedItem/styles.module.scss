@@ -1,0 +1,38 @@
+@import '@/styles/mixin.scss';
+
+.fixedItem {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 24px;
+
+  border-radius: 16px;
+  border: 1px solid var(--kux-divider8);
+  background: var(--kux-backgroundOverlay);
+  /* Shadows/Base */
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.04);
+
+  svg {
+    width: 24px !important;
+    height: 24px !important;
+    color: var(--kux-text);
+  }
+
+  @include media-query('lg') {
+  }
+  @include media-query('sm') {
+    width: 40px;
+    height: 40px;
+    border-radius: 11.429px;
+    border: 0.714px solid var(--kux-divider8);
+    box-shadow: 0 0 28.571px 0 rgba(0, 0, 0, 0.04);
+    margin-top: 14px;
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+}

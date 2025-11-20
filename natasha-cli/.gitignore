@@ -1,0 +1,16 @@
+# misc ignore
+.vscode
+.DS_Store
+
+# deps ignore
+node_modules
+/**/*/node_modules
+natasha-base-demo/node_modules
+natasha-base-demo/dist
+
+# runtime ignore
+workspace/**/*
+!workspace/.gitkeep
+
+# yarn
+yarn-error.log

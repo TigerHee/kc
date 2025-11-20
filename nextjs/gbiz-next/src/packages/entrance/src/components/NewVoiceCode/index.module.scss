@@ -1,0 +1,87 @@
+.notReceiverDialog {
+  :global(.kux-modal-header .kux-modal-header-icon) {
+    width: 34px;
+    height: 34px;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--kux-text60);
+    margin-bottom: 24px;
+  }
+
+  .tip {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--kux-text60);
+    margin-top: 24px;
+
+    span,
+    .helpCenter {
+      color: var(--kux-text60);
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+
+  .contentList {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--kux-text60);
+  }
+
+  .contentListItem {
+    list-style: none;
+    margin-bottom: 6px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .sendButton {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--kux-text60);
+    cursor: pointer;
+
+    a {
+      color: var(--kux-text60);
+      cursor: pointer;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+
+      a {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .footerWrapper {
+    width: 100%;
+    padding: 20px 32px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid var(--kux-divider8);
+    :global(.kux-button.kux-button-large) {
+      height: 40px;
+    }
+  }
+
+  .footerWrapperH5 {
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 12px 16px;
+  }
+}

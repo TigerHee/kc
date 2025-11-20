@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "paths": {
+      "src/*": [
+        "src/*"
+      ],
+      "config": [
+        "src/config.js"
+      ],
+      "hooks/*": [
+        "src/hooks/*"
+      ],
+      "helper": [
+        "src/helper.js"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "hocs/*": [
+        "src/utils/hocs/*"
+      ],
+      "models/*": [
+        "src/models/*"
+      ],
+      "services/*": [
+        "src/services/*"
+      ],
+    },
+    "experimentalDecorators": true,
+  },
+  "exclude": [
+    ".git",
+    ".app-cache",
+    ".npm",
+    ".npm-tmp",
+    "dist",
+    "dist*",
+    "node_modules",
+    "subfolder/dist",
+    "subfolder/node_modules",
+    "**/dist/*",
+    "**/node_modules/*",
+  ]
+}

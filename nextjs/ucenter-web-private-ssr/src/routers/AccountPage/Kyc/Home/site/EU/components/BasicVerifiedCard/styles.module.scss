@@ -1,0 +1,27 @@
+@import "@/theme/mixin.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid var(--kux-cover8);
+  padding: 8px 32px 28px;
+}
+
+.verifiedContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.tag {
+  display: flex;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: var(--kux-brandGreen8);
+  color: var(--kux-brandGreen);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%; /* 18.2px */
+}

@@ -1,0 +1,18 @@
+:global(.kux-button.kux-button-default) {
+  &.customer {
+    position: fixed;
+    right: 48px;
+    bottom: 48px;
+    background-color: var(--kux-toolTips);
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    border: 1px solid var(--kux-divider8);
+    z-index: 1000;
+
+    .icon {
+      color: var(--kux-buttonTextPrimary);
+    }
+  }
+}
+

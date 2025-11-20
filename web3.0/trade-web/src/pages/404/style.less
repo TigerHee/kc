@@ -1,0 +1,46 @@
+@import "~themes/dark.less";
+
+.not_found{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(32deg, #18232B 2%, #0F191D 100%);
+  .head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 68px 20px 10px 20px;
+
+    p {
+      font-size: 32px;
+      color: @white;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .content {
+    max-width: 1366px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 40px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 278px;
+      height: 40px;
+      background: @color-green;
+      font-size: 14px;
+      color: @white;
+      font-weight: 400;
+    }
+  }
+}
+
+@keyframes pop {
+  50%{
+    transform: translateY(10px);
+  }
+}

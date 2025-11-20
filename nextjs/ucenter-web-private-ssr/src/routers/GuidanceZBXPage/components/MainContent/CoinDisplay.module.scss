@@ -1,0 +1,15 @@
+.coinBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  font-weight: 500;
+}
+
+.styledCoinIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: 500;
+}
+

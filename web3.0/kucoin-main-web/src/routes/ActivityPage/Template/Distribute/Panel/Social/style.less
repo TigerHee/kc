@@ -1,0 +1,39 @@
+.socialWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 0 24px 0;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report {
+  color: #0f7dff;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-align: right;
+}
+
+.icon {
+  padding: 0 7px;
+  cursor: pointer;
+  > [data-role='icon'] {
+    display: block;
+  }
+  > [data-role='icon-hover'] {
+    display: none;
+  }
+
+  &:hover {
+    > [data-role='icon'] {
+      display: none;
+    }
+    > [data-role='icon-hover'] {
+      display: block;
+    }
+  }
+}

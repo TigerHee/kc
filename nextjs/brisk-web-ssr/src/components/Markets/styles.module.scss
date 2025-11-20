@@ -1,0 +1,86 @@
+@import '@/styles/mixin.scss';
+
+.coinRankWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 106px;
+  @include media-query('lg') {
+    padding-top: 93px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include media-query('sm') {
+    padding-top: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--kux-text);
+  margin-bottom: 8px;
+  text-align: center;
+  @include media-query('sm') {
+    font-size: 24px;
+  }
+}
+
+.desc {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 48px;
+  color: var(--kux-text60);
+  text-align: center;
+  @include media-query('sm') {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+.listWrapper {
+  width: 100%;
+  margin-bottom: 48px;
+  @include media-query('lg') {
+    margin-bottom: 0;
+  }
+}
+
+.pcList {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--kux-text60);
+    @include media-query('sm') {
+      font-size: 14px;
+    }
+  }
+}
+
+.linkIcon {
+  width: 20px !important;
+  height: 20px !important;
+  color: var(--kux-text60);
+}

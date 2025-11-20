@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.errorSection {
+  > span {
+    font-weight: 500;
+    color: var(--color-text);
+  }
+}
+
+.boldText {
+  font-weight: 500;
+  color: var(--color-text);
+}

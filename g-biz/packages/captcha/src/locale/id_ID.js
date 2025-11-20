@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'Batal',
+  'gfa_btn': 'Konfirmasi',
+  'verify_img_tip': 'Masukkan karakternya',
+  'verify_img_title': 'Verifikasi Gambar',
+};

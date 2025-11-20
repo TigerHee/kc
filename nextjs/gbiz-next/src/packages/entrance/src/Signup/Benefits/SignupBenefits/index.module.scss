@@ -1,0 +1,234 @@
+@import 'src/styles/mixin.scss';
+
+.container {
+  margin-top: 12px;
+
+  :global(.highlight) {
+    color: var(--kux-brandGreen);
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.topRowItem {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.rowItem1 {
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.rowItem2 {
+  margin: 0 0 36px;
+}
+
+.rowReserveAsset {
+  margin: 28px 0 32px;
+}
+
+.rowItem4 {
+  justify-content: space-between;
+  margin: 32px 0 0;
+}
+
+.rowItemDivider {
+  height: 1px;
+  background-color: var(--kux-divider4);
+}
+
+.baseTitle {
+  color: var(--kux-text);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.baseDesc {
+  color: var(--kux-text60);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  > span > span {
+    color: var(--kux-brandGreen);
+    font-weight: 500;
+  }
+}
+
+.rowItem1Desc {
+  > span {
+    color: var(--kux-brandGreen);
+    font-weight: 500;
+  }
+}
+
+.numberItemBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.numberItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.numberItemDivider {
+  width: 1px;
+  height: 45px;
+  background-color: var(--kux-cover8);
+}
+
+.numberItemText {
+  color: var(--kux-brandGreen);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 2px;
+}
+
+.numberItemDesc {
+  color: var(--kux-text40);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+}
+
+.rowItemTitle1 {
+  margin-bottom: 16px;
+}
+.rowItemTitle2 {
+  margin-bottom: 22px;
+}
+.rowItemTitle4 {
+  margin-bottom: 16px;
+}
+
+.rowReserveAssetTitle {
+  margin-bottom: 4px;
+}
+
+.rowReserveAssetDesc {
+  font-size: 13px;
+  line-height: 130%;
+  margin-bottom: 24px;
+  font-weight: 400;
+  color: var(--kux-text40);
+}
+
+.coinItemBox {
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coinItem {
+  min-width: 130px;
+  min-height: 118px;
+  border-radius: 8px;
+  border: 1px solid var(--kux-cover12);
+  text-align: center;
+  padding: 16px 28px;
+  font-size: 0;
+}
+.coinItem.placeholder {
+  border-color: transparent;
+}
+
+.coinItemIcon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+}
+
+.coinItemText {
+  color: var(--kux-text);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.coinItemDesc {
+  color: var(--kux-text40);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+  width: 100px;
+}
+
+.indiaTempImg {
+  width: 110px;
+  height: 110px;
+}
+.rowItemImg1 {
+  width: 124px;
+  height: 124px;
+}
+.rowItemImg2 {
+  width: 140px;
+  height: 140px;
+}
+
+.skeletonImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.skeletonWrapper {
+  position: relative;
+  overflow: hidden;
+  
+  // 流光效果层
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+    animation: shimmer 1.2s infinite;
+    mix-blend-mode: overlay; // 混合模式，让流光只在灰色块上明显
+    
+    // 夜间模式下的流光效果
+    :global([data-theme="dark"]) & {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      mix-blend-mode: soft-light;
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

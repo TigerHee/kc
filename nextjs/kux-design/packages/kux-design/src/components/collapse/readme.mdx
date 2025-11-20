@@ -1,0 +1,76 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="base/Collapse/Readme" />
+
+# Collapse 折叠面板组件
+
+基础的折叠面板组件，支持受控/非受控、手风琴模式、自定义面板、尺寸、图标等。
+
+## 基本用法
+
+```tsx
+<Collapse items={[
+  { key: 1, title: '标题1', content: '内容1' },
+  { key: 2, title: '标题2', content: '内容2' },
+]} />
+```
+
+## 受控用法
+
+```tsx
+const [activeKey, setActiveKey] = useState([1]);
+<Collapse items={...} activeKey={activeKey} onChange={setActiveKey} />
+```
+
+## 非受控用法
+
+```tsx
+<Collapse items={...} defaultActiveKey={[1]} />
+```
+
+## 手风琴模式
+
+```tsx
+<Collapse items={...} accordion />
+```
+
+
+## 使用 Collapse.Panel 作为子组件
+
+Collapse 既支持通过 `items` 参数传递数据源，也支持直接以 `Collapse.Panel` 作为子组件（children）进行灵活布局。
+
+```tsx
+<Collapse>
+  <Collapse.Panel key="a" header="自定义标题A" content={<div>内容A</div>} />
+  <Collapse.Panel key="b" header="自定义标题B" content={<div>内容B</div>} />
+</Collapse>
+```
+
+> `Collapse.Panel` 的 props 与 items 结构一致，支持 header、content、key 等参数。
+
+## 自定义展开图标
+
+```tsx
+<Collapse items={...} expandIcon={({isActive}) => isActive ? <IconOpen /> : <IconClose />} />
+```
+
+## Props
+
+| 属性             | 说明                         | 类型                                         | 默认值   |
+|------------------|------------------------------|----------------------------------------------|----------|
+| accordion        | 手风琴模式                   | boolean                                      | false    |
+| activeKey        | 受控展开面板 key             | string \| number \| (string \| number)[]     | -        |
+| defaultActiveKey | 非受控初始展开面板 key       | string \| number \| (string \| number)[]     | -        |
+| size             | 面板尺寸                     | 'small' \| 'medium' \| 'auto'                | 'auto'   |
+| onChange         | 面板切换回调                 | (activeKey: (string \| number)[]) => void    | -        |
+| items            | 面板数据源                   | ICollapseItem[]                              | -        |
+| children         | 自定义面板内容               | React.ReactNode                              | -        |
+| expandIcon       | 自定义面板头部图标           | `({isActive}: {isActive: boolean}) => React.ReactNode` | - |
+
+### ICollapseItem
+
+| 属性   | 说明     | 类型                |
+|--------|----------|---------------------|
+| key    | 唯一标识 | string \| number    |
+| title  | 标题     | React.ReactNode     |
+| content| 内容     | React.ReactNode     |

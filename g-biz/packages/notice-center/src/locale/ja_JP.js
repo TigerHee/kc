@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'ja_JP',
+  '2HVcFSJMKfjBCfPSUu8PbB': '通知',
+  'all.clear': '全て削除',
+  'all.read': '全て既読',
+  'confirm': '確認',
+  'delete.message.confirm': '全ての通知メッセージを削除しますか？',
+  'table.empty': 'データなし',
+  'today': '今日',
+  'yesterday': '昨日',
+};

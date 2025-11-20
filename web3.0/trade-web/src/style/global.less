@@ -1,0 +1,324 @@
+@import "~themes/dark.less";
+@import './tooltip.less';
+
+html,
+body,
+:global(#root) {
+  height: 100%;
+  margin: 0;
+  font-family: @font-family;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  width: 100%;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+}
+
+body {
+  :global {
+    .KuxDialog-root {
+      // z-index: 1070 !important;
+    }
+    .selectContainer {
+      // z-index: 1071 !important;
+    }
+    .rc-picker-dropdown {
+      z-index: 1074 !important;
+      .rc-picker-panel-container {
+        .rc-picker-footer {
+          .rc-picker-ranges {
+            .rc-picker-ok {
+              button {
+                color: #000 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 火狐浏览器
+* {
+  scrollbar-width: thin;
+}
+
+div {
+  box-sizing: border-box;
+  // background-clip: padding-box !important;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+b {
+  font-weight: 500;
+}
+
+:global {
+  .ant-spin-nested-loading > div > .ant-spin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ant-spin-container::after {
+    background: transparent;
+  }
+  .ant-spin-blur {
+    opacity: 1;
+  }
+  .ku-icon {
+    font-size: 24px !important;
+  }
+  .ku-svg-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+  .color-gray {
+    color: @color-gray;
+  }
+  .color-deep-gray {
+    color: @color-deep-gray;
+  }
+  .color-high {
+    color: @color_1;
+  }
+  .color-low {
+    color: @color_2;
+  }
+  .color-buy {
+    color: @color-buy;
+  }
+  .color-title {
+    color: #7685a9;
+  }
+  .color-sell {
+    color: @color-sell;
+  }
+  .color-red {
+    color: red;
+  }
+  .color-green {
+    color: green;
+  }
+  .bold {
+    font-weight: 400;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-center {
+    display: flex;
+    align-items: center;
+  }
+  .kflex {
+    display: flex;
+  }
+  .kvc {
+    align-items: center;
+  }
+  .khc {
+    justify-content: center;
+  }
+  .ksb {
+    justify-content: space-between;
+  }
+  .ksa {
+    justify-content: space-around;
+  }
+  .kv {
+    flex-direction: column;
+  }
+  .kfe {
+    justify-content: flex-end;
+  }
+  .kflex1 {
+    flex: 1;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .wrap {
+    white-space: normal;
+  }
+  .nowrap {
+    white-space: nowrap;
+  }
+  .full-width {
+    width: 100%;
+  }
+
+  .blocked {
+    display: block;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+
+  .pull-left {
+    float: left;
+  }
+  .pull-right {
+    float: right;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .ant-input {
+    font-size: 14px;
+    &::-webkit-input-placeholder {
+      font-size: 14px;
+      color: fade(@black, 25%);
+    }
+  }
+  .ant-tooltip-open {
+    border-color: @color-red !important;
+  }
+  .loopingClass (@index) when (@index > 0) {
+    @indexDouble: (@index * 2);
+
+    .mr-@{indexDouble} {
+      margin-right: (@indexDouble) * 1px;
+    }
+
+    .ml-@{indexDouble} {
+      margin-left: (@indexDouble) * 1px;
+    }
+
+    .mt-@{indexDouble} {
+      margin-top: (@indexDouble) * 1px;
+    }
+
+    .mb-@{indexDouble} {
+      margin-bottom: (@indexDouble) * 1px;
+    }
+
+    .pr-@{indexDouble} {
+      padding-right: (@indexDouble) * 1px;
+    }
+
+    .pl-@{indexDouble} {
+      padding-left: (@indexDouble) * 1px;
+    }
+
+    .pt-@{indexDouble} {
+      padding-top: (@indexDouble) * 1px;
+    }
+
+    .pb-@{indexDouble} {
+      padding-bottom: (@indexDouble) * 1px;
+    }
+
+    .fs-@{indexDouble} when (@indexDouble >= 12) {
+      font-size: (@indexDouble) * 1px;
+    }
+
+    .loopingClass(@index - 1);
+  }
+
+  .loopingClass(30);
+
+  .scrollBar {
+    &::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+    }
+  }
+
+  .filter-blur {
+    filter: blur(5px);
+  }
+  .text-list {
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    color: fade(@black, 45%);
+    li {
+      position: relative;
+      padding-left: 10px;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7px;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background-color: fade(@black, 45%);
+      }
+    }
+  }
+  .ant-modal-close-x:before {
+    font-weight: 100 !important;
+  }
+  .ant-btn {
+    box-shadow: none !important;
+  }
+  .ant-select-arrow:before {
+    border: none !important;
+  }
+  .ant-notification {
+    width: 400px !important;
+  }
+
+  .MuiDialogActions-spacing > :not(:first-child) {
+    margin-left: 8px;
+  }
+  .MuiTablePagination-root .MuiIcon-icon {
+    transform: rotateY(0deg) /* rtl:rotateY(180deg) */;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :global {
+    .KuxDrawer-mask {
+      .KuxDrawer-root {
+        width: 100% !important;
+        height: 90%;
+        min-height: 200px;
+      }
+    }
+  }
+}
+:global {
+  .KuxTabs-container {
+    .KuxTabs-flexContainer {
+      .KuxTab-container {
+        font-family: @font-family !important;
+      }
+    }
+  }
+}
+:global {
+  .KuxDialog-header {
+    direction: ltr;
+  }
+}
+
+a[data-key="login"] {
+  cursor: pointer;
+}

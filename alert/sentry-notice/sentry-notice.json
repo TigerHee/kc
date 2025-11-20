@@ -1,0 +1,26 @@
+{
+    "web_type": "node",
+    "pre_copy": false,
+    "node_version": "",
+    "docker_image": "",
+    "offline_params": {
+      "build_cmd": "",
+      "dist_copy": {
+        "on_opts": false,
+        "copy_file": "",
+        "copy_path": "",
+        "copy_cmd": "",
+        "exclude_file": [],
+        "delete_opts": false
+      },
+      "cdn_copy": {
+        "on_opts": false,
+        "copy_file": "",
+        "copy_path": "",
+        "copy_cmd": "",
+        "exclude_file": [],
+        "delete_opts": false
+      },
+      "other_opts": ""
+    }
+  }

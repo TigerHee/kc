@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/red</title>
+    <defs>
+        <radialGradient cx="50%" cy="9.30306364%" fx="50%" fy="9.30306364%" r="119.994776%" gradientTransform="translate(0.500000,0.093031),scale(1.000000,0.812500),rotate(90.000000),translate(-0.500000,-0.093031)" id="radialGradient-1">
+            <stop stop-color="#A82A52" offset="0%"></stop>
+            <stop stop-color="#EC2F75" offset="47.5993822%"></stop>
+            <stop stop-color="#EC2773" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-2" x="7" y="4" width="26" height="32" rx="1"></rect>
+        <linearGradient x1="45.8610443%" y1="-4.06361609%" x2="45.8610443%" y2="117.390577%" id="linearGradient-4">
+            <stop stop-color="#FF78A6" offset="0%"></stop>
+            <stop stop-color="#FF1D69" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-2.51534904e-15%" x2="50%" y2="98.4394308%" id="linearGradient-5">
+            <stop stop-color="#FFF3B7" offset="0%"></stop>
+            <stop stop-color="#FAB559" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-6" cx="20" cy="17" r="4"></circle>
+    </defs>
+    <g id="Icon/red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-3" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <use id="Combined-Shape" fill="url(#radialGradient-1)" xlink:href="#path-2"></use>
+        <path d="M8,4 L32,4 C32.5522847,4 33,4.44771525 33,5 L33,11.68 L33,11.68 C28.6666667,15.0933333 24.3333333,16.8 20,16.8 C15.6666667,16.8 11.3333333,15.0933333 7,11.68 L7,5 C7,4.44771525 7.44771525,4 8,4 Z" id="Rectangle" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+        <g id="Oval" fill-rule="nonzero" mask="url(#mask-3)">
+            <use fill="#FFFFFF" xlink:href="#path-6"></use>
+            <circle stroke-opacity="0.21254917" stroke="#000000" stroke-width="0.5" fill="url(#linearGradient-5)" fill-rule="evenodd" cx="20" cy="17" r="4.25"></circle>
+        </g>
+        <circle id="Oval" stroke="#E1953A" stroke-width="0.5" fill-rule="nonzero" mask="url(#mask-3)" cx="20" cy="17" r="3"></circle>
+    </g>
+</svg>

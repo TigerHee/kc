@@ -1,0 +1,74 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  serverless-nextjs-demo
+
+  Sample SAM Template for serverless-nextjs-demo
+
+Globals:
+  Function:
+    Timeout: 10
+
+Resources:
+  NextjsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: /
+      MemorySize: 256
+      PackageType: Image
+      # Handler 只适用于 PackageType: Zip，但 PackageType: Image 完全由 Dockerfile 控制。
+      # Handler: app/app.lambdaHandler
+      Architectures:
+        - x86_64
+      Events:
+        RootEvent:
+          Type: Api
+          Properties:
+            Path: /
+            Method: any
+        ProxyEvent:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: any
+    Metadata:
+      DockerTag: RestApi
+      DockerContext: ./
+      Dockerfile: Dockerfile.next
+  # 预热 Lambda
+  # WarmerFunction:
+  #   Type: AWS::Serverless::Function
+  #   Properties:
+  #     CodeUri: app/
+  #     # Runtime: nodejs20.x  # 使用 Node.js 运行时
+  #     MemorySize: 256
+  #     Timeout: 5
+  #     PackageType: Image
+  #     Architectures:
+  #       - x86_64
+  #     Policies:
+  #       - AWSLambdaBasicExecutionRole
+  #       - Statement:
+  #           Effect: Allow
+  #           Action: lambda:InvokeFunction
+  #           Resource: !GetAtt NextjsFunction.Arn
+  #     Environment:
+  #       Variables:
+  #         WARM_PARAMS: '[{"concurrency": 5, "function": "${NextjsFunction.Arn}"}]'
+  #     Events:
+  #       WarmerSchedule:
+  #         Type: Schedule
+  #         Properties:
+  #           Schedule: cron(*/5 * * * ? *)  # 每 5 分钟执行一次
+  #           # Schedule: rate(5 minutes)  # 每 5 分钟执行一次
+  #   Metadata:
+  #     DockerTag: warmer
+  #     DockerContext: ./app
+  #     Dockerfile: Dockerfile.warmer
+Outputs:
+  NextjsFunctionURL:
+    Description: "API Gateway endpoint URL for Next.js"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/"
+  WarmerFunctionARN:
+      Description: "ARN of the Warmer Lambda function"
+      Value: !GetAtt WarmerFunction.Arn

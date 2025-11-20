@@ -1,0 +1,38 @@
+.notificationWrapper {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px 32px;
+    border: none;
+    background: var(--color-cover4);
+    cursor: pointer;
+    // margin-inline-start: 12px!important;
+}
+
+.themeTitle {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    color: var(--color-text);
+}
+
+.themeImg {
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.themeIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+
+    [dir='rtl'] & {
+        margin-right: 0px;
+        margin-left: 8px;
+    }
+}

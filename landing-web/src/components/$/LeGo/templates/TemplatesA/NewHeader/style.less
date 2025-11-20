@@ -1,0 +1,30 @@
+/**
+ * Owner: melon@kupotech.com
+ */
+@import '~themes/mix.less';
+
+.newHeader {
+  width: 100%;
+}
+
+.bannerTop {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 83.3%;
+  max-width: 1200px;
+  border-top: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 16px;
+  .mediaQueryMd({width: 100%;});
+  .mediaQueryMd({ padding: 0 24px 16px 24px;});
+  .mediaQuerySm({ padding: 0 12px 16px 12px;});
+}
+.logoImg {
+  width: 118px;
+  cursor: pointer;
+  margin-top: 32px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({margin-top: 16px;});
+}

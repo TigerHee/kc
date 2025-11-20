@@ -1,0 +1,97 @@
+@import "./mixins.less";
+
+@font-family:  Roboto, 'Ubuntu', 'Exo 2', Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, '微软雅黑', Aril, sans-serif;
+
+//  --color
+@white: #fff;
+@black: #000000;
+@white-light: fade(@white, 70%);
+
+@color-black: #18232b;
+@color-dark-blue: #333D73;
+@color-deep-dark-blue: #1E2454;
+@color-gray: fade(@black, 45%);
+@color-deep-gray: fade(@black, 85%);
+@color-light-gray: #B0B3C2;
+@color-light2-gray: #E8E8E8;
+@color-green: #24AE8F;
+@color-red: #DC5656;
+@color-blue: #42B5FA;
+@color-orange: #FF8B42;
+@color-green-light: rgba(76, 186, 114, 0.1);
+@color-red-light: rgba(235, 82, 82, 0.1);
+//  --size
+@weight-medium: 500;
+@line-height-normal: 20px;
+
+@primary-color: #24ae8f;
+@checkbox-size: 12px;
+@radio-size: 12px;
+@checkbox-check-color: fade(@white, 85%);
+@radio-button-color: fade(@black, 45%);
+@radio-button-active-color: @primary-color;
+@input-disabled-bg: fade(@white, 15%);
+@border-radius-base: 0;
+@border-radius-sm: 0;
+@table-header-bg: #FAFAFC;
+@table-header-color: fade(@black, 45%);
+@table-padding-vertical: 10px;
+@btn-default-color: @primary-color;
+@btn-default-border: @primary-color;
+@tooltip-bg: fade(@black, 65%);
+@tooltip-arrow-color: @tooltip-bg;
+
+// -layout
+@theme-color: @color-black;
+@layout-header-background: #181A25;
+@header-color: #0f191d;
+@sider-color: @white;
+@footer-color: #0f191d;
+
+// -business
+@long-color: @color-green;
+@short-color: @color-red;
+@header-h: 56px;
+@contract-panel-h: 66px;
+@footer-h: 277px;
+
+@trade-input-height: 40px;
+
+@row-height: 20px;
+@font-Regular: 400;
+@font-Medium: 500;
+@font-Bold: 700;
+
+
+@color-down: #ff5f73;
+@color-up: #01aa78;
+@color-main: #0F7DFF;
+@weight-medium: 500;
+@weight-bold: 700;
+
+@color-primary: @color-main;
+// @color-danger: @error-color;
+// @color-success: @success-color;
+// @color-disabled: @disabled-color;
+@color-gray: rgba(0, 0, 0, .43);
+
+@color-high: @color-up;
+@color-low: @color-down;
+
+@color-buy: @color-up;
+@color-sell: @color-down;
+
+// --------------------------------------  trade 改版 --------------------------------------
+// header高度
+@headerHeight: 56px;
+// sidebar宽度
+@sideBarWidth: 40px;
+// 内容左侧固定宽度盒子的宽
+@fixedBoxWidth: 290px;
+// 广告位高度
+@bannerHeight: 125px;
+// 模块间隙
+@margin: 2px;
+@clientMinWidth: 1280px;
+
+@starColor: #E4A737;

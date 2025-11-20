@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4" y="4" width="24" height="24" fill="white"/>
+<rect x="8" y="8" width="8" height="8" stroke="#737E8D" stroke-width="2"/>
+<rect x="20" y="20" width="4" height="4" stroke="#737E8D" stroke-width="2"/>
+<rect x="11" y="23" width="6" height="2" fill="#737E8D"/>
+<rect x="7" y="19" width="6" height="2" fill="#737E8D"/>
+<rect x="19" y="11" width="2" height="6" fill="#737E8D"/>
+<rect x="23" y="7" width="2" height="6" fill="#737E8D"/>
+<rect x="7" y="23" width="2" height="2" fill="#737E8D"/>
+<rect x="15" y="19" width="2" height="2" fill="#737E8D"/>
+<rect x="19" y="7" width="2" height="2" fill="#737E8D"/>
+<rect x="23" y="15" width="2" height="2" fill="#737E8D"/>
+<rect x="11" y="11" width="2" height="2" fill="#737E8D"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30 22H28V28L22 28V30H28H30V28V22Z" fill="#21C397"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 10L4 10L4 4L10 4L10 2L4 2L2 2L2 4L2 10Z" fill="#21C397"/>
+</svg>

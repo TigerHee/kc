@@ -1,0 +1,33 @@
+/**
+ * Owner: sean.shi@kupotech.com
+ */
+@import 'src/styles/mixin.scss';
+.form {
+  gap: 0;
+
+  :global(.kux-form__item-help) {
+    display: none;
+  }
+
+  &.showItemHelp {
+    :global(.kux-form__item-help) {
+      display: flex;
+    }
+  }
+
+  .mtSpace {
+    margin-top: 8px;
+
+    @include media-query('sm') {
+      margin-top: 0;
+    }
+  }
+
+  .inputEye {
+    margin-top: 8px;
+
+    @include media-query('sm') {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Giao dịch toàn cầu thuận tiện 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Đăng ký và làm chủ thị trường trong vài giây!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Làm chủ thị trường mọi nơi 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "Hơn 80 nghìn đánh giá",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Xác minh, nạp và mua tiền điện tử ngay lập tức!",
+  "rw8e32A8H7X3QtiKHS37EK": "Tải về",
+  "tXwwyoSbqG4pgsoXomccjp": "Tải ứng dụng {{brandName}} để kiếm phần thưởng lên đến {{num}} {{siteBaseCurrency}}.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Người dùng mới sẽ được",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Nhận ngay",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>Hơn 5 triệu</1> lượt tải",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(Hơn 100 nghìn lượt đánh giá)",
+  "qqJX78TFyekdKwwT6nVVWU": "(Hơn 16 nghìn lượt đánh giá)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Dành riêng cho người dùng mới: nếu khoản tiền nạp hoặc giao dịch mua tiền điện tử đầu tiên của bạn lớn hơn 50 USD, bạn sẽ nhận được một hộp bí ẩn trị giá lên đến <span>500 USD</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Tải xuống",
+  "csjK9uyQQyYMLprAYkKsRT": "Tải xuống ứng dụng {{brandName}} để tiếp tục hành trình tiền điện tử của bạn và nhận phần thưởng lên đến <span> 500 USD </span> trong Khu vực Người mới.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Nạp hoặc mua tiền điện tử lần đầu tiên để nhận hộp bí ẩn trị giá đến <span> 500 USD</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Phần thưởng lên đến <span>500 USD</span> cho người dùng mới!",
+  "wLAfc8MZvoHbeNragecB4Z": "Giao dịch an toàn hơn và nhanh chóng hơn với ứng dụng di động của chúng tôi."
+}

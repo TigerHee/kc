@@ -1,0 +1,15 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  
+  margin-bottom: 32px;
+  display: block;
+  @include media-query('sm') {
+    margin-bottom: 20px;
+  }
+
+  &.hide {
+    display: none;
+  }
+  
+}

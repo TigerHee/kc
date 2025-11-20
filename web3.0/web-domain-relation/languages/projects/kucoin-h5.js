@@ -1,0 +1,18 @@
+module.exports = [
+  // "zh_CN",
+  "zh_HK",
+  "en_US",
+  "ru_RU",
+  "hi_IN",
+  "ko_KR",
+  "es_ES",
+  "de_DE",
+  "fr_FR",
+  "id_ID",
+  "it_IT",
+  "ms_MY",
+  "nl_NL",
+  "pt_PT",
+  "tr_TR",
+  "vi_VN",
+];

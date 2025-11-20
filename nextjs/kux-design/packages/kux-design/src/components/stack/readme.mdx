@@ -1,0 +1,144 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import * as StackStories from './stories';
+
+<Meta title="base/Stack/Readme" />
+
+# Stack 组件
+
+Stack 是一个灵活的布局组件，借鉴自 SwiftUI 的布局系统设计理念。提供了 `Stack`、`HStack`、`VStack` 和 `AutoStack` 四种布局组件，配合 `Spacer` 组件可以轻松实现灵活的布局需求。
+
+## 特性
+
+- 支持水平（HStack）和垂直（VStack）两种布局方向
+- 提供自适应布局组件（AutoStack）
+- 可以通过 Spacer 组件控制元素间的间距和分布
+- 支持自定义对齐方式（align）和对齐方式（justify）
+- 支持嵌套使用，实现复杂的布局需求
+- 可自定义间距大小（spacing）
+
+## 基础用法
+
+### HStack - 水平布局
+
+`HStack` 用于创建水平方向的布局：
+
+```tsx
+<HStack>
+  <div>左侧内容</div>
+  <Spacer />
+  <div>右侧内容</div>
+</HStack>
+```
+
+### VStack - 垂直布局
+
+`VStack` 用于创建垂直方向的布局：
+
+
+```tsx
+<VStack>
+  <div>顶部内容</div>
+  <Spacer />
+  <div>底部内容</div>
+</VStack>
+```
+
+### 自定义对齐
+
+Stack 支持自定义 `align` 和 `justify` 属性来控制子元素的对齐方式：
+
+
+```tsx
+<Stack 
+  direction="horizontal" 
+  align="flex-start" 
+  justify="space-between"
+>
+  <div>左对齐</div>
+  <div>中间</div>
+  <div>右对齐</div>
+</Stack>
+```
+
+### 间距控制
+
+使用 `spacing` 属性控制 Spacer 的默认大小：
+
+
+```tsx
+<VStack spacing={24}>
+  <div>Item 1</div>
+  <Spacer />
+  <div>Item 2</div>
+  <Spacer size={48} />
+  <div>Item 3</div>
+</VStack>
+```
+
+### AutoStack - 响应式布局
+
+`AutoStack` 组件会根据屏幕大小自动切换布局方向：
+
+
+```tsx
+<AutoStack breakpoint="S">
+  <div>这是一个自适应的Stack</div>
+  <Spacer />
+  <div>在小屏幕下会变成垂直布局</div>
+</AutoStack>
+```
+
+### 嵌套使用
+
+Stack 组件可以自由嵌套，实现复杂的布局需求：
+
+
+```tsx
+<VStack spacing={16}>
+  <HStack spacing={8} fullWidth>
+    <div>导航栏左侧</div>
+    <Spacer />
+    <div>导航栏右侧</div>
+  </HStack>
+  <HStack spacing={8} fullWidth>
+    <div>内容区左侧</div>
+    <Spacer />
+    <div>内容区中间</div>
+    <Spacer />
+    <div>内容区右侧</div>
+  </HStack>
+</VStack>
+```
+
+## API
+
+### Stack Props
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|---------|
+| direction | 布局方向 | `'vertical' \| 'horizontal'` | - |
+| align | 垂直对齐方式 | `React.CSSProperties['alignItems']` | `'center'` |
+| justify | 水平对齐方式 | `React.CSSProperties['justifyContent']` | `'center'` |
+| spacing | 设置其内 Spacer 组件的默认间距大小 | `number \| string` | - |
+| fullWidth | 是否填充整个区域 | `boolean` | - |
+| className | 自定义类名 | `string` | - |
+| style | 自定义样式 | `React.CSSProperties` | - |
+
+### HStack/VStack Props
+
+HStack 和 VStack 组件是 Stack 的简化版本，分别用于水平和垂直布局。它们的属性与 Stack 相同，但默认 `direction` 分别为 `'horizontal'` 和 `'vertical'`。
+
+
+### AutoStack Props
+
+| 属性 | 说明 | 类型 | 默认值 |
+|------|------|------|---------|
+| breakpoint | 响应式断点，小于等于该尺寸时切换为垂直布局 | `'xs'或'S' \| 'sm'或'M'` | `'xs'` |
+| ...stackProps | Stack 的其他属性 | `Omit<IStackProps, 'direction'>` | - |
+
+## 注意事项
+
+1. HStack 和 VStack 是对 Stack 的封装，更符合 SwiftUI 的使用习惯
+2. AutoStack 主要用于响应式布局场景，会根据屏幕尺寸自动调整布局方向
+3. spacing 属性只影响 Spacer 组件的大小，而不是元素之间的 gap
+4. 可以通过 style 或 className 覆盖默认的样式行为

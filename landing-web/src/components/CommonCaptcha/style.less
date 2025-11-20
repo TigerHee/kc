@@ -1,0 +1,56 @@
+.commonCaptcha {
+  z-index: 9999999;
+  transform: translateZ(0);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  width: 405px;
+  :global {
+    .ant-modal-content {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+    .ant-modal-close-x:before {
+      display: none;
+      color: #ffffff !important;
+    }
+  }
+}
+.recap {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+:global {
+  #recaptcha {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.imageVerModal {
+  .imgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F7F7F7;
+    margin: 16px 0 24px 0;
+  }
+  .verImage {
+    width: 148px;
+    height: 62px;
+    margin-left: 10px;
+  }
+  .confirmButton {
+    width: 100%;
+  }
+  .refreshIcon {
+    color: #c1c1c1;
+    width: 24px;
+    margin-right: 32px;
+    cursor: pointer;
+  }
+}

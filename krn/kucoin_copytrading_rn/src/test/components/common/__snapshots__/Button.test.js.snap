@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders text 1`] = `
+Array [
+  <View
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#1D1D1D",
+          "borderBottomLeftRadius": 20,
+          "borderBottomRightRadius": 20,
+          "borderTopLeftRadius": 20,
+          "borderTopRightRadius": 20,
+          "height": 40,
+          "opacity": 1,
+        },
+        Array [
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      hasIcon={false}
+      size="medium"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": "100%",
+            "justifyContent": "center",
+            "paddingBottom": 0,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            },
+            undefined,
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          disabled={false}
+          size="medium"
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontSize": 14,
+                "fontWeight": "600",
+                "textAlign": "center",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ]
+          }
+          textColor="primaryButtonText"
+        >
+          Test
+        </Text>
+      </View>
+    </View>
+  </View>,
+  "\\\\",
+]
+`;

@@ -1,0 +1,55 @@
+{
+  "name": "@kux/iconpack",
+  "version": "1.0.0-beta.20250812033437",
+  "description": "icon for @kux/design",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "sync": "tsx scripts/sync-icons.ts",
+    "dev": "vite",
+    "release": "natasha-release --packageManager=pnpm",
+    "prebuild": "pnpm sync",
+    "build": "vite build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./icon-map": {
+      "types": "./dist/icon-map.d.ts",
+      "import": "./dist/icon-map.es.js",
+      "require": "./dist/icon-map.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@figma-export/core": "^6.2.2",
+    "@kux/tsconfig": "workspace:*",
+    "@natasha/release": "catalog:",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "dotenv": "^17.0.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2"
+  }
+}

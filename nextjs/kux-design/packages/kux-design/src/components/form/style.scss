@@ -1,0 +1,64 @@
+@import '@/style/index.scss';
+
+// Form 组件样式
+@include component('form') {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  // 表单项样式
+  .#{$prefix}_item {
+    margin-bottom: get-theme(spacing-md);
+    width: 100%;
+
+    &--error {
+      .#{$prefix}_error {
+        color: get-theme(text-error);
+      }
+    }
+  }
+
+  // 表单项容器
+  .#{$prefix}_item-container {
+    display: flex;
+    width: 100%;
+
+    &--vertical {
+      flex-direction: column;
+    }
+
+    &--horizontal {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  // 错误信息样式
+  .#{$prefix}_error {
+    font-size: get-theme(text-xs);
+    color: get-theme(text-error);
+    margin-top: get-theme(spacing-xs);
+    line-height: 1.4;
+  }
+
+  // 帮助信息包装器
+  .#{$prefix}_helper-wrapper {
+    min-height: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // 水平布局时的列样式
+  .#{$prefix}_col {
+    display: flex;
+    flex-direction: column;
+
+    &--horizontal {
+      flex: 1 1 0;
+    }
+
+    &--vertical {
+      width: 100%;
+    }
+  }
+}

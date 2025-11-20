@@ -1,0 +1,108 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .info {
+    p {
+      &:first-child {
+        position: relative;
+        color: #303e4e;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 80px;
+        &:before {
+          position: absolute;
+          bottom: 0;
+          width: 87px;
+          height: 8px;
+          background: #d1b381;
+          content: '';
+        }
+      }
+      &:nth-child(2) {
+        max-width: 450px;
+        color: #303e4e;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 48px;
+        opacity: 0.5;
+      }
+    }
+    a,.link_for_a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 56px;
+      padding: 0 36px;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 24px;
+      background: rgba(197, 160, 98, 0.8);
+      border-radius: 33px;
+    }
+  }
+  .pc {
+    margin-right: -100px;
+  }
+}
+
+.content {
+  width: 100%;
+  :global {
+    .ant-table-thead > tr > th {
+      color: #303e4e;
+      font-weight: 400;
+      font-size: 18px;
+      background: transparent;
+      border-bottom: 1px solid #e1e1e1;
+      opacity: 0.5;
+    }
+    .ant-table-placeholder {
+      background: transparent;
+    }
+  }
+  .coinInfo {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    .name {
+      margin-left: 10px;
+      color: #303e4e;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    .label {
+      margin-left: 10px;
+      padding: 2px 8px;
+      color: #c5a062;
+      font-weight: 400;
+      font-size: 14px;
+      background: rgba(198, 161, 100, 0.1);
+    }
+  }
+  .rate {
+    color: #e6485b;
+    font-weight: 400;
+    font-size: 24px;
+  }
+  .date {
+    color: #303e4e;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .chargeBtn {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 18px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    background: #e4c283;
+  }
+}

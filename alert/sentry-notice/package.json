@@ -1,0 +1,32 @@
+{
+  "name": "sentry-notice",
+  "version": "1.1.15",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js --port 2999 --debug true",
+    "check:commitlint": "kc-web-checker -t commitlint",
+    "ci": "kc-web-checker -t owner"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged && yarn run e2e:check &&  yarn check:owner --diff"
+  },
+  "prepare": "husky install",
+  "dependencies": {
+    "axios": "1.7.4",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "cross-spawn": "^7.0.5",
+    "dotenv": "^8.2.0",
+    "es6-promise": "^4.2.8",
+    "express": "^4.21.1",
+    "hpagent": "^1.2.0",
+    "lodash": "^4.17.21",
+    "log4js": "6.4.0",
+    "node-schedule": "^2.1.0"
+  },
+  "devDependencies": {
+    "kc-web-checker": "^0.5.9"
+  }
+}

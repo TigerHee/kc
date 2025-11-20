@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>编组 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="84.8525555%" y1="90.9852679%" x2="16.0909825%" y2="4.54294653%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.0755299388" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.199355332" offset="100%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.273126132" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="60" cy="60" r="47"></circle>
+        <filter x="-13.8%" y="-11.7%" width="127.7%" height="127.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.163516171 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="交易+委托" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="负债率表" transform="translate(-439.000000, -214.000000)">
+            <g id="编组-2备份-2" transform="translate(439.000000, 214.000000)">
+                <g id="编组-3">
+                    <g id="编组-4">
+                        <g id="椭圆形">
+                            <circle fill="url(#linearGradient-1)" cx="60" cy="60" r="60"></circle>
+                            <circle fill="#171F29" cx="60" cy="60" r="54"></circle>
+                            <circle fill="#202934" cx="60" cy="60" r="52"></circle>
+                            <g>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                <use fill="#171F29" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

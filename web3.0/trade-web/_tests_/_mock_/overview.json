@@ -1,0 +1,16 @@
+{
+  "filters": {
+    "accountType": "ACCOUNT_TYPE_TOTAL",
+    "targetCurrency": "BTC",
+    "startDate": 30
+  },
+  "showAssets": true,
+  "assetDetail": {},
+  "dailyTrends": null,
+  "totalTrends": null,
+  "totalBalance": null,
+  "totalAssets": 100.00,
+  "accountBalance": null,
+  "LastDayTotalInCome": 0,
+  "kumexOpenFlag": true
+}

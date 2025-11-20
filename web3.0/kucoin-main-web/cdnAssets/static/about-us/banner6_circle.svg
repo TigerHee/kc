@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="670px" height="670px" viewBox="0 0 670 670" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>椭圆形</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#DCE3EC" offset="49.9521391%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="关于kucoin-英文" transform="translate(-625.000000, -4529.000000)" stroke="url(#linearGradient-1)" stroke-width="3">
+            <g id="椭圆形" transform="translate(0.000000, 4480.000000)">
+                <circle cx="960" cy="384" r="333.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

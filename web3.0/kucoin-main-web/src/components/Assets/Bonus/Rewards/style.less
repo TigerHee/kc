@@ -1,0 +1,107 @@
+@import "~theme/mix.less";
+
+.filterWrapper {
+  padding: 8px 16px;
+  background: rgba(0, 20, 42, 0.04);
+  border-radius: 2px;
+  margin-bottom: 10px;
+  tbody tr{
+    padding: 8px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  :global {
+    .ant-row {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .ant-calendar-picker {
+      width: 92px;
+      .ant-calendar-picker-icon {
+        display: none;
+      }
+    }
+  }
+  .label {
+    max-width: 100px;
+    min-width: 62px;
+    height: 40px;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+    padding-right: 16px;
+    line-height: 13px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    .mediaQuerySm({
+      padding-right: 2px;
+    });
+  }
+  .type {
+    height: 32px;
+  }
+  .coinSelector {
+    min-width: 350px;
+    .mediaQuerySm({
+      min-width: 252px;
+    });
+  }
+  .miniDivider {
+    display: inline-block;
+    margin: 0 4px;
+    width: 8px;
+    height: 1px;
+    background: #E5E9EB;
+  }
+  .tag {
+    cursor: pointer;
+    font-size: 12px;
+    color: #333333;
+  }
+}
+.amount {
+  font-weight: 500;
+}
+.arrow {
+  display: inline-block;
+  margin: 0 8px;
+  color: #ccc;
+  font-weight: bolder;
+}
+
+.pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 16px;
+}
+
+.info{
+  display: inline-block;
+  width: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.datepicker >div:last-child >div{
+  label{
+    margin-bottom: 0px;
+    .mediaQuerySm({
+      margin-bottom: 2px;
+    });
+  }
+}
+
+.radioButton > div{
+  label{
+    margin-bottom: 0px;
+    .mediaQuerySm({
+      margin-bottom: 2px;
+    });
+  }
+}

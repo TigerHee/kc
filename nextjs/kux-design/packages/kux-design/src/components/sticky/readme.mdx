@@ -1,0 +1,152 @@
+import { Meta, Story, Controls, Canvas } from '@storybook/addon-docs/blocks';
+import { StickyContainer, StickyItem } from './index';
+
+
+<Meta title="base/Sticky/Readme" />
+
+# Sticky 粘性布局组件
+
+`Sticky` 组件允许你创建在页面滚动时能够“粘”在特定位置的元素。它支持多种模式，如堆叠（stack）和替换（replace），并且可以自定义粘性行为的顶部偏移量。
+
+## 何时使用
+
+- 当你需要页面中的某个部分（如导航栏、操作栏、信息提示）在用户滚动时保持可见。
+- 当你需要多个元素依次变为粘性状态，并以堆叠或替换的方式展示。
+
+## 使用示例
+
+### 基本用法
+
+最简单的用法是包裹 `StickyItem` 在 `StickyContainer` 内部。
+
+```tsx
+import { StickyContainer, StickyItem } from '@kux/design';
+
+// 默认 replace 模式, 即只有一个粘性项会保持在顶部
+<StickyContainer>
+  <StickyItem>
+    <div>这是一个粘性项</div>
+  </StickyItem>
+  <div style={{ height: '200px' }}>
+    这里是其他内容，滚动时粘性项会保持在顶部。
+  </div>
+  <StickyItem>
+    <div>另一个粘性项</div>
+  </StickyItem>
+  <div style={{ height: '200vh' }}>滚动查看效果</div>
+</StickyContainer>
+```
+
+### 堆叠模式 (Stack Mode)
+
+在堆叠模式下，所有达到粘性触发位置的项会依次堆叠起来。
+
+````tsx
+import { StickyContainer, StickyItem } from '@kux/design';
+
+// 使用堆叠模式, 即多个粘性项可以同时显示在顶部
+<StickyContainer
+  defaultMode="stack"
+  offsetTop={50} // 设置粘性项距离顶部的偏移量(一般为header 高度)
+  onStickyItemsHeightChange={(items) => {
+  console.log('当前粘性项高度:', items.map(item => item.getHeight()));
+}}>
+  <StickyItem>
+    <div>第一个粘性项</div>
+  </StickyItem>
+  <div style={{ height: '200px' }}>
+    这里是其他内容，滚动时多个粘性项会依次堆叠在顶部。
+  </div>
+  <StickyItem>
+    <div>第二个粘性项</div>
+  </StickyItem>
+  {/* mode: none, 禁用 sticky 效果  */}
+  <StickyItem mode="none">
+    <div>第三个粘性项</div>
+  </StickyItem>
+  <div style={{ height: '200vh' }}>滚动查看堆叠效果</div>
+</StickyContainer>
+````
+
+### 无粘性模式 (None Mode)
+
+在此模式下，所有 `StickyItem` 的粘性行为都会被禁用，表现为普通元素。
+
+```tsx
+import { StickyContainer, StickyItem } from '@kux/design';
+
+// 默认 replace 模式, 即只有一个粘性项会保持在顶部
+<StickyContainer defaultMode="none">
+  <StickyItem>
+    <div>这是一个粘性项</div>
+  </StickyItem>
+  <div style={{ height: '200px' }}>
+    这里是其他内容，滚动时粘性项会保持在顶部。
+  </div>
+  <StickyItem defaultMode="replace">
+    <div>另一个粘性项</div>
+  </StickyItem>
+  <div style={{ height: '200vh' }}>滚动查看效果</div>
+</StickyContainer>
+```
+
+## API
+
+### StickyContainer
+
+| 属性          | 说明                                     | 类型                                 | 默认值    |
+|---------------|------------------------------------------|--------------------------------------|-----------|
+| `offsetTop`   | 粘性元素距离视口顶部的偏移量，单位为像素 | `number`                             | `0`       |
+| `defaultMode` | 粘性行为模式                             | `'replace' \| 'stack' \| 'none'`     | `'replace'` |
+| `onStickyItemsHeightChange`       | 当前sticky元素的高度变化事件, 接收高度作为参数                           | `(height: number) => void`                | -         |
+| `baseZIndex`       | 当前sticky元素的基础 z-index 值, `replace` 模式下, sticky 元素的 z-index 会在此基础上递减 -1;`stack` 模式下, sticky 元素的 z-index 会在此基础上递增+1       | `number`                             | `50`      |
+| `children`    | 子元素，通常是 `StickyItem` 组件实例     | `React.ReactNode`                    | -         |
+
+其他 div 属性如 `className`, `style` , `onClick` 等也可以直接传递给容器。
+
+### StickyItem
+
+`StickyItem` 是实际的粘性内容包裹器。
+
+| 属性        | 说明                                   | 类型                  | 默认值 |
+|-------------|----------------------------------------|-----------------------|--------|
+| `mode`     | 粘性行为模式               | `'replace' \| 'stack' \| 'none'`     | - |
+| `children`  | 粘性内容                               | `React.ReactNode`     | -      |
+
+其他 div 属性如 `className`, `style` , `onClick` 等也可以直接传递给容器。
+
+**注意:** `StickyItem` 的粘性行为(mode)由若未指定则继承其父级 `StickyContainer` 的 `defaultMode`.
+
+## SCSS 样式
+
+组件自带一些基本样式，可以通过 SCSS 变量进行定制。相关的类名包括：
+
+-   `.kux-sticky-container`: 粘性容器的类名。
+-   `.kux-sticky-item`: 每个粘性项的外部包裹器。
+-   `.kux-sticky-content`: 粘性项的内部内容包裹器。
+    -   `.is-sticky`: 当粘性项处于粘性状态时，会添加此类名到 `kux-sticky-content` 上。
+
+你可以覆盖这些类名或使用提供的 SCSS mixin 和变量来调整外观。
+例如，`.is-sticky` 类默认会添加 `position: fixed` 和一个轻微的阴影。
+
+```scss
+// 示例：自定义 is-sticky 状态下的背景色和阴影
+.kux-sticky-content.is-sticky {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+```
+
+## 实现细节与性能
+
+-   组件使用 `requestAnimationFrame` 来优化滚动事件的处理，确保动画流畅。
+-   通过 `IntersectionObserver` (如果适用) 或 `getBoundingClientRect` 来检测元素位置。当前版本使用 `getBoundingClientRect`。
+-   为了防止滚动回弹，当元素变为粘性（`position: fixed`）时，其原始位置会由一个具有相同高度的占位符（`StickyItem` 的外层 `div`）占据。
+-   组件内部对 DOM 的读写操作进行了优化，尽量在同一帧内先读后写，以减少强制同步布局。
+-   `IStickyItemHandle` 接口用于 `StickyContainer` 和 `StickyItem` 之间的通信，优化了信息传递，避免了容器直接操作子组件的 DOM。
+
+## 未来可优化方向
+
+-   考虑使用 `IntersectionObserver` API 来检测元素是否进入粘性区域，这可能比 `getBoundingClientRect` 在某些情况下性能更好。
+-   对于内容高度动态变化的粘性项，提供更完善的高度同步机制。
+

@@ -1,0 +1,42 @@
+.exForm {
+  margin-top: 12px;
+  margin-bottom: 8px;
+
+  @media (max-width: 600px) {
+    margin-top: 8px;
+  }
+
+  :global {
+    .kux-input {
+      width: 100%;
+    }
+    .kux-form__item + .kux-form__item {
+      margin-top: 20px;
+    }
+
+    .kux-input-core {
+      padding-left: 8px;
+    }
+  }
+}
+
+.buttonGroup {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textButton {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 24px;
+
+  & + & {
+    margin-top: 16px;
+  }
+}

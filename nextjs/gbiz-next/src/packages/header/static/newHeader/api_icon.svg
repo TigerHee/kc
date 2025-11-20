@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>API icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="API-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" opacity="0.646414621" x="0" y="0" width="32" height="32"></rect>
+        <g id="Group" transform="translate(16.000000, 16.500000) rotate(-315.000000) translate(-16.000000, -16.500000) translate(9.000000, -1.000000)">
+            <rect id="Rectangle-Copy-7" fill="#FFFFFF" x="2" y="17" width="2" height="5"></rect>
+            <rect id="Rectangle-Copy-8" fill="#FFFFFF" x="10" y="17" width="2" height="5"></rect>
+            <path d="M1,21 L1,25 C1,28.3137085 3.6862915,31 7,31 C10.3137085,31 13,28.3137085 13,25 L13,21 L1,21 Z" id="Rectangle" stroke="#0BC7A9" stroke-width="2"></path>
+            <path d="M3,23 L11,23 L11,25 C11,27.209139 9.209139,29 7,29 C4.790861,29 3,27.209139 3,25 L3,23 L3,23 Z" id="Rectangle" fill="#22585B"></path>
+            <path d="M3,6 L11,6 L11,8 C11,10.209139 9.209139,12 7,12 C4.790861,12 3,10.209139 3,8 L3,6 L3,6 Z" id="Rectangle-Copy-13" fill="#22585B" transform="translate(7.000000, 9.000000) scale(1, -1) translate(-7.000000, -9.000000) "></path>
+            <path d="M1,4 L1,8 C1,11.3137085 3.6862915,14 7,14 C10.3137085,14 13,11.3137085 13,8 L13,4 L1,4 Z" id="Rectangle-Copy-11" stroke="#0BC7A9" stroke-width="2" transform="translate(7.000000, 9.000000) scale(1, -1) translate(-7.000000, -9.000000) "></path>
+            <rect id="Rectangle" fill="#0BC7A9" x="6" y="31" width="2" height="4"></rect>
+            <rect id="Rectangle-Copy-12" fill="#0BC7A9" x="6" y="0" width="2" height="4"></rect>
+        </g>
+    </g>
+</svg>

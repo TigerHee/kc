@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'Anuluj',
+  'gfa_btn': 'Potwierdź',
+  'verify_img_tip': 'Wprowadź znaki',
+  'verify_img_title': 'Weryfikacja zdjęcia',
+};

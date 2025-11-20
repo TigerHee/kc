@@ -1,0 +1,122 @@
+@import "src/styles/mixin.scss";
+
+.cFooter {
+  padding: 0 24px;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @include media-query('sm') {
+    padding: 0 16px;
+  }
+
+  a {
+    display: block;
+    width: fit-content;
+    padding: 4px 0;
+    font-size: 14px;
+    text-decoration: none !important;
+    word-break: break-all;
+    cursor: pointer;
+    color: var(--color-text60);
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+}
+
+.footerMain {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px;
+
+  // Responsive: Small screens
+  @include media-query('sm') {
+    padding-top: 48px;
+  }
+}
+
+.divider {
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--color-divider8);
+
+  // Responsive: Small screens
+  @include media-query('sm') {
+    margin-top: -24px;
+  }
+}
+
+.copyright {
+  padding: 20px 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyrightOneCol {
+  padding: 20px 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.newCopyright {
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--color-text40);
+
+  // Responsive: Small screens
+  @include media-query('sm') {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+}
+
+.servertime {
+  display: flex;
+}
+
+.smCopyRight {
+  // Responsive: Small screens
+  @include media-query('sm') {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.disclaimerDesc {
+  margin-top: 20px;
+  color: var(--color-text40);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  white-space: pre-line;
+  a {
+    display: inline-block;
+    font-size: 12px;
+    padding: 0px;
+    color: #01BC8D;
+  }
+}
+
+.highRiskDesc {
+  margin-bottom: 48px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text60);
+  background-color: var(--color-cover2);
+  border-radius: 6px;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="546px" viewBox="0 0 1440 546" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>bg1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="546"></rect>
+        <linearGradient x1="91.5109696%" y1="45.6037158%" x2="54.0116238%" y2="55.7712543%" id="linearGradient-3">
+            <stop stop-color="#10192D" offset="0%"></stop>
+            <stop stop-color="#01081E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="54.6542751%" y1="51.1380193%" x2="22.9900138%" y2="59.5236304%" id="linearGradient-4">
+            <stop stop-color="#10192D" offset="0%"></stop>
+            <stop stop-color="#01081E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="54.6542751%" y1="52.5828124%" x2="22.9900138%" y2="71.6145289%" id="linearGradient-5">
+            <stop stop-color="#10192D" offset="0%"></stop>
+            <stop stop-color="#01081E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="着陆页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="币币兑换-landingpage">
+            <g id="bg1">
+                <g id="编组">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="矩形" fill="#01081E" xlink:href="#path-1"></use>
+                    <path d="M1281.393,-1.93978167e-13 L1440,504.989 L1440,546 L835.119,546 L2.27373675e-13,134.66 L2.27373675e-13,59.912 L40.545,-1.93978167e-13 L1281.393,-1.93978167e-13 Z" id="形状结合" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+                    <path d="M594.661,0 L964.165,546 L315.528,546 L5.68434189e-14,473.872 L5.68434189e-14,249.978 L78.513,0 L594.661,0 Z" id="形状结合" fill="url(#linearGradient-4)" mask="url(#mask-2)"></path>
+                    <polygon id="矩形" fill="url(#linearGradient-5)" mask="url(#mask-2)" points="-258 -104.08125 563 596.334375 -258 596.334375"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

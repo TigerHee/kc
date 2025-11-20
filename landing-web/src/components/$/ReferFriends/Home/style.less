@@ -1,0 +1,40 @@
+.pagination {
+  margin-top: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  margin-left: -16px;
+
+  :global {
+    .KuxPagination-item {
+      @size: 26px;
+
+      button {
+        width: @size;
+        height: @size;
+        font-size: 13px;
+      }
+    }
+
+    .KuxPagination-item {
+      button {
+        color: #01BC8D;
+        border: 1px solid #01BC8D;
+      }
+
+      div {
+        color: #01BC8D;
+      }
+
+      &.KuxPagination-item-selected {
+        button {
+          color: #fff;
+          border: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="133px" height="128px" viewBox="0 0 133 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="冻结解冻" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="账户冻结中（24h内登录页面）" transform="translate(-654.000000, -243.000000)" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(654.000000, 243.000000)">
+                <circle id="Oval-3" fill-opacity="0.413779438" fill="#0F7DFF" opacity="0.301339286" cx="69" cy="64" r="64"></circle>
+                <circle id="Oval-3-Copy" fill-opacity="0.413779438" fill="#0F7DFF" opacity="0.301339286" cx="108" cy="12" r="9"></circle>
+                <circle id="Oval-3-Copy-2" fill-opacity="0.413779438" fill="#0F7DFF" opacity="0.301339286" cx="9" cy="83" r="9"></circle>
+                <circle id="Oval-3-Copy-3" fill-opacity="0.413779438" fill="#0F7DFF" opacity="0.301339286" cx="18" cy="109" r="12"></circle>
+                <circle id="Oval-3" fill-opacity="0.413779438" fill="#0F7DFF" opacity="0.495591518" cx="69" cy="64" r="48"></circle>
+                <path d="M84.875,54.6666667 L82.3125,54.6666667 L82.3125,49.3333333 C82.3125,41.9733333 76.5725,36 69.5,36 C62.4275,36 56.6875,41.9733333 56.6875,49.3333333 L56.6875,54.6666667 L54.125,54.6666667 C51.2934375,54.6666667 49,57.0533333 49,60 L49,86.6666667 C49,89.6133333 51.2934375,92 54.125,92 L84.875,92 C87.7065625,92 90,89.6133333 90,86.6666667 L90,60 C90,57.0533333 87.7065625,54.6666667 84.875,54.6666667 Z M69.5,78.6666667 C66.6684375,78.6666667 64.375,76.28 64.375,73.3333333 C64.375,70.3866667 66.6684375,68 69.5,68 C72.3315625,68 74.625,70.3866667 74.625,73.3333333 C74.625,76.28 72.3315625,78.6666667 69.5,78.6666667 Z M77.44375,54.6666667 L61.55625,54.6666667 L61.55625,49.3333333 C61.55625,44.7733333 65.118125,41.0666667 69.5,41.0666667 C73.881875,41.0666667 77.44375,44.7733333 77.44375,49.3333333 L77.44375,54.6666667 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

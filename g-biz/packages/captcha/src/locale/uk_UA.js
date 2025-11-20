@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'Скасувати',
+  'gfa_btn': 'Підтвердити',
+  'verify_img_tip': 'Введіть символи',
+  'verify_img_title': 'Перевірка зображення',
+};

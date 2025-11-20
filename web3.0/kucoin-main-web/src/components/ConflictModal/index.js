@@ -1,0 +1,80 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+import React, { useMemo } from 'react';
+import { connect } from 'react-redux';
+import Security from 'static/conflictModal/security.svg';
+
+import { push } from 'utils/router';
+
+import { _t, addLangToPath } from 'tools/i18n';
+import HOST from 'utils/siteConfig';
+import { Dialog } from '@kc/mui';
+import { useLocale } from '@kucoin-base/i18n';
+
+const useForkMemo = (fn, deps) => {
+  return useMemo(() => {
+    return (...arg) => {
+      fn(...arg);
+    };
+  }, deps);
+};
+
+function ConflictModal({ open, dispatch, isLogin }) {
+  useLocale();
+  const handleCancel = useForkMemo(() => {
+    dispatch({
+      type: 'user/update',
+      payload: {
+        conflictModal: false,
+      },
+    });
+  }, []);
+  const handleOk = useForkMemo(() => {
+    handleCancel();
+    if (isLogin) {
+      push('/account/security/updatepwd');
+    } else {
+      window.location.href = addLangToPath(`${HOST.KUCOIN_HOST}/support`);
+    }
+  }, [isLogin]);
+  let content;
+  let cancelText;
+  let okText;
+  if (isLogin) {
+    content = _t('conflict.content1');
+    cancelText = _t('conflict.cancel');
+    okText = _t('conflict.pwd');
+  } else {
+    cancelText = null;
+    content = _t('conflict.content2');
+    okText = _t('conflict.contact');
+  }
+  return (
+    <Dialog
+      title={_t('conflict.title')}
+      imgSrc={Security}
+      open={open}
+      onCancel={handleCancel}
+      cancelText={cancelText}
+      onOk={handleOk}
+      okText={okText}
+      okButtonProps={{
+        size: 'medium',
+      }}
+      cancelButtonProps={{
+        size: 'medium',
+      }}
+    >
+      {content}
+    </Dialog>
+  );
+}
+
+export default connect((state) => {
+  const { isLogin, conflictModal } = state.user;
+  return {
+    open: conflictModal,
+    isLogin,
+  };
+})(ConflictModal);

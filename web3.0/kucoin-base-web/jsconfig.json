@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "paths": {
+      "scripts/*": ["scripts/*"],
+      "static/*": ["cdnAssets/static/*"],
+      "@*": ["src/*"],
+      "src/*": ["src/*"],
+      "helper": ["src/helper.js"],
+      "config/*": ["src/config/*"],
+      "codes": ["src/codes.js"],
+      "paths": ["src/paths.js"],
+      "utils/*": ["src/utils/*"],
+      "hocs/*": ["src/hocs/*"],
+      "tools/*": ["src/tools/*"],
+      "hooks/*": ["src/hooks/*"],
+      "routes/*": ["src/routes/*"],
+      "models/*": ["src/models/*"],
+      "services/*": ["src/services/*"],
+      "selector/*": ["src/selector/*"],
+      "components/*": ["src/components/*"],
+      "common/*": ["src/common/*"],
+      "@kucoin-base/*": ["src/shared/*"],
+      "@kucoin-base/dva": ["src/shared/store/createDva.js"],
+      "meta/*": ["src/meta/*"]
+    },
+    "experimentalDecorators": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

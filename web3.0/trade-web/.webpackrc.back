@@ -1,0 +1,155 @@
+const path = require('path');
+const configs = require('./config/variable');
+const themeConfig = require('./theme.config.js');
+const _ = require('lodash');
+
+const { version, name, isProd, isTest, siteCfg, site } = configs;
+require('dotenv').config({ path: path.resolve(__dirname, './.xversion') });
+const { XVersion = '', Desc = '' } = process.env;
+
+// site-sdb开头的为沙盒
+// production下 dev/sit/sdb 使用/_cdn路径转发，生产线上使用CDNHOST
+const msite = site || '';
+const IS_SANDBOX = msite.indexOf('site-sdb') === 0;
+const IS_INSIDE_WEB = msite === 'site-cn';
+const IS_TEST_ENV = msite.indexOf('sit') === 0 && msite.indexOf('site') < 0;
+let cdnHost = IS_INSIDE_WEB ? 'https://assets2.staticimg.com' : 'https://assets.staticimg.com';
+if (msite.indexOf('dev') === 0 || IS_TEST_ENV || IS_SANDBOX) {
+  cdnHost = '/_cdn';
+}
+
+const publicPath = isProd ? `${cdnHost}/${name}/${version}/` : 'http://localhost:8000/';
+const natashaPath =
+  !isProd || IS_TEST_ENV
+    ? 'https://assets-v2.kucoin.net/natasha/npm'
+    : 'https://assets.staticimg.com/natasha/npm';
+
+export default {
+  entry: {
+    index: 'src/index.js',
+    theme: 'src/theme-boot.js',
+    // vendors: [
+    //   "react",
+    //   "react-dom",
+    //   "prop-types",
+    //   "dva",
+    //   "dva-loading",
+    //   "dva-model-extend",
+    //   // "lodash",
+    //   "nprogress",
+    //   "decimal.js",
+    //   "@kc/react-grid-layout",
+    //   "classnames",
+    //   "react-copy-to-clipboard",
+    //   "qrcode.react",
+    //   "@material-ui/core"
+    //   // "echarts",
+    // ]
+  },
+  commons: [
+    {
+      name: 'vendor',
+      filename: '[name].[hash:8].js',
+      minChunks: function (module) {
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(path.join(__dirname, './node_modules')) === 0
+        );
+      },
+    },
+  ],
+  publicPath,
+  extraResolveExtensions: ['.less'],
+  html: {
+    template: './public/index.ejs',
+  },
+  hash: true,
+  theme: themeConfig('dark'),
+  extraBabelPlugins: [
+    ['babel-plugin-lodash'],
+    ['@babel/plugin-syntax-dynamic-import'],
+    [
+      'import',
+      {
+        libraryName: '@kufox/icons',
+        libraryDirectory: 'lib/components',
+        camel2DashComponentName: false,
+      },
+      'icons',
+    ],
+    [
+      'import',
+      {
+        libraryName: '@kux/icons',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+      'kuxicons',
+    ],
+  ],
+  // es5ImcompatibleVersions: true,
+  extraBabelIncludes: [/node_modules/],
+  env: {
+    development: {
+      extraBabelPlugins: ['dva-hmr'],
+      // devtool: "source-map"
+    },
+    production: {
+      outputPath: path.resolve(__dirname, `dist/`),
+      extraBabelPlugins: [['transform-remove-console', { exclude: ['error', 'warn'] }]],
+    },
+  },
+  alias: {
+    '@': `${__dirname}/src/trade4.0`,
+    '@mui': `${__dirname}/src/trade4.0/components/mui`,
+    '@/pages/Orderbook': `${__dirname}/src/trade4.0/pages/Orderbook`,
+    src: `${__dirname}/src`,
+    codes: `${__dirname}/src/codes`,
+    assets: `${__dirname}/src/assets`,
+    components: `${__dirname}/src/components`,
+    hooks: `${__dirname}/src/hooks`,
+    hocs: `${__dirname}/src/hocs`,
+    models: `${__dirname}/src/models`,
+    pages: `${__dirname}/src/pages`,
+    pipeline: `${__dirname}/src/pipeline`,
+    services: `${__dirname}/src/services`,
+    themes: `${__dirname}/src/themes`,
+    style: `${__dirname}/src/style`,
+    utils: `${__dirname}/src/utils`,
+    config: `${__dirname}/src/runtime-config`,
+    helper: `${__dirname}/src/helper`,
+    paths: `${__dirname}/src/paths`,
+  },
+  define: {
+    _DEV_: !isProd,
+    _PRD_: isProd,
+    _IS_TEST_ENV_: IS_TEST_ENV,
+    _IS_SANDBOX_: IS_SANDBOX,
+    _PUBLIC_PATH_: publicPath,
+    _NATASHA_PATH_: natashaPath,
+    _APP_NAME_: name,
+    _VERSION_: version,
+    _SITE_: site,
+    _RELEASE_: `${name}_${version}`,
+    _API_HOST_: siteCfg['API_HOST.WEB'],
+    _GATE_WAY_: siteCfg['API_HOST.WEB'],
+    _IS_TEST_: isTest,
+    _IS_INSIDE_WEB_: IS_INSIDE_WEB,
+    _RUNTIME_CONFIG_: configs,
+    _XVERSION_: _.isEmpty(XVersion) ? undefined : XVersion,
+    _DESC_: _.isEmpty(Desc) ? undefined : Desc,
+    _ENV_: IS_TEST_ENV ? 'sit' : isProd ? 'prod' : 'dev',
+    SENTRY_DEBUG: true,
+    LOCAL_SENTRY_DEBUG: false,
+  },
+  // 添加阿拉伯语右排布局插件
+  extraPostCSSPlugins: [require('postcss-rtl')(require('./postcss-rlt-config'))],
+  proxy: {
+    '/owen': {
+      target: 'http://10.232.70.77:10240/',
+      changeOrigin: true,
+      pathRewrite: { '^/owen': '' },
+    },
+  },
+};

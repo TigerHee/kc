@@ -1,0 +1,44 @@
+@keyframes contentZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentZoomOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.animateOverlay {
+  animation-timing-function: bezier-curve(0.2, 0, 0, 1);
+  animation-fill-mode: forwards;
+}
+
+.animateOverlayVisible {
+  @extend .animateOverlay;
+  animation-duration: 0.24s;
+  animation-name: contentZoomIn;
+}
+
+.animateOverlayUnVisible {
+  @extend .animateOverlay;
+  animation-duration: 0.23s;
+  animation-name: contentZoomOut;
+}
+
+.animationDropdown {
+  // background-color: red;
+}

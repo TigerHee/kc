@@ -1,0 +1,64 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="base/Divider/Readme" />
+
+# Divider 分割线
+
+分割线用于区隔内容的分割线。
+
+## 何时使用
+
+- 对不同章节的文本段落进行分割。
+- 对行内文字/链接进行分割。
+
+
+## API
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| direction | 分割线方向，`horizontal`/`vertical` | string | 'horizontal' |
+| variant | 线型，`plain`/`solid`/`dashed`/`dotted` | string | 'plain' |
+| orientation | 文字位置，`start`/`center`/`end` | string | 'center' |
+| orientationMargin | 文字与最近边的距离 | string \| number | - |
+| style | 自定义样式 | CSSProperties | - |
+| className | 自定义类名 | string | - |
+| children | 分割线内容 | ReactNode | - |
+
+## 用法示例
+
+### 横向分割线
+
+```tsx
+<Divider>内容</Divider>
+```
+
+
+### 文字位置
+
+```tsx
+<Divider orientation="start">左侧文字</Divider>
+<Divider orientation="end">右侧文字</Divider>
+```
+
+### 纵向分割线
+
+```tsx
+<Divider type="vertical" />
+```
+
+### 尺寸
+
+```tsx
+<Divider size="small">Small</Divider>
+<Divider size="large">Large</Divider>
+```
+
+### 线型
+
+```tsx
+<Divider variant="plain">纯文字</Divider>
+<Divider variant="dotted">点线</Divider>
+<Divider variant="dashed">虚线</Divider>
+<Divider variant="solid">实线</Divider>
+```

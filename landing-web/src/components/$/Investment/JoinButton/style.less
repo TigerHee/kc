@@ -1,0 +1,31 @@
+.join {
+  display: inline-block;
+  background: #58CCB6;
+  border-radius: 4px;
+  padding: 0 42px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  text-align: center;
+  // font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  &,
+  &:focus,
+  &:active,
+  &:hover {
+    color: rgba(1, 8, 30, 1);
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  .join {
+    border-radius: ~`px2rem(4)`;
+    padding: 0 ~`px2rem(37)`;
+    height: ~`px2rem(48)`;
+    line-height: ~`px2rem(48)`;
+    font-size: ~`px2rem(16)`;
+    letter-spacing: ~`px2rem(1.25)`;
+  }
+}

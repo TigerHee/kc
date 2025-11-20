@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "baseUrl": ".", // 项目根目录
+        "module": "ESNext",
+        // 将项目内alias引用映射到对应目录
+        "paths": {
+            "@packages/*": [
+                "./packages/*"
+            ],
+            "@utils": [
+                "./externals/utils"
+            ],
+            "@utils/*": [
+                "./externals/utils/*"
+            ],
+            "@hooks/*": [
+                "./externals/hooks/*"
+            ],
+            "@tools/*": [
+                "./externals/tools/*"
+            ],
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "externals/**/*",
+        "packages/**/*",
+        "e2e/**/*",
+        "config/**/*",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

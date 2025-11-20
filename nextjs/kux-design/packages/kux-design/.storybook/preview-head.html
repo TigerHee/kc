@@ -1,0 +1,51 @@
+<script>
+  // 根据storybook 国家配置来加载不同的域名关系脚本
+  (function (){
+    const currentEnv = localStorage.getItem('sb-site-env') || 'kc';
+    const suffix = currentEnv === 'kc' ? '' : `_${currentEnv}`;
+    const scriptUrl = `https://assets.staticimg.com/web-domain-relation/1.9.9/boot${suffix}.js`;
+    document.write(`<script type="text/javascript" src="${scriptUrl}"><\/script>`);
+  })();
+</script>
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font"
+  type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2"
+  as="font" type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/KFOlCnqEu92Fr1MmEU9fABc4AMP6lbBP.woff2"
+  as="font" type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2"
+  as="font" type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/KFOlCnqEu92Fr1MmEU9fCxc4AMP6lbBP.woff2"
+  as="font" type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/KFOlCnqEu92Fr1MmEU9fChc4AMP6lbBP.woff2"
+  as="font" type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/Roboto-SemiBold.woff2" as="font"
+  type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/KFOlCnqEu92Fr1MmYUtfBBc4AMP6lQ.woff2"
+  as="font" type="font/woff2" crossorigin />
+<link rel="prefetch" href="https://assets.staticimg.com/natasha/npm/@kux/font/css.css" as="style"
+    onload='this.onload=null,this.rel="stylesheet"'>
+
+<style>
+  /* make error message in pre visible */
+  .sb-story.sb-unstyled > pre {
+    white-space: pre-line;
+  }
+  html {
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei;
+    color: var(--kux-text);
+  }
+  html[data-theme='dark'] {
+    background-color: var(--kux-backgroundOverlay);
+  }
+  #storybook-root {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .sb-show-main{
+    background: none;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+</style>

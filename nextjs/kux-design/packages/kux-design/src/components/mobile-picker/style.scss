@@ -1,0 +1,109 @@
+@import '@/style/index.scss';
+@import './common-style.scss';
+
+// ===== 公共样式 =====
+.kux-mobile-picker__footer {
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.kux-mobile-picker__drawer {
+  border-radius: 16px 16px 0 0;
+}
+
+// ===== 输入相关样式 =====
+.kux-mobile-picker__input-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.kux-mobile-picker__input {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border: 1px solid get-theme(cover12);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: get-theme(text);
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &--active {
+    border-color: get-theme(text);
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.kux-mobile-picker__arrow-wrapper {
+  height: 40px;
+  margin: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: get-theme(icon60);
+
+  [dir='rtl'] & {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// ===== 选择器样式 =====
+.kux-mobile-picker__date-wrapper,
+.kux-mobile-picker__time-wrapper,
+.kux-mobile-picker__range-wrapper {
+  width: 100%;
+}
+
+.kux-mobile-picker__date-picker,
+.kux-mobile-picker__time-picker,
+.kux-mobile-picker__range-picker {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+// ===== 额外头部样式 =====
+.kux-mobile-picker__extra-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 0;
+  gap: 12px;
+}
+
+.kux-mobile-picker__extra-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  color: get-theme(text60);
+  border-radius: 20px;
+  border: 1px solid get-theme(cover12);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: get-theme(text);
+  }
+
+  &--selected {
+    color: get-theme(text);
+    border-color: get-theme(text);
+  }
+} 

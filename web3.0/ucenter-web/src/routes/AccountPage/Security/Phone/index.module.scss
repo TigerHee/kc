@@ -1,0 +1,25 @@
+.container {
+  max-width: 580px;
+  height: auto;
+  padding: 0 0 88px 0;
+  margin: 0 auto;
+  
+  &.containerH5 {
+    padding: 0 16px 44px 16px;
+
+    .title {
+      margin-top: 8px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .title {
+    margin-top: 48px;
+    color: var(--kux-text);  
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}

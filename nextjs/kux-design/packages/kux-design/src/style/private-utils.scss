@@ -1,0 +1,35 @@
+@use 'sass:map';
+/**
+ * 组件库内部私有样式工具类
+ * 这些样式仅供组件库内部使用，不应暴露给外部用户
+ */
+@import './theme-vars.scss';
+
+/**
+ * 在组件库内部定义主题变量
+ */
+@mixin defineThemeVar($key, $light, $dark) {
+  // 校验变量是否已经存在themeMap
+  @if map.has-key((map.get($kux-theme, 'dark')), $key)
+    or map.has-key((map.get($kux-theme, 'light')), $key) {
+    @warn "#{$key} already exists in $kux-theme";
+  }
+
+  // 将主题颜色设置进 $kux-theme
+  $kux-theme: map.merge($kux-theme,
+      ('light': map.merge(map.get($kux-theme, 'light'), ($key: $light)),
+        'dark': map.merge(map.get($kux-theme, 'dark'), ($key: $dark)))) !global;
+
+  $prefix: #{$lib-ns}-;
+
+  :root,
+  [data-theme='light'] {
+    --#{$prefix}#{$key}: #{$light};
+  }
+
+  [data-theme='dark'] {
+    --#{$prefix}#{$key}: #{$dark};
+  }
+
+  $prefix: $ns !global;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 78</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="32" cy="32" r="32"></circle>
+        <linearGradient x1="50%" y1="-5.42953985%" x2="53.2630213%" y2="109.707158%" id="linearGradient-3">
+            <stop stop-color="#DDE3EB" offset="0%"></stop>
+            <stop stop-color="#BDC9D9" offset="96.960802%"></stop>
+            <stop stop-color="#0F7DFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M48.2909217,50.54232 L39.651687,46.33944 C38.8368696,45.94256 38.3304348,45.14528 38.3304348,44.25824 L38.3304348,41.28296 C38.5375304,41.03656 38.7554783,40.75584 38.9806609,40.44608 C40.1011478,38.90608 40.9991652,37.19184 41.6521043,35.34296 C42.9281391,34.7736 43.7565217,33.546 43.7565217,32.16 L43.7565217,28.64 C43.7565217,27.79256 43.4309565,26.97152 42.8521739,26.33 L42.8521739,21.64928 C42.9028174,21.16528 43.1017739,18.28416 40.9602783,15.90728 C39.1027478,13.84544 36.0885565,12.8 32,12.8 C27.9114435,12.8 24.8972522,13.84544 23.0397217,15.9064 C20.8982261,18.28328 21.0971826,21.16528 21.1478261,21.64928 L21.1478261,26.33 C20.5690435,26.97152 20.2434783,27.79256 20.2434783,28.64 L20.2434783,32.16 C20.2434783,33.23096 20.7435826,34.22976 21.597287,34.89592 C22.4256696,38.08768 24.1593043,40.49272 24.7652174,41.26448 L24.7652174,44.1764 C24.7652174,45.02824 24.2877217,45.80968 23.5199304,46.218 L15.4522435,50.50008 C12.8287304,51.89312 11.2,54.56304 11.2,57.47056 L11.2,60.32 C11.2,64.49648 24.805913,65.6 32,65.6 C39.194087,65.6 52.8,64.49648 52.8,60.32 L52.8,57.64216 C52.8,54.61672 51.0717913,51.89576 48.2909217,50.54232 Z" id="path-4"></path>
+        <filter x="-33.7%" y="-18.9%" width="167.3%" height="153.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.161458333 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-78">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Oval" fill-rule="nonzero"></g>
+            <rect id="Rectangle" fill="url(#linearGradient-3)" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="0" width="64" height="64"></rect>
+            <g id="Path" mask="url(#mask-2)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+            </g>
+        </g>
+    </g>
+</svg>

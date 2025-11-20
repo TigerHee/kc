@@ -1,0 +1,78 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react", "react-app"],
+  "plugins": ["react", "prettier", "react-hooks"],
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "_IS_SERVER_": false
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      // 添加ES特性支持，使之能够识别ES6语法
+      "jsx": true
+    }
+  },
+  "rules": {
+    "max-classes-per-file": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": "error",
+    "semi": [2, "always"],
+    "no-else-return": "error",
+    "no-loop-func": "error",
+    "no-multi-spaces": "error",
+    "no-console": 0,
+    "camelcase": 0,
+    "no-restricted-syntax": 0,
+    "no-cond-assign": 0,
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "no-multiple-empty-lines": ["error", { "max": 2 }],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+    "no-undef": "error",
+    "no-undef-init": "error",
+    "no-shadow-restricted-names": "error",
+    "no-debugger": 0,
+    "no-plusplus": 0,
+    "no-unused-vars": 2,
+    "no-nested-ternary": [0],
+    "no-use-before-define": [0],
+    "import/no-unresolved": [0],
+    "no-shadow": 0,
+    "import/extensions": [0],
+    "space-before-function-paren": 0,
+    "react/prop-types": 0,
+    "react/jsx-max-props-per-line": [2, { "maximum": 1, "when": "multiline" }],
+    "react/display-name": 0,
+    "react/jsx-no-target-blank": 0,
+    "react/jsx-fragments": [0],
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/destructuring-assignment": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/anchor-has-content": [0],
+    "jsx-a11y/img-has-alt": [0],
+    "react/prefer-stateless-function": 0,
+    "jsx-a11y/no-static-element-interactions": [0],
+    "jsx-a11y/click-events-have-key-events": [0],
+    "react/require-default-props": 0,
+    "react/default-props-match-prop-types": 2,
+    "react/forbid-prop-types": 0,
+    "react/no-did-update-set-state": 0,
+    "import/no-named-as-default": 0,
+    "import/no-anonymous-default-export": 0,
+    "no-multi-assign": 0,
+    "consistent-return": 0,
+    "no-prototype-builtins": 0,
+    "radix": 0,
+    "no-lonely-if": 0,
+    "no-continue": 0
+  }
+}

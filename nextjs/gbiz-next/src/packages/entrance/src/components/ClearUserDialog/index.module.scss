@@ -1,0 +1,59 @@
+@import 'src/styles/mixin.scss';
+
+.dialogContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.imgWrap {
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 148px;
+    height: auto;
+    pointer-events: none;
+  }
+}
+
+.tipTitle {
+  color: var(--kux-text);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  margin-top: 8px;
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  align-self: stretch;
+  color: var(--kux-text60);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: 'PingFang SC';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  white-space: pre-wrap;
+}
+
+.contentItem {
+  margin-top: 8px;
+}
+
+.operate {
+  display: flex;
+  gap: 16px;
+  align-self: stretch;
+  justify-content: space-between;
+  margin-top: 24px;
+  button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,97 @@
+$sm: 767px;
+
+.alertWrapper {
+  margin-top: 16px;
+  :global(.kux-alert-item) {
+    max-width: 100%;
+  }
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  span>span {
+    color: var(--kux-brandRed) !important;
+  }
+}
+
+.formWrapper {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media (max-width: $sm) {
+    margin-top: 28px;
+  }
+}
+
+.subTitle {
+  color: var(--kux-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
+.answersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  gap: 16px 12px;
+  :global(.kux-input) {
+    width: 100%;
+  }
+}
+
+.selectItem {
+  display: flex;
+  height: 32px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--kux-divider8);
+  border-radius: 80px;
+  width: 106px;
+  color: var(--kux-text60);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 140%; /* 16.8px */
+  cursor: pointer;
+
+  &.large {
+    width: calc(50% - 6px);
+  }
+
+  &:hover, &.active {
+    border-color: var(--kux-text);
+    color: var(--kux-text);
+  }
+
+  @media (max-width: $sm) {
+    width: calc(33% - 4px);
+  }
+}
+
+.selectItemWrapper {
+  margin: 6px 0;
+}
+
+.btnWrapper {
+  margin-top: 20px;
+  @media (max-width: $sm) {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.errorDialog {
+  :global(.kux-modal-header) {
+    padding-bottom: 0;
+  }
+  :global(.kux-empty-title) {
+    text-align: center;
+  }
+  :global(.kux-empty-description) {
+    text-align: center;
+  }
+}

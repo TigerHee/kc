@@ -1,0 +1,20 @@
+@import '@/style/index.scss';
+
+@mixin legend-float() {
+  padding: 0 4px;
+  width: auto;
+}
+
+/* 0 为 LTR，1 为 RTL */
+@mixin label-float($rtl) {
+  $translateX: if($rtl > 0, -16px, 16px);
+  color: get-theme(text);
+  transform: translate($translateX, -8px) scale(0.75);
+}
+
+@mixin svg-default() {
+  svg {
+    cursor: pointer;
+    color: get-theme(icon60);
+  }
+}

@@ -1,0 +1,15 @@
+export default {
+  "inviteB.manage.commission.yourrate": "آپ کی کمیشن کی شرح",
+  "inviteB.manage.commisson.friendrate": "دوست کی فیس میں رعایت",
+  "inviteB.manage.copy.share": "کاپی کیا گیا! ابھی شیئر کریں!",
+  "inviteB.manage.poster.create": "ابھی شیئر کریں",
+  "inviteB.manage.poster.share": "ابھی شیئر کریں",
+  "inviteB.manage.remark": "ریمارکس",
+  "69ti912QyqQK3RLThoqqNL": "ویلکم پیکج کا دعوی کرنے کے لیے سائن اپ کریں۔",
+  "h2RhjtaW236Cy1ofAMdsY7": "{{num}}  {{siteBaseCurrency}} تک کی قیمت!",
+  "ceWPbECZDHEFPo5wuNKZou": "مزید",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "کاپی کیا گیا!",
+  "sTkpRT7EiVTxqr6sApV5Aj": "لنک کاپی کریں۔",
+  "x8nfNnRNkgqeds6C4AfUC8": "تصویر محفوظ کریں",
+  "4EhrZujhYTKtPmKwo99tBr": "ریفرل کوڈ: {rcode}"
+}

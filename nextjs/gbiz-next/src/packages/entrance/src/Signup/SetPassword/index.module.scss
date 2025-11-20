@@ -1,0 +1,68 @@
+/**
+ * Owner: sean.shi@kupotech.com
+ */
+@import 'src/styles/mixin.scss';
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  margin-bottom: 8px;
+  color: var(--kux-text);
+  word-break: break-word;
+
+  &.fromDrawer {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  @include media-query('sm') {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 8px;
+
+    &.fromDrawer {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.tips {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--kux-text60);
+  margin-bottom: 37px;
+
+  @include media-query('sm') {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+}
+
+.form {
+  .mtSpace {
+    margin-top: 8px;
+
+    @include media-query('sm') {
+      margin-top: 0;
+    }
+  }
+
+  .inputEye {
+    margin-top: 8px;
+
+    @include media-query('sm') {
+      margin-top: 0;
+    }
+  }
+}
+
+.submitButton {
+  margin-top: 24px;
+
+  @include media-query('sm') {
+    margin-top: 20px;
+  }
+}

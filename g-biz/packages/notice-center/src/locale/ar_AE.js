@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'ar_AE',
+  '2HVcFSJMKfjBCfPSUu8PbB': 'إشعارات',
+  'all.clear': 'حذف الكل',
+  'all.read': 'قراءة الكل',
+  'confirm': 'تأكيد',
+  'delete.message.confirm': 'هل أنت متأكد من حذف جميع رسائل الإعلام؟',
+  'table.empty': 'لا توجد بيانات',
+  'today': 'اليوم',
+  'yesterday': 'أمس',
+};

@@ -1,0 +1,13 @@
+export default {
+  "0e69c213ac414800a71a": "Verdergaan",
+  "122f15eb20c94800a85a": "Australië",
+  "1282a9de05204000a42e": "Later",
+  "2441224b3dbb4000a184": "U wordt in <span>{{time}}</span> doorgestuurd",
+  "327afb2cd06c4800a436": "Europa",
+  "3705a22def0d4800a1b9": "Update van uw serviceregio",
+  "50184c5b65814800ab6a": "Op basis van uw locatie raden we u aan naar de <span>{{site}}</span> site over te schakelen voor de beste ervaring. Wilt u verdergaan?",
+  "5db2931fb7474800a935": "Volgens uw meest recente KYC-gegevens is uw account naar het <span>{{site}}</span> platform verplaatst. Om aan de regels te voldoen, wordt u automatisch naar de bijgewerkte site doorgestuurd.",
+  "a4d911c5beb74000aa50": "Het lijkt erop dat u zich in een andere regio bevindt",
+  "e60f7f265df84800a4e3": "Wereldwijd",
+  "f8f20fdb54ed4800a803": "Nu wisselen"
+}

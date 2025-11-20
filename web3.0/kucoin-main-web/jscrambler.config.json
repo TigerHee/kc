@@ -1,0 +1,56 @@
+[
+  {
+    "filesSrc": "dist",
+    "fileMatcher": [
+      "kucoin-main-web/*/js/p__selfservice__assetsBack__index.*.js",
+      "kucoin-main-web/*/js/p__selfservice__assetsBack__form.*.js",
+      "kucoin-main-web/*/js/p__selfservice__assetsBack__form~p__selfservice__assetsBack__index.*.js",
+      "kucoin-main-web/*/js/p__selfservice___layout.*.js",
+      "kucoin-main-web/*/js/p__selfservice__login__index.*.js",
+      "kucoin-main-web/*/js/p__selfservice__resetLoginPW__index.*.js",
+      "kucoin-main-web/*/js/p__selfservice__resetPhone__index.*.js",
+      "kucoin-main-web/*/js/p__selfservice__resetTradePW__index.*.js",
+      "kucoin-main-web/*/js/p__selfservice__resetg2fa__index.*.js",
+      "kucoin-main-web/*/js/p__account__profile__index.*.js",
+      "kucoin-main-web/*/js/p__account__security__api__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__encourage__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__encouragement__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__index~p…ets__payments__index~p__assets__trade~539b8d28.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__loans__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__margin-bonus__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__referral__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bonus__rewards__index.*.js",
+      "kucoin-main-web/*/js/p__assets__bot-account__index.*.js",
+      "kucoin-main-web/*/js/p__assets__coin__coin$.*.js",
+      "kucoin-main-web/*/js/p__assets__earn-account__coupons.*.js",
+      "kucoin-main-web/*/js/p__assets__earn-account__index.*.js",
+      "kucoin-main-web/*/js/p__assets__high-frequency-account__index.*.js",
+      "kucoin-main-web/*/js/p__assets__index.*.js",
+      "kucoin-main-web/*/js/p__assets__main-account__index.*.js",
+      "kucoin-main-web/*/js/p__assets__margin-account__index.*.js",
+      "kucoin-main-web/*/js/p__assets__margin-account__isolated__index.*.js",
+      "kucoin-main-web/*/js/p__assets__margin-account__margin__index.*.js",
+      "kucoin-main-web/*/js/p__assets__record__index.*.js",
+      "kucoin-main-web/*/js/p__assets__trade-account__convertKCS__index.*.js",
+      "kucoin-main-web/*/js/p__assets__trade-account__convertKCS__record__index.*.js",
+      "kucoin-main-web/*/js/p__assets__trade-account__index.*.js",
+      "kucoin-main-web/*/js/p__assets__withdraw__coin.*.js",
+      "kucoin-main-web/*/js/p__assets__withdraw__index.*.js",
+      "kucoin-main-web/*/js/p__forms__verify.*.js",
+      "kucoin-main-web/*/js/p__withdraw-addr-manage__index.*.js",
+      "kucoin-main-web/*/js/p__assets-pol__index.*.js",
+      "kucoin-main-web/*/js/p__assets-detail__index.*.js"
+    ],
+    "mode": "default"
+  },
+  {
+    "filesSrc": "dist",
+    "fileMatcher": [
+      "kucoin-main-web/*/js/p__assets__withdraw__coin.*.js",
+      "kucoin-main-web/*/js/p__assets__withdraw__index.*.js",
+      "kucoin-main-web/*/js/p__assets__coin__coin$.*.js"
+    ],
+    "mode": "hard"
+  }
+]

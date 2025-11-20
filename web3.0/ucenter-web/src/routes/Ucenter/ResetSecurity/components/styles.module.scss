@@ -1,0 +1,35 @@
+$sm: 767px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 0 88px;
+  overflow-y: auto;
+  @media (max-width: $sm) {
+    padding: 0 16px 44px;
+  }
+}
+
+.header {
+  color: var(--kux-text);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 140%; /* 50.4px */
+  @media (max-width: $sm) {
+    font-size: 24px;
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap32 {
+  gap: 32px;
+}

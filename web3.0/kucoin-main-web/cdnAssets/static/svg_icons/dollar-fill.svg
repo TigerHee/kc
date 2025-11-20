@@ -1,0 +1,30 @@
+
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#22B4FF" offset="0%"></stop>
+            <stop stop-color="#0F7DFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M6.46244477,9.21666667 C3.78792342,8.52833333 2.92783505,7.8225 2.92783505,6.71416667 C2.92783505,5.4425 4.11192931,4.55 6.1089838,4.55 C8.20618557,4.55 8.98379971,5.54166667 9.0544919,7 L11.6583211,7 C11.5817378,4.9875 10.3387334,3.15583333 7.87628866,2.555 L7.87628866,0 L4.34167894,0 L4.34167894,2.52 C2.05596465,3.01583333 0.217967599,4.47416667 0.217967599,6.73166667 C0.217967599,9.42666667 2.4742268,10.7683333 5.75552283,11.55 C8.70692194,12.25 9.29013255,13.2708333 9.29013255,14.3675 C9.29013255,15.1666667 8.71870398,16.45 6.1089838,16.45 C3.68188513,16.45 2.72164948,15.3708333 2.59793814,14 L0,14 C0.147275405,16.555 2.0736377,17.9841667 4.34167894,18.4683333 L4.34167894,21 L7.87628866,21 L7.87628866,18.4916667 C10.167894,18.0541667 12,16.7416667 12,14.3441667 C12,11.0425 9.13696613,9.91083333 6.46244477,9.21666667 Z" id="path-2"></path>
+        <filter x="-58.3%" y="-23.8%" width="216.7%" height="166.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="账户中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="账号概览-copy" transform="translate(-679.000000, -391.000000)">
+            <g id="Group-10" transform="translate(327.000000, 293.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero" opacity="0.502139137">
+                <g id="Group-13-Copy-3" transform="translate(332.000000, 82.000000)">
+                    <circle id="Oval-Copy-9" cx="40" cy="36" r="20"></circle>
+                </g>
+            </g>
+            <g id="ic-attach-money-48-px" transform="translate(693.000000, 401.000000)">
+                <g id="Path">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

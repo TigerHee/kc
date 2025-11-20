@@ -1,0 +1,68 @@
+.banner {
+  width: 100%;
+  background: #0b0f15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    margin-top: ~`px2rem(52) `;
+    width: ~`px2rem(334) `;
+    font-size: ~`px2rem(23) `;
+    color: #ffffff;
+    text-align: center;
+    line-height: ~`px2rem(30) `;
+    font-weight: 700;
+  }
+  .sub {
+    margin-top: ~`px2rem(7) `;
+    width: ~`px2rem(300) `;
+    font-size: ~`px2rem(12) `;
+    color: #ffffff;
+    text-align: center;
+    line-height: ~`px2rem(24) `;
+    font-weight: 400;
+  }
+  img {
+    margin-top: ~`px2rem(48) `;
+    width: ~`px2rem(218) `;
+  }
+  .signBox {
+    margin-top: ~`px2rem(30) `;
+    width: 100%;
+    height: ~`px2rem(73) `;
+    padding: ~`px2rem(16) ` ~`px2rem(12) `;
+    border-top: ~`px2rem(1) ` solid rgba(184, 198, 216, 0.16);
+    .leftSign {
+      display: flex;
+      .signInput {
+        width: 100%;
+        height: ~`px2rem(40) `;
+        background: #ffffff;
+        border-radius: ~`px2rem(4) `;
+        font-size: ~`px2rem(14) `;
+      }
+      .signBtn {
+        margin-left: ~`px2rem(12) `;
+        height: ~`px2rem(40) `;
+        border-radius: ~`px2rem(4) `;
+        padding: 0 ~`px2rem(12) `;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: ~`px2rem(14) `;
+        color: #00142a;
+        font-weight: 500;
+      }
+      input::-webkit-input-placeholder {
+        font-size: ~`px2rem(14) `;
+        line-height: ~`px2rem(40) `;
+        color: rgba(0, 20, 42, 0.6);
+      }
+      :global {
+        .ant-form-item {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

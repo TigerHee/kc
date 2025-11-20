@@ -1,0 +1,75 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  margin-top: -80px;
+  background: #000a1e;
+  .left {
+    width: 750px;
+    margin-right: 100px;
+  }
+  .colorWrite {
+    color: #ffffff;
+  }
+  .leftTitle {
+    .colorWrite;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .leftSub {
+    .colorWrite;
+    margin-top: 23px;
+    font-size: 16px;
+  }
+  .leftSign {
+    display: flex;
+    margin-top: 67px;
+    input::-webkit-input-placeholder {
+      color: rgba(1, 8, 30, 0.6);
+      font-size: 14px;
+    }
+  }
+  .signInput {
+    width: 372px;
+    height: 48px;
+    border-radius: 4px;
+  }
+  .signBtn {
+    height: 48px;
+    margin-left: 13px;
+    padding: 0 24px;
+    color: #01081e;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1.25px;
+    border-radius: 4px;
+  }
+}
+
+.cusModal {
+  .closeIcon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  :global {
+    .ant-modal-content {
+      padding: 36px 40px;
+    }
+  }
+}
+.imgBox{
+  right: -170px;
+}
+[dir='rtl']&{
+  .imgBox{
+    left: -170px;
+    right: auto;
+  }
+}

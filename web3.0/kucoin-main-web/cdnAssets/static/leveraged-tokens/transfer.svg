@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>矩形 2</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-532.000000, -1337.000000)">
+            <g id="编组-3备份" transform="translate(112.000000, 1138.000000)">
+                <g id="Input/Filled/Light/Text-fields/Inactive备份" transform="translate(40.000000, 199.000000)">
+                    <g id="编组-7" transform="translate(268.000000, 0.000000)">
+                        <g id="编组" transform="translate(112.000000, 0.000000)">
+                            <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+                            <path d="M12.4477612,3.7034826 L13.1512438,3 L17.920398,7.97512439 L2,7.97512439 L2,6.98009951 L15.7243781,6.98009951 L12.4477612,3.7034826 Z M7.4726368,16.2268657 L6.76915422,16.9303483 L2,11.9552239 L17.920398,11.9552239 L17.920398,12.9502488 L4.19601989,12.9502488 L7.4726368,16.2268657 L7.4726368,16.2268657 Z" id="形状" fill="#24AE8F"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

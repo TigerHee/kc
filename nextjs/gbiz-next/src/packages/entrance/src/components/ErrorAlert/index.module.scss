@@ -1,0 +1,11 @@
+.tipContainer {
+  margin-bottom: 24px;
+  .alertWrapper {
+    color: var(--kux-brandRed);
+    font-size: 14px;
+    margin: 0px;
+    line-height: 130%;
+    font-weight: 500;
+    max-width: unset;
+  }
+}

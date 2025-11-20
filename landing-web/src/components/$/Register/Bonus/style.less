@@ -1,0 +1,157 @@
+@keyframes move {
+  0%,
+  65% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(6deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(6deg);
+  }
+  85% {
+    transform: rotate(-6deg);
+  }
+  90% {
+    transform: rotate(6deg);
+  }
+  95% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes move {
+  0%,
+  65% {
+    -webkit-transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(6deg);
+  }
+  75% {
+    -webkit-transform: rotate(-6deg);
+  }
+  80% {
+    -webkit-transform: rotate(6deg);
+  }
+  85% {
+    -webkit-transform: rotate(-6deg);
+  }
+  90% {
+    -webkit-transform: rotate(6deg);
+  }
+  95% {
+    -webkit-transform: rotate(-6deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.bonusWrap {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #00142a;
+  z-index: 999;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  margin-top: 42px;
+  .flexCenter {
+    display: flex;
+    align-items: center;
+  }
+  .inner {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bonusLeft {
+    .flexCenter;
+  }
+  .presentBox {
+    width: 115px;
+    height: 119px;
+    margin-top: -62px;
+    position: relative;
+  }
+  .presentImg {
+    width: 115px;
+    height: 119px;
+    animation: move 2s 0s infinite;
+    -webkit-animation: move 2s 0s infinite;
+  }
+  .presentTextImg {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .numWrap {
+    margin-left: 51px;
+  }
+  .numBox {
+    display: flex;
+  }
+  .numItems {
+    width: 40px;
+    height: 36px;
+    line-height: 36px;
+    background: #00142a;
+    border-radius: 2px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .numRed {
+    color: red;
+  }
+  .numInfo {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #01081e;
+    line-height: 23px;
+    font-weight: 500;
+  }
+  .bonusRight {
+    .flexCenter;
+    font-size: 20px;
+    color: #01081e;
+    font-weight: 600;
+  }
+  .bonusWelcome {
+    font-size: 16px;
+    color: #01081e;
+    font-weight: 600;
+  }
+  .delLine {
+    text-decoration: line-through;
+  }
+  .fingerImg {
+    width: 25px;
+    height: 18px;
+    margin: 0 20px 0 15px;
+  }
+  .signBtn {
+    height: 48px;
+    background: rgba(1, 8, 30, 1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 1.25px;
+    font-weight: 500;
+  }
+}

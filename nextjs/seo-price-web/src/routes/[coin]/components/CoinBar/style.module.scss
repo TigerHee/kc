@@ -1,0 +1,120 @@
+@import '@/styles/mixin.scss';
+
+.coinBarBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  @include media-query('lg') {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+.price {
+  color: var(--color-text);
+  margin-bottom: 0;
+  font-size: 36px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  white-space: nowrap;
+
+  @include media-query('lg') {
+    font-size: 18px;
+  }
+
+}
+
+.priceChange {
+  flex: 1;
+  margin-left: 8px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--color-text60);
+
+  // color: )=> rate > 0 ? theme.colors.primary: rate < 0 ? theme.colors.secondary: theme.colors.text60
+  .rateGreaterThanZero {
+    color: var(--color-primary);
+  }
+
+  .rateLessThanZero {
+    color: var(--color-secondary);
+  }
+
+  display: flex;
+  align-items: baseline;
+  align-self: flex-end;
+
+  @include media-query('sm') {
+    margin-left: 4px;
+    font-size: 12px;
+  }
+
+}
+
+.changeRateLabel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin-left: 4px;
+  color: var(--color-text40);
+  text-transform: lowercase;
+
+  @include media-query('sm') {
+    font-size: 12px;
+  }
+
+}
+
+.switchListWrapper {
+  flex: 1;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 12px;
+
+  @include media-query('sm') {
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.switchList {
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 12px;
+
+  @include media-query('sm') {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+.switchItem {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--color-text40);
+
+  &.active {
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  word-break: keep-all;
+
+  @include media-query('lg') {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+}

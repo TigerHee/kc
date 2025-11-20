@@ -1,0 +1,8 @@
+{
+  "i18n-ally.localesPaths": ["src/locales", ".neeko/locale"],
+  "i18n-ally.sourceLanguage": "zh-HK", // 默认语言
+  "i18n-ally.regex.usageMatch": [
+    // 这个比较重要！！！ 识别你的国际化方法，比如我们这里使用 _t，你可以改成你自己项目的方法
+    "[^\\w\\d]_t\\(['\"`]({key})['\"`]"
+  ]
+}

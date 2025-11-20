@@ -1,0 +1,97 @@
+.qrBox {
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid var(--kux-divider8);
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .mask {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.8);
+
+    .maskContent {
+      width: 260px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+
+      .btn {
+        background: var(--kux-text);
+        color: var(--kux-textEmphasize);
+        &:hover {
+          background: var(--kux-text);
+        }
+
+        &.btnDark {
+          background: #00C288;
+          color: var(--kux-text);
+
+          &:hover {
+            background: #00C288;
+          }
+        }
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--kux-toolTips);
+        margin-bottom: 24px;
+      }
+
+      .scanedText {
+        width: 210px;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: var(--kux-toolTips);
+      }
+    }
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+
+  svg {
+    color: var(--kux-icon);
+  }
+
+  > span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--kux-text60);
+    margin-left: 10px;
+
+    .link {
+      color: var(--kux-brandGreen);
+    }
+  }
+}
+
+.forgetBottomBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}

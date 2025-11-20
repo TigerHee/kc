@@ -1,0 +1,83 @@
+@import '@/styles/mixin.scss';
+
+.itemWrapper {
+
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(29, 29, 29, 0.02);
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(29, 29, 29, 0.05);
+  }
+
+}
+
+.coinIcon {
+
+  width: 28px;
+  height: 28px;
+
+}
+
+.coinData {
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.dataRow {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .normal {
+    color: var(--color-text40);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+
+    @include media-query('lg') {
+      font-size: 12px;
+    }
+  }
+
+  .strong {
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+
+    @include media-query('lg') {
+      font-size: 14px;
+    }
+  }
+
+}
+
+.rateWrapper {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .rateNormal {
+    color: var(--color-text40);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  img {
+    margin-left: 2px;
+  }
+
+}

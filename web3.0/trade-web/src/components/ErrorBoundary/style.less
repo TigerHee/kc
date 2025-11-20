@@ -1,0 +1,78 @@
+.container {
+  width: 100%;
+  min-height: 500px;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #FFF;
+}
+.content {
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-left: -500px;
+}
+.content::after {
+  content: "";
+  height: 0px;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+.leftBox {
+  float: left;
+  max-width: 520px;
+}
+.rightBox {
+  float: right;
+  width: 460px;
+  height: 313px;
+  background-image: url('../../assets/404/compatibility_computer.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.title {
+  font-size: 34px;
+  font-weight: 500;
+  color: #000A1E;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.describe {
+  font-size:14px;
+  color: #6C7988;
+  line-height:24px;
+  margin-top: 4px;
+}
+
+.btnGroup {
+  padding-top: 16px;
+}
+.btn {
+  display: block;
+  padding: 0 12px;
+  height: 48px;
+  line-height: 48px;
+  min-width: 166px;
+  text-align: center;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.reload {
+  color: #FFF;
+  background: #24AE8F;
+  border: 1px solid #24AE8F;
+}
+.link {
+  color: #464E5B;
+  background: #FFF;
+  border: 1px solid rgb(108,121,136);
+}

@@ -1,0 +1,68 @@
+/**
+ * Owner: willen@kupotech.com
+ */
+
+.wrapper {
+  width: 100vw;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding-top: 80px;
+  align-items: center;
+}
+
+.textMid {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+.textSm {
+  margin-top: 8px;
+}
+
+.logOut {
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--kux-text);
+  span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.applyWarning {
+  color: var(--kux-text);
+  margin: 0;
+}
+
+.iconWrapper {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--kux-text);
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.desc {
+  color: var(--kux-complementary);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 13px;
+}
+

@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log*
+yarn-error.log
+
+# misc
+.DS_Store
+.idea
+.vscode
+
+# production
+/cjs
+/umd
+/system
+/es
+/dist

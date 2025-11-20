@@ -1,0 +1,47 @@
+@import '~themes/mix.less';
+
+.conditions {
+  width: 100%;
+  padding: 64px 0 0;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({padding: 60px 24px 0 24px;});
+  .mediaQuerySm({padding: 40px 12px 0 12px;});
+}
+.inner {
+  margin: 0 auto;
+  width: 83.3%;
+  max-width: 1200px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 100%;});
+}
+.title {
+  margin: 0 0;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: #00142a;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({font-size: 36px; line-height: 48px;});
+  .mediaQuerySm({font-size: 24px; line-height: 36px;});
+}
+.content {
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({margin-top: 12px;});
+  .mediaQuerySm({margin-top: 8px;});
+}
+.contentItems {
+  margin: 0 0;
+  font-size: 16px;
+  line-height: 28px;
+  color: #00142a;
+  transition: all 0.3s ease-in-out;
+  .mediaQuerySm({font-size: 12px; line-height: 24px;});
+}
+.winImg {
+  width: 100%;
+  margin-top: 64px;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({margin-top: 60px;});
+  .mediaQuerySm({margin-top: 40px;});
+}

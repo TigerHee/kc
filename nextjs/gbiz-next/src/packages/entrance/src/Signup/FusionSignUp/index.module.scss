@@ -1,0 +1,67 @@
+@import 'src/styles/mixin.scss';
+
+.contentBox {
+  width: 486px;
+  max-width: 486px;
+  margin: 0 auto 0 100px;
+  
+  &.noLayout {
+    width: 486px;
+    margin: 0 auto;
+  }
+  
+  &.fromDrawer {
+    max-width: unset;
+    margin: 0 auto;
+    padding: 40px 64px 40px;
+  }
+  
+  @include media-query('xl') {
+    margin: 0 auto;
+  }
+  
+  @include media-query('lg') {
+    margin: 0 auto;
+    
+    &.fromDrawer {
+      padding: 30px 40px 40px;
+    }
+  }
+  
+  @include media-query('sm') {
+    width: 100%;
+    margin: 0 auto;
+    max-width: unset;
+
+    &.noLayout {
+      width: 100%;
+    }
+    
+    &.fromDrawer {
+      padding: 0px 16px 40px !important;
+    }
+  }
+}
+
+
+:global(body fieldset) {
+  min-width: initial;
+  padding: initial;
+  margin: initial;
+  border: initial;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+}
+:global(body legend) {
+  width: initial;
+  padding: initial;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+}
+
+
+

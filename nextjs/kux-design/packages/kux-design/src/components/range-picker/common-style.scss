@@ -1,0 +1,312 @@
+@import '@/style/index.scss';
+
+.kux-range-picker__dropdown {
+  .kux-picker-dropdown-range {
+    box-shadow: 0px 0px 40px get-theme(cover4) !important;
+    background: get-theme(bulletLayer);
+    border-radius: 8px;
+    padding: 0;
+    z-index: 1000;
+  }
+  .kux-picker-range-arrow {
+    display: none;
+  }
+  @include responsive-down(md) {
+    .kux-picker-panels {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .kux-picker-header {
+    height: 46px;
+    padding: 8px 16px 0;
+    border-bottom: 1px solid get-theme(divider4);
+  }
+  .kux-picker-header-super-prev-btn,
+  .kux-picker-header-super-next-btn,
+  .kux-picker-header-prev-btn,
+  .kux-picker-header-next-btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    [dir='rtl'] & {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .kux-picker-header-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 130%;
+    color: get-theme(text);
+    .kux-picker-month-btn,
+    .kux-picker-year-btn,
+    .kux-picker-decade-btn {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 130%;
+      color: get-theme(text);
+    }
+    .kux-picker-year-btn {
+      margin-left: 12px;
+      [dir='rtl'] & {
+        margin-left: 0px;
+        margin-right: 12px;
+      }
+    }
+  }
+  .kux-picker-body {
+    padding: 0 11px 16px;
+  }
+  table {
+    width: 100%;
+    height: 100%;
+  }
+  tr {
+    display: flex;
+  }
+  td {
+    padding: 0;
+  }
+  .kux-picker-cell-inner {
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: get-theme(text20);
+  }
+  .kux-picker-month-panel,
+  .kux-picker-year-panel,
+  .kux-picker-decade-panel {
+    .kux-picker-body {
+      width: 288px;
+      height: 266px;
+      padding: 20px 11px 16px 11px;
+    }
+    tbody {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    tr {
+      height: 44.33px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    td {
+      flex: 1;
+      height: 32px;
+      display: grid;
+      justify-content: center;
+      &:first-of-type {
+        justify-content: flex-start;
+      }
+      &:last-of-type {
+        justify-content: flex-end;
+      }
+    }
+    .kux-picker-cell-inner {
+      width: 80.66px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 20px;
+    }
+  }
+  .kux-picker-date-panel {
+    th {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: get-theme(text30);
+      font-weight: 500;
+    }
+    td {
+      width: 38px;
+      height: 38px;
+    }
+    .kux-picker-cell-inner {
+      width: 100%;
+      height: 100%;
+      line-height: 38px;
+      border-radius: 100%;
+    }
+  }
+  .kux-picker-cell-in-view {
+    .kux-picker-cell-inner {
+      color: get-theme(text);
+    }
+  }
+  .kux-picker-cell-inner:hover {
+    color: get-theme(text);
+  }
+  .kux-picker-cell-disabled {
+    opacity: 1;
+    .kux-picker-cell-inner {
+      cursor: not-allowed;
+      color: get-theme(text40);
+      border-radius: 0;
+      &:hover {
+        background: get-theme(cover4);
+      }
+    }
+  }
+  .kux-picker-month-panel,
+  .kux-picker-year-panel,
+  .kux-picker-decade-panel {
+    .kux-picker-cell-range-start,
+    .kux-picker-cell-range-end {
+      .kux-picker-cell-inner {
+        background: get-theme(text);
+        color: get-theme(textEmphasize);
+      }
+    }
+    .kux-picker-cell-range-start,
+    .kux-picker-cell-range-end,
+    .kux-picker-cell-in-range {
+      position: relative;
+      &:before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: ' ';
+        background: get-theme(cover4);
+      }
+    }
+    .kux-picker-cell-range-start {
+      .kux-picker-cell-inner {
+        border-radius: 20px 0 0 20px;
+        [dir='rtl'] & {
+          border-radius: 0 20px 20px 0;
+        }
+      }
+    }
+    .kux-picker-cell-range-end {
+      .kux-picker-cell-inner {
+        border-radius: 0 20px 20px 0;
+        [dir='rtl'] & {
+          border-radius: 20px 0 0 20px;
+        }
+      }
+    }
+    .kux-picker-cell-range-start.kux-picker-cell-range-end {
+      .kux-picker-cell-inner {
+        border-radius: 20px;
+      }
+      &:before {
+        width: 0;
+      }
+    }
+    .kux-picker-cell-range-start:before,
+    .kux-picker-cell-range-end:before {
+      width: 50%;
+    }
+    .kux-picker-cell-range-start:before {
+      inset-inline-start: 50%;
+    }
+    .kux-picker-cell-range-end:before {
+      inset-inline-end: 50%;
+    }
+  }
+  .kux-picker-date-panel {
+    .kux-picker-cell-range-start,
+    .kux-picker-cell-range-end {
+      .kux-picker-cell-inner {
+        background: get-theme(text);
+        color: get-theme(textEmphasize);
+      }
+    }
+    .kux-picker-cell-range-start.kux-picker-cell-range-end,
+    .kux-picker-cell-in-range {
+      .kux-picker-cell-inner {
+        background: get-theme(cover4);
+      }
+    }
+    .kux-picker-cell-range-start.kux-picker-cell-range-end {
+      .kux-picker-cell-inner {
+        color: get-theme(text);
+      }
+    }
+    .kux-picker-cell-in-range {
+      .kux-picker-cell-inner {
+        border-radius: 0;
+        color: get-theme(text);
+      }
+    }
+    .kux-picker-cell-range-start,
+    .kux-picker-cell-range-end {
+      position: relative;
+    }
+    .kux-picker-cell-range-start:after,
+    .kux-picker-cell-range-end:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: ' ';
+      background: get-theme(cover4);
+    }
+    .kux-picker-cell-range-start:after {
+      border-radius: 100% 0 0 100%;
+      [dir='rtl'] & {
+        border-radius: 0 100% 100% 0;
+      }
+    }
+    .kux-picker-cell-range-end:after {
+      border-radius: 0 100% 100% 0;
+      [dir='rtl'] & {
+        border-radius: 100% 0 0 100%;
+      }
+    }
+    .kux-picker-cell-range-start.kux-picker-cell-range-end:after {
+      border-radius: 100%;
+    }
+  }
+  .kux-picker-month-panel,
+  .kux-picker-year-panel,
+  .kux-picker-decade-panel {
+    .kux-picker-cell-range-start:after {
+      border-radius: 20px 0 0 20px;
+      [dir='rtl'] & {
+        border-radius: 0 20px 20px 0;
+      }
+    }
+    .kux-picker-cell-range-end:after {
+      border-radius: 0 20px 20px 0;
+      [dir='rtl'] & {
+        border-radius: 20px 0 0 20px;
+      }
+    }
+    .kux-picker-cell-range-start.kux-picker-cell-range-end:after {
+      border-radius: 20px;
+    }
+  }
+  .kux-picker-cell:not(.kux-picker-cell-in-view) {
+    &:hover {
+      background: get-theme(cover4);
+    }
+    &.kux-picker-cell-range-start,
+    &.kux-picker-cell-range-end,
+    &.kux-picker-cell-in-range {
+      &:after {
+        width: 0%;
+      }
+      .kux-picker-cell-inner {
+        background: transparent;
+        color: get-theme(text20);
+      }
+    }
+  }
+}

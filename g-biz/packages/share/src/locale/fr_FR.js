@@ -1,0 +1,15 @@
+export default {
+  "inviteB.manage.copy.share": "Copié ! Partagez maintenant !",
+  "inviteB.manage.remark": "Remarques",
+  "inviteB.manage.commission.yourrate": "Votre taux de commission",
+  "inviteB.manage.commisson.friendrate": "Remise sur les frais d'un ami",
+  "inviteB.manage.poster.create": "Partagez maintenant",
+  "inviteB.manage.poster.share": "Partagez maintenant",
+  "69ti912QyqQK3RLThoqqNL": "Inscrivez-vous pour réclamer le paquet de bienvenue",
+  "h2RhjtaW236Cy1ofAMdsY7": "D’une valeur allant jusqu’à {{num}}  {{siteBaseCurrency}} !",
+  "ceWPbECZDHEFPo5wuNKZou": "Plus",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "Copié !",
+  "sTkpRT7EiVTxqr6sApV5Aj": "Copier le lien",
+  "x8nfNnRNkgqeds6C4AfUC8": "Enregistrer l'image",
+  "4EhrZujhYTKtPmKwo99tBr": "Code de parrainage : {rcode}"
+}

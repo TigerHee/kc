@@ -1,0 +1,6 @@
+/**
+ * Owner: lucas.l.lu@kupotech.com
+ */
+export const appConfig = {
+  rightIcon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAQAAACQ9RH5AAABPElEQVR42u2YwZHDIAxFVQL3II1KSAkuwZ2sOjAdbDqglJRCCZTAHrITDbfI9oh4hvfP3++ALcAwmVwM+sGKlTbwBVdsrzirKWEboo4LtlHqNNU71RxwJaFkTDmk5js+sZ0REtsoaKelfq79xTZAHDdsZ4YSfAJzV6qUKdmCxaBVMGspPjiAkbjt0nLoSz7afocpDlqF5F3M9m3RrFUo9UV7V9tu4rh0XQexqhNVqjcBxb7GJOAJByqvd5oZfGEmIeEwz8yTr4IDCcmA7+F/Jy5Hvgn34aM3Pt9xqzsqLy5i1WrZQ6xazQpGMOsaOxxbFCy6TG7a/gkcnLQcurtH3qctlIzJWLFpmL/xwqJQPVMbHwADxDexT9jjefL90F8LtL9cgiuH+Zvoempe3NU6CMaoV/BEb3zzzDy5GH+hI+3nk8lQDgAAAABJRU5ErkJggg==',
+};

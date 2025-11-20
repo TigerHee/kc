@@ -1,0 +1,167 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="8. 与3.0架构集成" order="1" />
+
+# 与3.0架构集成
+
+`@kux/design` 相对 Kux 更加轻量、无侵入性, 可以非常方便的与3.0架构集成。
+
+## JS 相关配置
+
+```ts
+import { setup as setupKuxDesign, setTheme } from '@kux/design';
+import { useEffect } from 'react';
+import { useSelector } from 'src/hooks/useSelector';
+import JsBridge from '@kucoin-base/bridge';
+import { _t } from 'src/tools/i18n';
+
+// 引入组件库样式
+import '@kux/design/dist/style.css';
+
+// 对组件库进行基础设置
+setupKuxDesign({
+  // 设置 KcApp 桥方法对象, 保证所有需要使用 JsBridge 能力的场景(比如app中打开链接、分享)功能正常
+  jsBridge: JsBridge,
+  // 设置组件库中确认按钮的默认文案, 用于对话框、提示框, !! 需将key 换成项目中存在的 key !!
+  // 若不设置, 也可在使用具体组件时传入文案
+  getOkText: () => _t('confirm'),
+  // 设置组件库取消按钮的默认文案, 用于对话框、提示框等 !! 需将key 换成项目中存在的 key !!
+  // 若不设置, 也可在使用具体组件时传入文案
+  getCancelText: () => _t('cancel'),
+  // 设置Tooltip 在移动端对话框展示的标题文案, !! 需将key 换成项目中存在的 key
+  // 默认文案为 "说明"
+  getTooltipTitle: () => _t('fecc6fbe4be74800af75'),
+});
+
+// 入口组件
+export function EntryPage() {
+  // 获取3.0主题
+  const currentTheme = useSelector((state) => state.app.currentTheme, 'ignore');
+
+  useEffect(() => {
+    // 更新 KC App 混合应用行为
+    initKcApp(currentTheme === 'light');
+    // 同步主题
+    setTheme(currentTheme);
+  }, [currentTheme])
+  // 其他代码
+  ...
+}
+
+// 初始化 KC App 混合应用行为, app 为 @kux/design 中的全局工具方法对象
+function initKcApp(isLightMode: boolean) {
+  if (!app.isInApp) return;
+
+  app.hybrid.config('updateHeader', {
+    statusBarTransparent: true,
+    statusBarIsLightMode: isLightMode,
+    visible: false,
+  });
+
+  app.hybrid.call('enableBounces', { isEnable: false })
+}
+```
+
+## tsconfig 设置
+如果你在使用 ts 开发, 需要在 `tsconfig.json` 中添加以下配置, 以便于可以提供正确类型提示
+
+```json
+{
+  "compilerOptions": {
+    // @kux/app-sdk 为 @kux/design 依赖的工具包(会自动安装), 即全局对象 app 的类型定义
+    "types": ["@kux/app-sdk"],
+  }
+}
+```
+
+## 构建相关的配置
+
+### 升级 `@natasha/cli`
+项目使用的 `@natasha/cli` 需要升级到 `1.3.1-beta.20250714034312` 及以上版本, 新版本增加了对 `sass` 的支持、优化了 `postcss` 的配置。
+
+<Callout type="warning">
+  注意: `sass` 需要使用 node 18 及以上版本。请确保项目使用的 node 及 CI 环境满足要求。
+
+> 3.0 项目若使用的古老的node版本, 在将本地 node 版本升级到 18 以上后, 可以将项目CI配置文件 `<项目名>.json` 中的 node 版本和 docker 镜像按下面进行修改
+> ```json
+> "node_version": "v18.19.0",
+> "docker_image": "harbor-hkidc.kcprd.com/base/node:18.19.0-bullseye",
+> ```
+[CI nodejs 基础镜像](https://klarkchat.sg.larksuite.com/wiki/INMwwn0W6iowmtk6TSrlMA6ygtb)
+</Callout>
+
+### postcss 配置
+3.0 项目默认引入了 `postcss-rtlcss` (有的是`postcss-rtl`)插件, 该插件会自动翻转带方向的样式来做RTL 支持.
+但是它是无差别的处理所有的样式文件, 包括组件库 `@kux/design` 的样式文件, 而 `@kux/design` 本身已经做了 RTL 支持, 这会导致样式被重复处理, 从而导致样式异常。
+
+另外 `postcss-rtlcss` 插件是无差别的翻转样式, 时常需要做一个特殊处理来阻止不必要的翻转. 这里推荐使用css 逻辑属性来实现更好的RTL支持, 辅助 `postcss-logical-polyfill` 插件来处理逻辑属性的兼容性问题。
+
+为了解决这个问题, 需对修改 rlt 配置, 一般位于 `config/umi/extraPostCSSPlugins` 或者 `config/postCssPlugins.js` 文件中。
+
+rtl 配置修改方法:
+
+```js
+// 不直接导出 rtl
+const rtl = require('postcss-rtlcss')({
+  // 配置保持不变
+  blacklist: [
+    ...
+  ],
+});
+
+export function customRtl (rule, ctx) {
+  const sourcePath = ctx && ctx.opts && ctx.opts.from || '';
+  if (sourcePath && (
+    // 忽略 kux-design 库 下的 css
+    sourcePath.includes('kux-design') ||
+    // 忽略 sass/scss 文件, 如果你不使用 @kux-design 的 sass 工具, 或者不使用sass, 可以忽略这部分
+    sourcePath.includes('.sass') ||
+    sourcePath.includes('.scss'))) {
+    return;
+  }
+  return rtl
+}
+
+```
+
+修改 build.config.js 中的 `postcss` 配置, 使其使用 `customRtl` 函数来处理 RTL 样式。
+
+```js
+import { customRtl } from './path/to/rtl';
+
+export default {
+  ...,
+  extraPostCSSPlugins: [
+    // 其他插件
+    customRtl,
+    // 如果你使用了 postcss-logical-polyfill, 也可以在这里添加
+    require('postcss-logical-polyfill')(),
+  ],
+  ...
+}
+```
+
+### 项目构建配置 build.config.js
+kux-design 使用 es6 新语法构建, 为了避免在项目中使用时重复polyfill, 故没有将 kux-design 默认打包为支持旧版本浏览器的版本. 然而3.0的项目却默认忽略了 node_modules 中的包, 所以项目中并不对 `@kux/design` 进行 polyfill, 这会导致在旧版本浏览器中使用时出现问题。
+
+修改项目根目录下的 `build.config.js` 文件, 在 `chainWebpack` 函数中添加以下代码, 以便于在构建时对 `@kux/design` 进行 polyfill。
+
+```js
+export default {
+  ...,
+  chainWebpack: (config) => {
+    ...
+    // 修改 babel exclude, 将下述package里面的 ??= 进行转换，支持低版本
+    const paths = [
+      ...,
+      /node_modules[\\/]@kc[\\/]kux-design/,
+    ];
+    config.module
+      .rule('babel')
+      .exclude.clear()
+      .add(function (modulePath) {
+        return /node_modules/.test(modulePath) && !paths.some((i) => i.test(modulePath));
+      });
+  }
+}
+```

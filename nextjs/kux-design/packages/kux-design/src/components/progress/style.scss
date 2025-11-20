@@ -1,0 +1,45 @@
+@import '@/style/index.scss';
+
+@include defineThemeVar(progress-inner-background, #F9F9F9, #121212);
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-progress 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'progress'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('progress') {
+  .#{$prefix}_inner {
+    background-color: get-theme(progress-inner-background);
+    border: 1px solid get-theme(cover4);
+    height: 8px;
+    border-radius: 10px;
+  }
+
+  .#{$prefix}_bar {
+    max-width: 100%;
+    height: 100%;
+    background-color: get-theme(brandGreen);
+    border-radius: 10px;
+  }
+
+  &_outer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    line-height: 1;
+
+    &_name {
+      color: get-theme(text40);
+      font-size: 12px;
+      font-weight: 400;
+    }
+    &_text {
+      color: get-theme(text60);
+      font-size: 12px;
+      font-weight: 400;
+
+      &_highlight {
+        color: get-theme(brandGreen);
+      }
+    }
+  }
+}

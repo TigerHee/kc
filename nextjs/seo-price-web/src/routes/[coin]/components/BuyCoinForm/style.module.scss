@@ -1,0 +1,51 @@
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  border: 1px solid var(--color-cover8);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+
+  @include media-query('sm') {
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
+  @include media-query('sm') {
+    border: none;
+    padding: 0;
+  }
+
+  .buyCoinTabs {
+    :global(.KuxTabs-scroller) {
+      :global(.KuxTabs-Container) {
+        padding-top: 0 !important;
+        :global(.KuxTab-TabItem) {
+          span {
+            font-size: 20px !important;
+
+            @include media-query('sm') {
+              border: none !important;
+              padding: 0 !important;
+              font-size: 14px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.tabLabel {
+  
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--color-text60);
+
+  &.active{
+    color: var(--color-text)
+  }
+  
+}

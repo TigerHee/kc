@@ -1,0 +1,122 @@
+// 本文件是对 ant-design:
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+// 相应变量值的覆盖
+// 注意：只需写出要覆盖的变量即可（不需要覆盖的变量不要写）
+// http://www.iconfont.cn/collections/detail?cid=790
+@import "../../node_modules/@kc/ui/lib/style/themes/default.less";
+
+// kumex
+
+@font-Regular: 400;
+@font-Medium: 500;
+@font-Bold: 700;
+@black: #000000;
+@color-gray: fade(@black, 45%);
+@primary-color: #24AE8F;
+
+@mobileSize: ~'(max-width: 768px)';
+@padSize: ~'(min-width: 768px) and (max-width: 1024px)';
+@pcSize: ~'(max-width: 1200px)';
+@lgerSize: ~'(min-width: 1200px)';
+
+@mq-width-md: 768px;
+
+// kumex var
+:root {
+  --black: #000;
+
+  --white: #fff;
+  --white87: fade(#fff, 87);
+  --white74: fade(#fff, 74);
+  --white70: fade(#fff, 70);
+  --white60: fade(#fff, 60);
+  --white38: fade(#fff, 38);
+  --white24: fade(#fff, 24);
+  --white16: fade(#fff, 16);
+  --white12: fade(#fff, 12);
+  --white08: fade(#fff, 08);
+  --white04: fade(#fff, 04);
+  --white008: fade(#fff, 008);
+  --white004: fade(#fff, 004);
+  --white00: fade(#fff, 0);
+
+  --dark: #01081E;
+  --dark87: fade(#01081E, 87);
+  --dark74: fade(#01081E, 74);
+  --dark70: fade(#01081E, 70);
+  --dark60: fade(#01081E, 60);
+  --dark38: fade(#01081E, 38);
+  --dark24: fade(#01081E, 24);
+  --dark16: fade(#01081E, 16);
+  --dark12: fade(#01081E, 12);
+  --dark08: fade(#01081E, 08);
+  --dark04: fade(#01081E, 04);
+  --dark008: fade(#01081E, 008);
+  --dark004: fade(#01081E, 004);
+  --dark00: fade(#01081E, 00);
+
+  --primary: #24AE8F;
+  --primary74: fade(#24AE8F, 74);
+  --primary60: fade(#24AE8F, 60);
+  --primary38: fade(#24AE8F, 38);
+  --primary16: fade(#24AE8F, 16);
+  --primary08: fade(#24AE8F, 08);
+
+  --secondary: #DC5656;
+  --secondary74: fade(#DC5656, 74);
+  --secondary60: fade(#DC5656, 60);
+  --secondary38: fade(#DC5656, 38);
+  --secondary16: fade(#DC5656, 16);
+  --secondary08: fade(#DC5656, 08);
+
+  --complementary: #EFA842;
+  --complementary74: fade(#EFA842, 74);
+  --complementary60: fade(#EFA842, 60);
+  --complementary38: fade(#EFA842, 38);
+  --complementary16: fade(#EFA842, 16);
+  --complementary08: fade(#EFA842, 08);
+
+  --high-emphasis: var(--dark);
+  --medium-emphasis: var(--dark87);
+  --btn-emphasis: var(--white87);
+  --btn-body: var(--white60);
+
+  --body: var(--dark60);
+  --disabled: var(--dark38);
+  --border: var(--dark16);
+  --divider: var(--dark08);
+  --table-header: var(--dark04);
+  --second-table-header: var(--dark04);
+  --resting: var(--dark00);
+
+  --background: var(--white);
+  --paper-background: var(--white);
+  --background-expand: var(--dark04);
+  --background-checkbox: var(--dark08);
+  --background-input: var(--dark08);
+  --background-stage-input: var(--white08);
+  --background-shallow-input: var(--dark004);
+  --transparent: var(--white00);
+
+  --surface: var(--white);
+  --mongolia-background: var(--white70);
+  --card-background: rgba(245, 245, 246, 1);
+  --line: rgba(235, 235, 237, 1);
+  --modal-background: #ffffff;
+  --tab-background: rgb(245, 245, 246);
+  --tab-background-transparent: rgba(245, 245, 246, 0);
+
+  --header-hover-background: fade(#58CCB6, 08);
+  --header-hover: #58CCB6;
+  --shadow: var(--white16);
+  --background-modal: var(--white);
+  --tab-hover: fade(#24AE8F, 14);
+  --new-line: #EBEBED;
+
+  --text12: var(--dark12);
+  --new-card: #fff;
+  --new-card-hover: rgba(0, 20, 42, 0.04);
+  --new-card-border: rgba(0, 20, 42, 0.04);
+}
+
+

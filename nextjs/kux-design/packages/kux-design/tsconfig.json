@@ -1,0 +1,21 @@
+{
+  "extends": "@kux/tsconfig/jsx",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
+    "types": [
+      "@kux/app-sdk",
+      "@types/node",
+      "vitest/globals",
+      "@testing-library/jest-dom"
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "verbatimModuleSyntax": false
+  },
+  "include": ["src", ".storybook", "test", "docs", "lego", "eslint.config.mjs"],
+  "exclude": ["node_modules", "dist"]
+}

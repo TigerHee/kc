@@ -1,0 +1,53 @@
+@import '~themes/mix.less';
+@import url('../index.less');
+
+.withLineWrap {
+  .pageWrap();
+  overflow: hidden;
+  position: relative;
+}
+.withLineInner {
+  .pageInner();
+  z-index: 1;
+  position: relative;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  &::before {
+    display: block;
+    content: '';
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+}
+
+.glowBannerTop {
+  width: 890px;
+  height: 735px;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../../../../assets/consensus/banner-top-glow.png');
+  background-size: cover;
+  .mediaQueryMd({width: 650px;height: 630px;left: -200px;});
+  .mediaQuerySm({width: 450px;height: 440px;});
+}
+
+.glowBannerBottom {
+  pointer-events: none;
+  width: 409px;
+  height: 609px;
+  background: url('../../../../assets/consensus/banner-bottom-glow.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 429px;
+  .mediaQueryMd({width: 299px;height: 399px; top: 329px;});
+  .mediaQuerySm({width: 210px;height: 410px; top: 582px;});
+}

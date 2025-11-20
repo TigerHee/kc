@@ -1,0 +1,105 @@
+@import '@/styles/mixin.scss';
+.sloganBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include media-query('sm') {
+    padding-bottom: 98px;
+  }
+  .title {
+    text-align: center;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    color: var(--kux-text);
+    @include media-query('sm') {
+      font-size: 44px;
+      span {
+        display: block;
+      }
+    }
+  }
+  .subtitle {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: var(--kux-text);
+    @include media-query('sm') {
+      font-size: 16px;
+    }
+  }
+  .actionBox {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 60px;
+    // gap: 40px;
+    gap: 24px;
+    @include media-query('sm') {
+      gap: 16px;
+    }
+
+    .signUpBtn {
+      cursor: pointer;
+      text-align: center;
+      border-radius: 56px;
+      padding: 22px 40px;
+      height: 72px;
+      background: var(--kux-text);
+
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 140%;
+      // color: var(--kux-text);
+      color: var(--kux-textEmphasize);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        // box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      @include media-query('sm') {
+        font-size: 16px;
+        height: 48px;
+        padding: 16px 32px;
+      }
+    }
+  }
+
+  .showFilmButton.actionBox {
+    gap: 16px;
+    @include media-query('sm') {
+      margin-right: 24px;
+      margin-left: 24px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .filmAndQrCodeBox {
+      max-width: 400px;
+      // width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      @include media-query('sm') {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    :global {
+      .guidance-button {
+        @include media-query('sm') {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

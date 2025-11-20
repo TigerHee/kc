@@ -1,0 +1,14 @@
+.input {
+  background: var(--color-overlay) !important;
+  border-radius: 2px !important;
+  max-width: 290px !important;
+  fieldset {
+    display: none !important;
+  }
+}
+
+.formItem {
+  :global(.KuxCol-col) {
+    width: 100% !important;
+  }
+}

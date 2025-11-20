@@ -1,0 +1,59 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-pagination 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'pagination'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('pagination') {
+  display: flex;
+  font-size: 14px;
+  
+  &-items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+  }
+
+  &-item {
+    margin: 0 3px;
+    > button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      appearance: none;
+      background-color: transparent;
+      border: 1px solid get-theme(divider8);
+      color: get-theme(text40);
+      border-radius: 4px;
+      padding: 1px 2px;
+      cursor: pointer;
+    }
+    &:hover {
+      >button {
+        border-color: get-theme(cover16);
+        color: get-theme(text);
+      }
+    }
+    &.is-page.is-disabled {
+      > button {
+        border-color: get-theme(text);
+        color: get-theme(text);
+      }
+    }
+    &.is-jump.is-disabled, &.is-jump.is-disabled:hover {
+      > button {
+        border-color: get-theme(cover8);
+        color: get-theme(text40);
+        cursor: default;
+        opacity: 0.4;
+      }
+    }
+
+    &.is-omit {
+      color: get-theme(text40);
+    }
+  }
+}

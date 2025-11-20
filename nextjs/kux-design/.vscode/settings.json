@@ -1,0 +1,8 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["**/meta.json"],
+      "url": "./node_modules/@kc/lego-schema/dist/component-schema.json"
+    }
+  ]
+}

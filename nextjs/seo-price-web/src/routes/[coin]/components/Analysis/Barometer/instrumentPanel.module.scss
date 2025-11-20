@@ -1,0 +1,125 @@
+.panelWrapper {
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.circleWrapper {
+  position: absolute;
+  bottom: 0;
+  width: 136px;
+  height: 68px;
+
+  .pannelText {
+    z-index: 3;
+    overflow: hidden;
+    color: rgba(0, 13, 29, 0.4);
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .strongSell {
+    position: absolute;
+    bottom: -2px;
+    text-align: right /*! @noflip */;
+    
+    left: -124px /*! @noflip */;
+    width: 120px;
+
+    &.isRTL {
+      left: -84px /*! @noflip */;
+      width: 80px;
+    }
+  }
+  .sell {
+    position: absolute;
+    top: 10px;
+    left:  -110px/*! @noflip */;
+    width: 120px;
+    text-align: right /*! @noflip */;
+
+    &.isRTL {
+      left: -80px /*! @noflip */;
+      width: 90px;
+    }
+  }
+
+  .neutral {
+    position: absolute;
+    top: -20px;
+    width: 136px;
+    text-align: center /*! @noflip */;
+  }
+  .buy {
+    position: absolute;
+    top: 10px;
+    right: 80px /*! @noflip */;
+    width: 90px;
+
+    &.isRTL {
+      right: -110px /*! @noflip */;
+      width: 120px;
+    }
+  }
+  .strongBuy {
+    position: absolute;
+    bottom: -2px;
+    right:  -84px /*! @noflip */;
+    width: 80px;
+
+    &.isRTL {
+      right: -124px;
+      width: 120px;
+    }
+  }
+  
+}
+
+.circleBox {
+  
+  position: absolute;
+  bottom: 0;
+  width: 136px;
+  height: 68px;
+  overflow: hidden;
+  
+  .pointer {
+    position: absolute;
+    top: 67px;
+    left: 17px /*! @noflip */;
+    transform: rotate(deg);
+    transform-origin: 100%;
+    transition: all 0.5s;
+    transition-timing-function: steps(60);
+  }
+  
+}
+
+.innerCircle {
+  
+  position: absolute;
+  left: 56px /*! @noflip */;
+  top: 56px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  // background: ;
+  border-radius: 50%;
+  
+}
+
+.outerCircle {
+  
+  position: absolute;
+  left: 44px /*! @noflip */;
+  top: 44px;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  opacity: 0.08;
+  border-radius: 50%;
+  
+}

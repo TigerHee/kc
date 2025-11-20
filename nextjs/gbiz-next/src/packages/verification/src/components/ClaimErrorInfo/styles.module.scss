@@ -1,0 +1,39 @@
+.errorContainer {
+  text-align: center;
+  line-height: 0;
+
+  img {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0;
+  }
+}
+
+.errorTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.errorContent {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--color-text60);
+  margin-bottom: 24px;
+}
+
+.buttonWrap {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  button+button {
+    margin-top: 12px;
+  }
+}
+

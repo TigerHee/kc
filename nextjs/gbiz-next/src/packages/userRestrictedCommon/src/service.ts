@@ -1,0 +1,45 @@
+/**
+ * Owner: iron@kupotech.com
+ */
+import { pull as get, post } from 'tools/request';
+
+interface IpDismissParams {
+  bizType?: string;
+  scene?: string;
+}
+
+interface EnglandDismissParams {
+  bizType?: string;
+}
+
+interface UserTransferParams {
+  entrySource?: string;
+}
+
+// 查询封禁信息
+// 入参支持多个bizType，以英文逗号分隔，如：IP_DIALOG, IP_TOP_MESSAGE, REGISTER
+export const queryIpDismiss = (params: IpDismissParams) => get('/user-dismiss/ip-dismiss/notice', params);
+
+// 查询英国地区封禁信息
+export const queryEnglandDismiss = (params: EnglandDismissParams) =>
+  get('/user-dismiss/ip-dismiss/notice/web/gb', params);
+
+/**
+ * 查询用户是否可以迁移
+ * 
+ * @returns Promise<{
+      "success": true,
+      "code": "200",
+      "msg": "success",
+      "retry": false,
+      "data": {
+        "canTransfer": false,
+        "originalSiteType": "global",
+        "targetSiteType": "australia",
+        "targetRegion": "kyc",
+        "subUserIdList": []
+      }
+    }> 
+ */
+export const queryUserCanTransfer = (params: UserTransferParams = {}) =>
+  post('/user-dismiss-front/web/siteTransfer/userTransferNotice', params);

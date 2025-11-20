@@ -1,0 +1,149 @@
+.countryListCheck {
+  text-align: right;
+
+  a {
+    font-size: 12px;
+  }
+}
+
+.activityPageWrapper{
+  background: #01081E;
+  background-clip: unset !important;
+  padding-bottom: 240px;
+  min-height: 80vh;
+  .activityPageContent{
+    width: 800px;
+    margin: 0 auto;
+    :global{
+      .ant-tabs-tab{
+        margin: 0 !important;
+        padding: 0;
+        width: 400px;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+        font-size: 16px;
+        color: #D2DCEF;
+        background: linear-gradient(-135deg, #243352 0%, #1E335B 99%, #0F7DFF 100%);
+        &:after{
+          display: none;
+        }
+        &:first-child{
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        &:last-child{
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+        &.ant-tabs-tab-active{
+          background: #554DFF !important;
+        }
+      }
+      .ant-tabs-ink-bar{
+        display: none !important;
+      }
+      .ant-tabs-bar{
+        margin: 36px 0;
+      }
+
+      .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+      .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+      .ant-table-thead > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+      .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+        background: transparent;
+      }
+
+      a {
+        color: #58CCB6;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: #58CCB6;
+        }
+      }
+    }
+  }
+  .fullPageContent {
+    width: 100%;
+  }
+}
+
+
+
+
+.activityPageWrapperH5{
+  background: #01081E;
+  background-clip: unset !important;
+  padding: ~`px2rem(12)`;
+  width: 100%;
+  min-height: 100vh;
+
+  .activityPageContentH5{
+    :global{
+      .ant-tabs-tab{
+        margin: 0 !important;
+        padding: 0;
+        width: 400px;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+        font-size: 16px;
+        color: #D2DCEF;
+        background: linear-gradient(-135deg, #243352 0%, #1E335B 99%, #0F7DFF 100%);
+        &:after{
+          display: none;
+        }
+        &:first-child{
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        &:last-child{
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+        &.ant-tabs-tab-active{
+          background: #554DFF !important;
+        }
+      }
+      .ant-tabs-ink-bar{
+        display: none !important;
+      }
+      .ant-tabs-bar{
+        margin: 36px 0;
+      }
+
+      .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+      .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+      .ant-table-thead > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
+      .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
+        background: transparent;
+      }
+
+      a {
+        color: #58CCB6;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: #58CCB6;
+        }
+      }
+    }
+  }
+}
+
+
+.h5SaleRule {
+  height: ~`px2rem(48)`;
+  // line-height: ~`px2rem(46)`;
+  padding: 0 ~`px2rem(12)`;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: fade(#fff, 3);
+  font-size: ~`px2rem(14)`;
+  color: #58CCB6;
+  line-height: ~`px2rem(22)`;
+}

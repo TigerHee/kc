@@ -1,0 +1,20 @@
+{
+  "api": [
+    {
+      "service": "ucenter", 
+      "outputDir": "./src/api",
+      "swaggerUrl": "http://10.40.91.15:10240/v3/api-docs",
+      "apiClient": "import { requestForApi as httpLib } from 'tools/request'",
+      "include": ["/v2/api-keys", "/v2/sub/user/create", "/passkey/delete", "/v1/sub/user/access"],
+      "disabled": true
+    }, 
+    {
+      "service": "broker",
+      "outputDir": "./src/api",
+      "swaggerUrl": "https://inner.dev.kucoin.net/broker/v3/api-docs",
+      "apiClient": "import { requestForApi as httpLib } from 'tools/request'",
+      "include": ["/invitation-code/getDefaultByBrokerName"],
+      "disabled": true
+    }
+  ]
+}

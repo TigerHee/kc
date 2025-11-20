@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'pl_PL',
+  '2HVcFSJMKfjBCfPSUu8PbB': 'Powiadomienia',
+  'all.clear': 'Usuń wszystko',
+  'all.read': 'Czytaj wszystko',
+  'confirm': 'Potwierdź',
+  'delete.message.confirm': 'Czy na pewno chcesz usunąć wszystkie komunikaty z powiadomieniami?',
+  'table.empty': 'Brak danych',
+  'today': 'Dzisiaj',
+  'yesterday': 'Wczoraj',
+};

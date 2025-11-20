@@ -1,0 +1,50 @@
+@import "~themes/light.less";
+
+@input_height: 38px;
+
+._input._input{
+    border-radius:2px;
+    // opacity:0.2;
+    // border:1px solid fade( @color_7, 20%);
+    border: 1px solid fade(@color_7, 30%);
+    background-color: transparent;
+    .fadeColor(@color_8, 0.9, color);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: @input_height;
+    &:hover{
+        border: 1px solid fade(@color_7, 30%);
+    }
+    &:focus{
+        border-color: #0F7DFF;
+    }
+    &.disabled{
+    color: transparent!important;
+
+    }
+}
+._input[disabled]{
+    color: transparent!important;
+}
+
+.timepicker.timepicker > input {
+    border-radius:2px;
+    // opacity:0.2;
+    // border:1px solid fade( @color_7, 20%);
+    border: 1px solid fade(@color_7, 30%);
+    background-color: transparent;
+    color: @color_7;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: @input_height;
+    &:hover{
+        border: 1px solid fade(@color_7, 30%);
+    }
+    &:focus{
+        border-color: #0F7DFF;
+    }
+    &.disabled{
+    color: transparent!important;
+
+    }
+}

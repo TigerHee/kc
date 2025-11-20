@@ -1,0 +1,192 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './stories';
+
+<Meta title="base/Steps/Readme" />
+
+# Steps
+
+## 概述
+
+Steps 组件是一个垂直步骤指示器，用于展示流程中的各个步骤状态。支持多种状态显示和自定义操作按钮。
+
+## 功能特性
+
+- **垂直布局**：默认垂直排列，适合移动端和桌面端
+- **状态管理**：支持多种步骤状态（default、warning、finish、error）
+- **自定义内容**：支持在每个步骤中添加自定义内容和操作按钮
+- **响应式设计**：适配不同屏幕尺寸
+
+## 步骤状态
+
+Steps 组件支持以下状态：
+
+### 1. 默认状态 (default)
+
+- 灰色背景圆圈
+- 显示步骤数字
+- 浅色文字
+
+### 2. 当前步骤 (current)
+
+- 绿色背景圆圈
+- 白色数字
+- 最突出的视觉焦点
+
+### 3. 已完成 (pass)
+
+- 绿色边框圆圈
+- 成功图标 (SuccessIcon)
+- 连接线高亮为绿色
+- 内容透明度降低到 0.6
+
+### 4. 完成状态 (finish)
+
+- 绿色边框圆圈
+- 成功图标 (SuccessIcon)
+- 用于最后一步完成状态
+
+### 5. 警告状态 (warning)
+
+- 橙色边框圆圈
+- 等待图标 (WaitIcon)
+- 橙色文字
+- 用于需要用户注意的步骤
+
+### 6. 错误状态 (error)
+
+- 红色边框圆圈
+- 信息图标 (InfoFilledIcon)
+- 红色文字
+- 用于出现错误的步骤
+
+## 使用示例
+
+### 基础用法
+
+```tsx
+import { Steps } from '@/components/steps';
+
+function MyComponent() {
+  return (
+    <Steps current={1}>
+      <Steps.Step title="第一步" description="这是第一步的描述" />
+      <Steps.Step title="第二步" description="这是第二步的描述" />
+      <Steps.Step title="第三步" description="这是第三步的描述" />
+    </Steps>
+  );
+}
+```
+
+### 带操作按钮的步骤
+
+```tsx
+import { Steps } from '@/components/steps';
+
+function MyComponent() {
+  return (
+    <Steps current={1}>
+      <Steps.Step
+        title="身份验证"
+        description="添加支付方式以接收现金"
+        action={{
+          text: 'Verify',
+          onClick: () => console.log('验证身份'),
+        }}
+      />
+      <Steps.Step title="链接邮箱" description="添加支付方式以接收现金" />
+      <Steps.Step title="设置交易密码" description="添加支付方式以接收现金" />
+    </Steps>
+  );
+}
+```
+
+### 自定义状态
+
+```tsx
+import { Steps } from '@/components/steps';
+
+function MyComponent() {
+  return (
+    <Steps status="warning">
+      <Steps.Step title="第一步" description="已完成" />
+      <Steps.Step title="第二步" description="需要验证" />
+      <Steps.Step title="第三步" description="等待中" />
+    </Steps>
+  );
+}
+```
+
+### 带自定义内容的步骤
+
+```tsx
+import { Steps } from '@/components/steps';
+
+function MyComponent() {
+  return (
+    <Steps current={1}>
+      <Steps.Step title="测试" description="测试描述">
+        <div>自定义内容</div>
+        <p>可以包含任何 React 元素</p>
+      </Steps.Step>
+      <Steps.Step title="第二步" description="第二步描述" />
+    </Steps>
+  );
+}
+```
+
+## API
+
+### Steps Props
+
+| 参数      | 说明         | 类型                                            | 默认值 |
+| --------- | ------------ | ----------------------------------------------- | ------ |
+| current   | 当前步骤索引 | `number`                                        | `0`    |
+| children  | 步骤元素     | `ReactElement<IStepProps, typeof Step>`         | -      |
+| className | 自定义类名   | `string`                                        | `''`   |
+| status    | 全局状态     | `'default' \| 'warning' \| 'finish' \| 'error'` | -      |
+
+### Step Props
+
+| 参数        | 说明         | 类型                                            | 默认值 |
+| ----------- | ------------ | ----------------------------------------------- | ------ |
+| title       | 步骤标题     | `ReactNode`                                     | -      |
+| description | 步骤描述     | `ReactNode`                                     | -      |
+| status      | 步骤状态     | `'default' \| 'warning' \| 'finish' \| 'error'` | -      |
+| children    | 自定义内容   | `ReactNode`                                     | -      |
+| action      | 操作按钮     | `{ text: string; onClick: () => void }`         | -      |
+| index       | 步骤索引     | `number`                                        | `0`    |
+| isLast      | 是否最后一步 | `boolean`                                       | -      |
+| current     | 当前步骤     | `number`                                        | `0`    |
+| className   | 自定义类名   | `string`                                        | -      |
+
+## 设计规范
+
+### 颜色系统
+
+- **品牌绿** (`brandGreen`)：当前步骤、已完成状态、操作按钮
+- **警告色** (`complementaryYellow`)：警告状态
+- **错误色** (`brandRed`)：错误状态
+- **文字色** (`text`)：主要文字
+- **次要文字** (`text40`)：次要文字、图标
+
+### 尺寸规范
+
+- **指示器大小**：20px（移动端）/ 24px（桌面端）
+- **字体大小**：13px（移动端）/ 14px（桌面端）
+- **标题字体**：18px（移动端）/ 20px（桌面端）
+- **描述字体**：12px（移动端）/ 16px（桌面端）
+- **间距**：16px（移动端）/ 32px（桌面端）
+
+### 布局特性
+
+- **垂直排列**：步骤垂直堆叠
+- **连接线**：虚线连接各步骤
+- **内容对齐**：左侧指示器，右侧内容
+- **操作按钮**：右侧对齐，支持点击操作
+
+### 状态逻辑
+
+- **current 属性**：控制当前步骤高亮
+- **status 属性**：覆盖默认状态逻辑
+- **finish 状态**：当父级设置 finish 时，强制到最后一步
+- **自动状态**：根据 index 和 current 自动计算 pass/current/default 状态

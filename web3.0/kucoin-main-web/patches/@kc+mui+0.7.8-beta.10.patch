@@ -1,0 +1,237 @@
+diff --git a/node_modules/@kc/mui/lib/components/ThemeProvider/index.js b/node_modules/@kc/mui/lib/components/ThemeProvider/index.js
+index f660c43..42fb01f 100644
+--- a/node_modules/@kc/mui/lib/components/ThemeProvider/index.js
++++ b/node_modules/@kc/mui/lib/components/ThemeProvider/index.js
+@@ -30,7 +30,6 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj &&
+ // import '../../svg/svgSprite';
+ var useStyles = (0, _styles.makeStyles)({
+   '@global': {
+-    '@font-face': _fonts.base.face,
+     body: {
+       'font-size': 'medium',
+       fontFamily: _fonts.base.family
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Black.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Black.woff
+deleted file mode 100644
+index c88e79b..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Black.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Black.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Black.woff2
+deleted file mode 100644
+index 7c51c7c..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Black.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-BlackItalic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-BlackItalic.woff
+deleted file mode 100644
+index 494612a..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-BlackItalic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-BlackItalic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-BlackItalic.woff2
+deleted file mode 100644
+index c965dcc..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-BlackItalic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Bold.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Bold.woff
+deleted file mode 100644
+index 277591d..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Bold.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Bold.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Bold.woff2
+deleted file mode 100644
+index 614bd5f..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Bold.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-BoldItalic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-BoldItalic.woff
+deleted file mode 100644
+index 5ca5946..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-BoldItalic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-BoldItalic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-BoldItalic.woff2
+deleted file mode 100644
+index 6a1f927..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-BoldItalic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Demi.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Demi.woff
+deleted file mode 100644
+index 1b31f73..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Demi.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Demi.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Demi.woff2
+deleted file mode 100644
+index b3d36b8..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Demi.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-DemiItalic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-DemiItalic.woff
+deleted file mode 100644
+index 772bb28..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-DemiItalic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-DemiItalic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-DemiItalic.woff2
+deleted file mode 100644
+index 675fec1..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-DemiItalic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Italic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Italic.woff
+deleted file mode 100644
+index 31c0d1e..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Italic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Italic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Italic.woff2
+deleted file mode 100644
+index 1e1cb4f..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Italic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Light.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Light.woff
+deleted file mode 100644
+index b901a24..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Light.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Light.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Light.woff2
+deleted file mode 100644
+index bac3fcc..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Light.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-LightItalic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-LightItalic.woff
+deleted file mode 100644
+index 838c4a0..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-LightItalic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-LightItalic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-LightItalic.woff2
+deleted file mode 100644
+index c6c570d..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-LightItalic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Medium.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Medium.woff
+deleted file mode 100644
+index 9b3a31d..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Medium.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Medium.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Medium.woff2
+deleted file mode 100644
+index 7b0f02c..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Medium.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-MediumItalic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-MediumItalic.woff
+deleted file mode 100644
+index bbb735d..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-MediumItalic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-MediumItalic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-MediumItalic.woff2
+deleted file mode 100644
+index d16a1de..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-MediumItalic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Regular.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Regular.woff
+deleted file mode 100644
+index 3dbf9b6..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Regular.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Regular.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Regular.woff2
+deleted file mode 100644
+index 7d8f5ac..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Regular.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Thin.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-Thin.woff
+deleted file mode 100644
+index 05eff26..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Thin.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-Thin.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-Thin.woff2
+deleted file mode 100644
+index 0e892c3..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-Thin.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-ThinItalic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-ThinItalic.woff
+deleted file mode 100644
+index 50092e8..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-ThinItalic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-ThinItalic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-ThinItalic.woff2
+deleted file mode 100644
+index e5e237b..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-ThinItalic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-XLight.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-XLight.woff
+deleted file mode 100644
+index fe9de26..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-XLight.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-XLight.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-XLight.woff2
+deleted file mode 100644
+index c0a5997..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-XLight.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-XLightItalic.woff b/node_modules/@kc/mui/lib/fonts/URWDIN-XLightItalic.woff
+deleted file mode 100644
+index 4b30cd5..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-XLightItalic.woff and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/fonts/URWDIN-XLightItalic.woff2 b/node_modules/@kc/mui/lib/fonts/URWDIN-XLightItalic.woff2
+deleted file mode 100644
+index c3d3d8a..0000000
+Binary files a/node_modules/@kc/mui/lib/fonts/URWDIN-XLightItalic.woff2 and /dev/null differ
+diff --git a/node_modules/@kc/mui/lib/themes/consts/fonts.js b/node_modules/@kc/mui/lib/themes/consts/fonts.js
+index b9ff41c..9b0782b 100644
+--- a/node_modules/@kc/mui/lib/themes/consts/fonts.js
++++ b/node_modules/@kc/mui/lib/themes/consts/fonts.js
+@@ -7,38 +7,6 @@ Object.defineProperty(exports, "__esModule", {
+ });
+ exports["default"] = exports.base = void 0;
+ 
+-var _URWDINBlack = _interopRequireDefault(require("../../fonts/URWDIN-Black.woff"));
+-
+-var _URWDINBold = _interopRequireDefault(require("../../fonts/URWDIN-Bold.woff"));
+-
+-var _URWDINDemi = _interopRequireDefault(require("../../fonts/URWDIN-Demi.woff"));
+-
+-var _URWDINLight = _interopRequireDefault(require("../../fonts/URWDIN-Light.woff"));
+-
+-var _URWDINMedium = _interopRequireDefault(require("../../fonts/URWDIN-Medium.woff"));
+-
+-var _URWDINRegular = _interopRequireDefault(require("../../fonts/URWDIN-Regular.woff"));
+-
+-var _URWDINThin = _interopRequireDefault(require("../../fonts/URWDIN-Thin.woff"));
+-
+-var _URWDINXLight = _interopRequireDefault(require("../../fonts/URWDIN-XLight.woff"));
+-
+-var _URWDINBlack2 = _interopRequireDefault(require("../../fonts/URWDIN-Black.woff2"));
+-
+-var _URWDINBold2 = _interopRequireDefault(require("../../fonts/URWDIN-Bold.woff2"));
+-
+-var _URWDINDemi2 = _interopRequireDefault(require("../../fonts/URWDIN-Demi.woff2"));
+-
+-var _URWDINLight2 = _interopRequireDefault(require("../../fonts/URWDIN-Light.woff2"));
+-
+-var _URWDINMedium2 = _interopRequireDefault(require("../../fonts/URWDIN-Medium.woff2"));
+-
+-var _URWDINRegular2 = _interopRequireDefault(require("../../fonts/URWDIN-Regular.woff2"));
+-
+-var _URWDINThin2 = _interopRequireDefault(require("../../fonts/URWDIN-Thin.woff2"));
+-
+-var _URWDINXLight2 = _interopRequireDefault(require("../../fonts/URWDIN-XLight.woff2"));
+-
+ var base = {
+   size: {
+     sm: {
+@@ -74,52 +42,11 @@ var base = {
+       lineHeight: '88px'
+     }
+   },
+-  face: [{
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 100,
+-    src: "url(".concat(_URWDINThin2["default"], ") format('woff2'), url(").concat(_URWDINThin["default"], ") format('woff')")
+-  }, {
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 200,
+-    src: "url(".concat(_URWDINXLight2["default"], ") format('woff2'), url(").concat(_URWDINXLight["default"], ") format('woff')")
+-  }, {
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 300,
+-    src: "url(".concat(_URWDINLight2["default"], ") format('woff2'), url(").concat(_URWDINLight["default"], ") format('woff')")
+-  }, {
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 400,
+-    src: "url(".concat(_URWDINRegular2["default"], ") format('woff2'), url(").concat(_URWDINRegular["default"], ") format('woff')")
+-  }, {
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 500,
+-    src: "url(".concat(_URWDINMedium2["default"], ") format('woff2'), url(").concat(_URWDINMedium["default"], ") format('woff')")
+-  }, {
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 600,
+-    src: "url(".concat(_URWDINDemi2["default"], ") format('woff2'), url(").concat(_URWDINDemi["default"], ") format('woff')")
+-  }, {
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 700,
+-    src: "url(".concat(_URWDINBold2["default"], ") format('woff2'), url(").concat(_URWDINBold["default"], ") format('woff')")
+-  }, {
+-    fontFamily: 'URWDIN',
+-    fontDisplay: 'swap',
+-    fontWeight: 800,
+-    src: "url(".concat(_URWDINBlack2["default"], ") format('woff2'), url(").concat(_URWDINBlack["default"], ") format('woff')")
+-  }],
+   fontWeight: {
+     headline: 500,
+     text: 400
+   },
+-  family: "URWDIN, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei'"
++  family: "Roboto, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei'"
+ };
+ exports.base = base;
+ var _default = {

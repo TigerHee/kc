@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="49px" viewBox="0 0 49 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>tag_Cross_us</title>
+    <g id="杠杆交易赠金" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="杠杆赠金备份-2" transform="translate(-11.000000, -266.000000)">
+            <g id="tag_qc_cn备份-5" transform="translate(27.965876, 282.988728) rotate(-45.000000) translate(-27.965876, -282.988728) translate(-5.878301, 259.000161)">
+                <path d="M23.1369991,5.16800851 L46.3160478,5.16800851 L46.3160478,5.16800851 L21.1369991,30.66624 L21.1369991,7.16800851 C21.1369991,6.06343901 22.0324296,5.16800851 23.1369991,5.16800851 Z" id="矩形" fill="#FFFFFF" transform="translate(33.726523, 17.917124) rotate(-315.000000) translate(-33.726523, -17.917124) "></path>
+                <polygon id="矩形" fill="#24AE8F" points="15.9767278 17.8759504 51.6978701 17.8485629 67.6883532 33.8485629 -2.27373675e-13 33.8042761"></polygon>
+                <text id="Cross" font-family="PingFangSC-Medium, PingFang SC" font-size="10" font-weight="400" line-spacing="16" fill="#FFFFFF">
+                    <tspan x="19.2525048" y="28.8042761">Cross</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

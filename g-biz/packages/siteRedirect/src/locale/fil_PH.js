@@ -1,0 +1,13 @@
+export default {
+  "0e69c213ac414800a71a": "Magpatuloy",
+  "122f15eb20c94800a85a": "Australia",
+  "1282a9de05204000a42e": "Hindi Muna Ngayon",
+  "2441224b3dbb4000a184": "Ire-redirect ka pagkalipas ng <span>{{time}}</span>s",
+  "327afb2cd06c4800a436": "Europe",
+  "3705a22def0d4800a1b9": "Update sa Rehiyon ng Serbisyo",
+  "50184c5b65814800ab6a": "Batay sa lokasyon mo, inire-recommend namin ang pag-switch sa <span>{{site}}</span> site para sa pinakamahusay na experience. Gusto mo bang mag-proceed?",
+  "5db2931fb7474800a935": "Batay sa iyong mga latest na detalye sa KYC, inilipat sa <span>{{site}}</span> platform ang account mo. Para sa compliance, automatic kang ire-redirect sa updated na site.",
+  "a4d911c5beb74000aa50": "Mukhang nasa ibang rehiyon ka",
+  "e60f7f265df84800a4e3": "Global",
+  "f8f20fdb54ed4800a803": "Mag-switch Ngayon"
+}

@@ -1,0 +1,65 @@
+@import '../../../../theme/vars.less';
+
+.withDrawDialog {
+  width: 480px;
+  display: block;
+
+  .infoContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .imgContainer {
+      width: 90px;
+      height: 90px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .name {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 44px;
+      color: #00142A;
+      margin-top: 12px;
+    }
+  }
+
+  .inputContainer {
+    margin-bottom: 12px;
+    &.readonly {
+      pointer-events: none;
+      .readonlyInput {
+        color: @color-disabled;
+      }
+    }
+
+    .withPasteContainer {
+      :global {
+        .Mui-focused {
+          .MuiButton-label {
+            color: @color_new_primary;
+          }
+        }
+      }
+    }
+
+    .withPasteInput {
+       padding-right: 0;
+     }
+    .withPaste {
+      color: @color_new_primary;
+      background: none;
+      &:hover {
+        color: rgba(70, 197, 163, 1);
+      }
+    }
+  }
+  .button {
+    height: 48px;
+    font-weight: 600;
+  }
+}

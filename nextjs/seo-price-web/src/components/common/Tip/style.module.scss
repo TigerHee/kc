@@ -1,0 +1,15 @@
+.wrapper {
+  
+  position: relative;
+  
+}
+
+.textWrapper {
+  display: inline-flex;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-text40);
+  border-bottom: 1px dashed ;
+  // TODO fade处理
+  // border-color: fade(theme.colors.text, 0.12)
+}

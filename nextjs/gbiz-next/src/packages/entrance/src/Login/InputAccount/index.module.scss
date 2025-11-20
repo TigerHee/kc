@@ -1,0 +1,33 @@
+@import 'src/styles/mixin.scss';
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 31px;
+
+  @include media-query('sm') {
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  margin-top: 0;
+  word-break: break-word;
+  color: var(--kux-text);
+
+  &.titleWithDrawer {
+    font-size: 36px;
+  }
+
+  @include media-query('sm') {
+    font-size: 24px;
+  }
+}
+
+.tabsContainer {
+  margin-bottom: 32px;
+}

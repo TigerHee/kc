@@ -1,0 +1,58 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-skeleton 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'skeleton'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('skeleton') {
+  // 基础样式 - 所有 skeleton 组件共享
+  &-avatar,
+  &-node,
+  &-input {
+    position: relative;
+    overflow: hidden;
+    // TODO: 要改色值
+    background-color: fade(get-theme(icon, light), 0.1);
+
+    // 动画效果
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, fade(#fff, 0.4), transparent);
+      animation: skeleton-shimmer 1.2s infinite;
+
+      [data-theme='dark'] & {
+        background: linear-gradient(90deg, transparent, fade(#fff, 0.02), transparent);
+      }
+    }
+  }
+  
+  // Avatar 特定样式
+  &-avatar {
+    display: inline-block;
+  }
+  
+  // Node 特定样式
+  &-node {
+    display: inline-block;
+  }
+  
+  // Input 特定样式
+  &-input {
+    display: inline-block;
+  }
+}
+
+// 动画关键帧
+@keyframes skeleton-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+.scaleBtnWrapper {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background: #1d1d1d0a;
+  border-radius: 50%;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  [dir='rtl'] & {
+    right: 7px;
+    left: unset;
+  }
+
+  &.shrink {
+    position: unset;
+    left: unset;
+    right: unset
+  }
+}

@@ -1,0 +1,154 @@
+@import "src/styles/mixin.scss";
+
+.newFooterLinks {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:after {
+    width: 50%;
+    content: ' ';
+
+    @include media-query('sm') {
+      width: 0;
+    }
+  }
+}
+
+.ukLastGroup {
+  padding-bottom: 28px;
+
+  @include media-query('sm') {
+    padding-bottom: 28px;
+  }
+}
+
+.ukFooterLinks {
+  justify-content: flex-start;
+}
+
+.mergeNavTitle {
+  margin-top: 56px;
+}
+
+.association {
+  width: 20%;
+}
+
+.associationTitle {
+  @include media-query('sm') {
+    margin-bottom: 28px !important;
+  }
+}
+
+.newFooterAssociationList {
+  display: flex !important;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.associationHoverMenu {
+  left: 16px;
+}
+
+.noMarginBottom {
+  margin-bottom: 0;
+}
+
+.newFooterAssociationItem {
+  transform: translateY(0);
+  width: 32px !important;
+  height: 32px !important;
+  margin-right: 16px;
+  margin-left: 0;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  [dir="rtl"] & {
+    margin-right: 0;
+    margin-left: 21px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.newFooterReddit {
+  @include media-query('md') {
+    left: 60px;
+
+    &::after {
+      left: 74px;
+
+      [dir="rtl"] & {
+        left: unset;
+        right: 74px;
+      }
+    }
+  }
+}
+
+.newFooterFacebook {
+  @include media-query('md') {
+    left: 90px;
+
+    &::after {
+      left: 50px;
+
+      [dir="rtl"] & {
+        left: unset;
+        right: 50px;
+      }
+    }
+  }
+
+  @include media-query('sm') {
+    bottom: 38px;
+
+    &::after {
+      left: 20px;
+
+      [dir="rtl"] & {
+        left: unset;
+        right: 20px;
+      }
+    }
+  }
+}
+
+.newFooterTwitter {
+  @include media-query('md') {
+    left: 70px;
+
+    &::after {
+      left: 70px;
+
+      [dir="rtl"] & {
+        left: unset;
+        right: 70px;
+      }
+    }
+  }
+}
+
+.pureA {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.commonFooterLink {
+  @include media-query('sm') {
+    display: none;
+  };
+}

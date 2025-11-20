@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "locales/*": ["./src/locales/*"],
+      "utils/*": ["./src/utils/*"],
+      "components/*": ["./src/components/*"],
+      "services/*": ["./src/services/*"],
+      "models/*": ["./src/models/*"],
+      "config/*": ["./src/config/*"],
+      "assets/*": ["./src/assets/*"],
+      "layouts/*": ["./src/layouts/*"],
+      "hooks/*": ["./src/hooks/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

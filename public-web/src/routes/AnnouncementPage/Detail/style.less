@@ -1,0 +1,501 @@
+@import '~theme/mix.less';
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+.wrapper_idp {
+  max-width: 936px;
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 50px 18px 150px 18px;
+}
+
+.article_loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50vh;
+}
+.article {
+  position: relative;
+  h1 {
+    margin: 0;
+    color: #1d1d1d;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    transition: all 0.3s ease-in-out;
+    .mediaQueryMd({
+      font-size: 36px;
+      line-height: 44px;
+    });
+    .mediaQuerySm({
+      font-size: 24px;
+      line-height: 38px;
+    });
+  }
+
+  .time {
+    margin-top: 20px;
+    color: rgba(29, 29, 29, 0.4);
+    font-size: 14px;
+    line-height: 18px;
+    transition: all 0.3s ease-in-out;
+    .mediaQuerySm({
+      font-size: 14px;
+      line-height: 18px;
+    });
+  }
+
+  .content {
+    margin-top: 40px;
+    overflow-wrap: break-word;
+    // word-break: break-word;
+    // word-wrap: break-word;
+    :global {
+      img.size-full {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    .kucoin-article {
+      color: #24292e;
+      font-size: 15px;
+      line-height: 1.5;
+      line-height: 1.5;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      //word-break:keep-all;
+      // :global {
+      //   div.media-wrap.image-wrap:first-of-type {
+      //     width: 655px;
+      //     height: 286px;
+      //     overflow: hidden;
+      //     position: relative;
+      //     img {
+      //       width: 100%;
+      //       object-fit: cover;
+      //       position: absolute;
+      //       left: 0;
+      //       top: 50%;
+      //       transform: translateY(-50%);
+      //     }
+      //   }
+      // }
+    }
+    .kucoin-article a {
+      background-color: transparent;
+    }
+    .kucoin-article a:active,
+    .kucoin-article a:hover {
+      outline-width: 0;
+    }
+    .kucoin-article strong {
+      font-weight: inherit;
+    }
+    .kucoin-article strong {
+      font-weight: bolder;
+    }
+    .kucoin-article h1 {
+      margin: 0.67em 0;
+      font-size: 2em;
+    }
+    .kucoin-article img {
+      border-style: none;
+    }
+    .kucoin-article code,
+    .kucoin-article kbd,
+    .kucoin-article pre {
+      font-size: 1em;
+    }
+    .kucoin-article hr {
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+    }
+    .kucoin-article input {
+      margin: 0;
+      font: inherit;
+    }
+    .kucoin-article input {
+      overflow: visible;
+    }
+    .kucoin-article [type='checkbox'] {
+      box-sizing: border-box;
+      padding: 0;
+    }
+    .kucoin-article * {
+      box-sizing: border-box;
+    }
+    .kucoin-article input {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .kucoin-article a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    .kucoin-article a:hover {
+      text-decoration: underline;
+    }
+
+    .kucoin-article strong {
+      font-weight: 600;
+    }
+
+    .kucoin-article hr {
+      height: 0;
+      margin: 15px 0;
+      overflow: hidden;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid #dfe2e5;
+    }
+
+    .kucoin-article hr::before {
+      display: table;
+      content: '';
+    }
+    .kucoin-article hr::after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+    .kucoin-article table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    .kucoin-article td,
+    .kucoin-article th {
+      padding: 0;
+    }
+    .kucoin-article h1,
+    .kucoin-article h2,
+    .kucoin-article h3,
+    .kucoin-article h4,
+    .kucoin-article h5,
+    .kucoin-article h6 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .kucoin-article h1 {
+      font-weight: 600;
+      font-size: 32px;
+    }
+    .kucoin-article h2 {
+      font-weight: 600;
+      font-size: 24px;
+    }
+    .kucoin-article h3 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .kucoin-article h4 {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .kucoin-article h5 {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .kucoin-article h6 {
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .kucoin-article p {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .kucoin-article blockquote {
+      margin: 0;
+    }
+    .kucoin-article ul,
+    .kucoin-article ol {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+    .kucoin-article ol ol,
+    .kucoin-article ul ol {
+      list-style-type: decimal;
+    }
+    .kucoin-article ul ul ol,
+    .kucoin-article ul ol ol,
+    .kucoin-article ol ul ol,
+    .kucoin-article ol ol ol {
+      list-style-type: decimal;
+    }
+    .kucoin-article dd {
+      margin-left: 0;
+    }
+    .kucoin-article code {
+      font-size: 12px;
+    }
+    .kucoin-article pre {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+    .kucoin-article .octicon {
+      vertical-align: text-bottom;
+    }
+    .kucoin-article .pl-0 {
+      padding-left: 0 !important;
+    }
+    .kucoin-article .pl-1 {
+      padding-left: 4px !important;
+    }
+    .kucoin-article .pl-2 {
+      padding-left: 8px !important;
+    }
+    .kucoin-article .pl-3 {
+      padding-left: 16px !important;
+    }
+    .kucoin-article .pl-4 {
+      padding-left: 24px !important;
+    }
+    .kucoin-article .pl-5 {
+      padding-left: 32px !important;
+    }
+    .kucoin-article .pl-6 {
+      padding-left: 40px !important;
+    }
+    .kucoin-article::before {
+      display: table;
+      content: '';
+    }
+    .kucoin-article::after {
+      display: table;
+      clear: both;
+      content: '';
+    }
+    .kucoin-article > *:first-of-type {
+      margin-top: 0 !important;
+    }
+    .kucoin-article > *:last-child {
+      margin-bottom: 0 !important;
+    }
+    .kucoin-article a:not([href]) {
+      color: inherit;
+      text-decoration: none;
+    }
+    .kucoin-article p,
+    .kucoin-article blockquote,
+    .kucoin-article ul,
+    .kucoin-article ol,
+    .kucoin-article dl,
+    .kucoin-article table,
+    .kucoin-article pre {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    .kucoin-article hr {
+      height: 0.25em;
+      margin: 24px 0;
+      padding: 0;
+      background-color: #e1e4e8;
+      border: 0;
+    }
+    .kucoin-article blockquote {
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: 0.25em solid #dfe2e5;
+    }
+    .kucoin-article blockquote > :first-of-type {
+      margin-top: 0;
+    }
+    .kucoin-article blockquote > :last-child {
+      margin-bottom: 0;
+    }
+    .kucoin-article kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      color: #444d56;
+      font-size: 11px;
+      line-height: 10px;
+      vertical-align: middle;
+      background-color: #fafbfc;
+      border: solid 1px #c6cbd1;
+      border-bottom-color: #959da5;
+      border-radius: 3px;
+      box-shadow: inset 0 -1px 0 #959da5;
+    }
+    .kucoin-article h1,
+    .kucoin-article h2,
+    .kucoin-article h3,
+    .kucoin-article h4,
+    .kucoin-article h5,
+    .kucoin-article h6 {
+      margin-top: 24px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    .kucoin-article h1 {
+      padding-bottom: 0.3em;
+      font-size: 2em;
+    }
+    .kucoin-article h2 {
+      padding-bottom: 0.3em;
+      font-size: 1.5em;
+    }
+    .kucoin-article h3 {
+      font-size: 1.25em;
+    }
+    .kucoin-article h4 {
+      font-size: 1em;
+    }
+    .kucoin-article h5 {
+      font-size: 0.875em;
+    }
+    .kucoin-article h6 {
+      color: #6a737d;
+      font-size: 0.85em;
+    }
+    .kucoin-article ul,
+    .kucoin-article ol {
+      padding-left: 2em;
+      list-style: decimal;
+    }
+    .kucoin-article ul ul,
+    .kucoin-article ul ol,
+    .kucoin-article ol ol,
+    .kucoin-article ol ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .kucoin-article li {
+      overflow-wrap: break-word;
+      // word-break: break-word;
+    }
+    .kucoin-article li > p {
+      margin-top: 16px;
+    }
+    .kucoin-article li + li {
+      margin-top: 0.25em;
+    }
+    .kucoin-article dl {
+      padding: 0;
+    }
+    .kucoin-article dl dt {
+      margin-top: 16px;
+      padding: 0;
+      font-weight: 600;
+      font-size: 1em;
+      font-style: italic;
+    }
+    .kucoin-article dl dd {
+      margin-bottom: 16px;
+      padding: 0 16px;
+    }
+    .kucoin-article table {
+      display: table;
+      width: 100%;
+      overflow: auto;
+      // 确保表格内容不会超出容器范围
+      word-break: break-word;
+      word-wrap: break-word;
+    }
+    .kucoin-article table th {
+      font-weight: 600;
+    }
+    .kucoin-article table th,
+    .kucoin-article table td {
+      padding: 6px 13px;
+      border: 1px solid #dfe2e5;
+      @media screen and (max-width: 768px) {
+        padding: 2px;
+      }
+    }
+    .kucoin-article table tr {
+      background-color: #fff;
+      border-top: 1px solid #c6cbd1;
+    }
+    .kucoin-article table tr:nth-of-type(2n) {
+      background-color: #f6f8fa;
+    }
+    .kucoin-article img {
+      box-sizing: content-box;
+      max-width: 100%;
+      background-color: #fff;
+    }
+    .kucoin-article img[align='right'] {
+      padding-left: 20px;
+    }
+    .kucoin-article img[align='left'] {
+      padding-right: 20px;
+    }
+    .kucoin-article code {
+      margin: 0;
+      padding: 0.2em 0.4em;
+      font-size: 85%;
+      background-color: rgba(27, 31, 35, 0.05);
+      border-radius: 3px;
+    }
+    .kucoin-article pre {
+      word-wrap: normal;
+    }
+    .kucoin-article pre > code {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      white-space: pre;
+      word-break: normal;
+      background: transparent;
+      border: 0;
+    }
+    .kucoin-article .highlight {
+      margin-bottom: 16px;
+    }
+    .kucoin-article .highlight pre {
+      margin-bottom: 0;
+      word-break: normal;
+    }
+    .kucoin-article .highlight pre,
+    .kucoin-article pre {
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: #f6f8fa;
+      border-radius: 3px;
+    }
+    .kucoin-article pre code {
+      display: inline;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      line-height: inherit;
+      word-wrap: normal;
+      background-color: transparent;
+      border: 0;
+    }
+    .kucoin-article kbd {
+      display: inline-block;
+      padding: 3px 5px;
+      color: #444d56;
+      font: 11px 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+      line-height: 10px;
+      vertical-align: middle;
+      background-color: #fafbfc;
+      border: solid 1px #d1d5da;
+      border-bottom-color: #c6cbd1;
+      border-radius: 3px;
+      box-shadow: inset 0 -1px 0 #c6cbd1;
+    }
+    .kucoin-article hr {
+      border-bottom-color: #eee;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Безпечна й проста глобальна торгівля 24/7.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Нові користувачі отримують",
+  "awPHBDRwtLBxNEMctyUMJZ": "Тільки для нових користувачів: зробіть перший депозит або вперше купіть криптовалюту на суму більше ніж 50 $ й отримайте таємничу скриньку номінальною вартістю до <span>500 $</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Завантажити",
+  "csjK9uyQQyYMLprAYkKsRT": "Завантажте додаток {{brandName}}, щоб продовжити свою криптоподорож й отримати до <span>500 $</span> у нагородах для новачків.",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Отримати",
+  "evsRWTcozWk2pEFSUsfw28": "Реєструйтесь й освоюйте ринки за секунду!",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5+ млн</1> завантажень",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Освоюйте ринки будь-де 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80+ тис. відгуків",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100+ тис. відгуків)",
+  "oiiFHQ3NZu5zSYqpSGreye": "Зробіть перший депозит або вперше купіть криптовалюту й отримайте таємничу скриньку номінальною вартістю до <span>500 $</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "До <span>500 $</span> у нагородах для нових користувачів!",
+  "qqJX78TFyekdKwwT6nVVWU": "(16+ тис. відгуків)",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Швидко проходьте верифікацію, вносьте кошти й купуйте криптовалюту!",
+  "rw8e32A8H7X3QtiKHS37EK": "Завантажити",
+  "tXwwyoSbqG4pgsoXomccjp": "Завантажте додаток {{brandName}} й отримайте до {{num}} {{siteBaseCurrency}} у нагородах.",
+  "wLAfc8MZvoHbeNragecB4Z": "Торгуйте безпечніше й швидше в додатку"
+}

@@ -1,0 +1,48 @@
+@import '@/styles/mixin.scss';
+
+.watchFilmBtnBox {
+  @include media-query('sm') {
+    width: 100%;
+  }
+}
+.watchFilmBtn {
+  cursor: pointer;
+  text-align: center;
+  // min-width: fit-content;
+  height: 72px !important;
+  border-radius: 36px !important;
+  padding: 16px 40px !important;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    // box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  @include media-query('sm') {
+    width: 100%;
+    font-size: 16px;
+    height: 48px !important;
+    padding: 16px 32px !important;
+    border-radius: 24px !important;
+  }
+
+  span {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    line-height: 140% !important;
+    @include media-query('sm') {
+      font-weight: 700 !important;
+      font-size: 16px !important;
+    }
+  }
+
+  .playIcon {
+    width: 20px;
+    height: 20px;
+    [dir='rtl'] & {
+      transform: rotate(180deg);
+    }
+  }
+}

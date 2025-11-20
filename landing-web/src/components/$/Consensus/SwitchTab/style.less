@@ -1,0 +1,35 @@
+@import '~themes/mix.less';
+
+.tabOut {
+  :global {
+    div[role='tablist'] {
+      justify-content: space-between;
+    }
+    div[role='tablist'] + span {
+      height: 4px;
+      background: linear-gradient(89.94deg, #57e2bc -18.85%, #88f8b7 118.79%);
+      .mediaQuerySm({height: 2px;});
+    }
+    div[role='tab'] {
+      outline: none;
+      
+      font-weight: 400;
+      font-size: 24px;
+      // line-height: 38px;
+      text-align: center;
+      color: rgba(225, 232, 245, 0.4);
+      display: inline-block;
+
+      &[aria-selected='true'] {
+        background: linear-gradient(88.23deg, #58e3bc -3.66%, #87f8b7 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+
+      // .mediaQuerySm({font-size: 16px; line-height: 26px;});
+      .mediaQuerySm({font-size: 16px;});
+    }
+  }
+}

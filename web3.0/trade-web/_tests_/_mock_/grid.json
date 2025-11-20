@@ -1,0 +1,19 @@
+{
+  "filters": {
+    "area": "USDT",
+    "childAreas": {},
+    "recordType": 0
+  },
+  "botsAssets": 0,
+  "symbols": {},
+  "symbolsMap": {},
+  "symbolsSimpleMap": {},
+  "symbolCalcInfo": {},
+  "justCreated": {
+    "status": false,
+    "taskId": null
+  },
+  "isBotsMode": true,
+  "areas": [],
+  "notice": {}
+}

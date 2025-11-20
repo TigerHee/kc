@@ -1,0 +1,293 @@
+@import '@/style/index.scss';
+
+@include defineThemeVar(share-header-color, rgb(29, 29, 29), #f3f3f3);
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-share-view 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'share-view'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('share-view') {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: get-theme(mask);
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+
+    &.open {
+      opacity: 1;
+      transform: unset;
+      animation: get-animation-name(fade-in) 0.3s ease-in-out;
+    }
+  }
+
+  &_modal {
+    border-radius: 8px;
+    width: 90%;
+    transition:
+      transform 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &.open {
+      opacity: 1;
+      transform: unset;
+      animation: get-animation-name(slide-in-from-bottom) 0.3s ease-in-out;
+    }
+    // default for desktop
+    max-width: 640px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &.is-mobile {
+    .#{$prefix}_modal {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      background-color: transparent;
+      border-radius: 0;
+      // transform: translateY(50%);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &_header {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    height: 98px;
+    background-color: get-theme(bulletLayer);
+
+    color: get-theme(share-header-color);
+  }
+
+  &.is-mobile {
+    .#{$prefix}_header {
+      padding: 16px 0;
+      height: auto;
+      background-color: transparent;
+    }
+  }
+
+  &_title {
+    font-weight: 700;
+    font-size: 24px;
+    flex: 1;
+    @include ellipsis(2);
+  }
+
+  &.is-mobile {
+    .#{$prefix}_title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &_content {
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 8px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 500px;
+    @include responsive(md) {
+      background-color: get-theme(bulletLayer);
+    }
+  }
+
+  &_poster {
+    position: absolute;
+    transition: transform 0.1s linear;
+    z-index: 1;
+  }
+
+  &.is-mobile {
+    .#{$prefix}_content {
+      flex: 1;
+      display: flex;
+      min-height: auto;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+
+  &_footer {
+    // avoid been covered by the poster
+    z-index: 2;
+    padding: 0 32px 32px;
+    background-color: get-theme(bulletLayer);
+  }
+
+  &.is-mobile {
+    .#{$prefix}_footer {
+      padding: 0 16px 16px;
+      background-color: get-theme(bulletLayer);
+      border-radius: 16px 16px 0 0;
+    }
+
+    // -- 带广告位的footer start --
+    .footer-with-ads {
+      padding: 0;
+      background-color: get-theme(bulletLayer);
+      border-radius: 16px 16px 0 0;
+      .#{$prefix}_header {
+        padding: 0;
+        position: relative;
+        border-radius: 16px 16px 0 0;
+        overflow: hidden;
+      }
+      // -- 关闭按钮 start --
+      .#{$prefix}_close {
+        position: absolute;
+        cursor: pointer;
+        top: 12px;
+        inset-inline-end: 10px;
+        z-index: 9;
+      }
+      // -- 关闭按钮 end --
+      // -- 广告位 start --
+      .#{$prefix}_ads-list {
+        width: 100%;
+        overflow: hidden;
+        .slideImg {
+          width: 100%;
+          max-height: 130px;
+          cursor: pointer;
+        }
+      }
+      // -- 广告位 end --
+      // -- 按钮区域 start --
+      .#{$prefix}_button-list { 
+        padding: 16px;
+      }
+      // -- 按钮区域 end --
+    }
+    // -- 带广告位的footer end --
+  }
+
+  &_button-list {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  &.is-mobile {
+    .#{$prefix}_button-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &_social-media {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  &_actions {
+    display: flex;
+
+    > .#{$ns}-button {
+      flex: 1;
+    }
+  }
+
+  &_close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid get-theme(cover8);
+
+    > img {
+      width: 12px;
+      height: 12px;
+    }
+
+    @include responsive(md) {
+      width: 28px;
+      height: 28px;
+    }
+
+    @include responsive(lg) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  // 大屏分享弹窗中 保存/复制链接 按钮的样式
+  &-wicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid get-theme(cover8);
+
+    > svg {
+      width: 24px;
+      height: 24px;
+      color: get-theme(text60);
+    }
+  }
+
+  &_icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    gap: 8px;
+    text-decoration: none;
+    flex-direction: column;
+
+    .#{$prefix}_icon-button-icon {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 4px;
+    }
+
+    .#{$prefix}_icon-button-text {
+      color: get-theme(text60);
+      font-size: 12px;
+    }
+  }
+}

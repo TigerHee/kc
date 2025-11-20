@@ -1,0 +1,32 @@
+@import 'src/styles/mixin.scss';
+
+.List {
+  &:hover {
+    .delete-all {
+      visibility: visible;
+    }
+  }
+}
+
+.H2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 24px;
+  margin-bottom: 0px;
+  padding: 0 32px;
+  @include media-query('sm') {
+    padding: 0 16px;
+  }
+}
+
+.ICDelete {
+  cursor: pointer;
+  visibility: hidden;
+  @include media-query('sm') {
+    visibility: visible;
+  }
+}

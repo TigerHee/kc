@@ -1,0 +1,13 @@
+@import '@/styles/mixin.scss';
+
+.content {
+  min-height: 80vh;
+}
+
+.header {
+  min-height: 72px;
+
+  @include media-query('sm') {
+    min-height: 64px;
+  }
+}

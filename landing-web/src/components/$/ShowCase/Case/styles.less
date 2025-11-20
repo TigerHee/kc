@@ -1,0 +1,194 @@
+.wrapper {
+  padding: 88px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  .content {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 48px;
+      line-height: 72px;
+      font-weight: 500;
+      color: #01081E;
+    }
+    .desWrapper {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      .des {
+        font-size: 24px;
+        line-height: 36px;
+        color: #01081E;
+        font-weight: 500;
+        .vs {
+          font-size: 32px;
+          font-weight: bold;
+          font-style: italic;
+          margin-left: 12px;
+          margin-right: 16px;
+        }
+      }
+      .more {
+        line-height: 20px;
+        padding: 11px 16px;
+        font-size: 16px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.04);
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+      }
+    }
+    .cards {
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      .card {
+        flex: 1;
+        margin-right: 50px;
+        height: 204px;
+        padding-left: 32px;
+        padding-right: 16px;
+        padding-top: 29px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        &:last-child {
+          margin-right: 0;
+        }
+        .label {
+          display: flex;
+          align-items: flex-end;
+          .icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .crownIcon {
+              width: 19.4px;
+              height: 12.1px;
+            }
+            .coinImg {
+              width: 40px;
+              height: 40px;
+              border-radius: 100%;
+            }
+          }
+          .text {
+            font-size: 16px;
+            margin-left: 12px;
+            line-height: 36px;
+            color: #fff;
+            font-weight: 500;
+            &.noIcon {
+              margin-top: 11px;
+              margin-left: 0;
+            }
+          }
+        }
+        .currency {
+          margin-top: 16px;
+          display: flex;
+          align-items: baseline;
+          .mount {
+            font-size: 48px;
+            line-height: 48px;
+            font-weight: 500;
+            color: #fff;
+          }
+          .coin {
+            margin-left: 12px;
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 500;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @kc-mb-width) {
+  .wrapper {
+    padding: ~`px2rem(48)` ~`px2rem(16)` ~`px2rem(32)` ~`px2rem(16)` ;
+    .content {
+      width: 100%;
+      .title {
+        font-size: ~`px2rem(24)`;
+        line-height: ~`px2rem(32)`;
+      }
+      .desWrapper {
+        margin-top: ~`px2rem(22)`;
+        flex-direction: column;
+        .des {
+          font-size: ~`px2rem(16)`;
+          line-height: ~`px2rem(24)`;
+          .vs {
+            font-size: ~`px2rem(24)`;
+            margin-left: ~`px2rem(6)`;
+            margin-right: ~`px2rem(8)`;
+          }
+        }
+        .more {
+          align-self: flex-start;
+          margin-top: ~`px2rem(16)`;
+          line-height: ~`px2rem(20)`;
+          padding: ~`px2rem(10)` ~`px2rem(16)`;
+          font-size: ~`px2rem(14)`;
+          border-radius: ~`px2rem(20)`;
+        }
+      }
+      .cards {
+        margin-top: ~`px2rem(16)`;
+        flex-direction: column;
+        .card {
+          flex: auto;
+          width: 100%;
+          margin-bottom: ~`px2rem(16)`;
+          height: ~`px2rem(100)`;
+          padding-left: ~`px2rem(24)`;
+          padding-right: ~`px2rem(16)`;
+          padding-top: ~`px2rem(14)`;
+          margin-right: 0;
+          .label {
+            .icons {
+              .crownIcon {
+                width: ~`px2rem(11.6)`;
+                height: ~`px2rem(7.3)`;
+              }
+              .coinImg {
+                width: ~`px2rem(24)`;
+                height: ~`px2rem(24)`;
+              }
+            }
+            .text {
+              font-size: ~`px2rem(14)`;
+              margin-left: ~`px2rem(8)`;
+              line-height: ~`px2rem(14)`;
+              margin-bottom: ~`px2rem(4)`;
+              &.noIcon {
+                margin-top: ~`px2rem(8)`;
+              }
+            }
+          }
+          .currency {
+            margin-top: ~`px2rem(8.8)`;
+            &.noIcon {
+              margin-top: ~`px2rem(6)`;
+            }
+            .mount {
+              font-size: ~`px2rem(24)`;
+              line-height: ~`px2rem(24)`;
+            }
+            .coin {
+              margin-left: ~`px2rem(9)`;
+              font-size: ~`px2rem(14)`;
+              line-height: ~`px2rem(20)`;
+            }
+          }
+        }
+      }
+    }
+  }
+}

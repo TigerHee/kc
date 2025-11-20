@@ -1,0 +1,112 @@
+/*
+ * @Owner: gannicus.zhou@kupotech.com
+ * @Date: 2024-06-25 14:15:48
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2025-03-26 16:52:57
+ * @FilePath: /public-web/jest.config.js
+ * @Description:
+ */
+module.exports = {
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@@/(.*)$': '<rootDir>/src/.umi/$1',
+    '^src/(.*)': '<rootDir>/src/$1',
+    '^config/(.*)': '<rootDir>/src/config/$1',
+    '^config': '<rootDir>/src/config/index.js',
+    '^utils/(.*)': '<rootDir>/src/utils/$1',
+    '^tools/(.*)': '<rootDir>/src/tools/$1',
+    '^static/(.*)': '<rootDir>/cdnAssets/static/$1',
+    '^routes/(.*)': '<rootDir>/src/routes/$1',
+    '^components/(.*)': '<rootDir>/src/components/$1',
+    '^helper': '<rootDir>/src/helper.js',
+    '^common/(.*)': '<rootDir>/src/common/$1',
+    '^services/(.*)': '<rootDir>/src/services/$1',
+    '^hooks': '<rootDir>/src/hooks',
+    '^hocs/(.*)': '<rootDir>/src/hocs/$1',
+    '^TradeActivityCommon/(.*)': '<rootDir>/src/components/TradeActivity/ActivityCommon/$1',
+    '^TradeActivity/(.*)': '<rootDir>/src/components/TradeActivity/$1',
+  },
+  verbose: true, // 是否输出 descripe 和 test/it 中的测试描述信息
+  silent: true,
+  globals: {
+    _DEV_: true,
+    _APP_NAME_: 'public-web',
+    _APP_: 'public-web',
+    _VERSION_: '0.0.1',
+    _XVERSION_: '0.0.1',
+    CMS_CDN: 'xxx.xxx',
+    // IS_TEST_ENV: true,
+    _ENV_: 'prod',
+    _DEV_: 'env',
+    SENTRY_DEBUG: false,
+    _DEFAULT_LANG_: 'en_US',
+    _DEFAULT_LOCALE_: 'en',
+    _BASE_CURRENCY_: 'USDT',
+    __KC_LANGUAGES__: {
+      __ALL__: [
+        'de_DE',
+        'en_US',
+        'es_ES',
+        'fr_FR',
+        'ko_KR',
+        'nl_NL',
+        'pt_PT',
+        'ru_RU',
+        'tr_TR',
+        'vi_VN',
+        'zh_HK',
+        'it_IT',
+        'id_ID',
+        'ms_MY',
+        'hi_IN',
+        'th_TH',
+        'ja_JP',
+        'bn_BD',
+        'pl_PL',
+        'fil_PH',
+        'ar_AE',
+        'ur_PK',
+      ],
+    },
+    _SAFE_WEB_DOMAIN_: [
+      'kucoin.net',
+      'kucoin.com',
+      'kucoin.cloud',
+      'kucoin.biz',
+      'kucoin.top',
+      'kucoin.plus',
+      'kucoin.work',
+      'kumex.com',
+      'pool-x.io',
+      'kucoin.zendesk.com',
+      'localhost',
+    ],
+  },
+  setupFilesAfterEnv: [
+    '@testing-library/react-hooks/disable-error-filtering.js',
+    'reflect-metadata',
+  ], // 在每个测试文件执行之前调用一些默认执行代码的文件路径
+  // testEnvironment: 'jsdom',
+  setupFiles: ['./setupFile.js'],
+  collectCoverageFrom: [
+    '!<rootDir>/node_modules/**/*.js',
+    '!<rootDir>/src/routes/SlothubPage/IndexPage/CurrencyTasks/**/*.js',
+    // 覆盖率收集路径
+    '<rootDir>/src/utils/**/*.js',
+    '<rootDir>/src/hooks/**/*.js',
+    '<rootDir>/src/helper.js',
+    '!<rootDir>/src/routes/Ucenter/**/*.js',
+    '!<rootDir>/src/components/Seo/**/*.js',
+    '!<rootDir>/src/components/Entrance/**/*.js',
+    '!<rootDir>/src/components/RocketZone/constant.js',
+    '!<rootDir>/src/routes/SlothubPage/constant/index.js',
+    '!<rootDir>/src/routes/SlothubPage/DetailPage/components/CoinSignGainTaskList/constant.js',
+    '!<rootDir>/src/routes/Legal/legalRequests/useFetchConf.js',
+    '!<rootDir>/src/utils/waitForSaga.js',
+    '!<rootDir>/src/components/Spotlight/SpotlightR8/constants.js',
+    // 拆分出去，已经在测试中
+    '!<rootDir>/src/routes/AnnouncementPage/constant.js',
+    '!<rootDir>/src/routes/Legal/legalRequests/utils/index.js',
+    '!<rootDir>/src/routes/SlothubPage/**/*.js',
+  ],
+};

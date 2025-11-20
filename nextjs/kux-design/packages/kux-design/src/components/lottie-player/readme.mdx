@@ -1,0 +1,43 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as Stories from './stories';
+
+<Meta title="base/LottiePlayer/Readme" />
+
+
+# LottiePlayer
+
+用于在 React 项目中高效渲染 Lottie 动画，支持明暗主题、懒加载、占位图、事件回调等高级特性。
+
+依赖 `lottie-web` 库，必须在库的 [`setup` 方法中 设置 `getLottie` 方法](?path=/docs/1-开始使用--api#引入组件并初始化)。
+
+## Props
+
+| 属性        | 类型                                   | 默认值   | 说明                                                         |
+|-------------|----------------------------------------|----------|--------------------------------------------------------------|
+| path        | string                                 | -        | Lottie JSON 文件路径                                         |
+| immediate   | boolean                                | false    | 是否立即渲染动画，false 时等页面 LCP 后再渲染动画              |
+| poster      | ReactElement \| string                 | -        | 动画未加载前的占位图或自定义节点                              |
+| loop        | boolean                                | true     | 是否循环播放动画                                             |
+| renderer    | 'svg' \| 'canvas' \| 'html'            | 'svg'    | 渲染方式                                                     |
+| autoplay    | boolean                                | true     | 是否自动播放动画                                             |
+| className   | string                                 | -        | 自定义样式类名                                               |
+| style       | React.CSSProperties                    | -        | 自定义样式                                                   |
+| onReady     | (animation: any) => void               | -        | 动画ready回调, 参数为 [lottie animation 实例](https://www.npmjs.com/package/lottie-web#user-content-usage)                                   |
+| onComplete  | () => void                             | -        | 动画播放完成回调，仅 loop=false 时有效                        |
+| onError     | (error: Error) => void                 | -        | 动画加载失败回调                                             |
+
+## 示例
+
+```tsx
+import { LottiePlayer } from './index';
+
+<LottiePlayer
+  path="https://assets.staticimg.com/marketing-growth-web/2.2.24/static/tocReferral/gift-box.json"
+  poster="https://placehold.co/200"
+  loop={true}
+  renderer="svg"
+  autoplay={true}
+  immediate={false}
+  style={{ width: 200, height: 200 }}
+/>
+```

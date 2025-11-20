@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.cardLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; // 内容底部对齐
+  gap: 4px;
+  position: relative; // 添加相对定位
+  height: 362px; // 添加高度，与line的最终高度一致
+  padding-top: 8px;
+}
+.dotIconWrapper {
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dotIcon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--kux-text);
+  opacity: 0; // 初始隐藏
+  transition: opacity 0.3s ease-out; // 添加过渡动画
+
+  &.iconShow {
+    opacity: 1; // 显示时设为可见
+  }
+}
+.line {
+  width: 1px;
+  height: 0; // 初始高度为0
+  background-color: var(--kux-text);
+  transition: height 0.8s ease-out; // 800ms的过渡动画
+
+  &.lineAnimate {
+    height: 356px; // 动画后的最终高度
+  }
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  opacity: 0; // 初始不显示
+  transform: translateY(20px); // 初始向下偏移
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out; // 内容显示动画
+  max-width: 720px;
+  min-width: 720px;
+  @media (max-width: 820px) {
+    min-width: 680px;
+  }
+
+  &.contentShow {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    color: var(--kux-text);
+  }
+}
+.desc {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text60);
+}

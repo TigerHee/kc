@@ -1,0 +1,101 @@
+/**
+ * 用户主题变量定义
+ */
+@use 'sass:map';
+@import './vars.scss';
+
+/**
+ * 用户自定义的主题映射表
+ * 用于存储用户自定义的主题颜色
+ * 例如: $userThemeMap: (light: (primary: #ff0000), dark: (primary: #00ff00));
+ */
+$userThemeMap: () !default;
+
+// 初始化 $userThemeMap，确保每个主题名都有空 map
+@each $theme in $user-theme-names {
+  $userThemeMap: map.set($userThemeMap, $theme, ());
+}
+
+/**
+ * 定义用户指定的主题变量
+ * 依赖于 vars.scss 中的 主题名map $user-theme-names, 默认值 ('light', 'dark') 
+ * 
+ * 支持两种调用方式：
+ * 1. defineUserThemeVar($key, $themeMap)
+ * 2. defineUserThemeVar($key, $themeVar1, $themeVar2, $themeVar3, ...)
+ *
+ * @example
+ * 假设 $user-theme-names 为 ('light', 'dark', 'golden', 'enterprize')
+ * // 方式1: 使用 map 传入主题变量
+ * @defineUserThemeVar('primary', (light: #ff0000, dark: #00ff00, golden: #ffff00, enterprize: #0000ff))
+ * // 方式2: 按顺序传入主题变量
+ * @defineUserThemeVar('primary', #ff0000, #00ff00, #ffff00, #0000ff)
+ */
+@mixin defineUserThemeVar($key, $args...) {
+  $themeMap: null;
+  // 判断第二参数是否为 map
+  @if length($args) == 1 and type-of(nth($args, 1)) == 'map' {
+    $themeMap: nth($args, 1);
+  } @else {
+    // 按 $user-theme-names 顺序组装 map
+    $themeMap: ();
+    @for $i from 1 through length($user-theme-names) {
+      $theme: nth($user-theme-names, $i);
+      $val: if($i <= length($args), nth($args, $i), null);
+      $themeMap: map.set($themeMap, $theme, $val);
+    }
+  }
+
+  // 校验变量是否已经存在userThemeMap
+  $exists: false;
+  @each $theme in $user-theme-names {
+    @if map.has-key(map.get($userThemeMap, $theme), $key) {
+      $exists: true;
+    }
+  }
+  @if $exists {
+    @warn "#{$key} already exists in $userThemeMap";
+  }
+
+  // 更新 $userThemeMap
+  @each $theme in $user-theme-names {
+    $val: map.get($themeMap, $theme);
+    $userThemeMap: map.set(
+      $userThemeMap,
+      $theme,
+      map.merge(map.get($userThemeMap, $theme), ($key: $val))
+    ) !global;
+  }
+
+  $prefix: #{$ns}-;
+
+  // 注入 CSS 变量
+  :root {
+    --#{$prefix}#{$key}: #{map.get($themeMap, $user-default-theme)};
+  }
+  @each $theme in $user-theme-names {
+    [data-theme='#{$theme}'] {
+      --#{$prefix}#{$key}: #{map.get($themeMap, $theme)};
+    }
+  }
+
+  $prefix: $ns !global;
+}
+
+/**
+ * 获取用户自定义的主题变量
+ */
+@function get-user-theme($key, $theme: null) {
+  $prefix: #{$ns}-;
+  @if $theme == null {
+    // 只传入 $key，默认使用当前主题变量
+    @return var(--#{$prefix}#{$key});
+  } @else {
+    // 校验 $theme 是否在 $userThemeMap 中存在
+    @if not map.has-key($userThemeMap, $theme) {
+      @error "Theme `#{$theme}` does not exist in $userThemeMap.";
+    }
+    // 传入 $theme 和 $key，返回静态 Sass 变量。即使用固定主题色
+    @return map.get(map.get($userThemeMap, $theme), $key);
+  }
+}

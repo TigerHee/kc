@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="686px" viewBox="0 0 1920 686" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>footer</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1920" height="686"></rect>
+        <linearGradient x1="96.8806384%" y1="44.7895136%" x2="59.0377282%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#10192D" offset="0%"></stop>
+            <stop stop-color="#000A1E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="78.0678071%" y1="47.0452031%" x2="31.3482182%" y2="60.7722232%" id="linearGradient-4">
+            <stop stop-color="#10192D" offset="0%"></stop>
+            <stop stop-color="#000A1E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="50%" x2="0%" y2="96.4024861%" id="linearGradient-5">
+            <stop stop-color="#10192D" offset="0%"></stop>
+            <stop stop-color="#000A1E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板备份-2" transform="translate(0.000000, -280.000000)">
+            <g id="footer" transform="translate(-0.000000, 280.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="矩形备份-9" fill="#000A1E" xlink:href="#path-1"></use>
+                <polygon id="路径" fill="url(#linearGradient-3)" mask="url(#mask-2)" points="1920 334.915507 1920 686 0 686 0 -280 1755.23389 -280"></polygon>
+                <path d="M841.293973,-280 L1399.01434,686 L-9.09494702e-13,686 L-9.09494702e-13,-280 L841.293973,-280 Z" id="形状结合" fill="url(#linearGradient-4)" mask="url(#mask-2)"></path>
+                <polygon id="矩形" fill="url(#linearGradient-5)" mask="url(#mask-2)" points="0 -59 745 686 0 686"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

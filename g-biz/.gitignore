@@ -1,0 +1,55 @@
+# dependencies
+/node_modules
+/packages/**/node_modules
+/packages/**/lib
+/packages/**/es
+/packages/**/.neeko
+/packages/**/stats
+/packages/gbiz-dev/dist
+/packages/gbiz-dev/.cache
+/storybook/node_modules
+/lib
+.yalc/
+!/packages/trade/lib
+
+# production
+/.next
+/.serverlesss
+/out
+
+# misc
+.DS_Store
+pm2-*.log
+npm-debug.log*
+.sentryclirc
+site-config.json
+stats.html
+
+.vscode/
+.idea/
+yarn-error.log
+package-lock.json
+.env
+.cache
+lerna-debug.log
+
+# neeko
+.neeko/
+.neeko.task.json
+.vault
+
+#包分析
+/.vault
+
+# off
+pre/*.json
+diff/*
+/zip/*.zip
+
+# jest
+/coverage
+/.jest
+
+.env.local
+.insightrc.js
+.nvmrc

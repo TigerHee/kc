@@ -1,0 +1,64 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="base/Segmented/Readme" />
+
+# Segmented 分段选择器
+分段选择器用于在多个选项间切换，常用于状态切换、视图切换等场景，是表单类组件。
+
+
+
+## 设计稿
+[设计稿链接](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=43241-59916&m=dev)
+
+## 为什么不叫 Tabs？
+Tabs 应包含内容区，Segmented 只负责选项切换，功能更接近 Tabs 的 tab 区域。
+
+## 代码演示
+
+```tsx
+// 受控
+const [val, setVal] = useState('A');
+<Segmented options={['A', 'B', 'C']} value={val} onChange={setVal} />
+
+// 非受控
+<Segmented options={['A', 'B', 'C']} defaultValue="B" onChange={console.log} />
+
+// 对象选项/禁用项
+<Segmented
+  options={[
+    { label: '一', value: '1' },
+    { label: '二', value: '2', disabled: true },
+    { label: '三', value: '3' },
+  ]}
+  value={val}
+  onChange={setVal}
+/>
+
+// variant/size/fullWidth/justified
+<Segmented options={['plain', 'slider', 'underlined']} variant="slider" size="large" fullWidth justified="stretch" />
+<Segmented options={['plain', 'slider', 'underlined']} variant="slider" size="large" fullWidth justified="auto" />
+```
+
+## API
+
+| 属性         | 说明                 | 类型                                      | 默认值    |
+| ------------ | -------------------- | ----------------------------------------- | --------- |
+| options      | 选项列表             | (string \| number \| Option)[]            | -         |
+| value        | 当前值（受控）        | string \| number                          | -         |
+| defaultValue | 默认值（非受控）      | string \| number                          | -         |
+| onChange     | 变化回调             | (value) => void                           | -         |
+| variant      | 视觉风格             | 'plain' \| 'slider' \| 'underlined'       | 'plain'   |
+| size         | 尺寸                 | 'small' \| 'medium' \| 'large'            | 'medium'  |
+| disabled     | 是否禁用             | boolean                                   | false     |
+| fullWidth    | 是否占满父容器宽度    | boolean                                   | false     |
+| justified    | 选项分布方式         | 'stretch' \| 'auto'                        | -         |
+| className    | 自定义类名           | string                                    | -         |
+
+Option 类型：
+```ts
+interface Option {
+  label: React.ReactNode;
+  value: string | number;
+  disabled?: boolean;
+}
+```

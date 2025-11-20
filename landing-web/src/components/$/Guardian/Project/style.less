@@ -1,0 +1,61 @@
+
+
+#project_right{
+  overflow-y: scroll;
+}
+.project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 120px;
+  & > div{
+    width: 45%;
+    &:nth-child(2){
+      overflow-y: scroll;
+    }
+  }
+  *::-webkit-scrollbar {
+    background: transparent;
+    width: 2px;
+    height: 2px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: fade(#fff, 30);
+  }
+
+
+
+  :global{
+    .motivation_wrapper{
+      margin-bottom: 30px;
+    }
+  }
+
+
+}
+.project_h5{
+  // display: flex;
+  padding: 0 ~`px2rem(6)`;
+  *::-webkit-scrollbar {
+    background: transparent;
+    width: 2px;
+    height: 2px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: fade(#fff, 30);
+  }
+  :global{
+    .motivation_wrapper{
+      margin-bottom: ~`px2rem(30)`;
+    }
+  }
+
+}

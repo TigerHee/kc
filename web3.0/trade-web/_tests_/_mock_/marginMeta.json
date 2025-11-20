@@ -1,0 +1,40 @@
+{
+  "isFirstFetchDetail": false,
+  "borrowFormVisible": false,
+  "repayFormVisible": false,
+  "currentMarket": "BTC",
+  "isMargin": false,
+  "userPosition": null,
+  "positionDetail": {},
+  "liabilityRate": 0,
+  "autoLendConfig": {},
+  "marginModalConfig": {
+    "open": false,
+    "modalType": 0
+  },
+  "autoRepayConfirmOpen": false,
+  "debtModalVisible": false,
+  "configs": {
+    "earlyWarningDebtRatio": "0.95",
+    "warnDebtRatio": "0",
+    "remindDebtRatio": "0",
+    "liquidationDebtRatio": "0.97",
+    "transferableAmountDebtRatio": "0.6",
+    "transferableAmountDebtBufferRatio": "0.001",
+    "maxLeverage": 10,
+    "defaultLeverage": 3,
+    "riskLeverage": 5,
+    "borrowableDebtBufferRatio": "0.01",
+    "maxAutoLoanDebtRatio": "0.96",
+    "riskGrade": "0.6,0.85",
+    "remindPriceDeviateRatio": "0.1",
+    "subAccRiskLimitRatio": "0.05"
+  },
+  "borrowSizeMap": {},
+  "agreement": {},
+  "crossCurrencies": [],
+  "crossCurrenciesMap": {},
+  "loanCurrencies": [],
+  "loanCurrenciesMap": {},
+  "examContent": []
+}

@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    volumes:
+      - ~/data/db:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - insight-network
+networks:
+  insight-network:
+    driver: bridge

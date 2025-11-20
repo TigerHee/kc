@@ -1,0 +1,35 @@
+.coinBox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 100px;
+}
+
+.styledCoinIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.coinTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coinTitle {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  color: var(--kux-text);
+}
+
+.coinFullName {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: var(--kux-text40);
+}
+

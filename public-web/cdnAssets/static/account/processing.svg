@@ -1,0 +1,23 @@
+<svg width="181" height="180" viewBox="0 0 181 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.08" cx="90.5" cy="90" r="66" fill="#8CB2C1"/>
+<circle opacity="0.12" cx="90.5" cy="90" r="50" fill="#8CB2C1"/>
+<circle cx="90.4998" cy="89.9998" r="33.3333" fill="#8CB2C1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.4445 43.0553L14.5 40.4998L23.4445 37.9442L26 28.9998L28.5555 37.9442L37.5 40.4998L28.5555 43.0553L26 51.9998L23.4445 43.0553Z" fill="#B8C6D8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M154.167 31.3333L149.5 29.9999L154.167 28.6666L155.5 23.9999L156.833 28.6666L161.5 29.9999L156.833 31.3333L155.5 35.9999L154.167 31.3333Z" fill="#B8C6D8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M139.722 169.778L133.5 168L139.722 166.222L141.5 160L143.278 166.222L149.5 168L143.278 169.778L141.5 176L139.722 169.778Z" fill="#B8C6D8"/>
+<circle cx="11.5" cy="56" r="2" fill="#B8C6D8"/>
+<circle cx="135" cy="17.5" r="1.5" fill="#B8C6D8"/>
+<circle cx="2" cy="142.5" r="1.5" fill="#B8C6D8"/>
+<circle cx="160" cy="47.5" r="1.5" fill="#B8C6D8"/>
+<circle cx="153" cy="158.5" r="1.5" fill="#B8C6D8"/>
+<circle cx="45.5" cy="27" r="3" fill="#B8C6D8"/>
+<circle cx="168" cy="40.5" r="2.5" fill="#B8C6D8"/>
+<circle cx="118" cy="165.5" r="2.5" fill="#B8C6D8"/>
+<circle cx="13" cy="125.5" r="2.5" fill="#B8C6D8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.9498 148.5L18 143.55L13.0503 148.5L18 153.45L22.9498 148.5ZM14.4645 148.5L18 144.964L21.5356 148.5L18 152.036L14.4645 148.5Z" fill="#B8C6D8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M160.95 136.5L156 131.55L151.05 136.5L156 141.45L160.95 136.5ZM152.465 136.5L156 132.964L159.536 136.5L156 140.036L152.465 136.5Z" fill="#B8C6D8"/>
+<path d="M82.5 75H98.5V82.8676L90.5 87.6676L82.5 82.8676V75Z" stroke="white" stroke-width="4"/>
+<path d="M82.5 103V95.1324L90.5 90.3324L98.5 95.1324V103H82.5Z" stroke="white" stroke-width="4"/>
+<rect x="84.5" y="99" width="12" height="2" fill="white"/>
+<path d="M83.5 82V79H97.5V82L90.5 86L83.5 82Z" fill="white"/>
+</svg>

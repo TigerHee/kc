@@ -1,0 +1,111 @@
+@import '~themes/mix.less';
+
+@keyframes move {
+  0%,
+  65% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  85% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  95% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes move {
+  0%,
+  65% {
+    -webkit-transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(10deg);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+  }
+  80% {
+    -webkit-transform: rotate(10deg);
+  }
+  85% {
+    -webkit-transform: rotate(-10deg);
+  }
+  90% {
+    -webkit-transform: rotate(10deg);
+  }
+  95% {
+    -webkit-transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.notice {
+  width: 100%;
+  min-height: 87px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(1, 8, 30, 0.87);
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({min-height: 66px; padding: 0 24px;});
+  .mediaQuerySm({padding: 0 12px;});
+}
+.inner {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.noticeImg {
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+  animation: move 2s 0s infinite;
+  -webkit-animation: move 2s 0s infinite;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 16px; height: 16px;});
+}
+.tipText {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({font-size: 14px;});
+}
+.closeImg {
+  width: 16px;
+  height: 16px;
+  margin-left: 84px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  .mediaQueryMd({width: 14px; height: 14px;});
+  .mediaQuerySm({margin-left: 4px;});
+}
+
+.noticeImgRever {
+  margin-right: unset;
+  margin-left: 9px;
+}
+.closeImgRever {
+  margin-left: unset;
+  margin-right: 84px;
+  .mediaQuerySm({margin-left: unset;margin-right: 4px;});
+}

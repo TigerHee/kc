@@ -1,0 +1,63 @@
+.richTextWrapper {
+  
+}
+
+.title {
+  
+  margin-top: 24px;
+  margin-bottom: 12px;
+  
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  
+  color: var(--color-text);
+  
+}
+
+.article {
+  
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  
+  color: var(--color-text60);
+  
+  & > p {
+  min-height: 1em;
+  margin-bottom: 0;
+  }
+  
+}
+
+.content {
+  position: relative;
+  &.ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+}
+
+.viewMore {
+  
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-left: 2px;
+  background: var(--color-base);
+  
+  span {
+  margin-left: 13px;
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  }
+}

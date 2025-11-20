@@ -1,0 +1,132 @@
+@import '@/styles/mixin.scss';
+
+.platformItemWrapper {
+  position: relative;
+}
+
+.platformLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--kux-textEmphasize);
+  transition: all 0.2s ease;
+  @include media-query('sm') {
+    transition: none;
+  }
+
+  &:hover {
+    color: var(--kux-textEmphasize);
+    transform: scale(1.05);
+    @include media-query('sm') {
+      transform: none;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--kux-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  // @include media-query('sm') {
+  //   transition: none;
+  //   &:hover {
+  //     transform: none;
+  //   }
+  // }
+}
+
+.platformIconWrapper {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  @include media-query('sm') {
+    transition: none;
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+.platformIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  @include media-query('lg') {
+    width: 48px;
+    height: 48px;
+    transition: none;
+    &:hover {
+      filter: none;
+    }
+  }
+  @include media-query('sm') {
+    width: 48px;
+    height: 48px;
+    transition: none;
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.platformTooltip {
+  padding: 8px 0;
+
+  @include media-query('sm') {
+    padding: 0;
+  }
+}
+
+.tooltipContent {
+  @include media-query('sm') {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .tooltipLink {
+    display: block;
+    padding: 6px 12px;
+    color: var(--kux-text);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    transition: all 0.2s ease;
+
+    a {
+      color: var(--kux-text);
+    }
+
+    &:hover {
+      background: var(--kux-cover4);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--kux-divider);
+    }
+
+    @include media-query('sm') {
+      padding: 6px 12px;
+      font-size: 13px;
+      min-width: 100px;
+    }
+  }
+}

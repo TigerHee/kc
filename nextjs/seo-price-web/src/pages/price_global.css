@@ -1,0 +1,154 @@
+:root {
+  --color-down: #ff5f73;
+  --color-up: #01aa78;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --primary: #24ae8f;
+  --error-color: #ED6666;
+
+  --color-danger: #ED6666;
+  --color-success: #2DBD96;
+  --color-gray: rgba(0, 0, 0, .43);
+  --warning-color: #FFB547;
+  --color-high: var(--color-up);
+  --color-low: var(--color-down);
+
+  --color-buy: var(--color-up);
+  --color-sell: var(--color-down);
+  --font-size-lg: 16px;
+  --border-color-base: rgba(0, 20, 42, 0.08);
+
+  --process-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+b {
+  font-weight: 500;
+}
+
+#root {
+  width: 100%;
+}
+#hook_indexes {
+  height: 136px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.wrap {
+  white-space: normal;
+}
+.full-width {
+  width: 100%;
+}
+.color-white {
+  color: #fff;
+}
+.color-light-gray {
+  color: #cdcdcd;
+}
+.color-gray {
+  color: rgba(0, 0, 0, 0.4);
+}
+.color-pro-gray {
+  color: #8093a1;
+}
+.color-gray1 {
+  color: rgba(0, 0, 0, 0.53);
+}
+.color-high {
+  color: var(--color-high);
+}
+.color-low {
+  color: var(--color-low);
+}
+.color-buy {
+  color: var(--color-buy);
+}
+.color-title {
+  color: #7685a9;
+}
+.color-sell {
+  color: var(--color-sell);
+}
+.color-success {
+  color: var(--color-success);
+}
+.color-warn {
+  color: var(--warning-color);
+}
+
+.color-otc-red {
+  color: #c63c4d;
+}
+.font-weight {
+  font-weight: 500;
+}
+.font-lg {
+  font-size: var(--font-size-lg);
+}
+.font-lg-x {
+  font-size: var(--font-size-lg + 2px);
+}
+.font-lg-xx {
+  font-size: var(--font-size-lg + 4px);
+}
+.blocked {
+  display: block;
+}
+.pointer {
+  cursor: pointer;
+}
+.circle-wraper {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 24px;
+}
+.link-gray {
+  color: rgba(0, 0, 0, 0.7);
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ellipsis2Line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+

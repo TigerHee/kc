@@ -1,0 +1,53 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "loose": true,
+        "modules": false,
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+        }
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "@kc/mui",
+        "libraryDirectory": "lib/components",
+        "camel2DashComponentName": false
+      },
+      "@kc/mui"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "@kufox/mui",
+        "libraryDirectory": "/",
+        "camel2DashComponentName": false
+      },
+      "@kufox/mui"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "@kufox/icons",
+        "libraryDirectory": "lib/components",
+        "camel2DashComponentName": false
+      },
+      "@kufox/icons"
+    ],
+    [
+      "@babel/proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/proposal-class-properties",
+    "@babel/external-helpers",
+    "@babel/transform-runtime"
+  ]
+}

@@ -1,0 +1,17 @@
+export default {
+  "wtvAa6fsU5APWF5H3bEqQN": "Lihat <1>Kebijakan Privasi</1> dan <3>Ketentuan Penggunaan</3>",
+  "3Dn54WPNF5VzE5PZNVQ42C": "Ulangi Verifikasi",
+  "aGLiVVCYQQc3qbqz9Rugmb": "Pemberitahuan",
+  "aZursHyMzqCf8q23258vE2": "Batalkan",
+  "g3qDpMcCoxeKi1vbF8pmJ5": "Karena Anda tidak menyelesaikan verifikasi identitas dalam rentang waktu yang ditentukan, status Anda telah direset menjadi Belum Terverifikasi. Silakan kirim informasi verifikasi identitas Anda lagi.",
+  "hKKLHfYD47D8jZ3bRWr8Nb": "Ulangi Verifikasi",
+  "hXuuxGgQZ3pYpPEhtXFepB": "Berdasarkan informasi verifikasi identitas, Anda bertempat tinggal di negara atau wilayah di mana kami tidak dapat menyediakan layanan karena hukum dan regulasi setempat. Kami mohon maaf atas ketidaknyamanan yang mungkin terjadi.",
+  "s7bVrYwynBGUQWmFfoTnsA": "Lihat <1>Persetujuan Pengguna</1> kami untuk informasi lebih lanjut mengenai kebijakan terkait.",
+  "ugX6gMQu3aTn5fgBnWUC2o": "Jika Anda bukan bertempat tinggal dari negara/wilayah ini, silakan kirimkan ulang verifikasi identitas Anda sebelum <1> {{date}} (UTC)</1>. Jika tidak, <3>status verifikasi identitas akan direset menjadi Belum Terverifikasi</3>.",
+  "2vW7TMpb66typtNx1LDyNt": "Verifikasi Identitas",
+  "262ee07aefe84000a800": "Jika Anda bukan berasal dari wilayah ini, silakan kirimkan ulang verifikasi identitas Anda segera untuk menghindari gangguan pada layanan Anda.",
+  "0e5612829fed4800a0b7": "Migrasi Sekarang",
+  "8b2da0659a454800a2cc": "Migrasi Situs",
+  "96f0872977434800a621": "Mungkin Nanti",
+  "ed57cb44a83b4800a23d": "Berdasarkan informasi ID Anda, kami menyarankan migrasi ke {{targetSiteName}} untuk peningkatan pengalaman."
+}

@@ -1,0 +1,173 @@
+{
+  "CSP": {
+    "currencyType": "COMMON",
+    "innerWithdrawMinFee": "0",
+    "isDebitEnabled": true,
+    "withdrawRemark": "222",
+    "depositEffectAt": "1655200858000",
+    "withdrawDisabledTip": "",
+    "precision": 8,
+    "contractAddress": "0xa6446d655a0c34bc4f05042ee88170d056cbaf45",
+    "orgAddress": "",
+    "makerFeeCoefficient": "1.00",
+    "type": 1,
+    "isDepositEnabled": false,
+    "withdrawMinSize": "4000.000000",
+    "userAddressName": "",
+    "txUrl": "https://etherscan.io/tx/{txId}",
+    "createdAt": 1550738742000,
+    "feeCategory": 1,
+    "preWithdrawTipEnabled": "false",
+    "currencyName": "CSP",
+    "isDisplayDeposit": true,
+    "currency": "CSP",
+    "depositMinSize": "1.0001",
+    "preConfirmationCount": null,
+    "takerFeeCoefficient": "1.00",
+    "iconUrl": "https://currency-sit.kucoin.net/6342704e6078f00001f7d49b_pic3.jpg",
+    "isDisplayWithdraw": true,
+    "preDepositTip": "{\"en_US\":\"1321\",\"zh_CN\":\"321\"}",
+    "preWithdrawTip": "{\"en_US\":\"嘻嘻嘻\"}",
+    "showStakingRemark": "false",
+    "withdrawMinFee": "2.5",
+    "preDepositTipEnabled": "true",
+    "chainName": "ERC20",
+    "isChainEnabled": "false",
+    "isDigital": true,
+    "chainFullName": "Ethereum",
+    "depositDisabledTip": "",
+    "showDepositRemark": "true",
+    "withdrawFeeRate": "0",
+    "confirmationCount": "12",
+    "name": "Caspian",
+    "depositRemark": "111",
+    "showWithdrawRemark": "true",
+    "isWithdrawEnabled": false,
+    "isMarginEnabled": false,
+    "key": "CSP",
+    "coin": "CSP",
+    "step": "0.00000001",
+    "decimals": [
+      {
+        "length": 8,
+        "group": 100
+      },
+      {
+        "length": 7,
+        "group": 1000
+      },
+      {
+        "length": 6,
+        "group": 10000
+      },
+      {
+        "length": 5,
+        "group": 100000
+      },
+      {
+        "length": 4,
+        "group": 1000000
+      },
+      {
+        "length": 3,
+        "group": 10000000
+      },
+      {
+        "length": 2,
+        "group": 100000000
+      },
+      {
+        "length": 1,
+        "group": 1000000000
+      }
+    ],
+    "isContractEnabled": false,
+    "isPoolEnabled": true
+  },
+  "LOKI": {
+    "currencyType": "COMMON",
+    "innerWithdrawMinFee": "0",
+    "isDebitEnabled": true,
+    "depositEffectAt": "1670920970000",
+    "withdrawDisabledTip": "Node Maintenance｜节点维护",
+    "precision": 8,
+    "orgAddress": "",
+    "makerFeeCoefficient": "1.00",
+    "type": 1,
+    "isDepositEnabled": true,
+    "stakingRemark": "LOKI is one of the supported tokens in the Soft Staking program. Deposit and transfer LOKI to your Pool-X account and you will get bonus return from the platform.  <a href=\"https://pool-x.io/staking/soft\">Click here</a> to check daily return rate.",
+    "withdrawMinSize": "0.0000001",
+    "withdrawEffectAt": "1659090482000",
+    "userAddressName": "",
+    "txUrl": "https://lokiblocks.com/tx/{txId}",
+    "createdAt": 1551079214000,
+    "feeCategory": 1,
+    "preWithdrawTipEnabled": "true",
+    "currencyName": "OXEN",
+    "isDisplayDeposit": true,
+    "currency": "LOKI",
+    "depositMinSize": "0.00000001",
+    "preConfirmationCount": null,
+    "takerFeeCoefficient": "1.00",
+    "iconUrl": "https://assets-currency.kucoin.net/60c75945db892b0006d81d0a_OXEN.png",
+    "isDisplayWithdraw": true,
+    "preDepositTip": "",
+    "showStakingRemark": "false",
+    "preWithdrawTip": "",
+    "withdrawMinFee": "0.00000001",
+    "preDepositTipEnabled": "true",
+    "chainName": "LOKI",
+    "isChainEnabled": "false",
+    "isDigital": true,
+    "walletPrecision": "9",
+    "chainFullName": "LOKI",
+    "depositDisabledTip": "Node Maintenance | 节点升级",
+    "showDepositRemark": "false",
+    "withdrawFeeRate": "0",
+    "confirmationCount": "10",
+    "name": "Oxen",
+    "depositRemark": "[Attention] Please note that the deposit address has changed!",
+    "showWithdrawRemark": "false",
+    "isWithdrawEnabled": true,
+    "isMarginEnabled": true,
+    "key": "LOKI",
+    "coin": "LOKI",
+    "step": "0.00000001",
+    "decimals": [
+      {
+        "length": 8,
+        "group": 100
+      },
+      {
+        "length": 7,
+        "group": 1000
+      },
+      {
+        "length": 6,
+        "group": 10000
+      },
+      {
+        "length": 5,
+        "group": 100000
+      },
+      {
+        "length": 4,
+        "group": 1000000
+      },
+      {
+        "length": 3,
+        "group": 10000000
+      },
+      {
+        "length": 2,
+        "group": 100000000
+      },
+      {
+        "length": 1,
+        "group": 1000000000
+      }
+    ],
+    "isContractEnabled": false,
+    "isPoolEnabled": true
+  }
+}

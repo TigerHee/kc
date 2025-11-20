@@ -1,0 +1,372 @@
+[
+  {
+    "group": "0 Button Color",
+    "tokens": [
+      {
+        "name": "Primary-Button",
+        "light": "2 Text/100%",
+        "dark": "#F3F3F3"
+      },
+      {
+        "name": "Secondary-Button",
+        "light": "3 Cover/4%",
+        "dark": "3 Cover/8%"
+      }
+    ]
+  },
+  {
+    "group": "0 Button Text",
+    "tokens": [
+      {
+        "name": "Primary-Button-Text",
+        "light": "2 Text/Text Emphasize",
+        "dark": "#1D1D1D"
+      },
+      {
+        "name": "Secondary-Button-Text",
+        "light": "2 Text/100%",
+        "dark": "2 Text/100%"
+      }
+    ]
+  },
+  {
+    "group": "1 Brand Green",
+    "tokens": [
+      {
+        "name": "100%",
+        "light": "#00B47D",
+        "dark": "#00B47D"
+      },
+      {
+        "name": "60%",
+        "light": "#00B47D · 60%",
+        "dark": "#00B47D · 60%"
+      },
+      {
+        "name": "40%",
+        "light": "#00B47D · 40%",
+        "dark": "#00B47D · 40%"
+      },
+      {
+        "name": "20%",
+        "light": "#00B47D · 20%",
+        "dark": "#00B47D · 20%"
+      },
+      {
+        "name": "12%",
+        "light": "#00B47D · 12%",
+        "dark": "#00B47D · 12%"
+      },
+      {
+        "name": "8%",
+        "light": "#00B47D · 8%",
+        "dark": "#00B47D · 8%"
+      },
+      {
+        "name": "4%",
+        "light": "#00B47D · 4%",
+        "dark": "#00B47D · 4%"
+      }
+    ]
+  },
+  {
+    "group": "2 Text",
+    "tokens": [
+      {
+        "name": "100%",
+        "light": "#1D1D1D",
+        "dark": "#F3F3F3"
+      },
+      {
+        "name": "60%",
+        "light": "#1D1D1D · 60%",
+        "dark": "#F3F3F3 · 60%"
+      },
+      {
+        "name": "40%",
+        "light": "#1D1D1D · 48%",
+        "dark": "#F3F3F3 · 40%"
+      },
+      {
+        "name": "30%",
+        "light": "#1D1D1D · 30%",
+        "dark": "#F3F3F3 · 30%"
+      },
+      {
+        "name": "20%",
+        "light": "#1D1D1D · 20%",
+        "dark": "#F3F3F3 · 20%"
+      },
+      {
+        "name": "Text Emphasize",
+        "light": "#FFFFFF",
+        "dark": "#1D1D1D"
+      }
+    ]
+  },
+  {
+    "group": "3 Cover",
+    "tokens": [
+      {
+        "name": "16%",
+        "light": "#1D1D1D · 16%",
+        "dark": "#F3F3F3 · 16%"
+      },
+      {
+        "name": "12%",
+        "light": "#1D1D1D · 12%",
+        "dark": "#F3F3F3 · 12%"
+      },
+      {
+        "name": "8%",
+        "light": "#1D1D1D · 8%",
+        "dark": "#F3F3F3 · 8%"
+      },
+      {
+        "name": "4%",
+        "light": "#1D1D1D · 4%",
+        "dark": "#F3F3F3 · 4%"
+      },
+      {
+        "name": "2%",
+        "light": "#1D1D1D · 2%",
+        "dark": "#F3F3F3 · 2%"
+      }
+    ]
+  },
+  {
+    "group": "4 General",
+    "tokens": [
+      {
+        "name": "icon 100",
+        "light": "#8C8C8C",
+        "dark": "#8C8C8C"
+      },
+      {
+        "name": "icon 60",
+        "light": "#8C8C8C · 60%",
+        "dark": "#8C8C8C · 60%"
+      },
+      {
+        "name": "icon 40",
+        "light": "#8C8C8C · 40%",
+        "dark": "#8C8C8C · 40%"
+      },
+      {
+        "name": "Tool tips",
+        "light": "#2D2D2F",
+        "dark": "#2D2D2F"
+      }
+    ]
+  },
+  {
+    "group": "5 Divider",
+    "tokens": [
+      {
+        "name": "8%",
+        "light": "#1D1D1D · 8%",
+        "dark": "#F3F3F3 · 8%"
+      },
+      {
+        "name": "4%",
+        "light": "#1D1D1D · 4%",
+        "dark": "#F3F3F3 · 4%"
+      },
+      {
+        "name": "block",
+        "light": "#F9F9F9",
+        "dark": "#000000"
+      },
+      {
+        "name": "info dash line",
+        "light": "#1D1D1D · 20%",
+        "dark": "#F3F3F3 · 20%"
+      }
+    ]
+  },
+  {
+    "group": "6 Bullet Layer",
+    "tokens": [
+      {
+        "name": "Bullet Layer",
+        "light": "#FFFFFF",
+        "dark": "#222223"
+      },
+      {
+        "name": "Toast",
+        "light": "#6D6D6D",
+        "dark": "#8C8C8C"
+      },
+      {
+        "name": "Toast(WEB)",
+        "light": "#222223",
+        "dark": "#FFFFFF"
+      }
+    ]
+  },
+  {
+    "group": "7 Background",
+    "tokens": [
+      {
+        "name": "Background(WEB)",
+        "light": "#F9F9F9",
+        "dark": "#222222"
+      },
+      {
+        "name": "Background(APP)",
+        "light": "#F9F9F9",
+        "dark": "#121212"
+      },
+      {
+        "name": "Overlay",
+        "light": "#FFFFFF",
+        "dark": "#121212"
+      }
+    ]
+  },
+  {
+    "group": "8 Mask",
+    "tokens": [
+      {
+        "name": "Mask",
+        "light": "#000D1D · 30%",
+        "dark": "#000000 · 60%"
+      }
+    ]
+  },
+  {
+    "group": "9 Brand Red",
+    "tokens": [
+      {
+        "name": "100%",
+        "light": "#F65454",
+        "dark": "#F65454"
+      },
+      {
+        "name": "60%",
+        "light": "#F65454 · 60%",
+        "dark": "#F65454 · 60%"
+      },
+      {
+        "name": "40%",
+        "light": "#F65454 · 40%",
+        "dark": "#F65454 · 40%"
+      },
+      {
+        "name": "20%",
+        "light": "#F65454 · 20%",
+        "dark": "#F65454 · 20%"
+      },
+      {
+        "name": "12%",
+        "light": "#F65454 · 12%",
+        "dark": "#F65454 · 12%"
+      },
+      {
+        "name": "8%",
+        "light": "#F65454 · 8%",
+        "dark": "#F65454 · 8%"
+      },
+      {
+        "name": "4%",
+        "light": "#F65454 · 4%",
+        "dark": "#F65454 · 4%"
+      }
+    ]
+  },
+  {
+    "group": "10 Complementary Yellow",
+    "tokens": [
+      {
+        "name": "100%",
+        "light": "#F8B200",
+        "dark": "#F8B200"
+      },
+      {
+        "name": "60%",
+        "light": "#F8B200 · 60%",
+        "dark": "#F8B200 · 60%"
+      },
+      {
+        "name": "40%",
+        "light": "#F8B200 · 40%",
+        "dark": "#F8B200 · 40%"
+      },
+      {
+        "name": "20%",
+        "light": "#F8B200 · 20%",
+        "dark": "#F8B200 · 20%"
+      },
+      {
+        "name": "12%",
+        "light": "#F8B200 · 12%",
+        "dark": "#F8B200 · 12%"
+      },
+      {
+        "name": "8%",
+        "light": "#F8B200 · 8%",
+        "dark": "#F8B200 · 8%"
+      },
+      {
+        "name": "4%",
+        "light": "#F8B200 · 4%",
+        "dark": "#F8B200 · 4%"
+      }
+    ]
+  },
+  {
+    "group": "11 Wallet Green",
+    "tokens": [
+      {
+        "name": "100%",
+        "light": "#18CA51",
+        "dark": "#0CC372"
+      },
+      {
+        "name": "60%",
+        "light": "#18CA51 · 60%",
+        "dark": "#0CC372 · 60%"
+      },
+      {
+        "name": "40%",
+        "light": "#18CA51 · 40%",
+        "dark": "#0CC372 · 40%"
+      },
+      {
+        "name": "20%",
+        "light": "#18CA51 · 20%",
+        "dark": "#0CC372 · 20%"
+      },
+      {
+        "name": "12%",
+        "light": "#18CA51 · 12%",
+        "dark": "#0CC372 · 12%"
+      },
+      {
+        "name": "8%",
+        "light": "#18CA51 · 8%",
+        "dark": "#0CC372 · 8%"
+      },
+      {
+        "name": "4%",
+        "light": "#18CA51 · 4%",
+        "dark": "#0CC372 · 4%"
+      }
+    ]
+  },
+  {
+    "group": "12 illustration",
+    "tokens": [
+      {
+        "name": "illustration Green",
+        "light": "#D3F475",
+        "dark": "#D3F475"
+      },
+      {
+        "name": "illustration Green2",
+        "light": "#25D17F",
+        "dark": "#25D17F"
+      }
+    ]
+  }
+]

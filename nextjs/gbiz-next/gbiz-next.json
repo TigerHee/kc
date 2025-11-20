@@ -1,0 +1,28 @@
+{
+  "web_type": "static",
+  "pre_copy": false,
+  "node_version": "v22.14.0",
+  "docker_image": "harbor-hkidc.kcprd.com/base/node:22.14.0-bullseye",
+  "offline_params": {
+    "build_cmd": "yarn run build",
+    "dist_copy": {
+      "on_opts": true,
+      "copy_file": "dist/assets/externals/import-map",
+      "copy_path": "gbiz-next",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": false
+    },
+    "cdn_copy": {
+      "on_opts": true,
+      "copy_file": "dist/assets",
+      "copy_path": "gbiz-next",
+      "copy_cmd": "rsync",
+      "exclude_file": [],
+      "delete_opts": false
+    },
+    "other_opts": ""
+  },
+  "url": "ssh://git@bitbucket.kucoin.net/kuc3/gbiz-next.git",
+  "app_type": "web"
+}

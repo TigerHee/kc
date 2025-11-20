@@ -1,0 +1,91 @@
+/**
+ * 文字排版工具类
+ */
+@import './common.scss';
+
+// 文字头对齐
+.#{$ns}-text-start {
+  text-align: start;
+}
+// 文字尾对齐
+.#{$ns}-text-end {
+  text-align: end;
+}
+// 文字居中对齐
+.#{$ns}-text-center {
+  text-align: center;
+}
+// 文字单行省略号
+.#{$ns}-ellipsis {
+  @include ellipsis;
+}
+// 文字2行省略号
+.#{$ns}-ellipsis-2 {
+  @include ellipsis(2);
+}
+// 文字3行省略号
+.#{$ns}-ellipsis-3 {
+  @include ellipsis(3);
+}
+
+// 文字头部省略号
+.#{$ns}-leading-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
+  text-align: left;
+
+  [dir='rtl'] & {
+    direction: ltr;
+    text-align: right;
+  }
+}
+
+/*
+ * 内容中心旋转翻转 180度
+ */
+.#{$ns}-inverted {
+  transform: rotate(180deg);
+}
+
+/*
+ * 仅在RTL 下内容旋转 180度
+ */
+.#{$ns}-inverted-rtl {
+  [dir='rtl'] & {
+    transform: rotate(180deg);
+  }
+  // RTL 内嵌 LTR 内容时保证不翻转
+  [dir='ltr'] & {
+    transform: rotate(0);
+  }
+}
+
+/*
+ * 内容对称翻转
+ */
+.#{$ns}-flip {
+  transform: scaleX(-1);
+}
+
+/*
+ * 仅在RTL 下内容对称翻转
+ */
+.#{$ns}-flip-rtl {
+  [dir='rtl'] & {
+    transform: scaleX(-1);
+    &.#{$ns}-inverted {
+      transform: rotate(180deg) scaleX(-1);
+    }
+  }
+
+  // RTL 内嵌 LTR 内容时保证不翻转
+  [dir='ltr'] & {
+    transform: scaleX(1);
+
+    &.#{$ns}-inverted {
+      transform: rotate(180deg) scaleX(1);
+    }
+  }
+}

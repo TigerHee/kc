@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Perdagangan global mudah dan aman 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "Daftar dan kuasai pasar dengan cepat!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Kuasai pasar di mana saja 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "80 Rb+ Ulasan",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "Verifikasi, setor, dan beli kripto secepat kilat!",
+  "rw8e32A8H7X3QtiKHS37EK": "Unduh",
+  "tXwwyoSbqG4pgsoXomccjp": "Unduh aplikasi {{brandName}} untuk dapatkan reward hingga {{num}} {{siteBaseCurrency}}.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Pengguna Baru Mendapatkan",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Klaim Sekarang",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5 Jt+</1> Unduhan",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100 Rb+ Ulasan)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16 Rb+ Ulasan)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Eksklusif untuk pengguna baru: jika setoran atau pembelian kripto pertama Anda lebih dari $50, Anda akan mendapatkan kotak misteri senilai hingga <span>$500</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Unduh",
+  "csjK9uyQQyYMLprAYkKsRT": "Unduh aplikasi {{brandName}} untuk melanjutkan perjalanan kripto Anda, dan dapatkan hadiah hingga <span>$500</span> di Zona Pemula.",
+  "oiiFHQ3NZu5zSYqpSGreye": "Setor atau beli kripto untuk pertama kalinya dan dapatkan kotak misteri senilai hingga <span>$500</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "Hadiah Hingga <span>$500</span> untuk Pengguna Baru!",
+  "wLAfc8MZvoHbeNragecB4Z": "Trading lebih aman dan lebih cepat menggunakan aplikasi seluler kami."
+}

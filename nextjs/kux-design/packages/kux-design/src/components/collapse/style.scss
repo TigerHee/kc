@@ -1,0 +1,123 @@
+@import '@/style/index.scss';
+
+@mixin collapse-middle-size() {
+  .#{$prefix}-panel {
+    padding: 0 40px;
+
+    &-header {
+      padding: 32px 0;
+      font-size: 24px;
+
+      .#{$ns}-icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &-content {
+      font-size: 18px;
+
+      &-inner {
+        padding: 24px 0 32px;
+      }
+    }
+
+    &.active {
+      .#{$prefix}-panel-header {
+        padding-bottom: 24px;
+      }
+    }
+  }
+}
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-collapse 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'collapse'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('collapse') {
+
+  &-panel {
+    padding: 0 16px;
+    
+    background-color: get-theme(cover2);
+    border-radius: 16px;
+
+    & + & {
+      margin-top: 24px;
+    }
+
+    &-header {
+      font-size: 16px;
+      padding: 16px 0;
+      
+      font-weight: 500;
+      color: get-theme(text);
+      cursor: pointer;
+      transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &-icon {
+        display: flex;
+        align-items: center;
+        margin-inline-start: 8px;
+      }
+
+      .#{$ns}-icon {
+        width: 24px;
+        height: 24px;
+        
+      }
+    }
+
+    &-content {
+      box-sizing: border-box;
+      height: 0px;
+      transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+      opacity: 0;
+      color: get-theme(text40);
+      font-size: 16px;
+      
+      
+      &-inner {
+        border-top: 1px solid transparent;
+        padding: 16px 0;
+        
+      }
+    }
+    .triangle-icon {
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+    }
+
+    &.active {
+
+      .triangle-icon {
+        transform: rotate(-180deg);
+      }
+
+      .#{$prefix}-panel-header {
+        padding-bottom: 16px;
+      }
+      .#{$prefix}-panel-content {
+        opacity: 1;
+        height: var(--kux-collapse-panel-content-height, 0);
+
+        &-inner {
+          border-color: get-theme(cover4);
+        }
+      }
+    }
+  }
+
+  
+
+  &.is-medium {
+    @include collapse-middle-size();
+  }
+
+  &.is-auto {
+    @include responsive(md) {
+      @include collapse-middle-size();
+    };
+  }
+}

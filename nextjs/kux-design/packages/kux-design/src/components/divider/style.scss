@@ -1,0 +1,69 @@
+@import '@/style/index.scss';
+
+@include component('divider') {
+  box-sizing: border-box;
+  color: get-theme(text60);
+  background: none;
+  margin: 1em 0;
+  border: none;
+  font-size: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &.is-horizontal {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    border: none;
+  }
+
+  &.is-vertical {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.5em;
+    vertical-align: middle;
+    border: none;
+    height: 1em;
+    width: 0;
+    min-width: 0;
+    border-left: 1px solid get-theme(divider8);
+  }
+  &-text {
+    margin: 0 1em;
+  }
+
+  .#{$prefix}-line-start,
+  .#{$prefix}-line-end,
+  .#{$prefix}-line-full {
+    border-top: 1px solid get-theme(divider8);
+  }
+
+  &.is-center {
+    .#{$prefix}-line-start, .#{$prefix}-line-end {
+      flex: 1;
+    }
+  }
+
+  &.is-start {
+    .#{$prefix}-line-end {
+      flex: 1;
+    }
+    .#{$prefix}-line-start {
+      flex-shrink: 0;
+      width: var(--kux-divider-orientation-margin, 0);
+    }
+  }
+  &.is-end {
+    .#{$prefix}-line-start {
+      flex: 1;
+    }
+    .#{$prefix}-line-end {
+      flex-shrink: 0;
+      width: var(--kux-divider-orientation-margin, 0);
+    }
+  }
+
+  .kux-divider-line-full {
+    flex: 1;
+  }
+}

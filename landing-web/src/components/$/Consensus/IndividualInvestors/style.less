@@ -1,0 +1,35 @@
+@import '~themes/mix.less';
+
+.out {
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.bigWord {
+  pointer-events: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 350px;
+  .mediaQueryMd({display: none;});
+}
+
+.tabContent {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 12px));
+  grid-gap: 48px 24px;
+  .mediaQuerySm({grid-gap: 24px 24px;});
+}
+
+.imgBox {
+  width: 100%;
+  margin-top: 100px;
+  .mediaQuerySm({margin-top: 60px;});
+}
+
+.igoImg {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 100px 0 rgba(90, 239, 194, 0.3);
+}

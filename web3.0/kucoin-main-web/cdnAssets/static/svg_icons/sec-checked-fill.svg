@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="安全设置" transform="translate(-558.000000, -266.000000)" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(558.000000, 266.000000)">
+                <path d="M12,0 C5.373,0 0,5.37 0,12 C0,18.63 5.373,24 12,24 C18.627,24 24,18.63 24,12 C24,5.37 18.627,0 12,0 Z" id="Fill-22-path" fill="#AEEAD8"></path>
+                <path d="M16.8265603,7.87168228 C16.8265603,7.87168228 11.5330603,17.0966823 11.4415603,17.1791823 C11.1393103,17.4641823 10.6645603,17.4491823 10.3818103,17.1491823 L6.95281026,13.9841823 C6.66931026,13.6841823 6.68506026,13.2041823 6.98731026,12.9266823 C7.28956026,12.6416823 7.76431026,12.6566823 8.04781026,12.9566823 L10.7313103,15.4316823 L15.5275603,7.12168228 C15.7345603,6.76918228 16.1928103,6.64168228 16.5520603,6.85168228 C16.9105603,7.05418228 17.0335603,7.51918228 16.8265603,7.87168228 Z" id="Fill-22-path" fill="#00815B"></path>
+            </g>
+        </g>
+    </g>
+</svg>

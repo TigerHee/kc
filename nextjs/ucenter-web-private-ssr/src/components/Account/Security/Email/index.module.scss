@@ -1,0 +1,44 @@
+.wrapper {
+  :global(.kux-form__item) {
+    :global(.kux-form__item-help) {
+      display: none;
+    }
+  }
+  :global(.kux-form__item.kux-form__item--error) {
+    :global(.kux-form__item-help) {
+      display: flex;
+    }
+  }
+  :global(.kux-form) {
+    & > div > div {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.alertWrapper {
+  margin-top: 16px;
+
+  .alert {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 16px;
+    font-size: 13px;
+    background: var(--kux-complementaryYellow8);
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+.phoneFormItem {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.phoneAreaSelectorWrapper {
+  display: flex;
+}
+
+.submitButton {
+  margin-top: 40px;
+}

@@ -1,0 +1,9 @@
+@mixin media-query($size) {
+  @if $size == 'sm' {
+    @media (max-width: 767px) { @content; }
+  } @else if $size == 'lg' {
+    @media (max-width: 1199px) { @content; }
+  } @else if $size == 'xl' {
+    @media (max-width: 1339px) { @content; }
+  }
+}

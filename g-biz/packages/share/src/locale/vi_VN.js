@@ -1,0 +1,15 @@
+export default {
+  "inviteB.manage.copy.share": "Đã sao chép! Hãy chia sẻ ngay!",
+  "inviteB.manage.remark": "Ghi chú",
+  "inviteB.manage.commission.yourrate": "Tỷ lệ hoa hồng của bạn",
+  "inviteB.manage.commisson.friendrate": "Chiết khấu phí cho bạn bè",
+  "inviteB.manage.poster.create": "Chia sẻ ngay",
+  "inviteB.manage.poster.share": "Chia sẻ ngay",
+  "69ti912QyqQK3RLThoqqNL": "Đăng ký để nhận gói Chào mừng",
+  "h2RhjtaW236Cy1ofAMdsY7": "Trị giá lên đến {{num}}  {{siteBaseCurrency}}!",
+  "ceWPbECZDHEFPo5wuNKZou": "Thêm",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "Đã sao chép!",
+  "sTkpRT7EiVTxqr6sApV5Aj": "Sao chép đường dẫn",
+  "x8nfNnRNkgqeds6C4AfUC8": "Lưu hình ảnh",
+  "4EhrZujhYTKtPmKwo99tBr": "Mã giới thiệu: {rcode}"
+}

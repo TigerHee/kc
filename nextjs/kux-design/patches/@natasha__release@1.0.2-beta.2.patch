@@ -1,0 +1,13 @@
+diff --git a/lib/index.js b/lib/index.js
+index 24f26b4f75502a9e530741477dd12ca4b9677b6e..517234dd7700f21b1d5b8f37183b3f133839afdd 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -48,6 +48,8 @@ async function publishAndTag(pkgObj, isBeta) {
+     // 发包
+     const cmdContent = getPublishCmdText({ isBeta });
+     await execCmdLine(cmdContent);
++    // skip tag
++    return;
+     // 将版本号打成tag推到仓库
+     if (pkgManagerName !== 'pnpm') {
+       await execCmdLine(`git tag ${pkgObj.version}`);

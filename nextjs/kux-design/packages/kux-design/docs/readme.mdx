@@ -1,0 +1,119 @@
+
+import { Meta } from '@storybook/addon-docs/blocks';
+import { BuildInfo } from './helper/build-info';
+
+<Meta title="1. 开始使用" />
+
+# 开始使用
+
+`@kux/design`是遵循[设计规范2025](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42786-39613&p=f&m=dev) 搭建的`移动样式优先`组件库。
+
+<BuildInfo />
+
+## 如何使用
+
+### 安装
+
+```sh
+# 使用pnpm、yarn或npm安装
+pnpm add @kux/design
+yarn add @kux/design
+npm install @kux/design
+```
+
+### 引入组件并初始化
+
+```ts
+import { setup as setupkuxDesign } from '@kux/design';
+// 在项目全局的地方引入组件全局样式，例如3.0项目的app.js
+import '@kux/design/dist/style.css';
+
+// 初始化组件库, 可以根据需要多次调用
+setupkuxDesign({
+  // 设置 KcApp 桥方法对象, 保证所有需要使用 JsBridge 能力的场景(比如app中打开链接、分享)功能正常
+  // web3.0 架构中可以使用下面方式获取
+  //  `import JsBridge from '@kucoin-base/bridge'`;
+  jsBridge: JsBridge,
+  /**
+   * 获取 lottie 库对象, 注意: 返回的对象需要有 loadAnimation 方法
+   * * 组件库中的 LottiePlayer 组件需要使用该方法获取 lottie 库对象
+   * 在 3.0 项目中可以赋值为 () => System.import('lottie-web')
+   */
+  getLottie: () => System.import('lottie-web'),
+
+  // 设置组件库中 确认 按钮的默认文案
+  // 若不设置, 也可在使用具体组件时传入文案
+  getOkText: () => _t('keyof confirm'),
+  // 设置 Tooltip 组件标题文案
+  // 若不设置, 也可在使用具体组件时传入文案
+  getTooltipTitle: () => _t('keyof title'),
+});
+
+// 完整配置如下
+export interface ILibConfig {
+  /**
+   * Kc App JsBridge(JsSDK) 对象, 在 App 环境下使用
+   * * Kc App 环境下必须设置该值
+   */
+  jsBridge: any;
+  /**
+   * Kc App TMA(Telegram) SDK 对象, 在 TMA 环境下使用
+   * TMA 环境下才需要设置该对象, 否则设置为 falsy 值即可
+   */
+  tmaSDK?: any;
+  /**
+   * 获取 lottie 库对象, 注意: 返回的对象需要有 loadAnimation 方法
+   * * 组件库中的 LottiePlayer 组件需要使用该方法获取 lottie 库对象
+   * 在 3.0 项目中可以赋值为 () => System.import('lottie-web')
+   */
+  getLottie: () => Promise<any>,
+  /**
+   * 组件库预设的获取 okText 文案的方法, 此处使用函数形式, 以便于在不同环境下获取不同的文案
+   * * 使用场景: tooltip, confirm 等组件的 okText 文案
+   */
+  getOkText: () => ReactNode;
+  /**
+   * 组件库预设的cancelText文案, 此处使用函数形式, 以便于在不同环境下获取不同的文案
+   * * 使用场景: tooltip, confirm 等组件的 cancelText 文案
+   */
+  getCancelText: () => ReactNode;
+
+  /**
+   * 组件库预设的获取 tooltip 在移动端(对话框展示)的对话框标题文案, 此处使用函数形式, 以便于在不同环境下获取不同的文案
+   * * 一般使用 “说明”
+   */
+  getTooltipTitle?: () => ReactNode;
+}
+```
+
+### tsconfig.json 配置
+若项目使用了 typescript, 则需要在 `tsconfig.json` 中添加以下配置, 以为 [全局工具对象 app](?path=/docs/7-全局工具对象-app--api) 提供类型支持
+
+```json
+{
+  "compilerOptions": {
+    "types": [
+      "@kux/app-sdk"
+    ],
+  }
+}
+```
+
+### 使用组件
+
+```tsx
+import { Button } from '@kux/design';
+
+export default function Demo() {
+  return (
+    <Button
+      type="primary"
+      onClick={() => {
+        console.log('Button clicked');
+      }}
+    >
+      Primary Button
+    </Button>
+  );
+}
+```

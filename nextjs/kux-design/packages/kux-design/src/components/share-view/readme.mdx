@@ -1,0 +1,159 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './stories';
+
+<Meta title="base/ShareView/Readme" />
+
+# ShareView
+分享视图组件
+
+`ShareView` 用于生成分享弹窗，支持多平台社交分享、海报生成与保存，适配移动端和桌面端。
+
+<Callout type="warning">
+`ShareView` 只是一个 UI 组件, 只适合在 web 端使用, 若在 app/ tg 小程序中使用, 
+  请使用 `sharePoster` 函数, 该函数参数与 `ShareView` 的一致(不需要 `isOpen`), 兼容各种平台.
+</Callout>
+
+
+
+## 属性 Props
+
+| 属性名         | 类型      | 说明                         | 必填 | 默认值 |
+| -------------- | --------- | ---------------------------- | ---- | ------ |
+| cacheId        | string    | 分享海报的唯一缓存 id, 海报内容变化需提供新的id         | 是   | -      |
+| dlgTitle       | string    | 分享对话框标题                | 否   | --     |
+| title          | string    | 分享链接标题                  | 否   | -      |
+| link           | string    | 分享链接                      | 是   | -      |
+| poster         | object    | 海报配置，见下方 poster 说明   | 是   | -      |
+| buttons        | array     | 自定义分享按钮配置            | 否   | 内置平台|
+| ads        | IAdsProps[]     | 广告位数组            | 否   | - |
+| onAdClick        | (item:IAdsProps) => void     | 广告位点击回调            | 否   | 默认打开广告位对应广告 |
+| galleryType        | string     | app 中多海报分享类型            | 否   | 默认打开广告位对应广告 |
+| isOpen         | boolean   | 是否打开分享视图              | 是   | -      |
+| onClose        | function  | 关闭分享视图回调              | 否   | -      |
+| errorText      | string    | 海报生成失败提示文案          | 是   | -      |
+| copyBtnText    | string    | 复制按钮文案                  | 是   | -      |
+| saveBtnText    | string    | 保存按钮文案                  | 是   | -      |
+| copySuccessText| string    | 复制成功提示文案              | 是   | -      |
+
+### poster 配置
+继承自 `IPosterProps`，常用字段有：
+
+- size: `{ width: number, height: number }` 海报尺寸
+- background: 背景色/图片
+- children: ReactNode，海报内容
+- name: 前端在保存海报时的文件名, 不传默认为使用时间戳
+- footer: ReactNode，海报底部内容, 不传使用默认 footer
+- rcode: 当前用户的 rcode
+
+## 用法示例
+
+```tsx
+import { ShareView } from 'kux-design';
+import { useState } from 'react';
+
+function Demo() {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <button onClick={() => setIsOpen(true)}>打开分享</button>
+      <ShareView
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        cacheId="share-demo"
+        dlgTitle="分享此页面"
+        title="KuCoin 官网"
+        link="https://www.kupotech.com"
+        poster={{
+          size: { width: 256, height: 454 },
+          children: <div style={{ color: '#222', fontSize: 24 }}>Hello KuCoin</div>,
+        }}
+        errorText="生成失败，请稍后重试"
+        copyBtnText="复制链接"
+        saveBtnText="保存海报"
+        copySuccessText="复制成功！"
+      />
+    </>
+  );
+}
+```
+
+## 广告位说明
+
+```tsx
+export interface IAdsProps {
+  /** 广告图片URL */
+  imageUrl: string;
+  /** 广告跳转链接 */
+  url: string;
+  /** 广告标题 */
+  title: string;
+  /** 广告ID */
+  id: string | number;
+}
+
+// 多海报分享类型 galleryType 可选值有:
+/** 多海报分享类型 - 给app用的,app用来获取海报管理； 但是可以添加 admin用的查询接口是 https://workbench-10.sit.kucoin.net/_api/market-operation/admin/postersShowLocals
+ * 类型有以下
+ * CUSTOMER_INVITE 邀请海报
+ * SHARE_APP 分享APP
+ * NOVICE_SHARE 新人专区分享
+ * AFFILIATE_APP TOB合伙人APP
+ * PREMARKET_SHARE 盘前交易分享
+ * SPOTLIGHT_SHARE Spotlight分享
+ *
+ */
+type IGalleryType = 'CUSTOMER_INVITE'
+    | 'SHARE_APP'
+    | 'NOVICE_SHARE'
+    | 'AFFILIATE_APP'
+    | 'PREMARKET_SHARE'
+    | 'SPOTLIGHT_SHARE'
+    | string;
+```
+
+## 分享视图组件里面的 ShareViewHeaderWithAds 是带广告位的走马灯， 点击走马灯图片默认行为是跳转到其配置的url
+
+一般是业务分享前先调用分享相关接口获取广告信息，获取到广告位数据后再传递给 kux分享组件进行展示
+
+- c端获取接口 https://www.kucoin.com/_api/promotion/v1/invitation/share-to-friends
+接口返回数据 ads 就是 广告位数据
+```
+{
+    "success": true,
+    "code": "200",
+    "msg": "success",
+    "retry": false,
+    "data": {
+        "title": null,
+        "ads": {
+            "data": {
+                "basic-share-affiliate-web": [
+                    {
+                        "id": 6496,
+                        "title": "Tob合伙人分享组件Web",
+                        "sort": 0,
+                        "url": "https://www.kucoin.com/affiliate",
+                        "imageUrl": "https://assets.staticimg.com/cms/media/342DDMEapDl0QRrZxvVU1XCh5R3yiOLdR7KKH2MBL.png",
+                        "size": "1125*192",
+                        "language": "zh_HK",
+                        "alt": "輕鬆分享、邀請用戶並賺取高達 60% 的返佣！",
+                        "ad_position": 106,
+                        "daytime_image_url": "https://assets.staticimg.com/cms/media/342DDMEapDl0QRrZxvVU1XCh5R3yiOLdR7KKH2MBL.png"
+                    }
+                ]
+            }
+        },
+        "referralCode": "Melon001",
+        "affiliateFlag": true,
+        "userRcodeFlag": true,
+        "referralCodeEnc": "TnU76N0r1jRs41QOqBo4Wg"
+    }
+}
+```
+
+- admin配置地址 后台的资源位配置的 https://workbench-10.sit.kucoin.net/operations-sys/resouce-position-manage/new-position-manage/position-list-new 
+
+1. app 非合伙人 使用资源位唯一ID basic-share-referral-app 
+2. app 合伙人 使用资源位唯一ID basic-share-affiliate-app
+3. h5 非合伙人 使用资源位唯一ID basic-share-referral-web
+4. h5 合伙人 使用资源位唯一ID basic-share-affiliate-web

@@ -1,0 +1,90 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import * as CarouselStories from './stories';
+
+<Meta title="base/Carousel/Readme" />
+
+# Carousel 轮播图
+
+轮播图组件，用于展示多个元素的循环播放。
+
+## 特性
+
+- 支持自定义同时可见的元素数量
+- 支持自动播放，鼠标悬停时自动暂停
+- 支持自定义元素间距
+- 支持 RTL 布局
+- 支持自定义控制按钮和指示器的显示/隐藏
+
+## 代码示例
+
+### 基础用法
+
+```jsx
+import { Carousel } from '@kucoin/kux-design';
+
+function Basic() {
+  return (
+    <Carousel>
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </Carousel>
+  );
+}
+```
+
+### 多个可见元素
+
+```jsx
+import { Carousel } from '@kucoin/kux-design';
+
+function MultipleVisible() {
+  return (
+    <Carousel visibleCount={3} gap={20}>
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+    </Carousel>
+  );
+}
+```
+
+### 自动播放
+
+```jsx
+import { Carousel } from '@kucoin/kux-design';
+
+function AutoPlay() {
+  return (
+    <Carousel autoplay autoplayInterval={3000}>
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </Carousel>
+  );
+}
+```
+
+## API
+
+### Props
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| children | 轮播元素 | React.ReactNode | - |
+| visibleCount | 同时可见的元素数量 | number | 1 |
+| gap | 每个元素之间的间距（像素） | number | 0 |
+| hideIndicators | 是否隐藏分页指示器 | boolean | false |
+| hideControls | 是否隐藏控制按钮 | boolean | false |
+| autoplay | 是否自动播放 | boolean | false |
+| autoplayInterval | 自动播放间隔时间（毫秒） | number | 3000 |
+| className | 自定义类名 | string | - |
+| style | 自定义样式 | React.CSSProperties | - |
+
+## 注意事项
+
+1. 组件会自动适配 RTL 布局，无需额外配置
+2. 自动播放时，鼠标悬停会暂停播放，移出后继续
+3. 轮播到最后一页后会平滑过渡到第一页

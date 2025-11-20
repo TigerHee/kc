@@ -1,0 +1,12 @@
+{
+  "main": [],
+  "trade": [],
+  "margin": [],
+  "coinIn": [],
+  "withdraw": [],
+  "mainMap": {},
+  "tradeMap": {},
+  "marginMap": {},
+  "marginTotalAsset": 0,
+  "currencies": []
+}

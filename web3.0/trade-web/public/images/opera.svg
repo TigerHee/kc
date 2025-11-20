@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>opera-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50.003%" y1="1.63%" x2="50.003%" y2="98.545%" id="linearGradient-1">
+            <stop stop-color="#FF1B2D" offset="30%"></stop>
+            <stop stop-color="#FA1A2C" offset="43.81%"></stop>
+            <stop stop-color="#ED1528" offset="59.39%"></stop>
+            <stop stop-color="#D60E21" offset="75.81%"></stop>
+            <stop stop-color="#B70519" offset="92.72%"></stop>
+            <stop stop-color="#A70014" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="49.99%" y1="0.853%" x2="49.99%" y2="99.519%" id="linearGradient-2">
+            <stop stop-color="#9C0000" offset="0%"></stop>
+            <stop stop-color="#FF4B4B" offset="70%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="opera-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="矩形备份-2" stroke-opacity="0.38" stroke="#B8C6D8" x="0" y="0" width="120" height="120" rx="10"></rect>
+            <path d="M46.84375,82.53125 C42.40625,77.3125 39.5625,69.59375 39.375,60.9375 L39.375,59.0625 C39.5625,50.40625 42.4375,42.6875 46.84375,37.46875 C52.59375,30.03125 61.03125,26.6875 70.5625,26.6875 C76.4375,26.6875 81.96875,27.09375 86.65625,30.21875 C79.625,23.875 70.34375,20.03125 60.15625,20 L60,20 C37.90625,20 20,37.90625 20,60 C20,81.4375 36.875,98.96875 58.09375,99.96875 C58.71875,100 59.375,100 60,100 C70.25,100 79.59375,96.15625 86.65625,89.8125 C81.96875,92.9375 76.75,93.0625 70.875,93.0625 C61.375,93.09375 52.5625,90 46.84375,82.53125 Z" id="路径" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+            <path d="M46.84375,37.46875 C50.5,33.125 55.25,30.53125 60.4375,30.53125 C72.09375,30.53125 81.53125,43.71875 81.53125,60.03125 C81.53125,76.34375 72.09375,89.53125 60.4375,89.53125 C55.25,89.53125 50.53125,86.90625 46.84375,82.59375 C52.59375,90.03125 61.125,94.78125 70.625,94.78125 C76.46875,94.78125 81.96875,93 86.65625,89.875 C94.84375,82.5 100,71.84375 100,60 C100,48.15625 94.84375,37.5 86.65625,30.1875 C81.96875,27.0625 76.5,25.28125 70.625,25.28125 C61.09375,25.28125 52.5625,30 46.84375,37.46875 Z" id="路径" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

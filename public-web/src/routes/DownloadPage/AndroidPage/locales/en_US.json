@@ -1,0 +1,18 @@
+{
+  "title": "KuCoin Android APP Download Installation Guide",
+  "subtitle": "Some Android systems turn off third-party application installation permissions, resulting in failure to install properly. Please refer to the following tutorial installation.",
+  "note1": "1. For Android 8.0 and above systems",
+  "steps.1.1": "Depending on the mobile phone manufacturer, the entrance to the settings may be different.",
+  "steps.1.2": "Take the illustration system as an example:",
+  "steps.1.3": "1. Enter “Settings”",
+  "steps.1.4": "2. Go to “More Settings”",
+  "steps.1.5": "3. Enter “Applications”",
+  "steps.1.6": "4. Enable KuCoin。",
+  "steps.1.7": "5.Then Install KuCoin。",
+  "note2": "2. Lower than Android 8.0 version of the system",
+  "steps.2.1": "Depending on the mobile phone manufacturer, the entrance to the settings may be different.",
+  "steps.2.2": "Take the Samsung system as an example:",
+  "steps.2.3": "1. Enter “Settings”",
+  "steps.2.4": "2. Find the entrance as shown",
+  "steps.2.5": "3.Enable Unknown Sources"
+}

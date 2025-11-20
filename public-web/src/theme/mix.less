@@ -1,0 +1,51 @@
+.clearfix() {
+  *zoom:1;
+  &:before,&:after{
+    content:" ";
+    display:table;
+  }
+  &:after{
+    clear:both;
+  }
+}
+
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mq-width-sm:600px;
+@mq-width-md:768px;
+@mq-width-lg:1024px;
+
+// < 768px
+.mediaQuerySm(@style) {
+  @media screen and (max-width:@mq-width-md) {
+    @style()
+  }
+}
+
+// < 1024px
+.mediaQueryMd(@style) {
+  @media screen and (max-width:@mq-width-lg) {
+    @style()
+  }
+}
+
+// < 600px 针对手机设备特定优化
+.mediaQueryMi(@style) {
+  @media screen and (max-width:@mq-width-sm) {
+    @style()
+  }
+}
+
+// 多行省略
+.ellipsisClamp(@clamp) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @clamp;
+  -webkit-box-orient: vertical;
+}
+

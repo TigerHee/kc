@@ -1,0 +1,12 @@
+/* eslint-disable prettier/prettier */
+export default {
+  'locale': 'fil_PH',
+  '2HVcFSJMKfjBCfPSUu8PbB': 'Mga Notification',
+  'all.clear': 'I-delete Lahat',
+  'all.read': 'Nabasa Lahat',
+  'confirm': 'Kumpirmahin',
+  'delete.message.confirm': 'Sigurado ka bang ide-delete mo ang lahat ng notification message?',
+  'table.empty': 'Walang data',
+  'today': 'Ngayong Araw',
+  'yesterday': 'Kahapon',
+};

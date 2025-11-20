@@ -1,0 +1,20 @@
+export default {
+  "3cdydxagCoFhHZNpd8EfkZ": "Trading global seguro y fácil 24/7.",
+  "evsRWTcozWk2pEFSUsfw28": "¡Regístrate y domina los mercados en segundos!",
+  "jpbjxHSFSvzbMtW9MsUSh6": "Domina los mercados en cualquier lugar 24/7.",
+  "mNJrrvGzgxR6JhQ8u82crp": "Más de 80K comentarios",
+  "rKzzY7kQ8wDRcRn8SuSsk6": "¡Verifícate, deposita y compra criptos ya!",
+  "rw8e32A8H7X3QtiKHS37EK": "Descargar",
+  "tXwwyoSbqG4pgsoXomccjp": "Descarga la app de {{brandName}} para ganar hasta {{num}} {{siteBaseCurrency}} en recompensas.",
+  "7dhofXiN9vaVRtVSNY9eCc": "Los nuevos usuarios consiguen",
+  "dsXQ82BhJeKcyFrfYG4Rwd": "Reclamar ahora",
+  "fHvhAMzEfxA6w2B25nHkiJ": "<1>5M+</1> de descargas",
+  "nwNe2QvcwoYLfK3wGsKf3D": "(100K+ reseñas)",
+  "qqJX78TFyekdKwwT6nVVWU": "(16K+ reseñas)",
+  "awPHBDRwtLBxNEMctyUMJZ": "Exclusivo para nuevos usuarios: si tu primer depósito o compra de criptomonedas es superior a 50 $, ¡recibirás una caja misteriosa por valor de hasta <span>500 $</span>!",
+  "bc25RyyCduDizpfpxEcMEi": "Descargar",
+  "csjK9uyQQyYMLprAYkKsRT": "Descarga la app de {{brandName}} para continuar tu criptoviaje y recibe hasta <span>500 $</span> en recompensas en la Zona para principiantes.",
+  "oiiFHQ3NZu5zSYqpSGreye": "¡Deposita o compra criptos por primera vez para conseguir una caja misteriosa valorada en hasta <span>500 $</span>!",
+  "pgBahZcxwoUfbjzJwqpmY7": "¡Hasta <span>500 $</span> en recompensas para nuevos usuarios!",
+  "wLAfc8MZvoHbeNragecB4Z": "Opera de forma más segura y rápida con nuestra app móvil."
+}

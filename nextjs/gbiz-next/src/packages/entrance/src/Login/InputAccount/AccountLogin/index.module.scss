@@ -1,0 +1,98 @@
+@import 'src/styles/mixin.scss';
+
+.extendForm {
+  // 内部按钮
+  .subButton {
+    margin-top: 40px;
+  }
+
+  // 密码输入与表单间距
+  .passwordFormItem {
+    margin-top: 32px;
+  }
+
+  // 输入框内的切换密码可见图标
+  :global(.KuxInput-togglePwdIcon) {
+    margin-left: 12px;
+    @media (max-width: 600px) {
+      margin-left: 10px;
+    }
+  }
+  
+  :global(.KuxCol-col) {
+    width: 100%;
+  }
+}
+
+.forgetPWDBox {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--kux-text);
+  text-decoration: underline;
+  margin-top: 0;
+}
+
+.fastClick {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--kux-text);
+
+  span {
+    color: var(--kux-text);
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.continueWithOther {
+  height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--kux-text40);
+  display: flex;
+  align-items: center;
+  margin: 32px 0 24px;
+
+  span {
+    padding: 0 12px;
+  }
+
+  &::before {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background-color: var(--kux-cover12);
+  }
+
+  &::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background-color: var(--kux-cover12);
+  }
+
+  @include media-query('sm') {
+    height: 18px;
+    margin: 24px 0 20px;
+  }
+}
+
+// Margin top utilities
+.mtSignupBox {
+  margin-top: 24px;
+
+  @include media-query('sm') {
+    margin-top: 16px;
+  }
+}
+
+.mtForgetBottom {
+  margin-top: 24px;
+
+  @include media-query('sm') {
+    margin-top: 20px;
+  }
+}

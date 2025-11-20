@@ -1,0 +1,16 @@
+{
+  "frozen": false,
+  "user": null,
+  "isLogin": true,
+  "securtyStatus": {},
+  "timeZones": [],
+  "balanceCurrency": "USDT",
+  "isShowRestrictedUserNotice": false,
+  "klineConf": {
+    "hasFetch": false,
+    "symbol": {},
+    "common": {},
+    "saved": {},
+    "inUse": false
+  }
+}

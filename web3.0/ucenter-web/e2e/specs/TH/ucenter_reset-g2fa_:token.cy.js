@@ -1,0 +1,1 @@
+import '../common/ucenter_reset-g2fa_:token.cy';

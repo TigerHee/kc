@@ -1,0 +1,54 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as Stories from './stories';
+
+<Meta title="base/Switch/Readme" />
+
+import { Switch } from './index';
+
+# Switch 开关组件
+
+基础的开关组件，支持受控/非受控、禁用、尺寸、样式等。
+
+## 基本用法
+
+```tsx
+<Switch />
+```
+
+## 受控用法
+
+```tsx
+const [checked, setChecked] = useState(false);
+<Switch value={checked} onChange={setChecked} />
+```
+
+## 非受控用法
+
+```tsx
+<Switch defaultValue={true} />
+```
+
+## 禁用
+
+```tsx
+<Switch disabled />
+```
+
+## 尺寸
+
+```tsx
+<Switch size="small" />
+<Switch size="medium" />
+```
+
+## Props
+
+| 属性         | 说明             | 类型                      | 默认值      |
+| ------------ | ---------------- | ------------------------- | ----------- |
+| value        | 受控开关状态     | boolean                   | -           |
+| defaultValue | 非受控初始状态   | boolean                   | false       |
+| onChange     | 状态变化回调     | (value: boolean) => void  | -           |
+| size         | 尺寸             | 'small' \| 'medium'      | -           |
+| disabled     | 是否禁用         | boolean                   | false       |
+| className    | 自定义类名       | string                    | -           |
+| style        | 自定义样式       | React.CSSProperties       | -           |

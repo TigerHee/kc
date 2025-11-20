@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#22B4FF" offset="0%"></stop>
+            <stop stop-color="#0F7DFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M20.5909091,18.6666667 C19.8409091,16.5308333 17.8272727,15 15.4545455,15 C12.4409091,15 10,17.46125 10,20.5 C10,23.53875 12.4409091,26 15.4545455,26 C17.8272727,26 19.8409091,24.4691667 20.5909091,22.3333333 L24.5454545,22.3333333 L24.5454545,26 L28.1818182,26 L28.1818182,22.3333333 L30,22.3333333 L30,18.6666667 L20.5909091,18.6666667 Z M15.4545455,22.3333333 C14.45,22.3333333 13.6363636,21.5129167 13.6363636,20.5 C13.6363636,19.4870833 14.45,18.6666667 15.4545455,18.6666667 C16.4590909,18.6666667 17.2727273,19.4870833 17.2727273,20.5 C17.2727273,21.5129167 16.4590909,22.3333333 15.4545455,22.3333333 Z" id="path-2"></path>
+        <filter x="-35.0%" y="-45.5%" width="170.0%" height="227.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="安全设置" transform="translate(-327.000000, -258.000000)" fill-rule="nonzero">
+            <g id="Group-9" transform="translate(327.000000, 258.000000)">
+                <circle id="Oval-Copy-9" fill="url(#linearGradient-1)" opacity="0.502139137" cx="20" cy="20" r="20"></circle>
+                <g id="Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

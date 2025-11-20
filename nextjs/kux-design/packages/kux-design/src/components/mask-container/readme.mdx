@@ -1,0 +1,121 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './stories';
+
+<Meta title="base/MaskContainer/Readme" />
+
+# MaskContainer
+
+MaskContainer 是一个基础的蒙层容器组件，用于统一管理需要蒙层的组件(如 Modal、Drawer、Popover 等)的层级顺序。它提供了一个默认全屏幕固定定位的容器，支持通过 ref 访问 DOM 节点。
+
+## 功能特性
+
+- 默认提供全屏固定定位(position: fixed)的容器
+- 自动管理全局 z-index 层级，多层蒙层时自动递增
+- 统一渲染到 公共的蒙层挂载 节点，避免 z-index 冲突
+- 当蒙层打开时自动锁定页面滚动
+- 支持通过 ref 访问 DOM 节点
+- 可自定义样式、内容和交互方式
+- 继承所有原生 div 元素属性
+
+## API
+
+### Props
+
+| 属性 | 说明 | 类型 | 默认值 | 必填 |
+| --- | --- | --- | --- | --- |
+| isOpen | 是否显示蒙层。控制是否锁定滚动以及z-index的分配，不直接控制蒙层显隐 | `boolean` | - | 是 |
+| children | 子元素 | `React.ReactNode` | - | 否 |
+| ref | 引用 DOM 节点 | `React.RefObject<HTMLDivElement>` | - | 否 |
+
+同时支持所有 div 元素的原生属性，如：
+- className
+- style
+- onClick
+- onMouseEnter
+- onMouseLeave
+等
+
+## 代码示例
+
+```tsx
+import { MaskContainer } from '@kucoin/kux-design';
+import { useRef } from 'react';
+
+// 基础用法
+function Basic() {
+  // 全屏loading, 页面不能滚动
+  return (
+    <MaskContainer isOpen>
+      <div>loading...</div>
+    </MaskContainer>
+  );
+}
+
+// 使用 ref
+function WithRef() {
+  const maskRef = useRef<HTMLDivElement>(null);
+  return (
+    <MaskContainer
+      ref={maskRef}
+      onClick={() => {
+        // 可以通过 ref 访问 DOM 节点
+        console.log(maskRef.current);
+      }}
+    >
+      <div>点击蒙层</div>
+    </MaskContainer>
+  );
+}
+
+// 自定义样式
+function CustomStyle() {
+  const [visible, setVisible] = useState(false);
+  return (
+    <div style={{ padding: 20 }}>
+      <Button type="primary" onClick={() => setVisible(true)}>显示蒙层</Button>
+      {visible && (
+        <MaskContainer 
+          isOpen={visible}
+          style={{ 
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          onClick={() => setVisible(false)}
+        >
+          <div style={{
+            background: 'white',
+            padding: '20px',
+            borderRadius: '8px',
+            boxShadow: '0 2px 12px rgba(0,0,0,0.1)'
+          }}>
+            点击蒙层关闭
+          </div>
+        </MaskContainer>
+      )}
+    </div>
+}
+```
+
+## 注意事项
+
+1. MaskContainer 默认样式:
+   ```css
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   ```
+   如果需要改变定位方式，可以通过 style 属性覆盖
+
+2. MaskContainer 会自动管理 z-index，不需要手动设置
+3. **isOpen ** 为 true 时:
+  * 页面会自动锁定滚动，避免滚动穿透问题
+  * z-index 会自动递增，确保蒙层在其他内容之上
+4. 所有 MaskContainer 的内容都会被渲染到同一个根节点下，确保层级管理的一致性
+5. 若需要添加蒙层显隐的动画, 需要自行处理
+
+
+如果你正在开发一个需要蒙层的新组件，建议使用 MaskContainer 来确保与其他组件的层级管理保持一致。

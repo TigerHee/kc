@@ -1,0 +1,6 @@
+export default {
+  'cancel': 'Cancel',
+  'gfa_btn': 'Confirm',
+  'verify_img_tip': 'Enter the characters',
+  'verify_img_title': 'Image Verification',
+};

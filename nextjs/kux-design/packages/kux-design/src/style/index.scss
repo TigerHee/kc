@@ -1,0 +1,19 @@
+// 通用代码, 组件使用时引入该文件即可
+// 公共的工具类样式, 不产生 css 内容, 可供组件及外部直接使用
+// 样式, 组件使用时引入该文件即可
+$ns: 'kux'; // 组件库中写死组件库的命名空间
+
+@import './vars.scss';
+@import './mixin.scss';
+@import './private-utils.scss';
+@import './media.scss';
+@import './style.scss';
+@import './animation.scss';
+
+// 图标样式
+@include component('icon') {
+  width: var(--kc-icon-size, 20px);
+  height: var(--kc-icon-size, 20px);
+  // 避免图标在 flex 容器中被缩小
+  flex-shrink: 0;
+}

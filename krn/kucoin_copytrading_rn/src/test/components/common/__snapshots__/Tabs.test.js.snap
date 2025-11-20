@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs applies style prop 1`] = `
+Array [
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 40,
+          "marginBottom": 6,
+          "paddingBottom": 1,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 10,
+          "position": "relative",
+        },
+        Object {
+          "backgroundColor": "red",
+        },
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      first={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onLayout={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {},
+          undefined,
+        ]
+      }
+    >
+      <Text
+        active={true}
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#1D1D1D",
+              "fontSize": 14,
+              "fontWeight": "bold",
+            },
+            undefined,
+          ]
+        }
+      >
+        Tab1
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      first={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onLayout={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "marginLeft": 24,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        active={false}
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "rgba(29, 29, 29, 0.4)",
+              "fontSize": 14,
+              "fontWeight": "bold",
+            },
+            undefined,
+          ]
+        }
+      >
+        Tab2
+      </Text>
+    </View>
+    <View
+      collapsable={false}
+      nativeID="animatedComponent"
+      style={
+        Object {
+          "backgroundColor": "#1D1D1D",
+          "borderBottomLeftRadius": 2,
+          "borderBottomRightRadius": 2,
+          "borderTopLeftRadius": 2,
+          "borderTopRightRadius": 2,
+          "bottom": -8,
+          "height": 4,
+          "left": 0,
+          "marginLeft": "auto",
+          "position": "absolute",
+          "textAlign": "center",
+          "width": "auto",
+          "zIndex": 2,
+        }
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(29, 29, 29, 0.08)",
+            "bottom": -8,
+            "height": 1,
+            "left": 0,
+            "position": "absolute",
+            "width": "120%",
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>,
+  "\\\\",
+]
+`;

@@ -1,0 +1,31 @@
+.content {
+  padding: 39.5px 32px 0;
+  :global(.kux-divider) {
+    margin: 20px 0;
+  }
+}
+
+.title {
+  color: var(--kux-text);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%; /* 33.6px */
+}
+
+.desc {
+  color: var(--kux-text60);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  margin-top: 8px;
+}
+
+.tips {
+  color: var(--kux-text40);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}

@@ -1,0 +1,227 @@
+  {
+    "siteType": "claim",
+    "basicProperties": {
+      "siteName": "claim",
+      "shareGlobalAccount": 1,
+      "walletType": 1,
+      "storageType": 1,
+      "siteDomainType": 2,
+      "siteDomain": "www.kucoinauth.com",
+      "siteRegion": null,
+      "brandType": 2,
+      "logoType": 1
+    },
+    "extProperties": [],
+    "functions": [
+      {
+        "code": "fast_trade",
+        "value": false
+      },
+      {
+        "code": "3rd_party",
+        "value": false
+      },
+      {
+        "code": "fiat_deposit",
+        "value": false
+      },
+      {
+        "code": "ucenter",
+        "value": true
+      },
+      {
+        "code": "kyc",
+        "value": false
+      },
+      {
+        "code": "kyb",
+        "value": false
+      },
+      {
+        "code": "personal_center",
+        "value": false
+      },
+      {
+        "code": "home_page",
+        "value": false
+      },
+      {
+        "code": "message_center",
+        "value": false
+      },
+      {
+        "code": "k_line",
+        "value": false
+      },
+      {
+        "code": "search",
+        "value": false
+      },
+      {
+        "code": "spot",
+        "value": false
+      },
+      {
+        "code": "margin",
+        "value": false
+      },
+      {
+        "code": "option",
+        "value": false
+      },
+      {
+        "code": "convert",
+        "value": false
+      },
+      {
+        "code": "futures",
+        "value": false
+      },
+      {
+        "code": "financing",
+        "value": false
+      },
+      {
+        "code": "copy_trading",
+        "value": false
+      },
+      {
+        "code": "trading_bot",
+        "value": false
+      },
+      {
+        "code": "api",
+        "value": false
+      },
+      {
+        "code": "currency",
+        "value": false
+      },
+      {
+        "code": "etf",
+        "value": false
+      },
+      {
+        "code": "loan",
+        "value": false
+      },
+      {
+        "code": "spot_growth",
+        "value": false
+      },
+      {
+        "code": "platform_growth",
+        "value": false
+      },
+      {
+        "code": "activity_bench",
+        "value": false
+      },
+      {
+        "code": "basic_bench",
+        "value": false
+      },
+      {
+        "code": "seo",
+        "value": false
+      },
+      {
+        "code": "rebate_business",
+        "value": false
+      },
+      {
+        "code": "invite_rebate",
+        "value": false
+      },
+      {
+        "code": "affiliate",
+        "value": false
+      },
+      {
+        "code": "api_broker",
+        "value": false
+      },
+      {
+        "code": "nd_broker",
+        "value": false
+      },
+      {
+        "code": "payment",
+        "value": false
+      },
+      {
+        "code": "kucoin_pay",
+        "value": false
+      },
+      {
+        "code": "kucard",
+        "value": false
+      },
+      {
+        "code": "express",
+        "value": false
+      },
+      {
+        "code": "p2p",
+        "value": false
+      },
+      {
+        "code": "web3_wallet",
+        "value": false
+      },
+      {
+        "code": "compliance_exhibition_platform",
+        "value": true
+      },
+      {
+        "code": "tax_platform",
+        "value": true
+      },
+      {
+        "code": "customer_service_system",
+        "value": true
+      },
+      {
+        "code": "risk_control_system",
+        "value": true
+      },
+      {
+        "code": "financial_system",
+        "value": true
+      },
+      {
+        "code": "reconciliation_system",
+        "value": true
+      },
+      {
+        "code": "data_center",
+        "value": true
+      }
+    ],
+    "bizConfigs": [
+      {
+        "code": "spot_liquidity",
+        "value": ""
+      },
+      {
+        "code": "contract_liquidity",
+        "value": ""
+      },
+      {
+        "code": "rebate_range",
+        "value": ""
+      },
+      {
+        "code": "is_allowed_multilevel_rebate",
+        "value": ""
+      },
+      {
+        "code": "quote_currency",
+        "value": "USDT"
+      },
+      {
+        "code": "shield_currency",
+        "value": ""
+      }
+    ]
+  }

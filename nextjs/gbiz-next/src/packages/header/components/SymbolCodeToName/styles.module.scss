@@ -1,0 +1,22 @@
+.baseCurrencyWrapper {
+  font-weight: 500;
+  color: var(--kux-text);
+  font-size: 15px;
+  line-height: 140%;
+}
+
+.baseCurrencyBox {
+  max-width: fit-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quoteCurrencyWrapper {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  color: var(--color-text30);
+  flex-shrink: 0;
+  margin-inline-start: 2px;
+}

@@ -1,0 +1,24 @@
+import { useSnackbar } from '@kux/mui';
+
+const { message } = useSnackbar();
+
+
+
+    useBindDialogButton(actionSheetRef, {
+      onConfirm,
+    });
+actionSheetRef.current.updateBtnProps({
+      okButtonProps: {
+        loading: loadingType === 'confirm',
+      },
+      cancelButtonProps: {
+        loading: loadingType === 'cancel',
+      },
+    });
+
+
+    actionSheetRef.current.updateBtnProps({
+      okButtonProps: {
+        loading: true
+      },
+    });

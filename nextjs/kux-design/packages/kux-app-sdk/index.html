@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App SDK 开发页面</title>
+  <script>
+    (function (){
+      window.region = 'kc';
+      try {
+        window.region = localStorage.getItem('region') || 'kc';
+      } catch (error) {}
+      scriptName = `boot${!window.region || window.region === 'kc' ? '' : `_${window.region}`}.js`;
+      document.write(
+        `<script src="https://assets.staticimg.com/web-domain-relation/1.9.10/${scriptName}"><` + `/script>`
+      );
+    })();
+  </script>
+</head>
+<body>
+  <h1>App SDK 开发页面</h1>
+  <p>点击下方按钮切换站点对应的 boot.js 版本 </p>
+  <div id="btns">
+
+  </div>
+
+
+
+  <p>You may try `app` in browser console to test functions in `app-sdk`</p>
+  <script src="./demo/index.ts" type="module"></script>
+  <script>
+    void (function () {
+      const regions = [
+        { value: 'kc', label: '主站' },
+        { value: 'au', label: '澳大利亚站' },
+        { value: 'eu', label: '欧盟站' },
+        { value: 'th', label: '泰国站' },
+        { value: 'tr', label: '土耳其站' },
+      ];
+      const btns = document.getElementById('btns');
+      regions.forEach(regionInfo => {
+        const btn = document.createElement('button');
+        btn.innerText = regionInfo.label;
+        if (regionInfo.value === window.region) {
+          btn.disabled = true;
+        }
+        btn.onclick = function () {
+          localStorage.setItem('region', regionInfo.value);
+          location.reload();
+        };
+        btns.appendChild(btn);
+      });
+    })();
+  </script>
+</body>
+</html>

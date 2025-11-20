@@ -1,0 +1,42 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as AlertStories from './stories';
+
+<Meta title="base/Alert/Readme" />
+
+# button
+
+[Figma](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42829-6745&m=dev)
+
+### 基础用法
+
+Alert有四种类型。`info`、`success`、`error`、`warning`。
+
+```tsx
+import { Alert } from '@kucoin/kux-design';
+
+<Alert type="info" message="This is a info alert" />
+<Alert type="success" message="This is a success alert" />
+<Alert type="error" message="This is a error alert" />
+<Alert type="warning" message="This is a warning alert" />
+```
+
+### 回调函数
+
+Alert组件支持回调函数。打开时 `onShow` 、隐藏时 `onHide`
+
+```tsx
+import { Alert } from '@kucoin/kux-design';
+
+<Alert type="info" message="This is a info alert" onShow={() => {}} onHide={() => {}} />
+```
+
+### 常驻显示
+
+duration 为 0 时，Alert 不会自动关闭。
+
+```tsx
+import { Alert } from '@kucoin/kux-design';
+
+<Alert type="info" message="This is a info alert" duration={0} />
+```
+

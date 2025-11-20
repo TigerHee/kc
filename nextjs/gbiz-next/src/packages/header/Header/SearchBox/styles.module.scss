@@ -1,0 +1,122 @@
+/**
+ * Owner: roger@kupotech.com
+ */
+@import 'src/styles/mixin.scss';
+
+.searchWrapper {
+  margin-left: 20px;
+
+  [dir='rtl'] & {
+    margin-right: 20px;
+  }
+}
+
+.h5Wrapper {
+   
+}
+
+.inputWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: unset;
+    padding: 0 12px;
+}
+
+.headerCloseWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    border: 2px solid var(--kux-cover8);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.cusInput {
+    width: 150px;
+    border: unset;
+
+    // :global(.KuxInput-prefix) {
+    //     margin-right: 6px !important;
+
+    //     [dir='rtl'] & {
+    //         margin-right: unset !important;
+    //         margin-left: 6px !important;
+    //     }
+    // }
+
+    // fieldset {
+    //     border: none !important;
+    // }
+}
+
+.cusInputInDrawer {
+    flex: 1;
+    :global {
+        .kux-input-core {
+            height: 48px !important;
+        }
+        .kux-input-fieldset {
+            inset: -10px 0 0 0;
+            border-radius: 24px;
+        }
+    }
+    :global(.kux-input-search-small) {
+        height: 48px !important;
+    }
+    :global(.kux-input-fieldset-search) {
+        border-color: var(--kux-cover8) !important;
+    }
+}
+
+:global(.kux-input-focus).cusInputInDrawer :global(.kux-input-fieldset) {
+    border-color: var(--kux-cover8);
+  }
+
+// .cusInputInSearch {
+//     border: 1px solid var(--color-divider8);
+//     margin-right: 16px;
+//     padding: 0 16px !important;
+//     height: 48px !important;
+// }
+
+.divider {
+    width: 1px !important;
+    height: 20px !important;
+    background-color: var(--kux-cover8);
+    margin: 0 16px;
+}
+
+.cancelSpan {
+    margin-inline-start: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--kux-text);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.content {
+    position: fixed;
+    top: 149px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+    z-index: 100;
+
+    background-color: var(--kux-bulletLayer);
+    overflow: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.inSearchWrapper {
+  display: flex;
+  align-items: center;
+}

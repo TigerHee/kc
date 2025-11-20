@@ -1,0 +1,69 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-loading-mask 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'loading'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('loading') {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &.is-full-screen {
+    position: fixed;
+    inset: 0;
+  }
+
+  &.is-blur {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  &-box {
+    position: relative;
+  }
+
+  &.is-large {
+    .#{$prefix}-box {
+      width: 64px;
+      height: 64px;
+    }
+  }
+  &.is-medium {
+    .#{$prefix}-box {
+      // 默认尺寸 medium
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &.is-small {
+    .#{$prefix}-box {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &.is-mini {
+    .#{$prefix}-box {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+
+
+  &-circle {
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: get-animation-name(spin) 1.5s linear infinite;
+  }
+
+  &-logo {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

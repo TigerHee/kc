@@ -1,0 +1,62 @@
+@import '~style/select.default.less';
+@import '~style/input.default.less';
+
+.transferForm {
+  label {
+    font-size: 12px;
+  }
+  :global {
+    .ant-select-selection__placeholder,
+    .ant-select-search__field__placeholder {
+      left: 12px;
+    }
+  }
+}
+.inputWrapper {
+  position: relative;
+}
+.input {
+  padding-right: 68px !important;
+}
+.addonAfter {
+  width: 56px;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 13px;
+  span {
+    width: 0;
+    height: 16px;
+    border-left: 1px solid #ccc;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    margin-top: -8px;
+  }
+}
+
+.switchInput {
+  width: 100%;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 14px;
+}
+.switchIcon {
+  width: 24px;
+  height: 24px;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.fromItem {
+  color: #0f7dff;
+}
+
+.coinSelector {
+  color: #333;
+}

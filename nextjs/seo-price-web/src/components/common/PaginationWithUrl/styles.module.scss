@@ -1,0 +1,52 @@
+.pageItem {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 2px;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none !important;
+  &:hover{
+    background:rgba(0, 20, 42, 0.04);
+    text-decoration: none;
+  }
+  &:active{
+    background: rgba(0, 20, 42, 0.12);
+    text-decoration: none;
+  }
+}
+
+
+
+.linkSelect{
+  background: #2DBD96;
+  color: #fff;
+}
+
+.arrow{
+  @extend .pageItem;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.disabledArrow{
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.4;
+  &:hover{
+    background: none;
+  }
+}
+
+.endEllipsis{
+  width: 32px;
+  height: 32px;
+  color: #000D1D;
+  text-align: center;
+}

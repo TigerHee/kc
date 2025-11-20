@@ -1,0 +1,53 @@
+.customWrapper {
+  position: relative;
+  margin: 120px auto 0;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    margin-top: 48px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.title {
+  margin-bottom: 48px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: center;
+  color: var(--kux-text);
+  word-break: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+
+  @media (max-width: 600px) {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+}
+
+.icon {
+  width: 182px;
+  height: 182px;
+  margin-bottom: 8px;
+
+  @media (max-width: 600px) {
+    width: 136px;
+    height: 136px;
+  }
+}
+
+.customButton {
+  padding: 24px 28px;
+  font-size: 16px;
+
+  @media (max-width: 600px) {
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+}
+

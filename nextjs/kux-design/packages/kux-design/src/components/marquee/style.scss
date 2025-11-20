@@ -1,0 +1,85 @@
+@import '@/style/index.scss';
+
+// 自动产生命名空间, 用于生成类名, 使用 $ns-marquee 作为类名
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则类名为 kux-hero2
+// * $prefix 也会自动更新: $ns + '-' + 'marquee'
+// * 例如: $ns: 'kux', componentName: 'Hero2', 则 $prefix 为 kux-hero2
+@include component('marquee') {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+  &-item {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-around;
+    will-change: transform;
+  }
+  
+  &.is-scrollable {
+    .#{$prefix}-item {
+      animation: marquee var(--duration, 20s) infinite linear;
+      [dir=rtl] & {
+        animation-name: marquee-rtl;
+      }
+      [dir=ltr] & {
+        animation-name: marquee;
+      }
+    }
+  }
+
+  &-spacer {
+    display: block;
+    flex-shrink: 0;
+    width: var(--gap, 0px);
+  }
+
+  &.is-vertical {
+    flex-direction: column;
+
+    .#{$prefix}-spacer {
+      height: var(--gap, 0px);
+    }
+    .#{$prefix}-item {
+      animation-direction: unset;
+      flex-direction: column;
+    }
+
+    &.is-scrollable .#{$prefix}-item {
+      animation: marquee-vertical var(--duration, 20s) linear infinite;
+    }
+  }
+
+  &.is-pause-on-hover:hover {
+    .#{$prefix}-item {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(calc(-100% - var(--gap, 0px)), 0, 0);
+  }
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(calc(100% + var(--gap, 0px)), 0, 0);
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0, calc(-100% - var(--gap, 0px)), 0);
+  } 
+}

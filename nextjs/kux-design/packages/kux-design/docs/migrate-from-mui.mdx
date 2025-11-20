@@ -1,0 +1,70 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="9. 从 @kux∕mui 迁移" />
+
+# 从 @kux/mui 迁移
+`@kux/design` 提供了与 `@kux/mui` 相同的组件, 但在使用上有一些差异, 也做了不少改进, 主要体现在以下几个方面:
+* 增强了响应式支持, 比如对话框组件不再区分 `mobile` 和 `desktop` 两个组件, 而是使用统一的 `Modal` 组件实现
+
+
+## 公共部分
+
+若项目中使用了 `@kux/mui` 组件库, 则需要在迁移到 `@kux/design` 前, 在项目的入口文件中添加以下配置:
+
+### 主题设置
+若项目使用了 `dva` 作为状态管理, 则在项目入口代码按下述方式处理
+
+```tsx
+import { useSelector } from 'src/hooks/useSelector';
+import { setTheme } from '@kux/design';
+
+// 项目入口代码
+export function EntryPage() {
+  // 获取当前主题
+  const currentTheme = useSelector((state) => state.app.currentTheme, 'ignore');
+
+  useEffect(() => {
+    // 同步主题
+    setTheme(currentTheme);
+  }, [currentTheme])
+  // 其他代码
+  ...
+}
+```
+
+若项目未使用 dva, 则可以在项目入口代码中增加下述代码
+
+```ts
+import { useEffect } from 'react';
+import { setTheme, BUILTIN_THEMES } from '@kux/design';
+
+// 项目入口代码
+export function EntryPage() {
+  useEffect(() => {
+    const theme = app.storage('theme')
+    // 设置主题, 若 theme 不在内置主题列表中, 则默认为 'light'
+    setTheme(BUILTIN_THEMES.includes(theme) ? theme : 'light');
+  }, []);
+  // 其他代码
+  ...
+}
+
+/**
+ * 更新主题方法, 并存储到 app.storage 中
+ */
+function updateTheme(theme: string) {
+  if (!BUILTIN_THEMES.includes(theme)) {
+    console.warn(`Unsupported theme: ${theme}, defaulting to 'light'`);
+    return;
+  }
+  // 更新主题, 并存储到 app.storage 中
+  app.storage('theme', theme);
+  setTheme(theme);
+}
+```
+
+
+## 组件改造
+
+
+### Loading

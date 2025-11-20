@@ -1,0 +1,96 @@
+@import './mixin.scss';
+
+/**
+ * 旋转动画
+ */
+@include keyframes('spin') {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/**
+ * 淡入动画
+ */
+@include keyframes(fade-in) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/**
+ * 淡出动画
+ */
+@include keyframes(fade-out) {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/**
+ * 从底部向上滑入动画
+ */
+@include keyframes(slide-in-from-bottom) {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/**
+ * 从左向右滑入动画
+ */
+@include keyframes(slide-in-from-left) {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/**
+ * 从右向左滑入动画
+ */
+@include keyframes(slide-in-from-right) {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@include keyframes(slide-out-to-bottom) {
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@include keyframes(slide-out-to-left) {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@include keyframes(slide-out-to-right) {
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

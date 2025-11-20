@@ -1,0 +1,89 @@
+// kufox base
+@primary: #2dbd96;
+@primary88: fade(#2dbd96, 88);
+@primary40: fade(#2dbd96, 40);
+@primary12: fade(#2dbd96, 12);
+@primary8: fade(#2dbd96, 8);
+@secondary: #ed6666;
+@secondary88: fade(#ed6666, 88);
+@secondary40: fade(#ed6666, 40);
+@secondary12: fade(#ed6666, 12);
+@secondary8: fade(#ed6666, 8);
+@complementary: #ffb547;
+@complementary88: fade(#ffb547, 88);
+@complementary40: fade(#ffb547, 40);
+@complementary12: fade(#ffb547, 12);
+@complementary8: fade(#ffb547, 8);
+@main: #18bb97; // 储蓄业务
+@trade: #5c95e8; // 币币业务
+@margin: #7a78e4; // 杠杆业务
+@futures: #72948a; // 合约业务
+@poolx: #8cb2c1; // poolx业务
+@mining: #9292b7; // 挖矿业务
+@icon: #737e8d; // 图标
+@mask: fade(#000000, 6); // 遮罩
+@link: #24ae8f; // 超链接
+@mq-width-md: 767px;
+@mq-width-lg: 1023px;
+@mq-width-fl: 1350px;
+
+.font_sm() {
+  font-size: 12px;
+  line-height: 20px;
+}
+.font_md() {
+  font-size: 14px;
+  line-height: 22px;
+}
+.font_lg() {
+  font-size: 16px;
+  line-height: 24px;
+}
+.font_xl() {
+  font-size: 20px;
+  line-height: 28px;
+}
+.font_x2l() {
+  font-size: 24px;
+  line-height: 36px;
+}
+.font_x3l() {
+  font-size: 34px;
+  line-height: 48px;
+}
+.font_x4l() {
+  font-size: 48px;
+  line-height: 72px;
+}
+.font_x5l() {
+  font-size: 60px;
+  line-height: 88px;
+}
+
+// < 768px
+.mediaQuerySm(@style) {
+  @media screen and (max-width: @mq-width-md) {
+    @style();
+  }
+}
+
+// < 1024px
+.mediaQueryMd(@style) {
+  @media screen and (max-width: @mq-width-lg) {
+    @style();
+  }
+}
+
+// < 1350
+.mediaQueryFl(@style) {
+  @media screen and (max-width: @mq-width-fl) {
+    @style();
+  }
+}
+
+// > 1350
+.mediaQueryXl(@style) {
+  @media screen and (min-width: (@mq-width-fl + 1)) {
+    @style();
+  }
+}

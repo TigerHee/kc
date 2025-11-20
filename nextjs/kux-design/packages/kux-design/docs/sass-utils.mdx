@@ -1,0 +1,451 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="5. Sass 与工具样式" />
+# Sass 与工具样式
+
+@kux/design 使用sass + css variable 来编写样式, 并将其中公共的 sass 工具以及css 工具类导出了, 项目中可以按需使用.
+
+## 构建工具配置
+在使用sass前, 需要在项目中配置好 sass 的编译工具, 例如使用 `sass-loader`。
+
+* 如果使用 vite, 只需要安装 `sass` 即可, vite 会自动处理 sass 的编译。
+* 如果使用 webpack, 需要安装 `sass-loader` 和 `sass`，并在 webpack 配置中添加相应的规则。详细参考
+[与3-0架构集成](?path=/docs/8-与3-0架构集成--api#项目构建配置-buildconfigjs).
+
+<Callout type="warning">
+  注意: `sass` 需要使用 node 18 及以上版本。请确保项目使用的 node 及 CI 环境满足要求。
+
+> 3.0 项目若使用的古老的node版本, 在将本地 node 版本升级到 18 以上后, 可以将项目CI配置文件 `<项目名>.json` 中的 node 版本和 docker 镜像按下面进行修改
+> ```json
+> "node_version": "v18.19.0",
+> "docker_image": "harbor-hkidc.kcprd.com/base/node:18.19.0-bullseye",
+> ```
+[CI nodejs 基础镜像](https://klarkchat.sg.larksuite.com/wiki/INMwwn0W6iowmtk6TSrlMA6ygtb)
+</Callout>
+
+
+## 基础配置
+
+每个业务应用(支持多个业务应用同时在一个仓库中使用的场景)都应该有一个自己的公共的 sass 文件入口, 用于对 kux-design 进行公共设置
+
+应用公共的scss文件, 例如: src/xxx/style/common.scss
+```scss
+// 设置命名空间, 用于避免样式冲突, 一定要在 @import '@kux/design/style'; 之前设置
+// 若不设置, 值默认为 user
+// @kux/design 的命名空间为 `kux`, !!!业务中不要将命名空间设置为 `kux`!!!
+$ns: '<your-namespace>';
+/**
+ * 用户自定义主题名称, 默认值为 ('light', 'dark')
+ * 一般不需要修改, 除非有特殊主题需求
+ *  例如 ('light', 'dark', 'light-golden', 'dark-golden')
+ * 
+ * 自定义主题变量后可以通过 setTheme 方法设置为自定义的主题, 如 setTheme('light-golden')
+ */
+// $user-theme-names: ('light', 'dark');
+@import '@kux/design/style';
+```
+
+业务中其他地方使用:
+```scss
+// 注意在项目配置好路径别名
+@import '@/xxx/style/common.scss';
+
+// 自定义主题变量, 按主题名顺序定义
+@include defineUserThemeVar('primary', lightgreen, darkgreen);
+// 也可以使用对象方式定义主题变量
+@include defineUserThemeVar('primary', (light: lightgreen, dark: darkgreen));
+
+// 开发一个组件
+@include component('hero') {
+  color: get-theme(text); // 使用组件库默认主题变量
+
+  &_title {
+    font-size: 24px;
+    // 使用自定义的主题变量
+    color: get-user-theme(primary);
+    @include text-stroke(#000, 2px); // 使用文字描边
+    // $prefix 是当前组件的命名空间前缀
+    #{$prefix}_title-content {
+      @include ellipsis(2); // 设置文字2行省略号
+    }
+
+    // 大于小屏幕的样式: 大屏、中屏
+    @include responsive(S) {
+      font-size: 20px;
+    }
+  }
+}
+
+// 假设 $ns 设置的为 lego, 那么将得到以下css
+:root, [data-theme='light'] {
+  --lego-primary: lightgreen;
+}
+[data-theme='dark'] {
+  --lego-primary: darkgreen;
+}
+.lego-hero {
+  color: var(--kux-text);
+}
+.lego-hero_title {
+  font-size: 24px;
+  color: var(--lego-primary);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.lego-hero_title-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+```
+
+提供的方法均已做好 RTL 适配及黑白主题适配, 可以直接使用。
+
+## CSS 工具类
+
+| 类名          | 功能说明                                 |
+|---------------|------------------------------------------|
+| `.kux-text-start`    | 文字首位对齐(ltr 时左对齐, rtl 右对齐)    |
+| `.kux-text-center`   | 文字居中对齐 |
+| `.kux-text-end` | 文字末位对齐(ltr 时右对齐, rtl 左对齐) |
+| `.kux-ellipsis`       | 文字单行省略号(注意需有宽度限制) |
+| `.kux-ellipsis-2`   | 文字2行省略号(注意需有宽度限制) |
+| `.kux-ellipsis-3`   | 文字3行省略号(注意需有宽度限制) |
+| `.kux-leading-ellipsis`  | 单行文本在文字头部显示省略号(ltr时即左侧, rtl即右侧) |
+| `.kux-inverted`  | 内容旋转 180deg, (rotate(180deg)) |
+| `.kux-inverted-rtl`  | 仅在rtl时内容中心旋转 180deg, (rotate(180deg)) |
+| `.kux-flip`  | 内容对称翻转, (scaleX(-1)) |
+| `.kux-flip-rtl`  | 仅在rtl时内容对称翻转, (scaleX(-1)) |
+| `.kux-highlight`  | 将文字颜色改为主题色(primary) |
+| `.kux-pointer`  | 鼠标指针改为pointer |
+
+## CSS 动画
+在 sass 中使用可以使用 `get-animation-name` 函数获取动画名称(不需要前缀), 例如 `get-animation-name('fade-in')`。
+
+| 类名          | 功能 说明                                 | 
+|---------------|------------------------------------------|
+| `kux-spin`  | 旋转: 内容旋转 360deg |
+| `kux-fade-in`  | 淡入: 内容不透明度从 0 变为 1 |
+| `kux-fade-out`  | 淡出: 内容不透明度从 1 变为 0 |
+| `kux-slide-in-from-bottom`  | 底部滑入+淡入: 内容不透明度从 1 变为 0, 同时位置从Y偏移100% 变为0 |
+| `kux-slide-in-from-left`  | 左侧滑入+淡入: 内容不透明度从 1 变为 0, 同时位置从X偏移-100% 变为0 |
+| `kux-slide-in-from-right`  | 右侧滑入+淡入: 内容不透明度从 1 变为 0, 同时位置从X偏移100% 变为0 |
+| `kux-slide-out-to-bottom`  | 底部滑出+淡出: 内容不透明度变为 0, 同时位置从Y变为100% |
+| `kux-slide-out-to-left`  | 左侧滑出+淡出: 内容不透明度变为 0, 同时位置从X变为-100% |
+| `kux-slide-out-to-right`  | 右侧滑出+淡出: 内容不透明度变为 0, 同时位置从X变为100% |
+
+
+## SASS Mixin
+
+### 普通 mixin
+
+| mixin          | 功能说明                                 | 
+|---------------|------------------------------------------|
+| `ellipsis($line: 1)`  | 设置文字溢出, 支持设置显示的行数, 默认1 |
+| `no-scrollbar`  | 隐藏滚动条 |
+| `space-x($space)`  | 设置子元素横向间距(已处理RTL) |
+| `space-y($space)`  | 设置子元素纵向间距 |
+| `text-stroke($color, $width: 1px, $restShadow: null)`  | 使用文字阴影实现文字描边, 比 text-stroke 兼容性更好 |
+
+示例:
+
+```scss
+// 引入项目的公共scss文件, 注意路径别名的配置
+@import '@/xxx/style/common.scss';
+
+.example {
+  @include space-x(10px); // 设置子元素横向间距为10px
+  @include no-scrollbar; // 隐藏滚动条
+  @include ellipsis(2); // 设置文字2行省略号
+  @include text-stroke(#000, 2px); // 设置文字描边
+}
+
+// 相当于
+// space-x(10px) 会生成以下css
+.example > * + * {
+  margin-left: 10px;
+}
+[dir='rtl'] .example > * + * {
+  margin-right: 10px;
+  margin-left: 0;
+}
+// no-scrollbar 会生成以下css
+.example::-webkit-scrollbar {
+  display: none;
+}
+// ellipsis(2) 会生成以下css
+.example {
+  overflow: hidden;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+// text-stroke(#000, 2px) 会生成以下css
+.example {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+```
+
+### 响应式开发
+| mixin          | 功能说明                                 | 
+|---------------|------------------------------------------|
+| `responsive($breakpoint)`  | 移动优先, 支持 md, lg, xl |
+| `responsive-down($breakpoint)`  | 大屏幕优先, 支持 md, lg, xl |
+| `responsive-between($breakpoint-min, $breakpoint-max)`  | 响应式区间 |
+
+三个断点分别对应:
+- md: 中屏幕 768px
+- lg: 大屏幕 1200px
+- xl: 超大屏幕 1440px
+
+对应的, 还有hooks `useResponsive` 和 方法`compareViewportSize` 用于获取当前屏幕尺寸和比较屏幕尺寸, [参考文档](?path=/docs/5-组件库中的hooks--api#useresponsive)
+
+
+示例
+
+```scss
+// 引入项目的公共scss文件, 注意路径别名的配置
+@import '@/xxx/style/common.scss';
+
+// 采用移动优先的写法
+.example {
+  font-size: 16px;
+  @include responsive(md) {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  @include responsive(lg) {
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// 同等效果采用大屏幕优先的写法
+.example-2 {
+  font-size: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  @include max-responsive(M) {
+    font-size: 20px;
+    box-shadow: none;
+  }
+  @include max-responsive(S) {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+// ------ 相当于 cs ---------
+.example {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .example {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1200px) {
+  .example {
+    font-size: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.example-2 {
+  font-size: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .example-2 {
+    font-size: 20px;
+    box-shadow: none;
+  }
+}
+@media (max-width: 768px) {
+  .example-2 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+
+```
+
+### 组件开发
+| mixin          | 功能说明                                 | 
+|---------------|------------------------------------------|
+| `component($name)`  | 开发自定义组件, 前缀在[基础配置](#基础配置)使用 `$ns`设置 |
+
+示例
+
+```scss
+// 引入项目的公共scss文件, 注意路径别名的配置
+@import '@/xxx/style/common.scss';
+
+@include component('hero') {
+  color: get-theme(text); // 使用组件库默认主题变量
+
+  &_title {
+    font-size: 24px;
+    // 使用自定义的主题变量
+    color: get-theme(primary);
+    @include text-stroke(#000, 2px); // 使用文字描边
+    // $prefix 是当前组件的命名空间前缀
+    #{$prefix}_content {
+      @include ellipsis(2); // 设置文字2行省略号
+    }
+
+    // 大于小屏幕的样式: 大屏、中屏
+    @include responsive(S) {
+      font-size: 20px;
+    }
+  }
+}
+
+
+// 假设 $ns 设置的为 lego, 那么将得到以下css
+.lego-hero {
+  color: var(--kux-text);
+}
+
+.lego-hero .lego-hero_title {
+  font-size: 24px;
+  color: var(--kux-primary);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+@media (min-width: 768px) {
+  .lego-hero .lego-hero_title {
+    font-size: 20px;
+  }
+}
+.lego-hero .lego-hero_title .lego-hero_content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+```
+
+
+### 主题变量
+定义自定义变量
+| mixin          | 功能说明                                 | 
+|---------------|------------------------------------------|
+| `defineUserThemeVar($name, $var1, $var2, ...)`  | 定义用户自定义主题变量, 按 `$user-theme-names` 顺序挨个定义, 前缀在[基础配置](#基础配置)使用 `$ns`设置, 配合 get-user-theme 获取变量 |
+| `defineUserThemeVar($name, $varMap)`  | 定义用户自定义主题变量, 使用对象方式定义, $varMap 的key 为 `$user-theme-names` 中的主题名, 前缀在[基础配置](#基础配置)使用 `$ns`设置, 配合 get-user-theme 获取变量 |
+
+获取变量
+| function          | 功能说明                                 | 
+|---------------|------------------------------------------|
+| `get-theme($key)`  | 获取组件库的主题变量(css 变量`var(--kux-xxx)`) |
+| `get-theme($key, $theme: dark\|light)`  | 获取组件库指定主题的变量值(具体的值) |
+| `get-user-theme($key)`  | 获取用户自定义的主题变量(css 变量`var(--#{$ns}-xxx)`, `#{$ns}`为当前组件的命名空间前缀) |
+| `get-user-theme($key, $theme: $user-theme-names)`  | 获取用户自定义的指定主题的变量值(具体的值), `$user-theme-names`为用户自定义的主题名称 |
+
+
+示例:
+
+```scss
+// 引入项目的公共scss文件, 注意路径别名的配置
+@import '@/xxx/style/common.scss';
+// 应当在局部全局中使用, 不要在嵌套中使用
+// 用户自定义的主题变量名可以与组件库的主题变量名相同, 因为两者使用了不同的前缀, 使用方式也不同
+@include defineUserThemeVar('primary', lightgreen, darkgreen); // 定义用户自定义主题变量
+// 也可以使用对象方式
+// @include defineUserThemeVar('primary', (light: lightgreen, dark: darkgreen));
+/**
+ * 用户自定义主题中的默认主题名, 需要与 $user-theme-names 中的主题名一致, 默认为 light.
+ * 该值影响 未设置 data-theme 时的页面使用的主题变量
+ */
+// $user-default-theme: 'light';
+.example {
+  color: get-theme(text); // 文字颜色始终使用浅色主题的文本颜色(白色)
+  border-color: get-user-theme(primary); // 获取用户自定义的主题变量
+}
+
+
+// 假设 $ns 设置的为 lego, 那么将得到以下css
+:root, [data-theme='light'] {
+  --lego-primary: lightgreen;
+}
+[data-theme='dark'] {
+  --lego-primary: darkgreen;
+}
+
+.example {
+  color: var(--kux-text);
+  border-color: var(--lego-primary);
+}
+
+```
+
+
+
+
+示例
+
+```scss
+// 引入项目的公共scss文件, 注意路径别名的配置
+@import '@/xxx/style/common.scss';
+
+.example {
+  color: get-theme(text, 'dark'); // 文字颜色始终使用暗色主题的文本颜色(白色)
+  background-color: get-user-theme(primary); // 假设已经定义了用户自定义主题变量 primary
+}
+
+// 假设 $ns 设置的为 lego, 那么将得到以下css
+.example {
+  color: #fff; /* 暗色主题的文本颜色 */
+  background-color: var(--lego-primary);
+}
+```
+
+### 动画
+自定义动画
+| mixin          | 功能说明                                 |
+|---------------|------------------------------------------|
+| `keyframes($name)`  | 自定义动画, 动画名为 `#{$ns}-#{$name}`, `$ns`为当前组件的命名空间前缀 |
+
+获取动画名称
+| function          | 功能说明                                 |
+|------------------|------------------------------------------|
+| `get-user-animation-name($name)`  | 获取自定义动画名称, 会自动拼接当前组件的命名空间前缀 |
+| `get-animation-name($name)`  | 获取组件库[内置动画名称](#css-动画), 不需要前缀 |
+
+示例:
+
+```scss
+// 引入项目的公共scss文件, 注意路径别名的配置
+@import '@/xxx/style/common.scss';
+
+// 定义自定义动画
+@include keyframes('shake') {
+  0%   { transform: translateX(0); }
+  10%  { transform: translateX(-8px); }
+  20%  { transform: translateX(8px); }
+  30%  { transform: translateX(-6px); }
+  40%  { transform: translateX(6px); }
+  50%  { transform: translateX(-4px); }
+  60%  { transform: translateX(4px); }
+  70%  { transform: translateX(-2px); }
+  80%  { transform: translateX(2px); }
+  90%  { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+.login-form.is-invalid {
+  // 使用自定义动画
+  animation: get-user-animation-name('shake') 0.5s ease-in-out;
+}
+
+.custom-loading {
+  // 使用组件库内置动画
+  animation: get-animation-name('spin') 1s linear infinite;
+}
+```

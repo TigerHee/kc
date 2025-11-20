@@ -1,0 +1,402 @@
+/* 以下是自定义变量 亮暗通用 */
+:root {
+  --custom-primary: #01bc8d;
+}
+
+:root:not(.theme-dark) {
+  --tv-color-platform-background: #fff;
+  --tv-color-pane-background: #fff;
+  /* --tv-color-pane-background-secondary: rgb(249, 185, 233); */
+  --tv-color-toolbar-button-background-hover: #f9f9f9;
+  /* --tv-color-toolbar-button-background-secondary-hover: red; */
+  --tv-color-toolbar-button-background-expanded: #fff;
+  --tv-color-toolbar-button-text: #8c8c8c;
+  --tv-color-toolbar-button-text-hover: #8c8c8c;
+  --tv-color-toolbar-button-text-active: var(--custom-primary);
+  --tv-color-toolbar-button-text-active-hover: var(--custom-primary);
+  --tv-color-item-active-text: #fff;
+  --tv-color-toolbar-toggle-button-background-active: var(--custom-primary);
+  --tv-color-toolbar-toggle-button-background-active-hover: var(--custom-primary);
+  /* --tv-list-item-button-background-color: rgba(0,0,0,0); */
+  --tv-list-item-button-background-hover-color: rgba(0, 0, 0, 0); /* 透明 */
+  --tv-tabs-slider-text-color: rgba(29, 29, 29, 0.4);
+  --tv-color-toolbar-divider-background: rgba(0, 0, 0, 0);
+  --tv-dialog-tabs-border-radius: 8px;
+  --range-slider-middle-bg: var(--custom-primary);
+  --ui-lib-checkbox-color-accent: var(--custom-primary);
+}
+
+.theme-dark:root {
+  --tv-color-platform-background: #121212;
+  --tv-color-pane-background: #121212;
+  --tv-color-toolbar-button-background-expanded: #121212;
+  /* --tv-color-pane-background-secondary: rgb(249, 185, 233); */
+  --tv-color-toolbar-button-background-hover: #222223;
+  /* --tv-color-toolbar-button-background-secondary-hover: red; */
+  --tv-color-toolbar-button-text: #8c8c8c;
+  --tv-color-toolbar-button-text-hover: #8c8c8c;
+  --tv-color-toolbar-button-text-active: var(--custom-primary);
+  --tv-color-toolbar-button-text-active-hover: var(--custom-primary);
+  --tv-color-item-active-text: #fff;
+  --tv-color-toolbar-toggle-button-background-active: var(--custom-primary);
+  --tv-color-toolbar-toggle-button-background-active-hover: var(--custom-primary);
+  --tv-list-item-button-background-hover-color: rgba(0, 0, 0, 0);
+  --tv-tabs-slider-text-color: rgba(243, 243, 243, 0.4);
+  --tv-color-toolbar-divider-background: rgba(0, 0, 0, 0);
+  --tv-dialog-tabs-border-radius: 8px;
+  --range-slider-middle-bg: var(--custom-primary);
+  --ui-lib-checkbox-color-accent: var(--custom-primary);
+}
+
+/* 注意：更新tradingview版本后以下内容需要替换 */
+/* --------------- menu item | select item 选中颜色 样式 start ------------- */
+.item-RhC5uhZw.isActive-RhC5uhZw,
+.item-RhC5uhZw.isActive-RhC5uhZw:active {
+  background-color: #f0f3fa !important; /* 强制hover的样式，hover需要其他颜色需单独设置，去掉important */
+  color: #131722 !important;
+}
+html.theme-dark .item-RhC5uhZw.isActive-RhC5uhZw,
+html.theme-dark .item-RhC5uhZw.isActive-RhC5uhZw:active {
+  background-color: rgba(243, 243, 243, 0.04) !important;
+  color: #c1c4cd !important;
+}
+
+html.theme-dark .item-RhC5uhZw:hover {
+  background-color: rgba(243, 243, 243, 0.04) !important;
+}
+
+html.theme-dark .wrapper-VM8LlHff {
+  background: #222223;
+}
+
+html.theme-dark .wrap-__HYDlI5.dialog-__HYDlI5 {
+  background: #222223;
+}
+
+html.theme-dark .wrapper-n_GqAsy6 {
+  background: #222223;
+}
+
+html.theme-dark .item-KMA9DMBY,
+html.theme-dark .wrap-KMA9DMBY.small-KMA9DMBY {
+  background: #222223;
+}
+
+/* html.theme-dark .wrap-jVaj_zta {
+  background: #222223;
+} */
+
+.item-RhC5uhZw.isActive-RhC5uhZw .shortcut-RhC5uhZw,
+.item-RhC5uhZw.isActive-RhC5uhZw:active .shortcut-RhC5uhZw {
+  color: #131722 !important;
+}
+html.theme-dark .item-RhC5uhZw.isActive-RhC5uhZw .shortcut-RhC5uhZw,
+html.theme-dark .item-RhC5uhZw.isActive-RhC5uhZw:active .shortcut-RhC5uhZw {
+  color: #c1c4cd !important;
+}
+
+html.theme-dark .tab-a7Y2yl3G.active-a7Y2yl3G .icon-a7Y2yl3G,
+html.theme-dark .tab-a7Y2yl3G.active-a7Y2yl3G .title-a7Y2yl3G {
+  color: #fff;
+}
+
+html.theme-dark .tab-a7Y2yl3G:hover {
+  background-color: rgba(243, 243, 243, 0.04) !important;
+}
+
+.tab-a7Y2yl3G:hover {
+  background-color: rgba(29, 29, 29, 0.04) !important;
+}
+
+/* --------------- menu item | select item 选中颜色 样式 end ------------- */
+
+/* 主屏下方提示语背景颜色 */
+.container-f2q4yHCG {
+  background-color: var(--custom-primary) !important;
+}
+
+/* --------------- tabs 样式 start ------------- */
+.tab-g47ZTMzc {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab-g47ZTMzc.active-g47ZTMzc {
+  color: #1d1d1d !important;
+}
+html.theme-dark .tab-g47ZTMzc.active-g47ZTMzc {
+  color: #f3f3f3 !important;
+}
+
+.tab-Rf5MOAG5.withHover-Rf5MOAG5:hover {
+  color: rgba(29, 29, 29, 0.4) !important;
+}
+html.theme-dark .tab-Rf5MOAG5.withHover-Rf5MOAG5:hover {
+  color: rgba(243, 243, 243, 0.4) !important;
+}
+
+.slider-n4RgAWzv .inner-n4RgAWzv {
+  background-color: var(--custom-primary) !important;
+  margin: 0 20px;
+}
+
+.isActive-rSoA6gh6 {
+  color: var(--custom-primary) !important;
+}
+/* --------------- tabs 样式 end ------------- */
+
+/* --------------- checkbox 样式 start ------------- */
+/* 支持通过 --ui-lib-checkbox-color-accent 设置颜色 如需另设样式在下方修改代码 */
+/* .wrapper-2eXD4rIf .input-2eXD4rIf:checked + .box-2eXD4rIf {
+  background-color: var(--custom-primary) !important;
+  border-color: var(--custom-primary) !important;
+}
+.wrapper-2eXD4rIf .box-2eXD4rIf {
+  border: 1px solid #b2b5be;
+  border-radius: 18px;
+} */
+/* --------------- checkbox 样式 end ------------- */
+
+/* radio 样式 */
+.radio-KZcDDz7S .wrapper-KZcDDz7S .input-KZcDDz7S:checked + .box-KZcDDz7S:before {
+  border-color: var(--custom-primary) !important;
+  transition: none;
+}
+
+/* 输入框 focus 样式 */
+.container-Mtq7m9Yl.intent-primary-Mtq7m9Yl {
+  --ui-lib-intent-color: var(--custom-primary);
+  --ui-lib-intent-highlight-color: var(--custom-primary);
+}
+
+/* switch focus 样式 */
+.input-Wv0rGnT8:checked + .thumb-wrapper-Wv0rGnT8 .track-Wv0rGnT8,
+.input-Wv0rGnT8:disabled + .thumb-wrapper-Wv0rGnT8 .track-Wv0rGnT8 {
+  background-color: var(--custom-primary) !important;
+  border-color: var(--custom-primary) !important;
+}
+
+/* --------------- 颜色选择框 样式 start ------------- */
+.swatch-pNRFZrPx.selected-pNRFZrPx:after {
+  border-color: var(--custom-primary) !important;
+}
+
+.thicknessItem-AfdFYQAU.checked-AfdFYQAU {
+  background-color: var(--custom-primary) !important;
+  border-color: var(--custom-primary) !important;
+}
+.input-jgT5uU0F:focus,
+.opacityInput-uujjxY8O:focus {
+  border-color: var(--custom-primary) !important;
+}
+
+.colorPickerWrap-KAmze9Wr.intent-primary-KAmze9Wr,
+.colorPickerWrap-KAmze9Wr.intent-primary-KAmze9Wr .shadow-KAmze9Wr {
+  border-color: var(--custom-primary) !important;
+}
+/* --------------- 颜色选择框 样式 end ------------- */
+
+/* modal 左侧 垂直tabs 样式 */
+.tab-a7Y2yl3G.active-a7Y2yl3G {
+  background-color: var(--custom-primary) !important;
+}
+
+/* --------------- button 样式 start ------------- */
+.color-brand-OvB35Th_.variant-primary-OvB35Th_ {
+  --ui-lib-button-default-color-bg: var(--custom-primary) !important;
+  --ui-lib-button-default-color-border: var(--custom-primary) !important;
+}
+
+.color-brand-OvB35Th_.variant-secondary-OvB35Th_ {
+  --ui-lib-button-default-color-bg: #0000 !important;
+  --ui-lib-button-default-color-border: var(--custom-primary) !important;
+  --ui-lib-button-default-color-content: var(--custom-primary) !important;
+}
+
+.button-OvB35Th_ {
+  cursor: pointer;
+  border-radius: 60px !important;
+}
+
+.size-small-OvB35Th_ .content-OvB35Th_ {
+  font-size: 14px;
+}
+/* --------------- button 样式 end ------------- */
+
+/* favorite hover 样式 */
+.favorite-TPXOIXOJ.active-TPXOIXOJ:hover {
+  background-color: var(--tv-list-item-button-background-color) !important;
+}
+
+/* .favorite-TPXOIXOJ.active-TPXOIXOJ {} */
+
+.selected-G1_Pfvwd .buttons-G1_Pfvwd,
+.selected-G1_Pfvwd .buttons-G1_Pfvwd .button-G1_Pfvwd:not(:first-child),
+.selected-G1_Pfvwd .buttonsWrapper-G1_Pfvwd,
+.selected-G1_Pfvwd .titleWrapper-G1_Pfvwd {
+  border-color: var(--custom-primary) !important;
+}
+
+/* --------------- toolbar style start ------------- */
+.innerWrap-TPBYkbxL {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.group-HlcUjC8J {
+}
+
+.wrap-ZOLycUbI {
+  margin-left: 0;
+  font-size: 12px;
+}
+/* .button-uO7HM85b svg {
+  width: 20px;
+} */
+
+.wrap-qKQlcmkd svg {
+  width: 20px;
+}
+
+/* .button-1SoiPS-f svg {
+  width: 20px;
+} */
+.value-Os5mxnuv {
+  font-size: 12px;
+}
+
+.button-_8r4li9v {
+  padding: 0px 5px;
+}
+
+.separatorWrap-HlcUjC8J {
+  padding: 0px;
+  display: none;
+}
+.button-reABrhVR .arrow-reABrhVR {
+  min-width: 26px;
+}
+.button-reABrhVR .arrow-reABrhVR .arrowWrap-reABrhVR {
+  margin: 0 6px 0 0;
+  /* width: 12px; */
+}
+
+.group-HlcUjC8J {
+  min-width: 30px;
+}
+
+.toolbar-uWw2aReP {
+  font-size: 12px;
+}
+
+.icon-2Vpz_LXc svg {
+  width: 28px;
+  position: relative;
+  z-index: -1;
+  scale: 0.7;
+}
+
+.button-2YcRd2gv {
+  padding: 0 0px;
+}
+#header-toolbar-screenshot {
+  padding: 0 !important;
+}
+#header-toolbar-screenshot .icon-uO7HM85b svg {
+  width: 28px;
+  transform: scale(0.7);
+}
+.button-OvB35Th_:active {
+  transform: translateY(0);
+}
+
+.toolbar-2yU8ifXU {
+  font-size: 12px;
+}
+
+.item-Jc9IXW74 {
+  font-size: 12px;
+}
+
+/* --------------- toolbar style end ------------- */
+
+/* --------------- modal style start ------------- */
+html.theme-dark .dialog-nnDbXk_L {
+  background: #222223;
+}
+/* --------------- modal style end ------------- */
+
+/* --------------- select style start ------------- */
+html.theme-dark .menuWrap-biWYdsXC {
+  background: #222223;
+}
+html.theme-dark .item-RhC5uhZw {
+  background: #222223;
+}
+/* --------------- select style end ------------- */
+
+/* --------------- calendar style start ------------- */
+html.theme-dark .calendar-Qr_wZLBl {
+  background: #222223;
+}
+/* --------------- calendar style end ------------- */
+
+.view-month-Qr_wZLBl .weeks-Qr_wZLBl .week-Qr_wZLBl .day-Qr_wZLBl.accent-color-Qr_wZLBl {
+  --ui-lib-light-button-color-border: var(--custom-primary) !important;
+  --ui-lib-light-button-color-bg: var(--custom-primary) !important;
+}
+.variant-ghost-msfP1I4t.color-gray-msfP1I4t.selected-msfP1I4t {
+  --ui-lib-light-button-default-color-content: var(--custom-primary) !important;
+}
+
+body {
+  /* font-family: 'Roboto', 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei'; */
+  -webkit-font-smoothing: unset;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* 去掉空数据logo */
+.errorCard__icon-Kcyx2XsY,
+.emptyIcon-eYX5YvkT {
+  display: none;
+}
+
+html.theme-dark .container-Mtq7m9Yl.disabled-Mtq7m9Yl,
+html.theme-dark .container-Mtq7m9Yl.disabled-Mtq7m9Yl:hover {
+  background-color: rgba(243, 243, 243, 0.08);
+}
+
+.container-Mtq7m9Yl.disabled-Mtq7m9Yl,
+.container-Mtq7m9Yl.disabled-Mtq7m9Yl:hover {
+  background-color: rgba(29, 29, 29, 0.08);
+}
+
+.chart-controls-bar {
+  height: 24px;
+}
+/* .quick-order-check{
+  cursor: pointer;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+}
+.quick-order-check::after{
+  position: absolute;
+  top: 0;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  visibility: visible;
+  padding-left: 0px;
+  text-align: center;
+  content: ' ';
+  border-radius: 1px;
+}   
+.quick-order-check:checked::after{
+  background-color: #01BC8D;
+  border-color: #01BC8D;
+  content: "✓";
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+} */

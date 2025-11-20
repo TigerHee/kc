@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "${IMAGE_NAME}"
+    env_file:
+      - ./.env
+    volumes:  
+      - /home/ec2-user/logs/insight-server:/logs
+    ports:
+      - "3300:3300"  
+      - "3301:3301"  
+    restart: unless-stopped
+    # depends_on:
+    #   - mongodb
+    # command: >
+    #    sh -c "yarn install && yarn run dev"
+    platform: linux/amd64
+    networks:
+      - insight-network
+networks:
+  insight-network:
+    driver: bridge

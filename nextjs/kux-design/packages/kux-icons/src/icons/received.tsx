@@ -1,0 +1,15 @@
+import type { SVGProps } from 'react'
+import { type IIconProps, KuxIcon } from '../kc-icon'
+function SvgIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" {...props}>
+      <g fill="currentColor">
+        <path d="M12.996 3a1 1 0 1 0-2 0v10.582l-2.789-2.79a1 1 0 0 0-1.414 1.415l4.445 4.445a1 1 0 0 0 .758.348h.002a1 1 0 0 0 .71-.293l4.5-4.5a1 1 0 0 0-1.415-1.414l-2.797 2.797z" />
+        <path d="M22 12a1 1 0 1 0-2 0v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-5.996a1 1 0 1 0-2 0V18a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4z" />
+      </g>
+    </svg>
+  )
+}
+export default function SvgComponent(props: IIconProps) {
+  return <KuxIcon {...props} icon={SvgIcon} />
+}

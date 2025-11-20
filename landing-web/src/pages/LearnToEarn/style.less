@@ -1,0 +1,96 @@
+//渐显示
+@-webkit-keyframes fadeIn {
+  0% {
+      opacity: 0.4
+  }
+
+  100% {
+      opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0.4
+  }
+
+  100% {
+      opacity: 1
+  }
+}
+
+.bg_common {
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #191B1D;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  @media (min-width: 1040px) {
+    display: none;
+  }
+  
+}
+
+.main_img {
+  background-image: url('assets/NFTQuiz/mainBg.png');
+}
+
+.learn_img {
+  background-image: url('assets/NFTQuiz/learnBg.png');
+}
+
+.pc_main {
+  background-color: #191B1D;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.page_anim {
+  opacity: 1;
+  animation: fadeIn 1s linear;
+  -webkit-animation: fadeIn 1s linear;
+}
+
+.mainBg {
+  @media (min-width: 1040px) {
+    background-image: url('assets/NFTQuiz/mainBg.svg');
+    background-color: black;
+    .pc_main;
+  }
+  &::before {
+    .bg_common;
+    .main_img;
+  }
+}
+
+.historyBg {
+  @media (min-width: 1040px) {
+    .pc_main;
+  }
+  &::before {
+    .bg_common;
+  }
+}
+
+.learnBg {
+  @media (min-width: 1040px) {
+    background-image: url('assets/NFTQuiz/learnBg.png');
+    .pc_main;
+    background-attachment: unset;
+  }
+  &::before {
+    .bg_common;
+    .learn_img;
+  }
+}
+
+.hidden {
+  display: none;
+}

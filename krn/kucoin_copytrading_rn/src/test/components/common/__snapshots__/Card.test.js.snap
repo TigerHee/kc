@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card applies style prop 1`] = `
+Array [
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderBottomLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderColor": "rgba(29, 29, 29, 0.08)",
+          "borderStyle": "solid",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+          "borderWidth": 1,
+          "marginBottom": 16,
+          "minHeight": 32,
+          "paddingBottom": 16,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+        },
+        Object {
+          "backgroundColor": "red",
+        },
+      ]
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Object {
+          "fontFamily": "Roboto-Regular",
+          "textAlign": "left",
+        }
+      }
+    >
+      Styled
+    </Text>
+  </View>,
+  "\\\\",
+]
+`;

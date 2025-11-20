@@ -1,0 +1,48 @@
+.IOSWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: var(--color-overlay);
+  display: flex;
+}
+
+.InfoWrapper {
+  display: flex;
+}
+
+.InfoDes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.InfoTitle {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.Logo {
+  width: 36px;
+  height: 36px;
+}
+
+.Close {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+.ShareImg {
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+}

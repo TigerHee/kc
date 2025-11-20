@@ -1,0 +1,15 @@
+export default {
+  "4EhrZujhYTKtPmKwo99tBr": "Реферальний код: {rcode}",
+  "69ti912QyqQK3RLThoqqNL": "Зареєструйтеся й отримайте вітальний набір",
+  "ceWPbECZDHEFPo5wuNKZou": "Більше",
+  "h2RhjtaW236Cy1ofAMdsY7": "На суму до {{num}}  {{siteBaseCurrency}}!",
+  "inviteB.manage.commission.yourrate": "Ваша ставка комісії",
+  "inviteB.manage.commisson.friendrate": "Знижка на комісію друга",
+  "inviteB.manage.copy.share": "Скопійовано! Поділіться з друзями!",
+  "inviteB.manage.poster.create": "Поділитися",
+  "inviteB.manage.poster.share": "Поділитися",
+  "inviteB.manage.remark": "Примітки",
+  "jBQ9i5z4hsWx6DXqnM4SbD": "Скопійовано!",
+  "sTkpRT7EiVTxqr6sApV5Aj": "Скопіювати посилання",
+  "x8nfNnRNkgqeds6C4AfUC8": "Зберегти зображення"
+}

@@ -1,0 +1,29 @@
+@import "~themes/dark.less";
+
+:global {
+  .ant-pagination {
+    .ant-pagination-disabled {
+      &:hover a, a {
+        color: @color-light-gray !important;
+      }
+    }
+
+    .ant-pagination-prev, .ant-pagination-next {
+      .ant-pagination-item-link {
+        color: @color_7;
+        background: transparent;
+      }
+    }
+
+    .ant-pagination-item {
+      background: transparent;
+    }
+  }
+
+  .ant-pagination-item:not(.ant-pagination-item-active)  a {
+    color: @color_7;
+  }
+  .ant-pagination-jump-prev:after, .ant-pagination-jump-next:after {
+    color: @color_7;
+  }
+}

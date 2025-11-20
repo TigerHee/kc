@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-5.42953985%" x2="53.2630213%" y2="109.707158%" id="linearGradient-1">
+            <stop stop-color="#DDE3EB" offset="0%"></stop>
+            <stop stop-color="#BDC9D9" offset="96.960802%"></stop>
+            <stop stop-color="#0F7DFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M194.898652,203.25595 L160.217109,186.30115 C156.946087,184.7001 154.913043,181.4838 154.913043,177.9054 L154.913043,165.90285 C155.744413,164.90885 156.619348,163.7764 157.523326,162.5268 C162.021435,156.3143 165.626457,149.3989 168.24763,141.94035 C173.370174,139.6435 176.695652,134.69125 176.695652,129.1 L176.695652,114.9 C176.695652,111.48135 175.388696,108.1692 173.065217,105.58125 L173.065217,86.6988 C173.268522,84.7463 174.067217,73.1236 165.470348,63.53505 C158.013435,55.2174 145.913196,51 129.5,51 C113.086804,51 100.986565,55.2174 93.5296522,63.5315 C84.9327826,73.12005 85.7314783,84.7463 85.9347826,86.6988 L85.9347826,105.58125 C83.6113043,108.1692 82.3043478,111.48135 82.3043478,114.9 L82.3043478,129.1 C82.3043478,133.42035 84.3119783,137.4496 87.7391087,140.13695 C91.064587,153.0128 98.0241304,162.71495 100.456522,165.8283 L100.456522,177.57525 C100.456522,181.01165 98.5396522,184.16405 95.457413,185.81125 L63.0703043,203.08555 C52.538413,208.7052 46,219.4759 46,231.2051 L46,242.7 C46,259.5483 100.619891,264 129.5,264 C158.380109,264 213,259.5483 213,242.7 L213,231.89735 C213,219.69245 206.062239,208.71585 194.898652,203.25595 Z" id="path-2"></path>
+        <filter x="-8.4%" y="-4.7%" width="116.8%" height="113.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.161458333 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Artboard-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-78">
+            <rect id="Rectangle" fill="url(#linearGradient-1)" fill-rule="nonzero" x="0" y="0" width="256" height="256"></rect>
+            <g id="Path">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

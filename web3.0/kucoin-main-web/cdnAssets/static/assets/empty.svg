@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>default</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="75.0778421%" x2="46.6959437%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#2D2F31" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#172835" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="91.9853913%" y1="0%" x2="-8.33996095%" y2="80.8647527%" id="linearGradient-2">
+            <stop stop-color="#F8F9FA" offset="0%"></stop>
+            <stop stop-color="#DDE2E7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="default">
+            <g>
+                <rect id="Rectangle" x="0" y="0" width="128" height="128"></rect>
+                <polygon id="Path-70" fill-opacity="0.299999982" fill="url(#linearGradient-1)" style="mix-blend-mode: multiply;" points="25.2701576 69.6379877 60.681785 101.714613 125.340729 90.2443028 84.9000596 58.5550432"></polygon>
+                <path d="M89.2748316,44.0458194 C92.1942288,46.915357 94.6828458,49.697898 96.7406826,52.3934425 C101.024553,58.0048507 102.303591,65.7610308 102.005728,65.9569195 C100.380719,67.0256015 91.0897865,60.8607418 89.2748316,55.8536525 C88.1867655,52.8519006 88.1867655,48.9159562 89.2748316,44.0458194 Z" id="Path-12" fill="#B1BCC4" transform="translate(95.252788, 55.062387) rotate(15.000000) translate(-95.252788, -55.062387) "></path>
+                <path d="M7.78616729,82.6463638 C29.1416806,68.0756983 40.3370564,49.9222258 41.3722948,28.1859463 C46.9798413,27.350032 57.8116935,28.3930333 84.9889666,33.1155849 C87.519882,33.5553781 87.7436693,37.5677409 85.6603283,45.1526733 C94.8231864,48.5106727 99.0216249,51.7093576 98.255644,54.7487279 C91.6146016,81.1000208 82.8287495,93.1142909 69.5688828,98.7600086 C54.3586633,100.689795 33.7644248,95.3185803 7.78616729,82.6463638 Z" id="Path-9" fill="url(#linearGradient-2)" transform="translate(53.065226, 63.533394) rotate(15.000000) translate(-53.065226, -63.533394) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

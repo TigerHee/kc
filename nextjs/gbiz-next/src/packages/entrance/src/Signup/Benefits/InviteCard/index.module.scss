@@ -1,0 +1,249 @@
+@import 'src/styles/mixin.scss';
+
+.container {
+  padding: 32px 24px 36px;
+  border-radius: 12px;
+  border: 1px solid var(--kux-divider8);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 48px;
+
+  & :global(.KuxAvatar-root) {
+    background-color: #d9d9d9;
+    border: none;
+  }
+
+  @include media-query('sm') {
+    padding: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+.layoutTop {
+  display: flex;
+  gap: 0 24px;
+
+  @include media-query('sm') {
+    gap: 0 12px;
+  }
+}
+
+.userFlag {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 130%;
+  flex-shrink: 0;
+  color: var(--kux-text);
+  border: 2px solid var(--kux-cover16);
+
+  @include media-query('sm') {
+    width: 41px;
+    height: 41px;
+    font-size: 16px;
+  }
+}
+
+.layoutRight {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  justify-content: center;
+  flex: 1;
+
+  @include media-query('sm') {
+    gap: 2px 0;
+  }
+}
+
+.nickname {
+  color: var(--kux-text);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 140%;
+
+  @include media-query('sm') {
+    font-size: 14px;
+  }
+}
+
+.rcode {
+  margin-top: 4px;
+  color: var(--kux-text60);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+
+  @include media-query('sm') {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+}
+
+.message {
+  margin-top: 10px;
+  margin-bottom: 32px;
+  width: 380px;
+  word-wrap: break-word;
+  border-radius: 12px;
+  background: var(--kux-cover4);
+  padding: 15px 16px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 0 1px 0 rgba(0, 0, 0, 0.04);
+  color: var(--kux-text60);
+  font-family: 'KuFox Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.h5Message {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--kux-cover4);
+  color: var(--kux-text60);
+}
+
+.dividerLine {
+  margin: 0;
+}
+
+.layoutBottom {
+  margin-top: 24px;
+}
+
+.campaignsTitle {
+  color: var(--kux-text);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+
+  @include media-query('sm') {
+    color: var(--kux-text40);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.campaignsList {
+  display: flex;
+  flex-direction: column;
+
+  @include media-query('sm') {
+    padding-bottom: 12px;
+    :global(.kux-slick-dots) {
+      bottom: -16px;
+    }
+    :global(.kux-slick-item) {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.campaignItem {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+
+  @include media-query('sm') {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin-top: 12px;
+  }
+}
+.campaignItemIcon {
+  color: var(--kux-text);
+  margin-right: 8px;
+  height: 16px;
+  display: flex;
+  padding: 1px 4px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px 8px 8px 0;
+  background: linear-gradient(276deg, #7ffca7 0.89%, #aaff8d 97.34%);
+  font-size: 10px;
+  font-weight: 700;
+
+  @include media-query('sm') {
+    align-self: flex-start;
+  }
+}
+
+.campaignItemContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 380px;
+  word-wrap: break-word;
+
+  @include media-query('sm') {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
+.campaignItemTitle {
+  color: var(--kux-text);
+  font-size: 16px;
+
+  @include media-query('sm') {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 14px;
+  }
+}
+.campaignItemDesc {
+  color: var(--kux-text40);
+  font-size: 14px;
+
+  @include media-query('sm') {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    height: 17px;
+    font-size: 12px;
+  }
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 0 12px 0 12px;
+  background: linear-gradient(103deg, #48d800 1.93%, #00b98a 98.71%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--kux-textEmphasis);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 130%;
+
+  @include media-query('sm') {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,83 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './stories';
+
+<Meta title="base/Button/Readme" />
+
+# button
+
+[Figma](https://www.figma.com/design/979O23gM42ADNiDJkoo8fa/KC-Guidelines-2025?node-id=42741-2438&p=f&m=dev)
+
+### 基础用法
+
+基本用法。
+
+```tsx
+import { Button } from '@kucoin/kux-design';
+
+function Demo() {
+  return (
+    <Button type="primary" onClick={() => {}}>
+      按钮
+    </Button>
+  );
+}
+```
+
+### 禁用状态
+
+禁用状态。
+
+```tsx
+import { Button } from '@kucoin/kux-design';
+
+function Demo() {
+  return (
+    <Button type="primary" disabled>
+      按钮
+    </Button>
+  );
+}
+```
+
+### 加载中状态
+
+- 如果需要手动控制加载中状态，请使用`loading`属性。
+- 如果回调是异步函数则按钮且`async`属性设置为`true`时会自动变为加载状态，异步函数执行完成后按钮会自动变为非加载状态。
+
+```tsx
+import { Button } from '@kucoin/kux-design';
+
+const fetchData = async () => {
+  return new Promise((resolve) => setTimeout(resolve, 2000));
+};
+
+function Demo() {
+  return (
+    <Button type="primary" async onClick={fetchData}>
+      按钮
+    </Button>
+  );
+}
+```
+
+### 按钮事件回调冷却时间
+
+按钮事件回调冷却时间，默认为 0ms。
+
+此属性用于防止用户快速点击按钮，导致事件回调被频繁触发。
+
+```tsx
+import { Button } from '@kucoin/kux-design';
+
+const clickHandle = () => {
+
+};
+
+function Demo() {
+  return (
+    <Button type="primary" onClick={clickHandle} coolDownTime={500}>
+      按钮
+    </Button>
+  );
+}
+```

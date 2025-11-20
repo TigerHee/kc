@@ -1,0 +1,26 @@
+/**
+ * 变量
+ */
+// 组件库内部使用命名空间, 用于保证内部函数、mixin 使用的ns变量不与外部的冲突
+$lib-ns: 'kux';
+
+/**
+ * 用户自定义主题名称
+ * 使用 data-theme="{theme}" 来切换主题
+ */
+$user-theme-names: (
+  'light',
+  'dark',
+) !default;
+/**
+ * 用户自定义主题中的默认主题名, 需要与 $user-theme-names 中的主题名一致
+ */
+$user-default-theme: 'light' !default;
+/**
+ * 组件的命名空间, 未设置时默认为 'user'
+ * 保证外部使用组件库的sass工具时命名空间不会与组件库自身冲突
+ * kux-design 组件的命名空间已在 style/index.scss 中设置为 'kux'
+ */
+$ns: 'user' !default;
+$page-background-color: #121212;
+$page-foreground-color: #f3f3f3;

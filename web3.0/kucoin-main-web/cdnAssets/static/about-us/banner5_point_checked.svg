@@ -1,0 +1,15 @@
+<svg width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="point_Selected">
+<g id="&#230;&#164;&#173;&#229;&#156;&#134;&#229;&#189;&#162;&#229;&#164;&#135;&#228;&#187;&#189; 3" filter="url(#filter0_f_2346_35740)">
+<circle cx="62.7817" cy="63" r="21" fill="#00FFC6"/>
+</g>
+<circle id="&#230;&#164;&#173;&#229;&#156;&#134;&#229;&#189;&#162;&#229;&#164;&#135;&#228;&#187;&#189; 125" cx="62.7817" cy="63" r="10.5" fill="#00FFC6"/>
+</g>
+<defs>
+<filter id="filter0_f_2346_35740" x="1.00751" y="1.22577" width="123.548" height="123.548" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="13.5914" result="effect1_foregroundBlur_2346_35740"/>
+</filter>
+</defs>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2400" height="464" viewBox="0 0 2400 464">
+  <defs>
+    <linearGradient id="background-b" x1="38.191%" x2="61.013%" y1="-1.455%" y2="95.144%">
+      <stop offset="0%" stop-color="#1F2738"/>
+      <stop offset="100%" stop-color="#021F51"/>
+    </linearGradient>
+    <rect id="background-a" width="2400" height="463.02"/>
+    <linearGradient id="background-d" x1="34.756%" y1="19.928%" y2="38.896%">
+      <stop offset="0%" stop-color="#3023AE"/>
+      <stop offset="43.884%" stop-color="#53A0FD"/>
+      <stop offset="100%" stop-color="#B4EC51"/>
+    </linearGradient>
+    <linearGradient id="background-e" x1="23.857%" y1="17.782%" y2="40.651%">
+      <stop offset="0%" stop-color="#3023AE"/>
+      <stop offset="47.525%" stop-color="#53A0FD"/>
+      <stop offset="100%" stop-color="#B4EC51"/>
+    </linearGradient>
+    <linearGradient id="background-f" x1="0%" x2="102%" y1="0%" y2="101%">
+      <stop offset="0%" stop-color="#2166FF"/>
+      <stop offset="100%" stop-color="#765AFF"/>
+    </linearGradient>
+    <linearGradient id="background-g" x1="0%" x2="97.063%" y1="0%" y2="96.111%">
+      <stop offset="0%" stop-color="#C9DEE4"/>
+      <stop offset="100%" stop-color="#323890"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="background-c" fill="#fff">
+      <use xlink:href="#background-a"/>
+    </mask>
+    <use fill="url(#background-b)" fill-rule="nonzero" xlink:href="#background-a"/>
+    <g mask="url(#background-c)">
+      <g transform="translate(277 -495)">
+        <g transform="translate(78 212)">
+          <g fill-rule="nonzero" stroke-width="2" opacity=".64" transform="translate(1329 635)">
+            <circle cx="127" cy="127" r="127" stroke="url(#background-d)" opacity=".117"/>
+            <circle cx="127.5" cy="127.5" r="96.5" stroke="url(#background-d)" opacity=".117"/>
+            <circle cx="126.5" cy="126.5" r="67.5" stroke="url(#background-d)" opacity=".117"/>
+            <circle cx="126.5" cy="126.5" r="40.5" stroke="url(#background-e)" opacity=".081"/>
+          </g>
+          <g fill="url(#background-f)" fill-rule="nonzero" opacity=".719" transform="translate(0 112)">
+            <circle cx="193.5" cy="193.5" r="193.5" opacity=".081"/>
+            <circle cx="194" cy="194" r="147" opacity=".081"/>
+            <circle cx="193" cy="193" r="103" opacity=".081"/>
+            <circle cx="193" cy="193" r="62" opacity=".081"/>
+          </g>
+          <g fill="url(#background-f)" fill-rule="nonzero" opacity=".719" transform="translate(118 651)">
+            <circle cx="148" cy="148" r="148" opacity=".081"/>
+            <circle cx="148.5" cy="148.5" r="112.5" opacity=".081"/>
+            <circle cx="148" cy="148" r="79" opacity=".081"/>
+          </g>
+        </g>
+        <g fill="url(#background-g)" fill-rule="nonzero" opacity=".062">
+          <circle cx="1650.5" cy="578.5" r="129.5"/>
+          <circle cx="1650" cy="578" r="92"/>
+          <circle cx="1651" cy="579" r="52"/>
+        </g>
+        <g fill="url(#background-f)" fill-rule="nonzero" opacity=".588" transform="translate(592 454)">
+          <circle cx="242.5" cy="242.5" r="242.5" opacity=".081"/>
+          <circle cx="243" cy="243" r="184" opacity=".081"/>
+          <circle cx="241" cy="241" r="129" opacity=".081"/>
+          <circle cx="241" cy="241" r="78" opacity=".081"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
